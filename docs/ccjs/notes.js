@@ -3,11 +3,7 @@
 
 
 
+Clears the content for the winnerMsgElement and roundResultsMsg elements.
+Try testing out the game by playing a few rounds until one of the players reaches 3 points. Then, click the "Play again?" button to see if the game resets correctly.
 
-
-
-
-
-When the #text-input element contains the text I am learning a new language and it is called c++. the #char-count element should contain the text "Character Count: 50/50". NOTE: While the maxlength attribute would achieve the correct functionality, this lab requires a JavaScript only solution.
-The user should not be able to enter more than 50 characters in the textarea element. When the character count reaches 50, any extra input should be automatically trimmed and the text Character Count: 50/50 should be displayed in red.
-Note: Be sure to link your stylesheet and the JavaScript file in your HTML.
+And with this final step, you have completed the Rock, Paper, Scissors game!
