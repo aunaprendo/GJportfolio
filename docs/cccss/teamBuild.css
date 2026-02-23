@@ -1,0 +1,44 @@
+body {
+  background-color: var(--accent-color-lgray);
+  text-align: center;
+}
+
+.title,
+.options-label,
+.team-stats
+ {
+  color: var(--text-color-main);
+}
+
+.title {
+  margin: 1.3rem 0;
+}
+
+.team-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 2rem;
+	flex-direction: column;
+}
+
+.options-label {
+  font-size: 1.2rem;
+}
+
+.sports-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card {
+  background-color: var(--accent-color-dgray);
+	color: var(--text-color-alt);
+  padding: 1rem;
+  margin: 1.2rem;
+  width: 45%;
+  border-radius: 15px;
+}
+
