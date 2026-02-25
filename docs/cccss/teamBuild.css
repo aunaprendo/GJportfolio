@@ -1,6 +1,9 @@
 #body {
-  background-color: var(--accent-color-gold);
-  text-align: center;
+  background-color: var(--accent-color-lgray);
+}
+
+#main{
+	text-align: center;
 }
 
 .title,

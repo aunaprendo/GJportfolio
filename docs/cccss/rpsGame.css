@@ -1,7 +1,11 @@
 #body {
-  background-color: var(--accent-color-gold);
-  text-align: center;
+  background-color: var(--accent-color-lgray);
+
   color: var(--text-color-main);
+}
+
+#main{
+	text-align: center;
 }
 
 .rules-container {
