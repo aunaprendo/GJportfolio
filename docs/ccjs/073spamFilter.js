@@ -2,13 +2,15 @@ const messageInput = document.getElementById("message-input");
 const result = document.getElementById("result-message");
 const checkMessageButton = document.getElementById("check-message-btn");
 
-
 const helpRegex = /please help|assist me/i;
+const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
+const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
+const stockRegex = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/i;
+const dearRegex = /(?:^|\s)d[e3][a4@]r fr[1|i][3e]nd(?:$|\s)/i;
 
-const denyList = [helpRegex];
+const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex, dearRegex];
 
-const isSpam = (msg) => denyList.some(item => item.test(msg));
-
+const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
 checkMessageButton.addEventListener("click", () => {
   if (messageInput.value === "") {
@@ -21,9 +23,3 @@ checkMessageButton.addEventListener("click", () => {
     : "This message does not seem to contain any spam.";
   messageInput.value = "";
 });
-
-
-Example Code
-const arr = ["A", "b", "C"];
-arr.some(letter => letter === letter.toUpperCase());
-Update the isSpam() function to use the some() method, which will check if testing msg against any of the regular expressions in denyList returns true."

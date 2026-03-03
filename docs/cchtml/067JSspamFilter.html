@@ -1,40 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Learn Regular Expressions by Building a Spam Filter</title>
-    <link rel="stylesheet" href="styles.css" />
-		<link rel="stylesheet" href="../cccss/spamFilter.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />		
+	<link rel="stylesheet" href="../cccss/spamFilter.css" />
+	
+  <!-- Primary Meta Tags -->
+  <title>Learn Regular Expressions by Building a Spam Filter</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
+</head>
 
-  <body>
-    <header class="main-text">
-      <h1 class="title">Is this Spam?</h1>
-      <p class="description">
-        Enter a phrase to check if it would be marked as spam or not.
+<body id="body">
+	<!-- Main navigation -->
+  <nav 
+    data-include="../partials/ccNavBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+	
+	<!-- Side menu -->
+  <aside 
+    data-include="../partials/ccSideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-end">
+	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+	  </ol>
+	</nav>	
+  <main id="main">
+		
+	<div class="form-container">	
+      <h2 class="text-thick text-center">Spam Checker</h2>
+      <p class="text-center" >
+        Enter a phrase to check if it would be marked as spam.
       </p>
-    </header>
-
-    <main>
-      <label class="message-label" for="message-input">Message: </label>
       <textarea
-        placeholder="Enter message here"
-        value=""
+        placeholder="Enter message to check here"
+        class="cctextarea"
         type="text"
         name="message"
         id="message-input"
         rows="10"
         cols="40"
       ></textarea>
-      <button class="btn" id="check-message-btn" type="button">
-        Check message
-      </button>
-      <p id="result-message"></p>
-    </main>
-
-    <footer class="footer">&copy; freeCodeCamp</footer>
-    <script src="./script.js"></script>
+      <div class="d-flex justify-content-center">
+		  	<button class="ccbutton" id="check-message-btn" type="button">Check Message</button>
+			</div>
+      <p class="text-center" id="result-message"></p>
+	</div>	
+  </main>
+		
+	<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
 		<script src="../ccjs/073spamFilter.js"></script>	
-  </body>
-</html>
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+</body>
+</html

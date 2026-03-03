@@ -10,16 +10,16 @@
 	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
 	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
 	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="../cccss/popup.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />			 
+	<link href="../cccss/popup.css" rel="stylesheet">
 	
   <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Contact Form</title>
+  <title>Palindrome Checker</title>
   <meta name="title" content="Portfolio" />
   <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
-<body>
+<body id="body">
 	<!-- Main navigation -->
   <nav 
     data-include="../partials/ccNavBar.html" 
@@ -44,50 +44,41 @@
 	  <ol class="breadcrumb justify-content-end">
 	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
 			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
 	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
 	  </ol>
 	</nav>	
-  <main>
-    <div class="form-container">
-      <form method="get"
-        action="0SubmissionRecieved.html" aria-label="Squirrel Language Contact Form">
-        <h2 class="text-white">Contact a Local Squirrel</h2>
-
-        <label class="cclabel" for="name">
-          Full Name:
-          <input class="ccinput" type="text" name="name" id="name" required aria-required="true" />
-        </label>
-
-        <label class="cclabel" for="email">
-          Email:
-          <input class="ccinput" type="email" name="email" id="email" required aria-required="true" />
-        </label>
-
-        <label class="cclabel" for="why">
-          Tell Us Why You Want to Learn Squirreleneese:
-          <textarea class="cctextarea" name="why" id="why" required aria-required="true" rows="5" cols="30" placeholder="I want to talk to squirrels because..."></textarea>
-        </label>
-				<div class="d-flex justify-content-center">
-				  <button class="ccbutton" type="submit">Submit</button>
-				</div>
-        
-      </form>
-    </div>
-	</main>
+  <main id="main">
+	<div class="form-container">	
+		<h2 class="text-thick text-white text-center">Palindrome Checker</h2>
+		<textarea
+	        placeholder="Enter message to check here"
+	        class="cctextarea"
+	        type="text"
+	        name="message"
+	        id="text-input"
+	        rows="7"
+	        cols="10"
+	      ></textarea>
+		<div class="d-flex justify-content-center">
+		  <button class="ccbutton" id="check-btn"type="submit">Check</button>
+		</div>		
+		<p class="text-white text-center" id="result"><em>Results pending...</em></p>
+	</div>
+  </main>
 		
-			<!-- Footer -->
+	<!-- Footer -->
 	  <footer
 	    data-include="../partials/footer.html" 
 	    role="contentinfo" 
 	    aria-label="Footer">
 	  </footer>
 		
+		<script src="../ccjs/074palindromeChecker.js"></script>	
 	  <script src="../js/script.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 	  AOS.init();
 	</script>
 </body>
-</html>
-	
+</html

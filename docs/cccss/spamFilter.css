@@ -1,80 +1,41 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.form-container {
+  background-color: var(--accent-color-lteal);
+  border-radius: 25px;
+	border: 1px dotted var(--accent-color-brown);
+  padding: 15px;
+  width: 100%;
+  max-width: 500px; 
+  margin: 75px auto 0 auto;   
 }
 
-:root {
-  --dark-grey: #1b1b32;
-  --light-grey: #f5f6f7;
-  --golden-yellow: #fecc4c;
-  --yellow: #ffcc4c;
-  --gold: #feac32;
-  --orange: #ffac33;
-  --dark-orange: #f89808;
+.cctextarea {
+  width: 100%;      
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-body {
-  background-color: var(--dark-grey);
-  color: var(--light-grey);
+.ccinput:focus,
+.cctextarea:focus {
+  outline: 3px solid var(--accent-color-brown); 
+  border-color: var(--accent-color-brown);
 }
 
-body,
-#message-input:placeholder-shown {
-  text-align: center;
-}
-
-textarea {
-  max-width: 90%;
-}
-
-.main-text {
-  margin: 25px 0;
-}
-
-.title {
-  font-size: 2.5rem;
-}
-
-.description {
-  margin-top: 15px;
-  font-size: 1.4rem;
-}
-
-.message-label {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-#message-input:placeholder-shown,
-textarea {
-  font-size: 1.1rem;
-}
-
-.btn {
-  display: block;
+.ccbutton {
+  background-color: #cccccc;
+  color: black;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  width: 200px;
-  margin: 10px auto;
-  color: var(--dark-grey);
-  background-color: var(--gold);
-  background-image: linear-gradient(var(--golden-yellow), var(--orange));
-  border-color: var(--gold);
-  border-width: 3px;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-image: linear-gradient(var(--yellow), var(--dark-orange));
-}
-
-#result {
-  font-size: 2rem;
-  margin: 20px 0;
-}
-
-.footer {
-  margin-top: 10px;
+.ccbutton:hover,
+.ccbutton:focus {
+  background-color: var(--accent-color-gold);
+  outline: 3px solid var(--accent-color-brown); 
 }
