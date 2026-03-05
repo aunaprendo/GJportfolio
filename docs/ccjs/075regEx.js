@@ -1,4 +1,3 @@
-
 const regexPattern = document.getElementById("pattern");
 const stringToTest = document.getElementById("test-string");
 const testButton = document.getElementById("test-btn");
@@ -6,14 +5,16 @@ const testResult = document.getElementById("result");
 const caseInsensitiveFlag = document.getElementById("i");
 const globalFlag = document.getElementById("g");
 
+function getFlags() {
+	 let flags = (caseInsensitiveFlag.checked ? "i" : "") +
+    (globalFlag.checked ? "g" : "");
+		return flags;
+	 };
 
 function comparisonTest() {
-	const getFlags =
-    (caseInsensitiveFlag.checked ? "i" : "") +
-    (globalFlag.checked ? "g" : "");
 
 	const regexInput = regexPattern.value;
-	const regexTester = new RegExp(regexInput, getFlags);
+	const regexTester = new RegExp(regexInput, getFlags());
 
 	const originalText = stringToTest.textContent;
 	const comparison = originalText.match(regexTester);

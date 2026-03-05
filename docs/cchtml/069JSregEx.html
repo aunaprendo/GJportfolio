@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="../cccss/regEx.css" />
-    <title>Regex Sandbox</title>
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />			 
+	<link rel="stylesheet" href="../cccss/regEx.css" />
+	
+  <!-- Primary Meta Tags -->
+  <title>Regex Sandbox</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
-<body>
-    <h1>Regex Sandbox</h1>
-    <main>
+<body id="body">
+	<!-- Main navigation -->
+  <nav 
+    data-include="../partials/ccNavBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+	
+	<!-- Side menu -->
+  <aside 
+    data-include="../partials/ccSideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-end">
+	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+	  </ol>
+	</nav>	
+  <main id="main">
+		
+    <h1 id="h1">Regex Sandbox</h1>
+
         <div id="regex-container">
             <label for="pattern">Regex Pattern:
                 <div id="pattern-container">/<input type="text" id="pattern" name="pattern"
                         placeholder="Enter your regex pattern">/</div>
             </label>
             <div id="flags-container">
-                <p>Flags: </p>
+                <p class="p">Flags: </p>
                 <label for="i">
                     <input type="checkbox" name="flags" id="i"> i
                 </label>
@@ -29,20 +68,30 @@
             </div>
         </div>
         <div id="test-container">
-            <p>Test String:</p>
+            <p class="mt-2 mb-2">Test String:</p>
             <div id="test-string" placeholder="Enter your test string" contenteditable="true"></div>
         </div>
         <button class="btn" id="test-btn" type="button">Test Regex</button>
         <div id="result-container">
-            <h2>Result:</h2>
-            <p id="result">
+            <h2 id="h2">Result:</h2>
+            <p class="p" id="result">
             </p>
         </div>
 
     </main>
 		
-		<script src="../ccjs/075regEx.js"></script>	    
-		<script src="script.js"></script>
+	<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+		<script src="../ccjs/075regEx.js"></script>	 
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
 </body>
-
-</html>
+</html

@@ -2,24 +2,28 @@
 
 
 
+	let highlightedString = originalText.replace(regexTester, match => {
+		return `<span class="highlight">${match}</span>`;
+	});
+	
+		const regexInput = regexPattern.value;
+	const regexTester = new RegExp(regexInput, getFlags());
+	
+	
 
 
 
 
 
 
-stringTester.innerHTML = "<span class="highlight"></span>";
+Spinal case is a string format where all words are in lowercase and separated by hyphens. "this-is-spinal-tap" is an example of a string in spinal case.
 
-When you click the testButton button, if the regex pattern matches the test string, the matched text should be highlighted. To highlight the matches, replace each match with the same text surrounded by a span element with the class of highlight. Note that the CSS for that has been already added for you.
-
-In case of multiple matches, each matched text should be separated from the next one by a comma and a space.
+The spinalCase function should return the string in spinal case format. For example, if the argument is ProductLanding page, the function should return product-landing-page.
 
 
 
-stringToTest.innerHTML = `<span class="highlight">${comparison}</span>`;
-	• const pattern = "freecodecamp";
-const str = "freecodecamp is the best we love freecodecamp";
-const matched = str.matchAll(pattern);
-const replaced = str.replaceAll(pattern, "freeCodeCamp");
-console.log(matched);
-console.log(replaced);
+Waiting: 3. spinalCase("This Is Spinal Tap") should return the string this-is-spinal-tap.
+Waiting: 4. spinalCase("thisIsSpinalTap") should return the string this-is-spinal-tap.
+Waiting: 5. spinalCase("The_Andy_Griffith_Show") should return the string the-andy-griffith-show.
+Waiting: 6. spinalCase("Teletubbies say Eh-oh") should return the string teletubbies-say-eh-oh.
+Waiting: 7. spinalCase("AllThe-small Things") should return the string all-the-small-things.
