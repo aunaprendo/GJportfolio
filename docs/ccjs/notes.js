@@ -1,3 +1,12 @@
+
+
+
+Failed: 48. When the value of #markdown-input is > **this is a *quote***, convertMarkdown() should return <blockquote><strong>this is a <em>quote</em></strong></blockquote>.
+
+Failed: 49. When the value of #markdown-input is > **this is a *quote***, <blockquote><strong>this is a <em>quote</em></strong></blockquote> should be displayed inside #html-output.
+Failed: 50. When the value of #markdown-input is > **this is a *quote***, you should set the inner HTML of #preview to <blockquote><strong>this is a <em>quote</em></strong></blockquote>.
+
+
 /* file: script.js */
 const mdInput = document.getElementById("markdown-input");
 const htmlOutput = document.getElementById("html-output");

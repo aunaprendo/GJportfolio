@@ -8,54 +8,47 @@ markdownInput.addEventListener("input", () => {
 });
 
 function convertMarkdown() {
-	const headingTest = /^\s*(?<hashes>#{1,6})\s(?<title>.*)/ig;
-	const italicTest = /^(?:_|\*)(?<text>.*?)(?:_|\*)/i;
-	const boldTest = /^(?:__|\*\*)(?<text>.*?)(?:__|\*\*)/i;
-	const imgTest = /^!\[(?<altText>.*?)\]\((?<imgSource>.*?)\)/i;
-	const urlTest = /^\[(?<linkText>.*?)\]\((?<link>.*?)\)/i;
-	const quoteTest = /^>\s(?<text>.*)/i;
 	const inputText = markdownInput.value;
-	
-	if (headingTest.test(inputText)) {
-		inputText.replace(headingTest, (match, hashes, title) => {
-  	const hashLevel = hashes.length;
-		const headingText = `<h${hashLevel}>${title}</h${hashLevel}>`;
-  	
-		return;
-		});
-	} else if (italicTest.test(inputText)) {
-		inputText.replace(italicTest, (match, text) => {
-		const italicText = `<em>${text}</em>`;
-		
-		return;
+	const headingTest = /^\s*(?<hashes>#{1,6})\s(?<title>.*)/gm;
+	let html = inputText.replace(headingTest, (match, hashes, title) => {
+  	hashes = hashes.length;
+			return `<h${hashes}>${title}</h${hashes}>`;
 		});		 
-	} else if (boldTest.test(inputText)) {
-		inputText.replace(boldTest, (match, text) => {
-		const boldText = `<strong>${text}</strong>`;
-		
-		return;
+
+		const boldTest = /__(?<text>.*?)__/gm;
+		html = html.replace(boldTest, (match, text) => {
+			return `<strong>${text}</strong>`;
 		});		
-	} else if (imgTest.test(inputText)) {
-		inputText.replace(imgTest, (match, altText, imgSource) => {
-  	const imgText = `<img alt="${altText}" src="${imgSource}">`;
 		
-		return;
+		const boldTest2 = /\*\*(?<text>.*?)\*\*/gm;
+		html = html.replace(boldTest2, (match, text) => {
+			return `<strong>${text}</strong>`;
 		});		
-	} else if (urlTest.test(inputText)) {
-		inputText.replace(urlTest, (match, linkText, link) => {
-  	const urlText = `<a href="${link}">${linkText}</a>`;
+			
+		const italicTest = /\*(?<text>.*)\*/gm;
+		html = html.replace(italicTest, (match, text) => {
+			return `<em>${text}</em>`;
+		});		 
 		
-		return;
+		const italicTest2 = /_(?<text>.*?)_/gm;
+		html = html.replace(italicTest2, (match, text) => {
+			return `<em>${text}</em>`;
+		});
+	
+		const imgTest = /^!\[(?<altText>.*?)\]\((?<imgSource>.*?)\)/gm;
+		html = html.replace(imgTest, (match, altText, imgSource) => {
+  		return `<img alt="${altText}" src="${imgSource}">`;
+		});		
+	
+		const urlTest = /^\[(?<linkText>.*?)\]\((?<link>.*?)\)/gm;
+		html = html.replace(urlTest, (match, linkText, link) => {
+  		return `<a href="${link}">${linkText}</a>`;
 		});	
-	} else if (quoteTest.test(inputText)) {
-		inputText.replace(quoteTest, (match, text) => {
-  	const quoteText = `<blockquote>${text}</blockquote>`;
+	
+		const quoteTest = /^>\s(?<text>.*)/gm;
+		html = html.replace(quoteTest, (match, text) => {
+  		return `<blockquote>${text}</blockquote>`;
+		});	
 		
-		return;
-		});	
-	} else {
-		htmlOutput.innerText = inputText;
-		preview.innerHTML = inputText;
-		return;
-	}
-}
+		return html;
+};
