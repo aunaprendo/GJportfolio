@@ -1,0 +1,68 @@
+body {
+  background-color: var(--accent-color-lteal);
+}
+
+.container {
+  width: 90%;
+  max-width: 680px;
+}
+
+.container,
+.output {
+  margin: 20px auto;
+}
+
+label,
+legend {
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.calButton {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--accent-color-gold);
+  border: 2px solid var(--accent-color-brown);
+}
+
+.calButton,
+input,
+select {
+  min-height: 24px;
+  color: var(--accent-color-dteal);
+}
+
+fieldset,
+label,
+.calButton,
+input,
+select {
+  margin-bottom: 10px;
+}
+
+.output {
+  border: 2px solid var(--accent-color-lgray);
+  padding: 10px;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.output span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.surplus {
+  color: #065F6F;
+}
+
+.deficit {
+  color: var(--accent-color-dteal);
+}
