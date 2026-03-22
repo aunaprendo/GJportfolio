@@ -1,69 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-		<link rel="stylesheet" href="../cccss/calorieCounter.css">	
-    <title>Calorie Counter</title>
-  </head>
-  <body>
-    <main>
-      <h1>Calorie Counter</h1>
-      <div class="container">
-        <form id="calorie-counter">
-          <label for="budget">Budget</label>
-          <input
-            type="number"
-            min="0"
-            id="budget"
-            placeholder="Daily calorie budget"
-            required
-          />
-          <fieldset id="breakfast">
-            <legend>Breakfast</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="lunch">
-            <legend>Lunch</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="dinner">
-            <legend>Dinner</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="snacks">
-            <legend>Snacks</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="exercise">
-            <legend>Exercise</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <div class="controls">
-            <span>
-              <label for="entry-dropdown">Add food or exercise:</label>
-              <select id="entry-dropdown" name="options">
-                <option value="breakfast" selected>Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="snacks">Snacks</option>
-                <option value="exercise">Exercise</option>
-              </select>
-              <button type="button" id="add-entry">Add Entry</button>
-            </span>
-          </div>
-          <div>
-            <button type="submit">
-              Calculate Remaining Calories
-            </button>
-            <button type="button" id="clear">Clear</button>
-          </div>
-        </form>
-        <div id="output" class="output hide"></div>
-      </div>
-    </main>
-    <script src="./script.js"></script>
-		<script src="../ccjs/080calorieCounter.js"></script>	
-  </body>
-</html>
+
+Failed: 18. When #other-complaint is checked and #complaint-description contains less than twenty characters, validateForm()["complaint-description"] should be false.
+
+Failed: 20. When #other-complaint is checked and the value of #complaint-description is changed to an invalid value, you should set its border color to red.
+
+Failed: 26. When #other-solution is checked and #solution-description contains less than twenty characters, validateForm()["solution-description"] should be false.
+
+Failed: 28. When #other-solution is checked and the value of #solution-description is changed to an invalid value, you should set its border color to red.
+
+Failed: 30. Your isValid function should take the validateForm() as its argument and return true when all the form fields have been filled correctly.
+
+
+Failed: 31. Your isValid function should take the validateForm() as its argument and return false when not all the form fields have been filled correctly.
+Failed: 32. You should call isValid when you try to submit the form.
+
+
+
+
+

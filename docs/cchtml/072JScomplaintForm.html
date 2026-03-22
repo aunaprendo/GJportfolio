@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="../cccss/complaintForm.css">		
+	
+  <!-- Primary Meta Tags -->
+  <title>>Customer Complaint Form</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
+</head>
+
+<body>
+	<!-- Main navigation -->
+  <nav 
+    data-include="../partials/ccNavBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+	
+	<!-- Side menu -->
+  <aside 
+    data-include="../partials/ccSideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-end">
+	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccHTML.html">freeCodeCamp HTML</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+	  </ol>
+	</nav>	
+  <main>
+		
+    <h1 class="text-center">Complaint Form</h1>
+    <form id="form">
+        <fieldset id="personal-info">
+            <div>
+                <label for="full-name">Full Name:</label>
+                <input required aria-required="true" type="text" id="full-name" name="full-name" placeholder="John Doe">
+            </div>
+
+            <div>
+                <label for="email">Email Address:</label>
+                <input required type="email" id="email" name="email" placeholder="example@domain.com">
+            </div>
+        </fieldset>
+        <hr>
+        <fieldset id="product-info">
+            <div>
+                <label for="order-no">Order No:</label>
+                <input required pattern="2024\d{6}$" type="text" id="order-no" name="order-no" placeholder="2024######">
+            </div>
+            <div>
+                <label for="product-code">Product Code:</label>
+                <input required pattern="[a-zA-Z]{2}\d{2}-[a-zA-Z]\d{3}-[a-zA-Z]{2}\d" type="text" id="product-code" name="product-code" placeholder="XX##-X###-XX#">
+            </div>
+            <div>
+                <label for="quantity">Quantity:</label>
+                <input required type="number" id="quantity" name="quantity" min="1">
+            </div>
+        </fieldset>
+
+        <fieldset id="complaints-group">
+            <legend>Complaint Reason:</legend>
+            <div>
+                <input type="checkbox" id="damaged-product" name="complaint" value="damaged-product">
+                <label for="damaged-product">Damaged Product</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="nonconforming-product" name="complaint" value="nonconforming-product">
+                <label for="nonconforming-product">Nonconforming Product</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="delayed-dispatch" name="complaint" value="delayed-dispatch">
+                <label for="delayed-dispatch">Delayed Dispatch</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="other-complaint" name="complaint" value="other">
+                <label for="other-complaint">Other</label>
+            </div>
+        </fieldset>
+
+        <fieldset id="complaint-description-container" hidden>
+            <legend>Description of Complaint Reason</legend>
+            <textarea required minlength="20" placeholder="Describe the reason of your complaint in at least 20 characters"
+                name="complaint-textarea" id="complaint-description"></textarea>
+        </fieldset>
+
+        <fieldset id="solutions-group">
+            <legend>Desired Solution</legend>
+            <input type="radio" name="solutions" id="refund" value="refund">
+            <label for="refund">Refund</label>
+
+            <input type="radio" name="solutions" id="exchange" value="exchange">
+            <label for="exchange">Exchange</label>
+
+            <input type="radio" name="solutions" id="other-solution" value="other">
+            <label for="other-solution">Other</label>
+        </fieldset>
+
+        <fieldset id="solution-description-container" hidden>
+            <legend>Description of Desired Solution</legend>
+            <textarea required minlength="20" placeholder="Describe the desired solution to your issue in at least 20 characters"
+                name="solution-textarea" id="solution-description"></textarea>
+        </fieldset>
+        <div id="btn-container">
+            <button class="btn-secondary btn" type="submit" id="submit-btn">Submit</button>
+            <span id="message-box" aria-live="polite"></span>
+        </div>
+
+    </form>
+	
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+		<script src="../ccjs/081complaintForm.js"></script>	 
+	  <script src="../js/script.js"></script>		
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+	</body>
+	</html>
+	
