@@ -1,0 +1,1 @@
+Start by accessing the #playlist-songs, #play, and #pause elements and assign them to the variables playlistSongs, playButton and pauseButton, respectively.
