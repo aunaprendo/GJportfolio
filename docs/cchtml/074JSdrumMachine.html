@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />		
+		
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="../cccss/drumMachine.css">	
+	<link rel="stylesheet" href="styles.css">	
+	
+  <!-- Primary Meta Tags -->
+  <title>Drum Machine</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
+</head>
+
+<body>
+	<!-- Main navigation -->
+  <nav 
+    data-include="../partials/ccNavBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+	
+	<!-- Side menu -->
+  <aside 
+    data-include="../partials/ccSideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-end">
+	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccHTML.html">freeCodeCamp HTML</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+	  </ol>
+	</nav>	
+  <main>
+		<div id="drum-machine">
+			<div id="pad-bank">
+				<button class="drum-pad" id="falling-nuts">
+					<audio class="clip" src="../assets/ccAssets/drumNutFall.mp3" id="Q"></audio>Q</button>
+				<button class="drum-pad" id="cracking-nuts">
+					<audio class="clip" src="../assets/ccAssets/drumNutCrack.mp3" id="W"></audio>W</button>	
+				<button class="drum-pad" id="hiding-nuts">
+					<audio class="clip" src="../assets/ccAssets/drumDigging.mp3" id="E"></audio>E</button>
+				<button class="drum-pad" id="tree-branch">
+					<audio class="clip" src="../assets/ccAssets/drumTreeBranch.mp3" id="A"></audio>A</button>	
+				<button class="drum-pad" id="wind">
+					<audio class="clip" src="../assets/ccAssets/drumWind.mp3" id="S"></audio>S</button>
+				<button class="drum-pad" id="leaves">
+					<audio class="clip" src="../assets/ccAssets/drumLeavesCrunch.mp3" id="D"></audio>D</button>	
+				<button class="drum-pad" id="red-squirrel">
+					<audio class="clip" src="../assets/ccAssets/drumRedSquirrel.mp3" id="Z"></audio>Z</button>
+				<button class="drum-pad" id="squirrel-call">
+					<audio class="clip" src="../assets/ccAssets/drumSquirrelCall.mp3" id="X"></audio>X</button>		
+				<button class="drum-pad" id="squirrel-chirp">
+					<audio class="clip" src="../assets/ccAssets/drumSquirrelChirp.mp3" id="C"></audio>C</button>							
+			</div>
+			<div id="clipName"><h2>Click to Play:</h2><p id="display"></p></div>
+		</div>
+	</main>
+
+	
+		<!-- Footer -->
+  <footer
+    data-include="../partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+	
+	<script src="../ccjs/085drumMachine.js"></script>	 
+	<script src="script.js"></script>	 	
+  <script src="../js/script.js"></script>		
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+	

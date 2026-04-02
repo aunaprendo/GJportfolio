@@ -1,29 +1,28 @@
 const displayText = document.getElementById("display");
+const clips = document.querySelectorAll(".clip");
 
-function stopAllSounds() {
-  document.querySelectorAll(".clip").forEach((clip) => {
+function playSound(clip) {
+  clips.forEach(c => {
+    c.pause();
+    c.currentTime = 0;
+  });
+
+  clip.play();
+  displayText.innerText = clip.parentElement.id;
+
+  setTimeout(() => {
     clip.pause();
     clip.currentTime = 0;
-  });
+  }, 2000);
 }
 
 document.querySelectorAll(".drum-pad").forEach((pad) => {
   pad.addEventListener("click", function () {
-    const clip = this.querySelector("audio");
-    stopAllSounds();
-    clip.play();
-    displayText.innerText = this.id;
+    playSound(this.querySelector("audio"));
   });
 });
 
 document.addEventListener("keydown", (e) => {
   const clip = document.getElementById(e.key.toUpperCase());
-  if (clip) {
-    stopAllSounds();
-    clip.play();
-    displayText.innerText = clip.parentElement.id;
-  }
+  if (clip) playSound(clip);
 });
-
-
-
