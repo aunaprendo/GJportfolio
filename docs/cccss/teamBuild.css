@@ -45,3 +45,8 @@
   border-radius: 15px;
 }
 
+@media (max-width: 576px) {
+	.player-card {
+  width: 90%;
+	}
+}

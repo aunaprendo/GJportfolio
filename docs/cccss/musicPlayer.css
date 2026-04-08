@@ -225,6 +225,7 @@
     margin: auto;
     font-family: var(--font-headline);
     width: 30px;
+		padding-left: 20px;
   }
 
   .playlist-song-delete {
