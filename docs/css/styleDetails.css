@@ -113,83 +113,73 @@
 }
 
 /* ========================================
-   HOME PAGE: QUOTE BUBBLES
+   HOME PAGE: TESTIMONIALS
 ========================================= */
-.bubble {
-  display: inline-block;
-  background: #GGGGGG;
-  color: var(--text-color-main);
-  padding: .25rem 2rem;
-  border-radius: 1.5rem;
-  max-width: 90%;
-  word-wrap: break-word;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-	overflow: visible; 
+.testimonial-grid {
+  column-gap: 1.5rem;
+  column-count: 3;
 }
 
-@media (max-width: 768px) {
-  .bubble {
-    max-width: 95%;
+@media (max-width: 992px) {
+  .testimonial-grid {
+    column-count: 2;
   }
 }
 
-/* Main tail nub */
-.bubble::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: -1.5rem;
-
-  width: 28px;
-  height: 22px;
-
-  background: #GGGGGG;
-  border-radius: 0 0 50% 50%;
-
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+@media (max-width: 768px) {
+  .testimonial-grid {
+    column-count: 1;
+  }
 }
 
-/* Secondary smaller nub */
-.bubble::before {
-  content: "";
-  position: absolute;
-  bottom: -24px;
-  left: -2rem;
-
-  width: 16px;
-  height: 14px;
-
-  background: #GGGGGG;
-  border-radius: 50%;
-
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+.testimonial-link {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
 }
 
-/* Mirror tail nubs for right-aligned bubbles ONLY */
-.bubble-container.text-end .bubble::after {
-  left: auto;
-  right: -1.5rem;
-	transform: rotate(-8deg);
-  border-radius: 0 0 50% 50%;
+.testimonial-link:hover .testimonial-card {
+  transform: translateY(-6px);
+  transition: 0.2s ease;
+	cursor: pointer;
 }
 
-.bubble-container.text-end .bubble::before {
-  left: auto;
-  right: -2rem;
-	transform: rotate(-12deg);
+.testimonial-card {
+  background: var(--accent-color-dteal);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  will-change: transform;
 }
 
-/* Hover effect */
-.bubble-link:hover .bubble {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+.testimonial-text {
+  color: var(--text-color-alt);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
 }
 
-/* Cursor pointer for whole bubble */
-.bubble-link {
-  cursor: pointer;
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial-author span {
+  font-weight: 600;
+  font-size: 0.9rem;
+	color: var(--text-color-alt);
+}
+
+.testimonial-note {
+  display: block;
+  margin-top: 8px;
+  opacity: 0.9;
+  font-style: italic;
+	color: var(--text-color-alt);
 }
 
 /* ========================================

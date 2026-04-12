@@ -1,60 +1,8 @@
 
 
-
-In this lab, you will build a permutation generator that will take a string and return all possible permutations of the characters in the string. For example, the possible permutations of the string cat are cat, cta, act, atc, tac, and tca.
-
-The recursive way of creating permutations of a string works by storing the fixed starting part of the string (prefix), and creating permutations of the rest.
-
-For example, let's consider the word machine. The first round of creating permutations would be made fixing the m as the prefix of the string, and then creating permutations of the rest of the string, achine.
-
-For the rest of the string, permutations continue in the same way. One letter is added to the prefix, maybe the c, so the prefix becomes mc. Then, each of the permutations of ahine is concatenated to the prefix.
-
-
-
-
-Iterate over each character in the input string and for each iteration, remove the current character from the string and call the permuteString function recursively with updated arguments to build the remaining permutations.
-You should return the final results array.
-You should ensure that the permutations are unique by removing duplicates.
-function permute(arr) {
-  if (arr.length === 0) return [[]];
-
-  let result = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    let current = arr[i];
-
-    let remaining = arr.slice(0, i).concat(arr.slice(i + 1));
-
-    let remainingPermutations = permute(remaining);
-
-    for (let perm of remainingPermutations) {
-      result.push([current, ...perm]);
-    }
-  }
-
-  return result;
-}
-
-console.log(permute(['a', 'b', 'c']));
-
-
-function permute(arr) {
-  if (arr.length <= 1) return [arr];
-
-  let result = [];
-
-  arr.forEach((item, index) => {
-    const remaining = [
-      ...arr.slice(0, index),
-      ...arr.slice(index + 1)
-    ];
-
-    const perms = permute(remaining);
-
-    perms.forEach(perm => {
-      result.push([item, ...perm]);
-    });
-  });
-
-  return result;
-}
+You should have a contains function that accepts a linked list and an element. It should return true if the specified element exists in the linked list, and false otherwise.
+You should have a getAt function that accepts a linked list and an index. It should return the element at the given index in the linked list. If the index is out of bounds, it should return undefined.
+You should have a insertAt function that accepts a linked list, an index, and an element. It should insert the given element at the specified position in the linked list. If the index is out of bounds, it should not modify the list.
+You should have a removeAt function that accepts a linked list and an index. It should remove the node at the given index in the linked list. If the index is out of bounds, it should not modify the list.
+You should have a clear function that accepts a linked list. It should remove all elements from the linked list, effectively resetting it to an empty state.
+Note: Some later tests rely on earlier methods. For example, if getAt is not implemented correctly, tests for functions like insertAt and removeAt may fail even when those functions are close to correct.
