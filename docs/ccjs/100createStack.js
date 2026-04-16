@@ -1,39 +1,52 @@
-let interests = ["squirrels", "trees"];
+function initStack() {
+  return {
+    collection: []
+  };
+}
+
+function print(stack) {
+  console.log(stack.collection);
+}
 
 function push(stack, element) {
-  stack[stack.length] = element;
-  return stack;
+	stack.collection.push(element);
 }
 
 function pop(stack) {
-  if (stack.length === 0) {
-    return undefined;
+  if (stack.collection.length === 0) {
+  	return undefined;
   }
-
-  let top = stack[stack.length - 1];
-  stack.length = stack.length - 1;
-  return top;
+	return stack.collection.pop();
 }
 
 function peek(stack) {
-  if (stack.length === 0) {
-    return undefined;
+   if (stack.collection.length === 0) {
+  	return undefined;
   }
-
-  return stack[stack.length - 1];
+	return stack.collection[stack.collection.length - 1];
 }
 
 function isEmpty(stack) {
-  return stack.length === 0;
+  return stack.collection.length ===0;
 }
 
 function clear(stack) {
-  stack.length = 0;
-  return stack;
+  return stack.collection.splice(0);
 }
 
-console.log(push(interests, "nuts"));
+let interests = initStack();
+push(interests, "trees");
+push(interests, "squirrels");
+push(interests, "dinosaurs");
+push(interests, "bubbles");
+print(interests);
 console.log(pop(interests));
+print(interests);
+push(interests, "candy");
+push(interests, "math");
 console.log(peek(interests));
-console.log(interests);
+print(interests);
+console.log(isEmpty(interests));
 console.log(clear(interests));
+console.log(isEmpty(interests));
+print(interests);
