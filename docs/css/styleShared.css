@@ -185,6 +185,18 @@ a {
 	font-weight: var(--weight-bold);
 }
 
+.gen-link-cert {
+  text-decoration: none;
+  color: var(--text-color-main);
+	font-weight: var(--weight-small);
+	font-style: italic;
+}
+
+.gen-link-cert:hover {
+  text-decoration: underline;
+	color: var(--accent-color-dteal);
+}
+
 .gen-link:hover,
 .gen-link-cc:hover,
 .gen-link-white:hover {
@@ -192,7 +204,8 @@ a {
 }
 
 .gen-link:visited,
-.gen-link-cc:visited {
+.gen-link-cc:visited,
+.gen-link-cert {
   color: var(--accent-color-dgray);
 }
 
