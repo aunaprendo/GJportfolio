@@ -1,43 +1,16 @@
 
 
 
+The fibonacci function should accept one parameter, a positive integer n.
+Calling fibonacci(n) should use a dynamic programming approach to compute and return the n-th number from the Fibonacci sequence, where each number is the sum of the two preceding numbers.
+Each computed number at the position n in the Fibonacci sequence should be stored in the sequence array at index n - 1.
 
-
-In this lab, you will build a function that converts an adjacency list representation of a graph into an adjacency matrix. An adjacency list is an object where each key represents a node, and the corresponding value is an array of nodes that the key node is connected to. An adjacency matrix is a 2D array where the entry at position [i][j] is 1 if there's an edge from node i to node j, and 0 otherwise.
-
-For example, given the adjacency list:
-
-Example Code
-{
-  0: [1, 2],
-  1: [2],
-  2: [0, 3],
-  3: [2]
-}
-The corresponding adjacency matrix would be:
-
-Example Code
-[
-  [0, 1, 1, 0],
-  [0, 0, 1, 0],
-  [1, 0, 0, 1],
-  [0, 0, 1, 0]
-]
-Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
-
-User Stories:
-
-You should define a function named adjacencyListToMatrix to convert an adjacency list to an adjacency matrix.
-The function should take an object representing the adjacency list of an unweighted (either undirected or directed) graph as its argument.
-The function should:
-Convert the adjacency list to an adjacency matrix.
-Print each row in the adjacency matrix.
-Return the adjacency matrix.
-For example, adjacencyListToMatrix({0: [2], 1: [2, 3], 2: [0, 1, 3], 3: [1, 2]}) should print:
-
-Example Code
-[0, 0, 1, 0]
-[0, 0, 1, 1]
-[1, 1, 0, 1]
-[0, 1, 1, 0]
-and return [[0, 0, 1, 0], [0, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]].
+Waiting: 4. fibonacci(0) should return 0.
+Waiting: 5. fibonacci(1) should return 1.
+Waiting: 6. fibonacci(2) should return 1.
+Waiting: 7. fibonacci(3) should return 2.
+4 3
+Waiting: 8. fibonacci(5) should return 5.
+Waiting: 9. fibonacci(10) should return 55.
+Waiting: 10. fibonacci(15) should return 610.
+Waiting: 11. You should not use recursion in your code.
