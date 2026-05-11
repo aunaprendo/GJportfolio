@@ -5,7 +5,7 @@ export const OTPGenerator = () => {
   const [time, setTime] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
-  const intervalRef = useRef(null);
+  const intervalRef = useRef();
 
   function handleClick() {
     const passcode = Math.floor(100000 + Math.random() * 900000);
@@ -15,12 +15,13 @@ export const OTPGenerator = () => {
   }
 
 useEffect(() => {
-  if (time === 0) return;
+  if (!isActive) return;
 
   intervalRef.current = setInterval(() => {
     setTime(prev => {
       if (prev <= 1) {
         clearInterval(intervalRef.current);
+				setIsActive(false);
         return 0;
       }
       return prev - 1;
@@ -28,7 +29,7 @@ useEffect(() => {
   }, 1000);
 
   return () => clearInterval(intervalRef.current);
-}, [time]);
+}, [isActive]);
 
   return (
     <div className="container">
