@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event RSVP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="index.jsx"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="../cccss/eventRSVP.css">
+  </head>
+
+  <body>
+		<main>
+	
+    <h1 class="h1">Squirrel Party</h1>
+    <p class="p"><em>Join us for a nutty good time as we celebrate squirrel-style with snacks, games, and tail-twitching fun!</em></p>
+		<br />
+
+     <form class="ccform"
+        id="form"
+        method="get"
+        action="0SubmissionRecieved.html"
+        aria-describedby="form-instructions">
+      <!-- Personal Information -->
+      <fieldset class="ccfieldset">
+        <label class="cclabel" for="first-name">
+          Full Name:
+          <input class="ccinput"id="first-name" name="full-name" type="text" required aria-required="true" />
+        </label>
+				
+        <label class="cclabel" for="email">
+          Email Address:
+          <input class="ccinput" id="email" name="email" type="email" required aria-required="true" />
+        </label>
+				<label class="cclabel" for="new-password">
+				  Create a Password:
+				  <input
+				    class="ccinput"
+				    id="new-password"
+				    name="new-password"
+				    type="password"
+				    pattern="[a-z0-5]{8,}"
+				    required
+				    aria-required="true"
+				    aria-describedby="password-hint"
+				  />			
+				  <span id="password-hint" class="password-hint" role="tooltip">
+				    Password must be at least 8 characters and contain only lowercase letters (a–z) and numbers (0–5).
+				  </span>
+				</label>
+
+      </fieldset>
+
+      <!-- Account Type -->
+      <fieldset class="ccfieldset option form-check">   
+        <legend>Type of Squirrel (required)</legend>
+        <label class="ms-5 cclabel" for="personal-account">
+          <input class="form-check-input " id="personal-account" type="radio" name="account-type" value="personal" class="ccinline" checked />
+          Wild
+        </label>
+        <label class="ms-5 cclabel" for="business-account">
+          <input class="form-check-input " id="business-account" type="radio" name="account-type" value="business" class="ccinline" />
+          Tame
+        </label>
+      </fieldset>
+
+      <!-- Additional Information -->
+      <fieldset class="ccfieldset">
+        <legend>Additional Information</legend>
+        <label class="cclabel form control" for="profile-picture">
+          Upload a Picture of Your Squirrel:
+          <input class="file-selector-button ccinput" id="profile-picture" type="file" name="file" aria-label="Profile picture upload" />
+        </label>
+        <label class="cclabel" for="age">
+          Age of Squirrel:
+          <input class="ccinput" id="age" type="number" name="age" min="13" max="120" />
+        </label>
+        <label class="cclabel" for="referrer">
+          How did you find your squirrel?
+          <select class="ccselect" id="referrer" name="referrer" aria-required="true">
+            <option value="">(Select one)</option>
+            <option value="1">Followed the Nuts</option>
+            <option value="2">Listened for Rustles</option>
+            <option value="3">Looked for Tree Traffic</option>
+            <option value="4">Explored Local Forest</option>
+          </select>
+        </label>
+        <label class="cclabel" for="bio">
+          Tell me more about your squirrel:
+          <textarea class="cctextarea" id="bio" name="bio" rows="3" cols="30" placeholder="My squirrel is a tiny, bushy-tailed acrobat, always darting from branch to branch with boundless curiosity and a love for crunchy treats...."></textarea>
+        </label>
+      </fieldset>
+
+			<!-- Terms (Vertically & Horizontally Centered) -->
+			<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+			  <div class="d-flex flex-column align-items-center text-center">
+			
+			    <p class="mb-3">
+			      <a
+			        href="https://pawssomepet.org/the-ultimate-guide-to-raising-pet-squirrels-tips-and-care/"
+			        target="_blank"
+			        class="gen-link-cc"
+			        rel="noopener noreferrer">
+			        Read how to treat your squirrel
+			      </a>
+			    </p>
+			
+			    <div class="form-check d-flex align-items-center">
+			      <input
+			        class="form-check-input"
+			        name="terms"
+			        id="terms-and-conditions"
+			        type="checkbox"
+			        required
+			        aria-required="true" />
+			      <label
+			        class="form-check-label ms-2 text-nowrap cclabel"
+			        for="terms-and-conditions">
+			        I promise to honor and respect my squirrel
+			      </label>
+			    </div>
+					<input class="btn btn-secondary" type="submit" value="Submit" />
+				</div>
+				</div>
+
+    </form>
+  </main>
+	
+    <div id="root"></div>
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+    >
+      import { EventRSVPForm } from './index.jsx';
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        <EventRSVPForm />
+      );
+    </script>
+		<script src="../ccjsx/08eventRSVP.js"></script> 
+  </body>
+</html>
