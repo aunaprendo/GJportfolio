@@ -435,6 +435,8 @@ body.menu-open .carousel-btn {
 }
 /* Learning Carousel Edge Fade */
 #bookCarousel,
+#videoCarousel,
+#addBookCarousel,
 #audioCarousel {
   position: relative;
   --fade-size: 25px;
@@ -456,12 +458,16 @@ body.menu-open .carousel-btn {
 }
 @media (min-width: 992px) {
   #bookCarousel,
+  #videoCarousel,
+  #addBookCarousel,
 	#audioCarousel {
     --fade-size: 45px;
   }
 }
 @media (max-width: 576px) {
   #bookCarousel,
+  #videoCarousel,
+  #addBookCarousel,
 	#audioCarousel	{
     --fade-size: 5px;
   }
