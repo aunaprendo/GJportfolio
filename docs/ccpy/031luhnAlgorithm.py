@@ -1,8 +1,6 @@
 def verify_card_number(string):
-    if "-" in string:
-        string=string.replace("-","")
-    elif " " in string:
-        string=string.replace(" ","")
+    string = string.replace("-", "")
+    string = string.replace(" ", "")
     array=list(string)
 
     digitChecks=array[-2::-2]
@@ -15,10 +13,7 @@ def verify_card_number(string):
     digitChecksDoubled=list(map(doubleDigits, digitChecks))
 
     digitsSame=array[-1::-2]
-    def integers(num):
-        num=int(num)
-        return num
-    digitsSameInt=list(map(integers, digitsSame))
+    digitsSameInt = list(map(int, digitsSame))
 
     allDigits=digitsSameInt+digitChecksDoubled
     total=sum(allDigits)
