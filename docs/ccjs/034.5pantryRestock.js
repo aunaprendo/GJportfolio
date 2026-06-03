@@ -43,7 +43,6 @@ const pantry = [
   }
 ];
 
-const shipment = parseShipment(rawShip);
 
 function planRestock(pantry, shipment) {
     let actions = [];
@@ -73,25 +72,29 @@ function planRestock(pantry, shipment) {
     return actions;
 }
 
-const actions= [
-  { type: "restock", item: {...zone:"cold"} },
-  { type: "donate", item: {...zone:"dry"} }
-]
+
 function groupByZone(actions) {
-	
+  let groups = {};
+
+  for (let action of actions) {
+    let zone = action.item.zone;
+
+    if (!groups[zone]) {
+      groups[zone] = [];
+    }
+
+    groups[zone].push(action);
+  }
+
+  return groups;	
 }
-
-console.log(groupByZone(actions))
-// {
-//   cold: [
-//     { type: "restock", item: {...} }
-//   ],
-
-//   dry: [
-//     { type: "donate", item: {...} }
-//   ]
-// }
 
 function clonePantry(pantry) {
     return pantry.map(item => ({ ...item }));
 }
+
+const shipment = parseShipment(rawShip);
+const actions = planRestock(pantry, shipment);
+const groupedActions = groupByZone(actions);
+
+console.log(groupedActions);

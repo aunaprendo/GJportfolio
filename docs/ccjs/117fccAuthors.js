@@ -1,3 +1,4 @@
+
 const authorContainer = document.getElementById('author-container');
 const loadMoreBtn = document.getElementById('load-more-btn');
 
@@ -10,11 +11,8 @@ const initialFetch = async () => {
     const res = await fetch(
       'https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json'
     );
-
-    const data = await res.json();
-
-    displayAuthors(data.slice(startingIndex, endingIndex));
-    authorDataArr = data;
+    authorDataArr = await res.json();
+    displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
   } catch (err) {
     authorContainer.innerHTML =
       '<p class="error-msg">There was an error loading the authors</p>';
@@ -28,7 +26,7 @@ const fetchMoreAuthors = () => {
   displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
   if (authorDataArr.length <= endingIndex) {
     loadMoreBtn.disabled = true;
-loadMoreBtn.style.cursor = "not-allowed"
+    loadMoreBtn.style.cursor = "not-allowed"
     loadMoreBtn.textContent = 'No more data to load';
   }
 };
@@ -41,10 +39,11 @@ const displayAuthors = (authors) => {
       <img class="user-img" src="${image}" alt="${author} avatar">
       <div class="purple-divider"></div>
       <p class="bio">${bio.length > 50 ? bio.slice(0, 50) + '...' : bio}</p>
-      <a class="gen-link-cc" href="${url}" target="_blank">${author} author page</a>
+      <a class="author-link" href="${url}" target="_blank">${author} author page</a>
     </div>
   `;
   });
 };
 
+initialFetch();
 loadMoreBtn.addEventListener('click', fetchMoreAuthors);
