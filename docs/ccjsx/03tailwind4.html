@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Shopping Cart Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="mt-8 mb-12 text-center text-3xl md:text-5xl font-semibold text-gray-900">Acorn & Beyond</h1>
+    
+      <div class="flex flex-col lg:flex-row justify-around items-center" id="shopping-cart-container">
+          
+        <div id="products-container">
+            <div class="text-center rounded-md bg-gradient-to-b from-gray-100 to-red-100 p-5 card lg:text-md m-5">
+                <h2 class="text-lg font-semibold text-red-600">Deluxe Acorn Safe</h2>
+                <p class="quantity font-bold text-gray-900">5 qty</p>
+                <p class="price">$500</p>
+                <button class="p-2 rounded remove-button bg-red-500 hover:bg-red-200">Remove</button>
+            </div>
+             <div class="text-center rounded-md bg-gradient-to-b from-gray-100 to-red-100 p-5 card lg:text-md m-5">
+                <h2 class="text-lg font-semibold text-red-600">Luxury Tail Grooming Kit</h2>
+                <p class="quantity font-bold text-gray-900">2 qty</p>
+                <p class="price">$100</p>
+                <button class="remove-button rounded p-2 bg-red-500 hover:bg-red-200">Remove</button>
+            </div>
+        </div>
+        
+        <div class="text-center p-5 text-white bg-black rounded border-2 border-red-300" id="order-summary-container">
+            <h2 class="text-lg font-semibold">Order Summary</h2>
+            <p id="total" class="font-bold text-xl">Total:</p>
+            <p id="total-amount" class="mb-3 total font-bold text-md">$600</p>
+            <a href="#" class="text-center text-black p-2 rounded bg-blue-100 hover:bg-blue-200">Checkout</a>
+        </div>
+    </div>
+  </body>
+</html>
