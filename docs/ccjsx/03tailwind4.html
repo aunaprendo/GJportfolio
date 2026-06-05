@@ -3,35 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Shopping Cart Page</title>
+    <title>Squirrel Supply Cart</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1 class="mt-8 mb-12 text-center text-3xl md:text-5xl font-semibold text-gray-900">Acorn & Beyond</h1>
+
+  <body class="min-h-screen bg-gradient-to-b from-teal-50 via-emerald-50 to-amber-50">
     
-      <div class="flex flex-col lg:flex-row justify-around items-center" id="shopping-cart-container">
-          
-        <div id="products-container">
-            <div class="text-center rounded-md bg-gradient-to-b from-gray-100 to-red-100 p-5 card lg:text-md m-5">
-                <h2 class="text-lg font-semibold text-red-600">Deluxe Acorn Safe</h2>
-                <p class="quantity font-bold text-gray-900">5 qty</p>
-                <p class="price">$500</p>
-                <button class="p-2 rounded remove-button bg-red-500 hover:bg-red-200">Remove</button>
-            </div>
-             <div class="text-center rounded-md bg-gradient-to-b from-gray-100 to-red-100 p-5 card lg:text-md m-5">
-                <h2 class="text-lg font-semibold text-red-600">Luxury Tail Grooming Kit</h2>
-                <p class="quantity font-bold text-gray-900">2 qty</p>
-                <p class="price">$100</p>
-                <button class="remove-button rounded p-2 bg-red-500 hover:bg-red-200">Remove</button>
-            </div>
+    <h1 class="mt-8 mb-2 text-center text-4xl md:text-6xl font-bold text-teal-800">
+      Acorn & Beyond
+    </h1>
+
+    <p class="text-center text-teal-700 mb-12">
+      Everything a squirrel needs for a successful nut-gathering season.
+    </p>
+
+    <div
+      class="flex flex-col lg:flex-row justify-around items-center gap-8 px-6"
+      id="shopping-cart-container"
+    >
+
+      <!-- Products -->
+      <div id="products-container" class="w-full lg:w-1/2">
+
+        <div
+          class="text-center rounded-xl bg-gradient-to-br from-white to-teal-100 p-6 shadow-lg border border-teal-200 m-5"
+        >
+
+          <h2 class="text-xl font-bold text-teal-700">
+            Deluxe Acorn Vault
+          </h2>
+
+          <p class="quantity font-semibold text-stone-700 mt-2">
+            5 vaults reserved
+          </p>
+
+          <p class="price text-2xl font-bold text-amber-800 mt-2">
+            $500
+          </p>
+
+          <button
+            class="p-2 px-4 rounded-lg mt-4 text-white bg-teal-600 hover:bg-teal-700 transition"
+          >
+            Return to Forest
+          </button>
         </div>
-        
-        <div class="text-center p-5 text-white bg-black rounded border-2 border-red-300" id="order-summary-container">
-            <h2 class="text-lg font-semibold">Order Summary</h2>
-            <p id="total" class="font-bold text-xl">Total:</p>
-            <p id="total-amount" class="mb-3 total font-bold text-md">$600</p>
-            <a href="#" class="text-center text-black p-2 rounded bg-blue-100 hover:bg-blue-200">Checkout</a>
+
+        <div
+          class="text-center rounded-xl bg-gradient-to-br from-white to-teal-100 p-6 shadow-lg border border-teal-200 m-5"
+        >
+
+          <h2 class="text-xl font-bold text-teal-700">
+            Premium Tail Fluff Kit
+          </h2>
+
+          <p class="quantity font-semibold text-stone-700 mt-2">
+            2 kits reserved
+          </p>
+
+          <p class="price text-2xl font-bold text-amber-800 mt-2">
+            $100
+          </p>
+
+          <button
+            class="p-2 px-4 rounded-lg mt-4 text-white bg-teal-600 hover:bg-teal-700 transition"
+          >
+            Return to Forest
+          </button>
         </div>
+
+      </div>
+
+      <!-- Order Summary -->
+      <div
+        class="text-center p-8 rounded-2xl bg-teal-900 text-white border-4 border-amber-800 shadow-2xl w-full max-w-sm"
+        id="order-summary-container"
+      >
+
+        <h2 class="text-2xl font-bold text-teal-100">
+          Tree Hollow Checkout
+        </h2>
+
+        <p id="total" class="font-bold text-xl mt-4">
+          Forest Total
+        </p>
+
+        <p
+          id="total-amount"
+          class="mb-6 total font-bold text-4xl text-teal-100"
+        >
+          $600
+        </p>
+
+        <a
+          href="#"
+          class="inline-block rounded-lg bg-amber-800 px-6 py-3 font-bold text-white hover:bg-teal-700 transition"
+        >
+          Secure My Acorns
+        </a>
+      </div>
+
     </div>
+
   </body>
 </html>
