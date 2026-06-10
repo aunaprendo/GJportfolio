@@ -1,13 +1,22 @@
 
 
-For the images, you can use the following URLs if you like:
-
-https://cdn.freecodecamp.org/curriculum/labs/colosseo.jpg
-https://cdn.freecodecamp.org/curriculum/labs/alps.jpg
-https://cdn.freecodecamp.org/curriculum/labs/sea.jpg
-
-
-
-Each of your image elements should have a utility class for setting a rounded border of your choice.
-Each of your .subheading elements should use utility classes to set the font weight and size of your choosing.
-Each of your .description elements should use a utility class to set the font size of your choosing.
+You should create a type called Category that consists of the following possible values: 'Sport', 'Cruiser', 'Touring', 'Dirt', 'Adventure', 'Naked', 'Electric'.
+You should create an interface called Motorcycle that has the following properties: an id of type string, an name of type string, an manufacturer of type string, a category of type Category, a price of type number, an image_url of type string, an created_at property of type Date, an description of type string, and a year of type number
+You should create a function named fetchMotorcycles that returns a Promise resolving to an array of Motorcycle objects.
+You should load Motorcycle data from the https://cdn.freecodecamp.org/curriculum/labs/data/motorcycles.json endpoint.
+You should create a function named renderMotorcycleCard that takes a single Motorcycle object as a parameter and returns a string containing the HTML that contains a formatted HTML string for the motorcycle card.
+The renderMotorCycleCard function should take a parameter called motorcycle of type Motorcycle.
+The renderMotorCycleCard function should return a type of string.
+Each motorcycle card component should have an img element that has a valid image and a class of motorcycle-card-image-container.
+Each motorcycle card component should have an element with an class of motorcycle-card-year-badge that lists the year in plain text.
+Each motorcycle card component should have an element with a class of motorcycle-card-title that lists the name of the motorcycle in plain text.
+Each motorcycle card component should have an element with a class of motorcycle-card-manufacturer that lists the name of the motorcycle manufacturer in plain text.
+Each motorcycle card component should have an element with a class of motorcycle-card-category that lists the category of the motorcycle in plain text.
+Each motorcycle card component should have an element with a class of motorcycle-card-description that lists the description of the motorcycle in plain text.
+Each motorcycle card component should have an element with a class of motorcycle-card-price that lists the price of the motorcycle in plain text.
+Each motorcycle card component should have an element with a class of motorcycle-card-engine that lists the horsepower of each engine.
+You should have a class called MotorcycleGalleryApp.
+The class should have a private array called allMotorcycles that is statically typed to a type of an array of Motorcycle objects.
+That class should have a function called renderMotorcycles that renders the equivalent motorcycle card components of the allMotorcycles variable inside the element with id of motorcycle-grid.
+The number of Motorcycle elements that are displayed should be listed inside of an element with an id of results-number.
+The filter should be updated on an input event.
