@@ -1,22 +1,30 @@
 
 
-You should create a type called Category that consists of the following possible values: 'Sport', 'Cruiser', 'Touring', 'Dirt', 'Adventure', 'Naked', 'Electric'.
-You should create an interface called Motorcycle that has the following properties: an id of type string, an name of type string, an manufacturer of type string, a category of type Category, a price of type number, an image_url of type string, an created_at property of type Date, an description of type string, and a year of type number
-You should create a function named fetchMotorcycles that returns a Promise resolving to an array of Motorcycle objects.
-You should load Motorcycle data from the https://cdn.freecodecamp.org/curriculum/labs/data/motorcycles.json endpoint.
-You should create a function named renderMotorcycleCard that takes a single Motorcycle object as a parameter and returns a string containing the HTML that contains a formatted HTML string for the motorcycle card.
-The renderMotorCycleCard function should take a parameter called motorcycle of type Motorcycle.
-The renderMotorCycleCard function should return a type of string.
-Each motorcycle card component should have an img element that has a valid image and a class of motorcycle-card-image-container.
-Each motorcycle card component should have an element with an class of motorcycle-card-year-badge that lists the year in plain text.
-Each motorcycle card component should have an element with a class of motorcycle-card-title that lists the name of the motorcycle in plain text.
-Each motorcycle card component should have an element with a class of motorcycle-card-manufacturer that lists the name of the motorcycle manufacturer in plain text.
-Each motorcycle card component should have an element with a class of motorcycle-card-category that lists the category of the motorcycle in plain text.
-Each motorcycle card component should have an element with a class of motorcycle-card-description that lists the description of the motorcycle in plain text.
-Each motorcycle card component should have an element with a class of motorcycle-card-price that lists the price of the motorcycle in plain text.
-Each motorcycle card component should have an element with a class of motorcycle-card-engine that lists the horsepower of each engine.
-You should have a class called MotorcycleGalleryApp.
-The class should have a private array called allMotorcycles that is statically typed to a type of an array of Motorcycle objects.
-That class should have a function called renderMotorcycles that renders the equivalent motorcycle card components of the allMotorcycles variable inside the element with id of motorcycle-grid.
-The number of Motorcycle elements that are displayed should be listed inside of an element with an id of results-number.
-The filter should be updated on an input event.
+User Stories:
+
+You should create an interface named Item with:
+
+
+You should create an interface named Book that extends Item. Its type property should be set to the literal "book". It should also have title and author properties of type string.
+You should create an interface named Electronics that extends Item. Its type property should be set to the literal "electronics". It should also have item and model properties of type string, and an optional warranty property of type number.
+You should create an interface named Clothing that extends Item. Its type property should be set to the literal "clothing". It should also have item and brand properties of type string, and an optional size property that can only be "S", "M", or "L".
+You should create a union type named Product that combines the Book, Electronics, and Clothing interfaces.
+You should create a generic class named Collection with a type parameter T. The constructor should accept an array of items of type T and store them in a property named items.
+The Collection class should have a getAll() method that returns all items in the collection.
+The Collection class should have a filter() method that accepts a callback and returns only the elements from the items array that satisfy the given condition. The callback should receive an element of type T and return a boolean.
+You should create a function named renderProduct with a parameter of type Product. It should return an HTML string representing a product with:
+
+An element with the class item and an ID with the value of the product id.
+An element with the class price and the text of the product price.
+An element containing additional product information.
+The renderProduct function should use type narrowing to render different HTML depending on the product type:
+
+For books, the rendered HTML should have the format Book: [title] by [author], where [title] and [author] should be replaced by the title and the author, respectively.
+For electronics, the rendered HTML should have the format Electronics: [item] - [model]. If the product has a warranty, append  - Warranty: [warranty] year(s) to the format. Replace [item], [model], and [warranty] with the item, the model, and the warranty, respectively.
+For clothing, the rendered HTML should have the format Clothing: [item] by [brand]. If the product has a size, append  - Size [size] to the format. Replace [item], [brand], and [size] with the item, the brand, and the size, respectively.
+If an invalid product type is encountered, throw an error with the format: Unknown product type: [product], where [product] should be replaced by the invalid product object. Use JSON.stringify to convert the invalid product into a string.
+You should create a Collection<Product> instance that includes at least one item for each product type and assign the instance to a variable named products.
+You should create a showProducts function that displays products in the #output element. It should accept an optional filter representing a product type; when omitted, show all products; when provided, show only products of that type.
+You should render products by converting each product to an HTML string using the renderProduct function and injecting the combined result into the #output element.
+Clicking the #all, #books, #electronics, and #clothing buttons should display the corresponding set of products in the #output element.
+On page load, all products should be shown by default.
