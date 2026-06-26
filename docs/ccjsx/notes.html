@@ -2,8 +2,20 @@
 
 
 
-    
-You should create a showProducts function that displays products in the #output element. It should accept an optional filter representing a product type; when omitted, show all products; when provided, show only products of that type.
-You should render products by converting each product to an HTML string using the renderProduct function and injecting the combined result into the #output element.
-Clicking the #all, #books, #electronics, and #clothing buttons should display the corresponding set of products in the #output element.
-On page load, all products should be shown by default.
+
+
+
+Each Action available to the pet should be encompassed by an enumerator.
+
+The pet should have the following moods, encompassed by a PetMood enumerator: ['Happy', 'Excited', 'Content', 'Sad', 'Tired', 'Sick', 'Hungry'].
+
+The pet should be Hungry if Hunger > 70.
+The pet should be Tired if Energy < 30.
+The pet should be Sad if Happiness < 30.
+The pet should be Excited if Happiness > 80 and Energy > 70.
+The pet should be Happy if Happiness > 60.
+Otherwise, the pet should be Content.
+The pet should have a number of images or emoji tied to each Mood.
+
+These emoji or images should be tied to the current PetMood, with a Record.
+The key of each Record entry should be the relevant PetMood enum value.
