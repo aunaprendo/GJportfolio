@@ -1,21 +1,6 @@
 
-
-
-
-You should implement a groupByZone(actions) function that groups the actions into storage zones based on each item’s zone property.
-
-You should use all of the functions together to process a shipment and log the final grouped result object to the console.
-
-raw shipment strings
-    ↓
-parseShipment()
-    ↓
-shipment objects
-    ↓
-planRestock(pantry, shipment)
-    ↓
-action objects
-    ↓
-groupByZone(actions)
-    ↓
-final grouped object
+Failed: 4. runSequence(config1, 1) should log Switching to green for 5 s, Switching to yellow for 2 s, Switching to red for 4 s in order.
+Failed: 5. runSequence(config1, 2) should log Switching to green for 5 s, Switching to yellow for 2 s, Switching to red for 4 s, Switching to green for 5 s, Switching to yellow for 2 s, Switching to red for 4 s in order.
+Failed: 6. runSequence(config2, 1) should log Switching to red for 3 s, Invalid phase detected, Switching to green for 6 s in order.
+Failed: 7. runSequence(config3, 2) should log Faulted phase!.
+Failed: 8. runSequence(config4, 5) should log No phases found.
