@@ -58,6 +58,11 @@ React.useEffect(() => {
 
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
+
+  const formData = new FormData(e.currentTarget);
+  const name = formData.get("pet-name") as string;
+
+  setPetName(name);
   setGameStarted(true);
 }
 
@@ -83,8 +88,10 @@ return (
       <div className="base-container">
       <form onSubmit={handleSubmit}>
       <h2>Name Your Squirrel</h2>
+      
       <input
           id="pet-name"
+          name="pet-name"
           className="input pet-name"
           type="text"
           required
@@ -98,7 +105,7 @@ return (
     {gameStarted && (
     <>
     <div id="overview" className="game-container">
-      <h2 className="pet-name">{petName}</h2>
+      <div className="pet-name">{petName}</div>
       <h3>{emoji}</h3>
       <button className="pet-buttons" id="eat-action" onClick={eat}>EAT</button>
       <button className="pet-buttons" id="play-action" onClick={play}>PLAY</button>

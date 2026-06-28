@@ -18,6 +18,7 @@ async function fetchMotorcycles(): Promise<Motorcycle[]> {
     return data;
 };
 
+
 function renderMotorcycleCard(
   motorcycle: Motorcycle
 ): string {
@@ -35,22 +36,28 @@ function renderMotorcycleCard(
 
 class MotorcycleGalleryApp {
     private allMotorcycles: Motorcycle[] = [];
+    
+    constructor() {
+        this.renderMotorcycles();
+    }
 
-    renderMotorcycles() {
+        async renderMotorcycles() {
+        this.allMotorcycles = await fetchMotorcycles();
+    
         const grid = document.getElementById("motorcycle-grid");
         if (!grid) return;
+    
         grid.innerHTML = "";
-        
+    
+        this.allMotorcycles.forEach((motorcycle) => {
+            grid.innerHTML += renderMotorcycleCard(motorcycle);
+        });
+    
         const count = document.getElementById("results-number");
-        if (!count) return;
-        count.innerHTML = "";
-        
-        this.allMotorcycles.forEach(motorcycle => {
-            const card = renderMotorcycleCard(motorcycle);
-            grid.innerHTML += card;
-            });
-            
-        count.innerHTML = `${this.allMotorcycles.length}`;
+        if (count) {
+            count.textContent = `${this.allMotorcycles.length}`;
         }
+    }
 }
 
+new MotorcycleGalleryApp();
