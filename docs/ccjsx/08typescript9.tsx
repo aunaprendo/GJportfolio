@@ -1,13 +1,33 @@
 const { useState } = React;
 
+enum PetMood {
+  HAPPY,
+  EXCITED,
+  CONTENT,
+  SAD,
+  TIRED,
+  SICK,
+  HUNGRY,
+}
+
+const moodEmoji: Record<PetMood, string> = {
+  [PetMood.HAPPY]: "😊",
+  [PetMood.EXCITED]: "🤩",
+  [PetMood.CONTENT]: "🙂",
+  [PetMood.SAD]: "😢",
+  [PetMood.TIRED]: "😴",
+  [PetMood.SICK]: "🤒",
+  [PetMood.HUNGRY]: "🍽️",
+};
+
 export const PetGame = () => {
-  const initialFull = 100;
-  const initialEmpty = 0;
-  const [happiness, setHappiness] = useState(initialFull);
-  const [energy, setEnergy] = useState(initialFull);
-  const [hunger, setHunger] = useState(initialEmpty);
+  const [happiness, setHappiness] = useState(100);
+  const [energy, setEnergy] = useState(100);
+  const [hunger, setHunger] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
   const [petName, setPetName] = useState("");
+  const currentMood = getMood();
+  const emoji = moodEmoji[currentMood];
   
 function eat () {
     setHunger(prev => Math.max(0, prev - 5));
@@ -24,9 +44,35 @@ function sleep () {
     setHunger(prev => Math.min(100, prev + 5));
 }
 
+React.useEffect(() => {
+  if (!gameStarted) return;
+
+  const interval = setInterval(() => {
+    setHunger(prev => Math.min(100, prev + 1));
+    setEnergy(prev => Math.min(100, prev + 1));
+    setHappiness(prev => Math.max(0, prev - 1));
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, [gameStarted]);
+
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
   setGameStarted(true);
+}
+
+function getMood(): PetMood {
+  if (hunger > 70) return PetMood.HUNGRY;
+
+  if (energy < 30) return PetMood.TIRED;
+
+  if (happiness < 30) return PetMood.SAD;
+
+  if (happiness > 80 && energy > 70) return PetMood.EXCITED;
+
+  if (happiness > 60) return PetMood.HAPPY;
+
+  return PetMood.CONTENT;
 }
 
 return (
@@ -38,8 +84,8 @@ return (
       <form onSubmit={handleSubmit}>
       <h2>Name Your Squirrel</h2>
       <input
-          id="name"
-          className="input"
+          id="pet-name"
+          className="input pet-name"
           type="text"
           required
           value={petName}
@@ -48,12 +94,12 @@ return (
     </form>
     </div>
     )}
-
+    
     {gameStarted && (
     <>
     <div id="overview" className="game-container">
-      <h2>{petName}</h2>
-      <h3>🙂</h3>
+      <h2 className="pet-name">{petName}</h2>
+      <h3>{emoji}</h3>
       <button className="pet-buttons" id="eat-action" onClick={eat}>EAT</button>
       <button className="pet-buttons" id="play-action" onClick={play}>PLAY</button>
       <button className="pet-buttons" id="sleep-action" onClick={sleep}>SLEEP</button>
@@ -62,8 +108,7 @@ return (
     <div className="stats-grid">
         <div className="stat-bar">
           <div className="stat-header stat-icon">🌰</div>
-    	  <div className="stat-header stat-name">Hunger</div>
-          <div className="stat-header stat-value">{hunger}%</div>
+    	  <div className="stat-header stat stat-name">Hunger<div className="stat-value">{hunger}%</div></div>
           <div className="stat-progress">
             <div className="stat-fill" style={{ width: `${hunger}%` }}></div>
           </div>
@@ -71,8 +116,7 @@ return (
         
         <div className="stat-bar">
           <div className="stat-header stat-icon">🌳</div>
-    	  <div className="stat-header stat-name">Energy</div>
-          <div className="stat-header stat-value">{energy}%</div>
+    	  <div className="stat-header stat-name stat">Energy<div className="stat-value">{energy}%</div></div>
           <div className="stat-progress">
             <div className="stat-fill" style={{ width: `${energy}%` }}></div>
           </div>
@@ -80,8 +124,7 @@ return (
         
         <div className="stat-bar">
           <div className="stat-header stat-icon">🌈</div>
-    	  <div className="stat-header stat-name">Happiness</div>
-          <div className="stat-header stat-value">{happiness}%</div>
+    	  <div className="stat-header stat-name stat">Happiness<div className="stat-value">{happiness}%</div></div>
           <div className="stat-progress">
             <div className="stat-fill" style={{ width: `${happiness}%` }}></div>
           </div>

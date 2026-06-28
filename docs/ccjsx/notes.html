@@ -2,20 +2,19 @@
 
 
 
+6. The second view should contain the provided pet name.
 
+Failed: 12. Each pet stat should contain exactly one element with class .stat-value.
 
-
-Each Action available to the pet should be encompassed by an enumerator.
-
-The pet should have the following moods, encompassed by a PetMood enumerator: ['Happy', 'Excited', 'Content', 'Sad', 'Tired', 'Sick', 'Hungry'].
-
-The pet should be Hungry if Hunger > 70.
-The pet should be Tired if Energy < 30.
-The pet should be Sad if Happiness < 30.
-The pet should be Excited if Happiness > 80 and Energy > 70.
-The pet should be Happy if Happiness > 60.
-Otherwise, the pet should be Content.
-The pet should have a number of images or emoji tied to each Mood.
-
-These emoji or images should be tied to the current PetMood, with a Record.
-The key of each Record entry should be the relevant PetMood enum value.
+Failed: 18. The Hunger stat should start at 0.
+Failed: 19. The Energy stat should start at 100.
+Failed: 20. The Happiness stat should start at 100.
+Failed: 21. Clicking the Eat button should reduce the Hunger value and increase the Energy value. If Hunger is 0 or Energy is 100, that value must not change.
+Failed: 22. Clicking the Play button should reduce the Energy value and increase the Happiness value. If Energy is 0 or Happiness is 100, that value must not change.
+Failed: 23. Clicking the Sleep button should increase the Hunger value and increase the Energy value. If Hunger is 100 or Energy is 100, that value must not change.
+Failed: 24. The Hunger stat should be 100 after an excessive period of idle time.
+Failed: 25. The Energy stat should be 100 after an excessive period of idle time.
+Failed: 26. The Happiness stat should be 0 after an excessive period of idle time.
+Failed: 27. Clicking the Eat button should reduce the Hunger value and increase the Energy value. If Hunger is 0 or Energy is 100, that value must not change.
+Failed: 28. Clicking the Play button should reduce the Energy value and increase the Happiness value. If Energy is 0 or Happiness is 100, that value must not change.
+Failed: 29. Clicking the Sleep button should increase the Hunger value and increase the Energy value. If Hunger is 100 or Energy is 100, that value must not change.
