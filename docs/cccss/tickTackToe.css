@@ -1,3 +1,118 @@
-body {
-    background-color: red;
+.gameWindow {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.gameWindow h1 {
+  margin: 0;
+}
+
+.gameWindow h2 {
+  margin: 0.75rem 0 2rem;
+  color: var(--accent-color-dgray);
+}
+
+.grid {
+  background: var(--bg-color-alt);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+}
+
+.square {
+  width: 110px;
+  height: 110px;
+
+  border: none;
+  border-radius: 0.6rem;
+
+  background: var(--bg-color-main);
+  color: var(--text-color-main);
+
+  font-family: inherit;
+  font-size: 3.5rem;
+  font-weight: var(--weight-bold);
+
+  cursor: pointer;
+
+  transition:
+    background-color .2s ease,
+    transform .15s ease,
+    box-shadow .2s ease;
+}
+
+.square:hover:not(:disabled) {
+  background: var(--accent-color-ateal);
+  transform: translateY(-2px);
+}
+
+.square:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.square:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.square.x {
+  color: var(--accent-color-dteal);
+}
+
+.square.o {
+  color: var(--accent-color-brown);
+}
+
+.reset {
+  margin-top: 2rem;
+
+  padding: 0.75rem 2rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  background: var(--accent-color-dteal);
+  color: var(--text-color-alt);
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+
+  cursor: pointer;
+
+  transition:
+    background-color .2s ease,
+    transform .15s ease;
+}
+
+.reset:hover {
+  background: var(--bg-color-alt);
+  transform: translateY(-2px);
+}
+
+.reset:active {
+  transform: scale(.98);
+}
+
+
+@media (max-width: 576px) {
+
+  .square {
+    width: 82px;
+    height: 82px;
+    font-size: 2.6rem;
+  }
+
+  .grid {
+    padding: 0.75rem;
+  }
 }
