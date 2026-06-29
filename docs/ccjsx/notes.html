@@ -1,17 +1,21 @@
-const { useState, useMemo } = React;
-
-export function CurrencyConverter() {
-
-}
 
 
 
-Waiting: 2. You should have one input[type="number"] element to accept the amount to be converted from.
-Waiting: 3. You should have two select elements.
-Waiting: 4. The select elements should have options for at least USD, EUR, GBP, and JPY.
-Waiting: 5. Changing the value of the first select element should cause the converted amounts to be recalculated.
-Waiting: 6. Changing the value of the second select element should not cause the converted amounts to be recalculated.
-Waiting: 7. Changing the value of the first select element should display the new converted amount.
-Waiting: 8. Changing the value of the second select element should display the new converted amount and currency.
-Waiting: 9. The converted amount should be displayed in the format XX.XX CCC, where XX.XX is the converted amount rounded to two decimal places and CCC is the currency code.
-Waiting: 10. The converted amount should be different from the input amount.
+You should create a Board component that renders nine button elements each with a class of square in a 3x3 grid.
+Clicking button.square elements should alternate between displaying an X then O within the element.
+Once a player has won the game, clicking on any button.square should not cause any further changes.
+You should create a button#reset element that resets the game when clicked.
+A message should be displayed indicating either X or O as the winner, or neither if the result is a draw.
+Tests:
+
+Waiting: 1. You should export a Board component.
+Waiting: 2. You should have nine button.square elements.
+Waiting: 3. The button.square elements should be in a 3x3 grid.
+Waiting: 4. The first click of a button.square element should result in X being displayed within the element.
+Waiting: 5. Clicking on the button#reset element should reset the game.
+Waiting: 6. The second click of a button.square element should result in O being displayed within the element.
+Waiting: 7. All subsequent clicks of a button.square element should alternate between displaying X and O within the element.
+Waiting: 8. Clicking on an already used button.square element should result in no change.
+Waiting: 9. Clicking on a button.square element after the game has ended should result in no change.
+Waiting: 10. The game should display a message indicating the winner to be X or O.
+Waiting: 11. The game should display a message indicating a draw.
