@@ -1,1 +1,47 @@
-hhhp
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="../cccss/petGame.css" />
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+  <div id="cardSection">
+      
+    <h1>Flash Card App</h1>
+    
+    <div id="flashcard">
+        <div id="front"></div>
+        <div id="back"></div>
+    </div>
+    
+  </div>
+
+  <div id="manageSection">
+    <h2>Manage Cards</h2>
+    <button id="delete-btn"></button>
+    
+    <hr />
+    
+    <h3>Cards in Deck</h3>
+    <div id="cards"></div>
+    
+    <hr />
+    
+    <h3>Add Cards</h3>
+    <form id="entry-form">
+        <label for="front-text">Front: </label>
+        <textarea id="front-text"></textarea>
+          
+        <label for="back-text">Back: </label>
+        <textarea id="back-text"></textarea>
+        
+        <button id="add-btn" type="submit">Save Card</button>
+    </form>
+  </div>
+  
+  <script src="index.ts" type="module"></script>
+  </body>
+</html>

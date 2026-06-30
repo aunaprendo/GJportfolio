@@ -1,0 +1,15 @@
+#flashcard.flipped #front {
+  display: none;
+}
+
+#flashcard.flipped #back {
+  display: block;
+}
+
+#flashcard:not(.flipped) #front {
+  display: block;
+}
+
+#flashcard:not(.flipped) #back {
+  display: none;
+}
