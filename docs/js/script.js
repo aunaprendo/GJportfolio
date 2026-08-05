@@ -257,14 +257,6 @@ function releaseFocusTrap() {
   _trapContainer = null;
 }
 
-/* ================================
-   DEBUG
-================================ */
-window.__siteControls = {
-  openContact,
-  closeContact,
-  toggleMenu
-};
 
 /* ================================
    PROJECT CAROUSEL
@@ -274,14 +266,12 @@ window.__siteControls = {
   const nextBtn = document.querySelector('.next');
   const prevBtn = document.querySelector('.prev');
 
-  // Exit safely if this carousel is not on the page
   if (!track || !nextBtn || !prevBtn) return;
 
   const cards = Array.from(track.children);
   let cardWidth;
   let index = 1;
 
-  /* Clone first & last */
   const firstClone = cards[0].cloneNode(true);
   const lastClone = cards[cards.length - 1].cloneNode(true);
 
@@ -345,7 +335,7 @@ window.__siteControls = {
 
   track.style.transform = `translateX(-${offset}px)`;
 }
-	  /* ================================
+  /* ================================
      TOUCH / SWIPE SUPPORT
   ================================ */
   const viewport = track.closest('.carousel-viewport');
@@ -354,9 +344,9 @@ window.__siteControls = {
   let currentX = 0;
   let isDragging = false;
 
-  const SWIPE_THRESHOLD = 50; // px required to trigger slide
+  const SWIPE_THRESHOLD = 50;
 
-  viewport.style.touchAction = 'pan-y'; // allow vertical scrolling
+  viewport.style.touchAction = 'pan-y';
 
   viewport.addEventListener('pointerdown', e => {
     if (e.target.closest('a, button')) return;
@@ -411,7 +401,6 @@ function initAutoCarousel(wrapper) {
   let paused = false;
   let rafId = null;
 
-  /* Clone items for infinite loop */
   const originals = Array.from(track.children);
   originals.forEach(item => track.append(item.cloneNode(true)));
 
@@ -435,11 +424,9 @@ function initAutoCarousel(wrapper) {
     if (!rafId) animate();
   }
 
-  /* Pause on hover */
   carousel.addEventListener("mouseenter", () => paused = true);
   carousel.addEventListener("mouseleave", () => paused = false);
 
-  /* Arrow controls */
   leftArrow.addEventListener("click", () => {
     paused = true;
     carousel.scrollBy({ left: -300, behavior: "smooth" });
@@ -450,7 +437,6 @@ function initAutoCarousel(wrapper) {
     carousel.scrollBy({ left: 300, behavior: "smooth" });
   });
 
-  /* Start after images load */
   const images = carousel.querySelectorAll("img");
   let loaded = 0;
 
