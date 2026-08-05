@@ -160,9 +160,6 @@ function initContactCard() {
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("contact-close");
 
-  /* 🔹 EVENT DELEGATION 🔹
-     Any click on .side-card anywhere in the document
-     will open the contact card */
   document.addEventListener("click", e => {
     const link = e.target.closest(".side-card");
     if (!link) return;
