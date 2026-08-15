@@ -1,16 +1,17 @@
 function getVowelCount(sentence) {
-	let lowercaseSentence = sentence.toLowerCase();
-	let letters = lowercaseSentence.split("");
-	let vowels = [];
-	for (let abc of letters) {
-		if (abc === "a" || abc === "e" || abc === "i" || abc === "o" || abc === "u") { vowels.push(abc);			
-		}
-	}
+  let lowercaseSentence = sentence.toLowerCase();
+  let letters = lowercaseSentence.split("");
+  let vowels = [];
+  for (let abc of letters) {
+    if (abc === "a" || abc === "e" || abc === "i" || abc === "o" || abc === "u") {
+      vowels.push(abc);
+    }
+  }
   return vowels.length;
 }
 console.log(getVowelCount("i love squirrels"));
 
-//fcc version 
+//fcc version
 function getVowelCount(sentence) {
   const vowels = "aeiou";
   let count = 0;
@@ -36,7 +37,6 @@ function getConsonantCount(sentence) {
   return count;
 }
 
-
 //step three
 function getPunctuationCount(sentence) {
   const notPunctuation = "abcdefghijklmnopqrstuvwxyz ";
@@ -50,21 +50,18 @@ function getPunctuationCount(sentence) {
   return count;
 }
 
-
-
 function getWordCount(sentence) {
-	let words = sentence.split(" ");
-	let count = 0;
-	
-	for (let word of words) {
-		if (word !== "") {
-      count++;			
-		}
-	}
+  let words = sentence.split(" ");
+  let count = 0;
+
+  for (let word of words) {
+    if (word !== "") {
+      count++;
+    }
+  }
   return count;
 }
 console.log(getWordCount("   "));
-
 
 function getWordCount(sentence) {
   let words = sentence.split(" ");
@@ -78,20 +75,18 @@ function getWordCount(sentence) {
   return count;
 }
 
-console.log(getWordCount("   "));   
-console.log(getWordCount("i love squirrels")); 
-	
-	
-	
+console.log(getWordCount("   "));
+console.log(getWordCount("i love squirrels"));
 
 function getWordCount(sentence) {
-	let lowercaseSentence = sentence.toLowerCase();
-	let words = lowercaseSentence.split(" ");
-	let wordArray = [];
-	for (let word of words) {
-		if (!word.includes(" ")) {wordArray.push(word);			
-		}
-	}
+  let lowercaseSentence = sentence.toLowerCase();
+  let words = lowercaseSentence.split(" ");
+  let wordArray = [];
+  for (let word of words) {
+    if (!word.includes(" ")) {
+      wordArray.push(word);
+    }
+  }
   return wordArray.length;
 }
 console.log(getWordCount("   "));

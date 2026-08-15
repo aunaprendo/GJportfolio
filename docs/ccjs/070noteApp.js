@@ -3,8 +3,8 @@ const statusEl = document.getElementById("status");
 
 let currentContent = "";
 
-noteEl.addEventListener("focus",  () => {
-  statusEl.textContent ="";
+noteEl.addEventListener("focus", () => {
+  statusEl.textContent = "";
 });
 
 noteEl.addEventListener("blur", () => {

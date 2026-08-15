@@ -1,83 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="../cccss/charCountdown.css" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Real Time Counter</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body id="body">
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-	
-	<h1>Counting Nuts</h1>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/charCountdown.css" />
 
-	 <div class="form-group mb-4">
-   	<label class="form-label" for="comments">Every Character Represents One Nut:</label>
-		<textarea
-    	id="text-input"
-    	class="form-control"
-    	name="comments"
-    	rows="3"
-    ></textarea>
-		<p class="form-hint" id="char-count">Nut Count: 0/50</p>
-   </div>
-			
-  </main>
-		
-	<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-		<script src="../ccjs/065charCountdown.js"></script>
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-</body>
+    <!-- Primary Meta Tags -->
+    <title>Real Time Counter</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body id="body">
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <h1>Counting Nuts</h1>
+
+      <div class="form-group mb-4">
+        <label class="form-label" for="comments">Every Character Represents One Nut:</label>
+        <textarea id="text-input" class="form-control" name="comments" rows="3"></textarea>
+        <p class="form-hint" id="char-count">Nut Count: 0/50</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../ccjs/065charCountdown.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
-	

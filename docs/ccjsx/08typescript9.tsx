@@ -28,118 +28,130 @@ export const PetGame = () => {
   const [petName, setPetName] = useState("");
   const currentMood = getMood();
   const emoji = moodEmoji[currentMood];
-  
-function eat () {
-    setHunger(prev => Math.max(0, prev - 5));
-    setEnergy(prev => Math.min(100, prev + 5));
-}
 
-function play () {
-    setEnergy(prev => Math.max(0, prev - 5));
-    setHappiness(prev => Math.min(100, prev + 5));
-}
+  function eat() {
+    setHunger((prev) => Math.max(0, prev - 5));
+    setEnergy((prev) => Math.min(100, prev + 5));
+  }
 
-function sleep () {
-    setEnergy(prev => Math.min(100, prev + 5));
-    setHunger(prev => Math.min(100, prev + 5));
-}
+  function play() {
+    setEnergy((prev) => Math.max(0, prev - 5));
+    setHappiness((prev) => Math.min(100, prev + 5));
+  }
 
-React.useEffect(() => {
-  if (!gameStarted) return;
+  function sleep() {
+    setEnergy((prev) => Math.min(100, prev + 5));
+    setHunger((prev) => Math.min(100, prev + 5));
+  }
 
-  const interval = setInterval(() => {
-    setHunger(prev => Math.min(100, prev + 1));
-    setEnergy(prev => Math.min(100, prev + 1));
-    setHappiness(prev => Math.max(0, prev - 1));
-  }, 1000);
+  React.useEffect(() => {
+    if (!gameStarted) return;
 
-  return () => clearInterval(interval);
-}, [gameStarted]);
+    const interval = setInterval(() => {
+      setHunger((prev) => Math.min(100, prev + 1));
+      setEnergy((prev) => Math.min(100, prev + 1));
+      setHappiness((prev) => Math.max(0, prev - 1));
+    }, 1000);
 
-function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
+    return () => clearInterval(interval);
+  }, [gameStarted]);
 
-  const formData = new FormData(e.currentTarget);
-  const name = formData.get("pet-name") as string;
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
 
-  setPetName(name);
-  setGameStarted(true);
-}
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("pet-name") as string;
 
-function getMood(): PetMood {
-  if (hunger > 70) return PetMood.HUNGRY;
+    setPetName(name);
+    setGameStarted(true);
+  }
 
-  if (energy < 30) return PetMood.TIRED;
+  function getMood(): PetMood {
+    if (hunger > 70) return PetMood.HUNGRY;
 
-  if (happiness < 30) return PetMood.SAD;
+    if (energy < 30) return PetMood.TIRED;
 
-  if (happiness > 80 && energy > 70) return PetMood.EXCITED;
+    if (happiness < 30) return PetMood.SAD;
 
-  if (happiness > 60) return PetMood.HAPPY;
+    if (happiness > 80 && energy > 70) return PetMood.EXCITED;
 
-  return PetMood.CONTENT;
-}
+    if (happiness > 60) return PetMood.HAPPY;
 
-return (
-  <>
-    <h1>Squirrel Care</h1>
-    <p>Take care of your pet squirrel</p> 
-  {!gameStarted && (
-      <div className="base-container">
-      <form onSubmit={handleSubmit}>
-      <h2>Name Your Squirrel</h2>
-      
-      <input
-          id="pet-name"
-          name="pet-name"
-          className="input pet-name"
-          type="text"
-          required
-          value={petName}
-          onChange={(e) => setPetName(e.target.value)}/>
-          <button type='submit'>Start Game</button>
-    </form>
-    </div>
-    )}
-    
-    {gameStarted && (
+    return PetMood.CONTENT;
+  }
+
+  return (
     <>
-    <div id="overview" className="game-container">
-      <div className="pet-name">{petName}</div>
-      <h3>{emoji}</h3>
-      <button className="pet-buttons" id="eat-action" onClick={eat}>EAT</button>
-      <button className="pet-buttons" id="play-action" onClick={play}>PLAY</button>
-      <button className="pet-buttons" id="sleep-action" onClick={sleep}>SLEEP</button>
-    </div>
-    
-    <div className="stats-grid">
-        <div className="stat-bar">
-          <div className="stat-header stat-icon">🌰</div>
-    	  <div className="stat-header stat stat-name">Hunger<div className="stat-value">{hunger}%</div></div>
-          <div className="stat-progress">
-            <div className="stat-fill" style={{ width: `${hunger}%` }}></div>
-          </div>
+      <h1>Squirrel Care</h1>
+      <p>Take care of your pet squirrel</p>
+      {!gameStarted && (
+        <div className="base-container">
+          <form onSubmit={handleSubmit}>
+            <h2>Name Your Squirrel</h2>
+
+            <input
+              id="pet-name"
+              name="pet-name"
+              className="input pet-name"
+              type="text"
+              required
+              value={petName}
+              onChange={(e) => setPetName(e.target.value)}
+            />
+            <button type="submit">Start Game</button>
+          </form>
         </div>
-        
-        <div className="stat-bar">
-          <div className="stat-header stat-icon">🌳</div>
-    	  <div className="stat-header stat-name stat">Energy<div className="stat-value">{energy}%</div></div>
-          <div className="stat-progress">
-            <div className="stat-fill" style={{ width: `${energy}%` }}></div>
+      )}
+
+      {gameStarted && (
+        <>
+          <div id="overview" className="game-container">
+            <div className="pet-name">{petName}</div>
+            <h3>{emoji}</h3>
+            <button className="pet-buttons" id="eat-action" onClick={eat}>
+              EAT
+            </button>
+            <button className="pet-buttons" id="play-action" onClick={play}>
+              PLAY
+            </button>
+            <button className="pet-buttons" id="sleep-action" onClick={sleep}>
+              SLEEP
+            </button>
           </div>
-        </div>
-        
-        <div className="stat-bar">
-          <div className="stat-header stat-icon">🌈</div>
-    	  <div className="stat-header stat-name stat">Happiness<div className="stat-value">{happiness}%</div></div>
-          <div className="stat-progress">
-            <div className="stat-fill" style={{ width: `${happiness}%` }}></div>
+
+          <div className="stats-grid">
+            <div className="stat-bar">
+              <div className="stat-header stat-icon">🌰</div>
+              <div className="stat-header stat stat-name">
+                Hunger<div className="stat-value">{hunger}%</div>
+              </div>
+              <div className="stat-progress">
+                <div className="stat-fill" style={{ width: `${hunger}%` }}></div>
+              </div>
+            </div>
+
+            <div className="stat-bar">
+              <div className="stat-header stat-icon">🌳</div>
+              <div className="stat-header stat-name stat">
+                Energy<div className="stat-value">{energy}%</div>
+              </div>
+              <div className="stat-progress">
+                <div className="stat-fill" style={{ width: `${energy}%` }}></div>
+              </div>
+            </div>
+
+            <div className="stat-bar">
+              <div className="stat-header stat-icon">🌈</div>
+              <div className="stat-header stat-name stat">
+                Happiness<div className="stat-value">{happiness}%</div>
+              </div>
+              <div className="stat-progress">
+                <div className="stat-fill" style={{ width: `${happiness}%` }}></div>
+              </div>
+            </div>
           </div>
-        </div>
-    </div>
+        </>
+      )}
     </>
-    )}
-  </>
-);}
-
-
+  );
+};

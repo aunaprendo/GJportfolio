@@ -1,228 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="../cccss/quiz.css" rel="stylesheet" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Quiz</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-    <!-- Page header with internal navigation -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="../cccss/quiz.css" rel="stylesheet" />
 
-		<header class="header">
-      <img
-        id="fcclogo"
-        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
-        alt="freeCodeCamp logo"
-        role="img"
-      />
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp Quiz</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-      <!-- Secondary page navigation -->
-      <nav class="nav"aria-label="Quiz section navigation" id="quiz-nav">
-        <ul id="quiz-list">
-          <li class="li quiz-items"><a href="#student-info">You</a></li>
-          <li class="li quiz-items"><a href="#habitat-questions">Habitat</a></li>
-          <li class="li quiz-items"><a href="#behavior-questions">Behavior</a></li>
-        </ul>
-      </nav>
-    </header>
-    <h1 class="h1 mt-5">Squirrel Life Quiz</h1>
-		
-    <!-- Form begins -->
-    <form 
-      method="get"
-      action="0SubmissionRecieved.html">
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-      <!-- Student info section -->
-      <section class="section" aria-labelledby="student-info">
-        <h2 class="h2" id="student-info">Squirrel Observer Information</h2>
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
 
-        <div class="info">
-          <label for="student-name">Name:</label>
-          <input
-            type="text"
-            name="student-name"
-            id="student-name"
-            autocomplete="name"
-						class="input"
-          />
-        </div>
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <!-- Page header with internal navigation -->
 
-        <div class="info">
-          <label for="student-email">Email:</label>
-          <input
-            type="email"
-            name="student-email"
-            id="student-email"
-            autocomplete="email"
-						class="input"
-          />
-        </div>
+      <header class="header">
+        <img
+          id="fcclogo"
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+          alt="freeCodeCamp logo"
+          role="img"
+        />
 
-        <div class="info">
-          <label for="birth-date">Date of Birth:</label>
-          <input
-            type="date"
-            name="birth-date"
-            id="birth-date"
-						class="input"
-          />
-        </div>
-      </section>
+        <!-- Secondary page navigation -->
+        <nav class="nav" aria-label="Quiz section navigation" id="quiz-nav">
+          <ul id="quiz-list">
+            <li class="li quiz-items"><a href="#student-info">You</a></li>
+            <li class="li quiz-items"><a href="#habitat-questions">Habitat</a></li>
+            <li class="li quiz-items"><a href="#behavior-questions">Behavior</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h1 class="h1 mt-5">Squirrel Life Quiz</h1>
 
-      <!-- Habitat questions -->
-      <section class="section" aria-labelledby="habitat-questions">
-        <h2 class="h2" id="habitat-questions">Habitat Questions</h2>
+      <!-- Form begins -->
+      <form method="get" action="0SubmissionRecieved.html">
+        <!-- Student info section -->
+        <section class="section" aria-labelledby="student-info">
+          <h2 class="h2" id="student-info">Squirrel Observer Information</h2>
 
-        <!-- Question 1 -->
-        <div class="question-block">
-          <h3 class="h3"><span class="sr-only">Question </span>1</h3>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input
+              type="text"
+              name="student-name"
+              id="student-name"
+              autocomplete="name"
+              class="input"
+            />
+          </div>
 
-          <fieldset class="question">
-            <legend>
-              Squirrels commonly build their nests (dreys) in trees.
-            </legend>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input
+              type="email"
+              name="student-email"
+              id="student-email"
+              autocomplete="email"
+              class="input"
+            />
+          </div>
 
-            <ul class="answers-list">
-              <li>
-                <label for="q1-a1">
-                  <input class="input" type="radio" id="q1-a1" name="q1" value="true" />
-                  True
-                </label>
-              </li>
-              <li>
-                <label for="q1-a2">
-                  <input class="input" type="radio" id="q1-a2" name="q1" value="false" />
-                  False
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
+          <div class="info">
+            <label for="birth-date">Date of Birth:</label>
+            <input type="date" name="birth-date" id="birth-date" class="input" />
+          </div>
+        </section>
 
-        <!-- Question 2 -->
-        <div class="question-block">
-          <h3 class="h3"><span class="sr-only">Question </span>2</h3>
+        <!-- Habitat questions -->
+        <section class="section" aria-labelledby="habitat-questions">
+          <h2 class="h2" id="habitat-questions">Habitat Questions</h2>
 
-          <fieldset class="question">
-            <legend>
-              Squirrels prefer environments with plenty of trees and food sources.
-            </legend>
-
-            <ul class="answers-list">
-              <li>
-                <label for="q2-a1">
-                  <input class="input" type="radio" id="q2-a1" name="q2" value="true" />
-                  True
-                </label>
-              </li>
-              <li>
-                <label for="q2-a2">
-                  <input class="input" type="radio" id="q2-a2" name="q2" value="false" />
-                  False
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-      </section>
-
-      <!-- Behavior questions -->
-      <section class="section" aria-labelledby="behavior-questions">
-        <h2 class="h2" id="behavior-questions">Behavior Questions</h2>
-
-        <div class="formrow">
+          <!-- Question 1 -->
           <div class="question-block">
-            <label for="selector">
-              Do squirrels store food for later use?
-            </label>
+            <h3 class="h3"><span class="sr-only">Question </span>1</h3>
+
+            <fieldset class="question">
+              <legend>Squirrels commonly build their nests (dreys) in trees.</legend>
+
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input class="input" type="radio" id="q1-a1" name="q1" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input class="input" type="radio" id="q1-a2" name="q1" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
 
-          <div class="answer">
-            <select class="select" name="selector" id="selector" required>
-              <option value="">Select an option</option>
-              <option value="yes">Yes, they cache food</option>
-              <option value="no">No, they eat it immediately</option>
-            </select>
-          </div>
-
+          <!-- Question 2 -->
           <div class="question-block">
-            <label for="behavior-textarea">
-              Share a fun squirrel fact or observation:
-            </label>
-          </div>
+            <h3 class="h3"><span class="sr-only">Question </span>2</h3>
 
-          <div class="answer">
-            <textarea
-              id="behavior-textarea"
-              name="squirrel-observations"
-              rows="5"
-              cols="55"
-							class="textarea"
-            ></textarea>
-          </div>
-        </div>
-      </section>
+            <fieldset class="question">
+              <legend>Squirrels prefer environments with plenty of trees and food sources.</legend>
 
-      <button class="quiz-button"  type="submit">Send</button>
-    </form>
-		
-	</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-	</body>
-	</html>
-	
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input class="input" type="radio" id="q2-a1" name="q2" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input class="input" type="radio" id="q2-a2" name="q2" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- Behavior questions -->
+        <section class="section" aria-labelledby="behavior-questions">
+          <h2 class="h2" id="behavior-questions">Behavior Questions</h2>
+
+          <div class="formrow">
+            <div class="question-block">
+              <label for="selector"> Do squirrels store food for later use? </label>
+            </div>
+
+            <div class="answer">
+              <select class="select" name="selector" id="selector" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes, they cache food</option>
+                <option value="no">No, they eat it immediately</option>
+              </select>
+            </div>
+
+            <div class="question-block">
+              <label for="behavior-textarea"> Share a fun squirrel fact or observation: </label>
+            </div>
+
+            <div class="answer">
+              <textarea
+                id="behavior-textarea"
+                name="squirrel-observations"
+                rows="5"
+                cols="55"
+                class="textarea"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <button class="quiz-button" type="submit">Send</button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

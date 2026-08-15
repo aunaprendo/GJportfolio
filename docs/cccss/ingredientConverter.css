@@ -7,8 +7,8 @@
 
 .h1 {
   margin: 10px 0 15px;
-	font-size: calc(1.525rem + 2.5vw);
-	font-weight: var(--weight-semibold);
+  font-size: calc(1.525rem + 2.5vw);
+  font-weight: var(--weight-semibold);
 }
 
 #container {
@@ -29,5 +29,3 @@ select {
   border: 1px solid var(--accent-color-brown);
   border-radius: 4px;
 }
-
-

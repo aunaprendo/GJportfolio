@@ -8,21 +8,21 @@ const minIncomeForCar = 30000;
 const minCreditScoreForCar = 650;
 
 function getLoanMessage(annualIncome, creditScore) {
-  if(creditScore >= minCreditScoreForDuplex && annualIncome >= minIncomeForDuplex) {
-    return "You qualify for a duplex, condo, and car loan."
+  if (creditScore >= minCreditScoreForDuplex && annualIncome >= minIncomeForDuplex) {
+    return "You qualify for a duplex, condo, and car loan.";
   } else if (annualIncome >= minIncomeForCondo && creditScore >= minCreditScoreForCondo) {
-    return "You qualify for a condo and car loan."
+    return "You qualify for a condo and car loan.";
   } else if (annualIncome >= minIncomeForCar && creditScore >= minCreditScoreForCar) {
-    return "You qualify for a car loan."
+    return "You qualify for a car loan.";
   } else {
-    return "You don't qualify for any loans."
+    return "You don't qualify for any loans.";
   }
 }
 
-const duplexLoanMsg	= getLoanMessage(85000, 850);
-const condoLoanMsg	= getLoanMessage(65000, 690);
-const carLoanMsg	= getLoanMessage(45000, 660);
-const noLoanMsg	= getLoanMessage(25000, 550);
+const duplexLoanMsg = getLoanMessage(85000, 850);
+const condoLoanMsg = getLoanMessage(65000, 690);
+const carLoanMsg = getLoanMessage(45000, 660);
+const noLoanMsg = getLoanMessage(25000, 550);
 
 console.log(duplexLoanMsg);
 console.log(condoLoanMsg);

@@ -41,6 +41,3 @@ function lookUpProfile(name, property) {
 }
 
 console.log(lookUpProfile("Harry", "likes"));
-
-
-

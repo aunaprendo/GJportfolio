@@ -15,23 +15,25 @@
 }
 
 /* Shared styles for top and middle color blocks */
-.one, .two, .three {
+.one,
+.two,
+.three {
   display: block;
-  margin: 10px auto; 
+  margin: 10px auto;
   box-sizing: border-box;
   filter: blur(1px);
 }
 
 /* Top color block */
 .one {
-  width: 90%; 
+  width: 90%;
   max-width: 450px;
   height: 25%;
   background-color: var(--accent-color-dteal);
   box-shadow: 0 0 3px 3px var(--accent-color-dteal);
   border-radius: 9px;
   transform: rotate(-0.6deg);
-  aria-hidden: true; 
+  aria-hidden: true;
 }
 
 /* Middle color block */
@@ -57,4 +59,3 @@
   filter: blur(2px);
   aria-hidden: true;
 }
-

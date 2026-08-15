@@ -2,14 +2,13 @@
   background-color: var(--accent-color-lgray);
 }
 
-#main{
-	text-align: center;
+#main {
+  text-align: center;
 }
 
 .title,
 .options-label,
-.team-stats
- {
+.team-stats {
   color: var(--text-color-main);
 }
 
@@ -22,7 +21,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   font-size: 2rem;
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .options-label {
@@ -38,7 +37,7 @@
 
 .player-card {
   background-color: var(--accent-color-brown);
-	color: var(--text-color-alt);
+  color: var(--text-color-alt);
   padding: 1rem;
   margin: 1.2rem;
   width: 45%;
@@ -46,7 +45,7 @@
 }
 
 @media (max-width: 576px) {
-	.player-card {
-  width: 90%;
-	}
+  .player-card {
+    width: 90%;
+  }
 }

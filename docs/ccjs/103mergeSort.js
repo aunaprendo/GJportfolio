@@ -30,17 +30,16 @@ function mergeSort(array) {
     leftArrayIndex += 1;
     sortedIndex += 1;
   }
-  
+
   while (rightArrayIndex < rightPart.length) {
     array[sortedIndex] = rightPart[rightArrayIndex];
     rightArrayIndex += 1;
     sortedIndex += 1;
   }
-
 }
 const numbers = [4, 10, 6, 14, 2, 1, 8, 5];
-console.log('Unsorted array: ');
+console.log("Unsorted array: ");
 console.log(numbers);
 mergeSort(numbers);
-console.log('Sorted array: ');
+console.log("Sorted array: ");
 console.log(numbers);

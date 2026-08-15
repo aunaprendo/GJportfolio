@@ -3,7 +3,7 @@
 }
 
 @media (min-width: 768px) {
-  #product-nav  {
+  #product-nav {
     display: block;
     position: fixed;
     top: 0;
@@ -21,10 +21,10 @@
   #main-doc {
     margin-left: 250px;
   }
-	
-	.alt-heading {
-  display: none;
-	}
+
+  .alt-heading {
+    display: none;
+  }
 }
 
 #product-nav {
@@ -35,8 +35,8 @@
 .product-nav-link {
   padding: 15px;
   font-weight: var(--weight-thin);
-	font-size: 1.2rem;
-	line-height: 4rem;
+  font-size: 1.2rem;
+  line-height: 4rem;
   color: var(--text-color-main);
 }
 
@@ -46,6 +46,5 @@
 
 footer {
   position: relative;
-  z-index: .1; 
+  z-index: 0.1;
 }
-

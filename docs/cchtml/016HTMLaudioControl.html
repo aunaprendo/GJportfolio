@@ -1,148 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link href="../cccss/audio.css" rel="stylesheet" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Audio Controls</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccHTML.html">freeCodeCamp HTML</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-    <h1>Squirrel Controls</h1>
-		<audio id="squirrel-audio" preload="auto">
-		  <source src="../assets/ccAssets/squirrelTalk.mp3" type="audio/mpeg" />
-		  Your browser does not support the audio element.
-		</audio>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="../cccss/audio.css" rel="stylesheet" />
 
-    <fieldset>
-      <legend>Control your level of squirrels</legend>
-		
-			<button 
-			  id="play-btn"
-			  class="mb-3 btn btn-secondary"
-			  type="button"
-			  aria-pressed="false">
-			  Play Sounds
-			</button>
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp Audio Controls</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-      <div class="control-group">
-        <label id="volume-label" for="volume-range">
-          Volume:
-        </label>
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-        <small id="volume-description">
-          Adjust the number of squirrels
-        </small>
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
 
-        <input
-				  type="range"
-				  id="volume-range"
-				  min="0"
-				  max="100"
-				  value="50"
-				  aria-describedby="volume-description" />
-      </div>
-			
-			<button
-			  id="mute-btn"
-			  class="mt-3 btn btn-secondary"
-			  type="button">
-			  Mute Squirrels
-			</button>
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccHTML.html">freeCodeCamp HTML</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <h1>Squirrel Controls</h1>
+      <audio id="squirrel-audio" preload="auto">
+        <source src="../assets/ccAssets/squirrelTalk.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
 
-    </fieldset>
-	</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-	<script>
-  const audio = document.getElementById("squirrel-audio");
-  const playBtn = document.getElementById("play-btn");
-  const muteBtn = document.getElementById("mute-btn");
-  const volumeRange = document.getElementById("volume-range");
+      <fieldset>
+        <legend>Control your level of squirrels</legend>
 
-  // Initialize volume from slider
-  audio.volume = volumeRange.value / 100;
+        <button id="play-btn" class="mb-3 btn btn-secondary" type="button" aria-pressed="false">
+          Play Sounds
+        </button>
 
-  // Play / Pause toggle
-  playBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = "Pause Sounds";
-      playBtn.setAttribute("aria-pressed", "true");
-    } else {
-      audio.pause();
-      playBtn.textContent = "Play Sounds";
-      playBtn.setAttribute("aria-pressed", "false");
-    }
-  });
+        <div class="control-group">
+          <label id="volume-label" for="volume-range"> Volume: </label>
 
-  // Volume control
-  volumeRange.addEventListener("input", () => {
-    audio.muted = false;
-    audio.volume = volumeRange.value / 100;
-  });
+          <small id="volume-description"> Adjust the number of squirrels </small>
 
-  // Mute toggle
-  muteBtn.addEventListener("click", () => {
-    audio.muted = !audio.muted;
-    muteBtn.textContent = audio.muted
-      ? "Unmute Squirrels"
-      : "Mute Squirrels";
-  });
-	
-</script>
-	</body>
-	</html>
-	
+          <input
+            type="range"
+            id="volume-range"
+            min="0"
+            max="100"
+            value="50"
+            aria-describedby="volume-description"
+          />
+        </div>
+
+        <button id="mute-btn" class="mt-3 btn btn-secondary" type="button">Mute Squirrels</button>
+      </fieldset>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const audio = document.getElementById("squirrel-audio");
+      const playBtn = document.getElementById("play-btn");
+      const muteBtn = document.getElementById("mute-btn");
+      const volumeRange = document.getElementById("volume-range");
+
+      // Initialize volume from slider
+      audio.volume = volumeRange.value / 100;
+
+      // Play / Pause toggle
+      playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          playBtn.textContent = "Pause Sounds";
+          playBtn.setAttribute("aria-pressed", "true");
+        } else {
+          audio.pause();
+          playBtn.textContent = "Play Sounds";
+          playBtn.setAttribute("aria-pressed", "false");
+        }
+      });
+
+      // Volume control
+      volumeRange.addEventListener("input", () => {
+        audio.muted = false;
+        audio.volume = volumeRange.value / 100;
+      });
+
+      // Mute toggle
+      muteBtn.addEventListener("click", () => {
+        audio.muted = !audio.muted;
+        muteBtn.textContent = audio.muted ? "Unmute Squirrels" : "Mute Squirrels";
+      });
+    </script>
+  </body>
+</html>

@@ -6,14 +6,12 @@
   --golden-yellow: #feac32;
 }
 
-
 #main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .todo-app {
   background-color: var(--accent-color-gold);

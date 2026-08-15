@@ -16,6 +16,4 @@ function fearNotLetter(abcs) {
   return undefined;
 }
 
-console.log(fearNotLetter("bcdf")); 
-
-
+console.log(fearNotLetter("bcdf"));

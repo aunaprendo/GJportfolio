@@ -1,4 +1,4 @@
-let squirrels =["squirRels", "sure"];
+let squirrels = ["squirRels", "sure"];
 
 function mutation(array) {
   let wordOne = array[0].toLowerCase();
@@ -14,4 +14,3 @@ function mutation(array) {
 }
 
 console.log(mutation(squirrels));
-

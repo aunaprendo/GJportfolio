@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -11,34 +12,34 @@ body {
 main {
   flex: 1;
   display: flex;
-  align-items: flex-end;   /* bottom */
+  align-items: flex-end; /* bottom */
   justify-content: center; /* horizontal center */
-  padding-bottom: 2rem;    /* space above footer */
+  padding-bottom: 2rem; /* space above footer */
 }
 
 #submission-good {
-	background:
-	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
     url(../assets/ccAssets/submissionGood.jpeg);
   background-size: cover;
   background-position: center;
-}	
+}
 
 #shopping-cart {
-	background:
-	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
     url(../assets/ccAssets/shopBasket.jpeg);
   background-size: cover;
   background-position: center;
-}	
+}
 
 #check-out {
-	background:
-	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.4)),
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)),
     url(../assets/ccAssets/checkOut.jpeg);
   background-size: cover;
   background-position: center;
-}	
+}
 
 .go-back-btn {
   margin: 2rem auto 0;
@@ -55,7 +56,9 @@ main {
   font-weight: 500;
   cursor: pointer;
   opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .go-back-btn:hover,
@@ -72,8 +75,8 @@ main {
 .center-stack {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;   
-  align-items: center;       /* horizontal centering */
+  justify-content: flex-end;
+  align-items: center; /* horizontal centering */
   text-align: center;
 }
 

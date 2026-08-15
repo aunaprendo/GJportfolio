@@ -17,9 +17,9 @@
 /* Gallery Container */
 .gallery {
   display: flex;
-  flex-wrap: wrap;          /* Allow images to wrap */
-  justify-content: center;  /* Center images horizontally */
-  gap: 16px;                /* Space between images */
+  flex-wrap: wrap; /* Allow images to wrap */
+  justify-content: center; /* Center images horizontally */
+  gap: 16px; /* Space between images */
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 10px;
@@ -27,14 +27,13 @@
 
 /* Gallery Images */
 .gallery img {
-  width: 100%;              /* Responsive width */
-  max-width: 350px;         /* Constrain image size */
-  height: auto;             /* Maintain aspect ratio */
-  object-fit: cover;        /* Crop images to fit without distortion */
+  width: 100%; /* Responsive width */
+  max-width: 350px; /* Constrain image size */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop images to fit without distortion */
   border-radius: 10px;
-  display: block;           /* Remove inline spacing */
+  display: block; /* Remove inline spacing */
 }
-
 
 /* =========================================================================
    Responsive Breakpoints
@@ -43,7 +42,7 @@
 /* Medium screens (tablet) */
 @media (max-width: 1200px) {
   .gallery img {
-    max-width: 45%;  /* Two images per row */
+    max-width: 45%; /* Two images per row */
     height: auto;
   }
 }

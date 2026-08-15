@@ -1,115 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />		
-		
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="../cccss/bookmarkManager.css">		
-	
-  <!-- Primary Meta Tags -->
-  <title>Bookmark Manager</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main id="main">
-        <section class="section" id="main-section">
-            <h1 class="h1">Bookmarks</h1>
-            <div class="div" id="dropdown">
-                <label class="label" for="category-dropdown">Select a category:</label>
-                <select class="select" id="category-dropdown" name="options">
-                    <option value="Squirrels" selected>Squirrels</option>
-                    <option value="Nuts">Nuts</option>
-                    <option value="Trees">Trees</option>
-                    <option value="Dinosaurs">Dinosaurs</option>
-                </select>
-            </div>
-            <div class="div" id="buttons">
-                <button  class="me-3 btn btn-primary" type="button" id="view-category-button">View Category</button> 
-                <button class="btn btn-primary" type="button" id="add-bookmark-button">Add Bookmark</button>
-            </div>
-        </section>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/bookmarkManager.css" />
 
-        <section id="form-section" class="hidden">
-            <form>
-                <h2 class="h2 category-name"></h2>
-                <div class="div">
-                    <label class="label" for="name">Name:</label>
-                    <input class="input" type="text" id="name">
-                </div>
-                <div class="div">
-                    <label class="label" for="url">URL:</label>
-                    <input class="input" type="text" id="url">
-                </div>
-                <div class="div">
-                    <button class="btn btn-primary me-3" type="button" id="close-form-button">Go Back</button>
-                    <button class="btn btn-primary" type="button" id="add-bookmark-button-form">Add Bookmark</button>
-                </div>
-            </form>
-        </section>
+    <!-- Primary Meta Tags -->
+    <title>Bookmark Manager</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-        <section id="bookmark-list-section" class="hidden">
-            <h2 class="h2 category-name"></h2>
-            <div class="div" id="category-list">
-            </div>
-            <div class="div">
-                <button class="btn btn-primary me-3" type="button" id="close-list-button">Go Back</button>
-                <button class="btn btn-primary" type="button" id="delete-bookmark-button">Delete Bookmark</button>
-            </div>
-        </section>
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-	</main>
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
 
-	
-		<!-- Footer -->
-  <footer
-    data-include="../partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-	
-	<script src="../ccjs/089bookmarkManager.js"></script>	 	 
-  <script src="../js/script.js"></script>		
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main id="main">
+      <section class="section" id="main-section">
+        <h1 class="h1">Bookmarks</h1>
+        <div class="div" id="dropdown">
+          <label class="label" for="category-dropdown">Select a category:</label>
+          <select class="select" id="category-dropdown" name="options">
+            <option value="Squirrels" selected>Squirrels</option>
+            <option value="Nuts">Nuts</option>
+            <option value="Trees">Trees</option>
+            <option value="Dinosaurs">Dinosaurs</option>
+          </select>
+        </div>
+        <div class="div" id="buttons">
+          <button class="me-3 btn btn-primary" type="button" id="view-category-button">
+            View Category
+          </button>
+          <button class="btn btn-primary" type="button" id="add-bookmark-button">
+            Add Bookmark
+          </button>
+        </div>
+      </section>
+
+      <section id="form-section" class="hidden">
+        <form>
+          <h2 class="h2 category-name"></h2>
+          <div class="div">
+            <label class="label" for="name">Name:</label>
+            <input class="input" type="text" id="name" />
+          </div>
+          <div class="div">
+            <label class="label" for="url">URL:</label>
+            <input class="input" type="text" id="url" />
+          </div>
+          <div class="div">
+            <button class="btn btn-primary me-3" type="button" id="close-form-button">
+              Go Back
+            </button>
+            <button class="btn btn-primary" type="button" id="add-bookmark-button-form">
+              Add Bookmark
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="bookmark-list-section" class="hidden">
+        <h2 class="h2 category-name"></h2>
+        <div class="div" id="category-list"></div>
+        <div class="div">
+          <button class="btn btn-primary me-3" type="button" id="close-list-button">Go Back</button>
+          <button class="btn btn-primary" type="button" id="delete-bookmark-button">
+            Delete Bookmark
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../ccjs/089bookmarkManager.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
-	

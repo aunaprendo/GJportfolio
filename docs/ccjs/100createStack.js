@@ -1,6 +1,6 @@
 function initStack() {
   return {
-    collection: []
+    collection: [],
   };
 }
 
@@ -9,25 +9,25 @@ function print(stack) {
 }
 
 function push(stack, element) {
-	stack.collection.push(element);
+  stack.collection.push(element);
 }
 
 function pop(stack) {
   if (stack.collection.length === 0) {
-  	return undefined;
+    return undefined;
   }
-	return stack.collection.pop();
+  return stack.collection.pop();
 }
 
 function peek(stack) {
-   if (stack.collection.length === 0) {
-  	return undefined;
+  if (stack.collection.length === 0) {
+    return undefined;
   }
-	return stack.collection[stack.collection.length - 1];
+  return stack.collection[stack.collection.length - 1];
 }
 
 function isEmpty(stack) {
-  return stack.collection.length ===0;
+  return stack.collection.length === 0;
 }
 
 function clear(stack) {

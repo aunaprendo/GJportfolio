@@ -34,14 +34,14 @@ function isSelect(element: EventTarget | null): element is HTMLSelectElement {
   return element instanceof HTMLSelectElement;
 }
 
-const bugEmojiElement = document.querySelector<HTMLParagraphElement>('#bug-emoji')!;
+const bugEmojiElement = document.querySelector<HTMLParagraphElement>("#bug-emoji")!;
 const bugMap: Record<string, Bug<string>> = {
-  "bee": new Bee(bugEmojiElement),
-  "spider": new Spider(bugEmojiElement),
+  bee: new Bee(bugEmojiElement),
+  spider: new Spider(bugEmojiElement),
 };
 
-const selectElement = document.querySelector<HTMLSelectElement>('#species')!;
-selectElement.addEventListener("change", e => {
+const selectElement = document.querySelector<HTMLSelectElement>("#species")!;
+selectElement.addEventListener("change", (e) => {
   if (isSelect(e.target)) {
     bugMap[e.target.value].render();
   }

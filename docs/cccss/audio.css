@@ -8,7 +8,7 @@
 
 #volume-range::-webkit-slider-runnable-track {
   height: 6px;
-  background: var(--accent-color-gold); 
+  background: var(--accent-color-gold);
   border-radius: 3px;
 }
 
@@ -18,7 +18,7 @@
   margin-top: -6px; /* centers thumb on track */
   width: 18px;
   height: 18px;
-  background: var(--accent-color-brown); 
+  background: var(--accent-color-brown);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -30,7 +30,7 @@
 }
 
 #volume-range::-moz-range-progress {
-  background: var(--accent-color-brown); 
+  background: var(--accent-color-brown);
   height: 6px;
   border-radius: 3px;
 }
@@ -38,7 +38,7 @@
 #volume-range::-moz-range-thumb {
   width: 18px;
   height: 18px;
-  background: var(--accent-color-brown); 
+  background: var(--accent-color-brown);
   border-radius: 50%;
   border: none;
   cursor: pointer;

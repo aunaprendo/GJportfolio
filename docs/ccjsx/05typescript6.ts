@@ -32,12 +32,12 @@ class Collection<T> {
     this.items = items;
   }
   getAll() {
-      return this.items;
+    return this.items;
   }
-  
+
   filter(callback: (item: T) => boolean) {
     return this.items.filter(callback);
-  } 
+  }
 }
 
 const tail: Clothing = {
@@ -46,7 +46,7 @@ const tail: Clothing = {
   price: 25,
   item: "knit",
   brand: "squirrels inc",
-  size: "S"
+  size: "S",
 };
 
 const tree: Book = {
@@ -54,7 +54,7 @@ const tree: Book = {
   id: "learn",
   price: 10,
   title: "Drey Building",
-  author: "Sandy Cheeks"
+  author: "Sandy Cheeks",
 };
 
 const nuts: Electronics = {
@@ -62,54 +62,59 @@ const nuts: Electronics = {
   id: "scanner",
   price: 55,
   item: "nut finder",
-  model: "PecanDelux"
+  model: "PecanDelux",
 };
 
-const products = new Collection<Product>([
-  tail,
-  tree,
-  nuts,
-]);
+const products = new Collection<Product>([tail, tree, nuts]);
 
 function renderProduct(product: Product) {
-    let html = `<div class="item" id="${product.id}"></div>
-<div class="price">${product.price}</div>`
-if (product.type === "book"){
-    html += `<div id="more">Book: ${product.title} by ${product.author}</div>`
-} else if (product.type === "electronics"){
+  let html = `<div class="item" id="${product.id}"></div>
+<div class="price">${product.price}</div>`;
+  if (product.type === "book") {
+    html += `<div id="more">Book: ${product.title} by ${product.author}</div>`;
+  } else if (product.type === "electronics") {
     if (product.warranty) {
-        html += `<div id="more">Electronics: ${product.item} - ${product.model} - Warranty: ${product.warranty} year(s)</div>`
-    } else {html += `<div id="more">Electronics: ${product.item} - ${product.model}</div>`}
-} else if (product.type === "clothing"){
+      html += `<div id="more">Electronics: ${product.item} - ${product.model} - Warranty: ${product.warranty} year(s)</div>`;
+    } else {
+      html += `<div id="more">Electronics: ${product.item} - ${product.model}</div>`;
+    }
+  } else if (product.type === "clothing") {
     if (product.size) {
-        html += `<div id="more">Clothing: ${product.item} by ${product.brand} - Size ${product.size}</div>`
-    } else {html += `<div id="more">Clothing: ${product.item} by ${product.brand}</div>`}
-} else {
+      html += `<div id="more">Clothing: ${product.item} by ${product.brand} - Size ${product.size}</div>`;
+    } else {
+      html += `<div id="more">Clothing: ${product.item} by ${product.brand}</div>`;
+    }
+  } else {
     const jsonString = JSON.stringify(product);
     throw new Error(`Unknown product type: ${jsonString}`);
+  }
+  return html;
 }
-    return html;
-}
-
 
 function showProducts(filter?: Product["type"]) {
   const output = document.getElementById("output");
-  if (output){
-      if (filter) {
-      const combinedHTML = products.filter(product => product.type === filter).map(product => renderProduct(product)).join("");
-        output.innerHTML = combinedHTML;
+  if (output) {
+    if (filter) {
+      const combinedHTML = products
+        .filter((product) => product.type === filter)
+        .map((product) => renderProduct(product))
+        .join("");
+      output.innerHTML = combinedHTML;
     } else {
-      const combinedHTML = products.getAll().map(product => renderProduct(product)).join("");
-        output.innerHTML = combinedHTML;
-    }     
-}
+      const combinedHTML = products
+        .getAll()
+        .map((product) => renderProduct(product))
+        .join("");
+      output.innerHTML = combinedHTML;
+    }
+  }
 }
 
 const booksBtn = document.querySelector<HTMLButtonElement>("#books");
 const electronicsBtn = document.querySelector<HTMLButtonElement>("#electronics");
 const clothingBtn = document.querySelector<HTMLButtonElement>("#clothing");
 const allBtn = document.querySelector<HTMLButtonElement>("#all");
-    
+
 allBtn?.addEventListener("click", () => {
   showProducts();
 });

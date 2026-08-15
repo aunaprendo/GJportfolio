@@ -1,7 +1,7 @@
 .title {
   margin: 25px 0;
   text-align: center;
-	font-size: calc(1.525rem + 2.5vw);
+  font-size: calc(1.525rem + 2.5vw);
 }
 
 body {
@@ -9,7 +9,7 @@ body {
 }
 
 .weather-card {
-  max-width: 800px;        
+  max-width: 800px;
   width: 100%;
   background: #ffffff;
   border-radius: 12px;
@@ -17,17 +17,17 @@ body {
 }
 
 .secondary {
-  font-size: calc(1.2rem + .1vw);
+  font-size: calc(1.2rem + 0.1vw);
   line-height: 1.2;
 }
 
 .primary {
-  font-size: calc(1.2rem + .3vw);
+  font-size: calc(1.2rem + 0.3vw);
   line-height: 1.2;
 }
 
 #location {
-	color: var(--accent-color-brown);
+  color: var(--accent-color-brown);
 }
 
 .WAhidden {

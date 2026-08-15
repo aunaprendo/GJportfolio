@@ -1,133 +1,132 @@
 :root {
-    --padding: 0.3rem;
+  --padding: 0.3rem;
 }
 
 #body {
-    background-color: var(--accent-color-lteal);
-    color: var(--text-color-main);
+  background-color: var(--accent-color-lteal);
+  color: var(--text-color-main);
 }
 
 #h1 {
-    margin: 5rem auto 2rem;
-    text-align: center;
+  margin: 5rem auto 2rem;
+  text-align: center;
 }
 
 .p {
-    padding: var(--padding);
+  padding: var(--padding);
 }
 
 #regex-container {
-    max-width: 680px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #000;
-		background: var(--text-color-alt);
+  max-width: 680px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  background: var(--text-color-alt);
 }
 
-#regex-container>label {
-    padding: var(--padding);
-    flex: 1 1 auto;
+#regex-container > label {
+  padding: var(--padding);
+  flex: 1 1 auto;
 }
 
 #pattern-container {
-    display: inline-block;
-    color: black;
-    background-color: black;
-    margin: 5px;
-    border: black;
+  display: inline-block;
+  color: black;
+  background-color: black;
+  margin: 5px;
+  border: black;
 }
 
 #pattern {
-    margin: 0.2rem;
-    border: 0;
-    font-size: 1rem;
-    width: calc(100% - 1.2rem);
+  margin: 0.2rem;
+  border: 0;
+  font-size: 1rem;
+  width: calc(100% - 1.2rem);
 }
 
 #pattern:focus {
-    outline: none;
+  outline: none;
 }
 
 #flags-container {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
 }
 
-#flags-container>label {
-    padding: var(--padding);
-    margin-right: 0.3rem;
+#flags-container > label {
+  padding: var(--padding);
+  margin-right: 0.3rem;
 }
 
 #test-container {
-    max-width: 680px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
-    border: 2px solid #000;
-		background: var(--text-color-alt);
+  max-width: 680px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  border: 2px solid #000;
+  background: var(--text-color-alt);
 }
 
 #test-string {
-    min-height: 5rem;
-    border-top: 2px solid #000;
-		background: var(--text-color-alt);
-    font-size: 1.2rem;
+  min-height: 5rem;
+  border-top: 2px solid #000;
+  background: var(--text-color-alt);
+  font-size: 1.2rem;
 }
 
-[contenteditable=true]:empty:before {
-    content: attr(placeholder);
-    pointer-events: none;
-    color: var(--accent-color-lgray);
+[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  pointer-events: none;
+  color: var(--accent-color-lgray);
 }
 
 ::placeholder {
-    color: var(--accent-color-lgray);
+  color: var(--accent-color-lgray);
 }
 
-
 .btn {
-    display: block;
-    cursor: pointer;
-    width: 8rem;
-    margin: 0.2rem auto;
-    color: var(--text-color-alt);
-    background: var(--accent-color-brown);
-		border: 1px dotted #000;
-    font-size: 1.1rem;
+  display: block;
+  cursor: pointer;
+  width: 8rem;
+  margin: 0.2rem auto;
+  color: var(--text-color-alt);
+  background: var(--accent-color-brown);
+  border: 1px dotted #000;
+  font-size: 1.1rem;
 }
 
 .btn:hover {
-    background-color: var(--accent-color-gold);
-    color: var(--text-color-main);		
+  background-color: var(--accent-color-gold);
+  color: var(--text-color-main);
 }
 
 #result-container {
-    max-width: 680px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 680px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #h2 {
-    align-self: flex-start;
-    margin: 0.4rem 0.2rem 0.2rem;
-    flex: 0 1 auto;
+  align-self: flex-start;
+  margin: 0.4rem 0.2rem 0.2rem;
+  flex: 0 1 auto;
 }
 
 #result {
-    background-color: var(--text-color-alt);
-    font-size: 1.5rem;
-    flex: 1 1 auto;
-    margin: 0.2rem;
-    border: 2px solid #000;
-    min-height: 3rem;
+  background-color: var(--text-color-alt);
+  font-size: 1.5rem;
+  flex: 1 1 auto;
+  margin: 0.2rem;
+  border: 2px solid #000;
+  min-height: 3rem;
 }
 
 .highlight {
-    background-color: var(--accent-color-gold);
+  background-color: var(--accent-color-gold);
 }

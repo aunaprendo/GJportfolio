@@ -14,21 +14,17 @@ function primeTest(num) {
 }
 
 function sumPrimes(num) {
-	let primes = [];
-	
-	if (num < 2) {
-		return 0;
-	}
-	
-	for (let i = 0; i <= num; i++) {
-		if (primeTest(i) === true) {
-			primes.push(i);
-		}
-	}
-	return primes.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  0
-);
+  let primes = [];
+
+  if (num < 2) {
+    return 0;
+  }
+
+  for (let i = 0; i <= num; i++) {
+    if (primeTest(i) === true) {
+      primes.push(i);
+    }
+  }
+  return primes.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 console.log(sumPrimes(10));
-

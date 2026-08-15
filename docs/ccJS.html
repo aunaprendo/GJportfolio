@@ -1,348 +1,478 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="css/styleShared.css" />
-	<link rel="stylesheet" href="css/styleNavigations.css" />
-	<link rel="stylesheet" href="css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp JS Projects</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="partials/navBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="partials/sideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	
-<main>
-	<div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-				
-				<div class="container">
-			      <div class="justify-content-center p-1 p-md-5 p-xl-3">
-			
-			        <div class="row justify-content-center">
-			          <div class="mt-0 pt-1" data-aos="fade-up">
-			            <div class="text-center">
-			              <span><a href="ccProjects.html" class="gen-link">← freeCodeCamp Work</a></span>
-			              <h1>JS Practice</h1>
-			              <p class="px-xl-5">This section highlights my learning journey through <a href="https://www.freecodecamp.org/learn/javascript-v9/" class="gen-link-cert ">freeCodeCamp’s structured JavaScript curriculum.</a> Each project demonstrates core concepts such as functions, scope, higher-order methods, DOM manipulation, and event-driven programming. As my understanding deepens, I’ve focused on writing clean, efficient logic while strengthening my analytical and problem-solving skills. These interactive projects reflect both growing technical confidence and a deeper understanding of how applications behave and respond to user input.
-										</p>
-			            </div>
-			          </div>
-			        </div>
-			
-			        <div class="grid p-0 mt-5 clearfix row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6" data-aos="fade-up">
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/60.svg" class="card-img-top" alt="coffee cup Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/000JSstudies.html" class="gen-link">Studies</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/61.svg" class="card-img-top" alt="business card Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/055JSstorytelling.html" class="gen-link">Story Picker</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/62.svg" class="card-img-top" alt="card Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/056JSemojiReactor.html" class="gen-link">Emoji Reactor</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/63.svg" class="card-img-top" alt="flyer Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/057JSfavoriteIcon.html" class="gen-link">Favorite Selector</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/64.svg" class="card-img-top" alt="birthday cake Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/058JSinstrumentFilter.html" class="gen-link">Instrument Filter</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/65.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/059JScharCountdown.html" class="gen-link">Max Count</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/66.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/060JSlightboxViewer.html" class="gen-link">Art Box</a>
-									  </div>
-									</div>  
-							  </div>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styleShared.css" />
+    <link rel="stylesheet" href="css/styleNavigations.css" />
+    <link rel="stylesheet" href="css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/67.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/061JSrpsGame.html" class="gen-link">Squirrel Game</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/68.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/062JSteamBuild.html" class="gen-link">Squirrel Team</a>
-									  </div>
-									</div>  
-							  </div>
-																
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/69.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/063JSplanetTabs.html" class="gen-link">Fact Tabs</a>
-									  </div>
-									</div>  
-							  </div>
-																
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/70.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/064JSnoteApp.html" class="gen-link">Notes App</a>
-									  </div>
-									</div>  
-							  </div>
-																
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/71.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/065JSthemeSwitch.html" class="gen-link">Themes</a>
-									  </div>
-									</div>  
-							  </div>
-																								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/72.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/067JSspamFilter.html" class="gen-link">Spam</a>
-									  </div>
-									</div>  
-							  </div>
-																								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/73.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/068JSpalindromeChecker.html" class="gen-link">Palindrome</a>
-									  </div>
-									</div>  
-							  </div>
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp JS Projects</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/74.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/069JSregEx.html" class="gen-link">RegEx</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/75.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/070JShtmlMark.html" class="gen-link">Markdown</a>
-									  </div>
-									</div>  
-							  </div>
-																
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/76.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/071JScalorieCounter.html" class="gen-link">Calorie Counter</a>
-									  </div>
-									</div>  
-							  </div>
-																
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/77.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/072JScomplaintForm.html" class="gen-link">Complaint Form</a>
-									  </div>
-									</div>  
-							  </div>
-																
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/78.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/073JSmusicPlayer.html" class="gen-link">Music Player</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/79.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/074JSdrumMachine.html" class="gen-link">Sound Pad</a>
-									  </div>
-									</div>  
-							  </div>
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="partials/navBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/80.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/075JStodoApp.html" class="gen-link">Task App</a>
-									  </div>
-									</div>  
-							  </div>	
-	
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/81.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/076JSbookmarkManager.html" class="gen-link">Bookmarks</a>
-									  </div>
-									</div>  
-							  </div>								
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/82.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/077JSshoppingCart.html" class="gen-link">Shopping Cart</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/83.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/078JSdecimalToBinary.html" class="gen-link">Number Stack</a>
-									  </div>
-									</div>  
-							  </div>								
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/84.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/079JSingredientConverter.html" class="gen-link">Ingredient Converter</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/85.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/080JSsortingVisualizer.html" class="gen-link">Sorting</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/86.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/081JSfccAuthors.html" class="gen-link">Authors</a>
-									  </div>
-									</div>  
-							  </div>			
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/87.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/082JSfccForum.html" class="gen-link">Forum</a>
-									  </div>
-									</div>  
-							  </div>
-								
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/ccProjectIcons/88.svg" class="card-img-top" alt="Application form Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="cchtml/083JSweatherApp.html" class="gen-link">Weather App</a>
-									  </div>
-									</div>  
-							  </div>
-								
-							</div>
-						</div>
-					</div>
-					
-			</div>
-		</div>
-	</div>
-</main>
-		
-		<!-- Footer -->
-  <footer 
-    data-include="partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-	
-   <script src="js/script.js"></script>
-	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+    <!-- Side menu -->
+    <aside data-include="partials/sideMenu.html" role="navigation" aria-label="Side menu"></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="container">
+              <div class="justify-content-center p-1 p-md-5 p-xl-3">
+                <div class="row justify-content-center">
+                  <div class="mt-0 pt-1" data-aos="fade-up">
+                    <div class="text-center">
+                      <span
+                        ><a href="ccProjects.html" class="gen-link">← freeCodeCamp Work</a></span
+                      >
+                      <h1>JS Practice</h1>
+                      <p class="px-xl-5">
+                        This section highlights my learning journey through
+                        <a
+                          href="https://www.freecodecamp.org/learn/javascript-v9/"
+                          class="gen-link-cert"
+                          >freeCodeCamp’s structured JavaScript curriculum.</a
+                        >
+                        Each project demonstrates core concepts such as functions, scope,
+                        higher-order methods, DOM manipulation, and event-driven programming. As my
+                        understanding deepens, I’ve focused on writing clean, efficient logic while
+                        strengthening my analytical and problem-solving skills. These interactive
+                        projects reflect both growing technical confidence and a deeper
+                        understanding of how applications behave and respond to user input.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="grid p-0 mt-5 clearfix row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6"
+                  data-aos="fade-up"
+                >
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/60.svg"
+                        class="card-img-top"
+                        alt="coffee cup Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/000JSstudies.html" class="gen-link">Studies</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/61.svg"
+                        class="card-img-top"
+                        alt="business card Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/055JSstorytelling.html" class="gen-link">Story Picker</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/62.svg"
+                        class="card-img-top"
+                        alt="card Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/056JSemojiReactor.html" class="gen-link">Emoji Reactor</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/63.svg"
+                        class="card-img-top"
+                        alt="flyer Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/057JSfavoriteIcon.html" class="gen-link"
+                          >Favorite Selector</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/64.svg"
+                        class="card-img-top"
+                        alt="birthday cake Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/058JSinstrumentFilter.html" class="gen-link"
+                          >Instrument Filter</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/65.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/059JScharCountdown.html" class="gen-link">Max Count</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/66.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/060JSlightboxViewer.html" class="gen-link">Art Box</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/67.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/061JSrpsGame.html" class="gen-link">Squirrel Game</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/68.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/062JSteamBuild.html" class="gen-link">Squirrel Team</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/69.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/063JSplanetTabs.html" class="gen-link">Fact Tabs</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/70.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/064JSnoteApp.html" class="gen-link">Notes App</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/71.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/065JSthemeSwitch.html" class="gen-link">Themes</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/72.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/067JSspamFilter.html" class="gen-link">Spam</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/73.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/068JSpalindromeChecker.html" class="gen-link">Palindrome</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/74.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/069JSregEx.html" class="gen-link">RegEx</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/75.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/070JShtmlMark.html" class="gen-link">Markdown</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/76.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/071JScalorieCounter.html" class="gen-link"
+                          >Calorie Counter</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/77.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/072JScomplaintForm.html" class="gen-link">Complaint Form</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/78.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/073JSmusicPlayer.html" class="gen-link">Music Player</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/79.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/074JSdrumMachine.html" class="gen-link">Sound Pad</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/80.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/075JStodoApp.html" class="gen-link">Task App</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/81.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/076JSbookmarkManager.html" class="gen-link">Bookmarks</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/82.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/077JSshoppingCart.html" class="gen-link">Shopping Cart</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/83.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/078JSdecimalToBinary.html" class="gen-link">Number Stack</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/84.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/079JSingredientConverter.html" class="gen-link"
+                          >Ingredient Converter</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/85.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/080JSsortingVisualizer.html" class="gen-link">Sorting</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/86.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/081JSfccAuthors.html" class="gen-link">Authors</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/87.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/082JSfccForum.html" class="gen-link">Forum</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="assets/ccProjectIcons/88.svg"
+                        class="card-img-top"
+                        alt="Application form Icon"
+                      />
+                      <div class="card-body m-1 p-1">
+                        <a href="cchtml/083JSweatherApp.html" class="gen-link">Weather App</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
-

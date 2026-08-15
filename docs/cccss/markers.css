@@ -5,7 +5,7 @@
 
 /* Container for markers */
 .marker-container {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   padding: 10px 0;
 }
 
@@ -33,33 +33,24 @@
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
   border-left: 10px double rgba(0, 0, 0, 0.75);
-	position: relative;
+  position: relative;
 }
 
 /* Teal marker styling */
 .teal {
- background: linear-gradient(
-  #043f4b, 
-  #065F6F, 
-  #087b88);
+  background: linear-gradient(#043f4b, #065f6f, #087b88);
   box-shadow: 0 0 20px 0 rgba(6, 95, 111, 0.8);
 }
 
 /* Brown marker styling */
 .brown {
-  background: linear-gradient(
-  #4a3600,  
-  #705200, 
-  #a87a1f);
+  background: linear-gradient(#4a3600, #705200, #a87a1f);
   box-shadow: 0 0 20px 0 #705200;
 }
 
 /* Gold marker styling */
 .gold {
-  background: linear-gradient(
-  #bfa33e,  
-  #D8B961,
-  #f0d980);
+  background: linear-gradient(#bfa33e, #d8b961, #f0d980);
   box-shadow: 0 0 20px 0 hsla(44, 55%, 62%, 0.8);
 }
 
@@ -69,4 +60,3 @@
   position: absolute;
   left: -9999px; /* Hide visually but readable by screen readers */
 }
-

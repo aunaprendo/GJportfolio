@@ -1,134 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />		
-		
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="../cccss/weatherApp.css">		
-	
-  <!-- Primary Meta Tags -->
-  <title>Weather App</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-	<main class="d-flex justify-content-center align-items-start py-5">
-	  <div class="weather-card container-fluid container-md p-4">
-	
-	    <h1 class="title text-center mb-3">Weather Checker</h1>
-	
-	    <div class="text-center mb-3">
-	      <label for="city-select" class="form-label">Select Your City:</label>
-	      <select class="form-select w-75 mx-auto" id="city-select">
-	        <option value=""></option>
-	        <option value="new york">New York</option>
-	        <option value="los angeles">Los Angeles</option>
-	        <option value="chicago">Chicago</option>
-	        <option value="paris">Paris</option>
-	        <option value="tokyo">Tokyo</option>
-	        <option value="london">London</option>
-	      </select>
-	    </div>
-			
-			<div class="text-center mb-4 position-relative">
-			  <button class="btn btn-secondary px-4" id="get-weather-btn">
-			    Get Weather
-			  </button>
-			</div>
-	
-	    <!-- Weather Container -->
-	    <div id="weather-container" class="WAhidden">
-	      <div class="row align-items-stretch">
-	
-	        <!-- LEFT COLUMN -->
-	        <div class="col-12 col-md-6 text-md-start text-center mb-4 mb-md-0 pe-md-4 border-md-end">
-	          <img id="weather-icon" class="img-fluid mb-3" />
-	          <h2 id="location" class="mb-3 text-bold"></h2>
-						<div class="d-flex mb-3">
-						  <span class="primary text-thick me-2">Temperature:</span>
-						  <span class="primary" id="main-temperature"></span>
-						</div>
-						<div class="d-flex mb-3">
-						  <span class="primary text-thick me-2">Feels Like:</span>
-						  <span class="primary" id="feels-like"></span>
-						</div>						
-	        </div>
-	
-	        <!-- RIGHT COLUMN -->
-	        <div class="col-12 col-md-6 ps-md-4 d-flex flex-column justify-content-end">
-	          <div class="d-flex mb-2">
-						  <p class="secondary text-thick me-2 mb-0">Humidity:</p>
-						  <p id="humidity" class="secondary mb-0"></p>
-						</div>
-						<div class="d-flex mb-2">
-						  <p class="secondary text-thick me-2 mb-0">Wind:</p>
-						  <p id="wind" class="secondary mb-0"></p>
-						</div>
-						<div class="d-flex mb-2">
-						  <p class="secondary text-thick me-2 mb-0">Gust:</p>
-						  <p id="wind-gust" class="secondary mb-0"></p>
-						</div>
-						<div class="d-flex mb-2">
-						  <p class="secondary text-thick me-2 mb-0">Type:</p>
-						  <p id="weather-main" class="secondary mb-0"></p>
-						</div>
-	        </div>	
-					
-	      </div>
-	    </div>
-	
-	  </div>
-	</main>
-	
-		<!-- Footer -->
-  <footer
-    data-include="../partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-	
-	<script src="../ccjs/119weatherApp.js"></script>  
-  <script src="../js/script.js"></script>		
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/weatherApp.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>Weather App</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main class="d-flex justify-content-center align-items-start py-5">
+      <div class="weather-card container-fluid container-md p-4">
+        <h1 class="title text-center mb-3">Weather Checker</h1>
+
+        <div class="text-center mb-3">
+          <label for="city-select" class="form-label">Select Your City:</label>
+          <select class="form-select w-75 mx-auto" id="city-select">
+            <option value=""></option>
+            <option value="new york">New York</option>
+            <option value="los angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="paris">Paris</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="london">London</option>
+          </select>
+        </div>
+
+        <div class="text-center mb-4 position-relative">
+          <button class="btn btn-secondary px-4" id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <!-- Weather Container -->
+        <div id="weather-container" class="WAhidden">
+          <div class="row align-items-stretch">
+            <!-- LEFT COLUMN -->
+            <div
+              class="col-12 col-md-6 text-md-start text-center mb-4 mb-md-0 pe-md-4 border-md-end"
+            >
+              <img id="weather-icon" class="img-fluid mb-3" />
+              <h2 id="location" class="mb-3 text-bold"></h2>
+              <div class="d-flex mb-3">
+                <span class="primary text-thick me-2">Temperature:</span>
+                <span class="primary" id="main-temperature"></span>
+              </div>
+              <div class="d-flex mb-3">
+                <span class="primary text-thick me-2">Feels Like:</span>
+                <span class="primary" id="feels-like"></span>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-12 col-md-6 ps-md-4 d-flex flex-column justify-content-end">
+              <div class="d-flex mb-2">
+                <p class="secondary text-thick me-2 mb-0">Humidity:</p>
+                <p id="humidity" class="secondary mb-0"></p>
+              </div>
+              <div class="d-flex mb-2">
+                <p class="secondary text-thick me-2 mb-0">Wind:</p>
+                <p id="wind" class="secondary mb-0"></p>
+              </div>
+              <div class="d-flex mb-2">
+                <p class="secondary text-thick me-2 mb-0">Gust:</p>
+                <p id="wind-gust" class="secondary mb-0"></p>
+              </div>
+              <div class="d-flex mb-2">
+                <p class="secondary text-thick me-2 mb-0">Type:</p>
+                <p id="weather-main" class="secondary mb-0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../ccjs/119weatherApp.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
-	

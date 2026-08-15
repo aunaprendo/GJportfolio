@@ -21,11 +21,11 @@
   background: var(--bg-color-alt);
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .square {
@@ -45,9 +45,9 @@
   cursor: pointer;
 
   transition:
-    background-color .2s ease,
-    transform .15s ease,
-    box-shadow .2s ease;
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
 }
 
 .square:hover:not(:disabled) {
@@ -90,8 +90,8 @@
   cursor: pointer;
 
   transition:
-    background-color .2s ease,
-    transform .15s ease;
+    background-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .reset:hover {
@@ -100,12 +100,10 @@
 }
 
 .reset:active {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
-
 @media (max-width: 576px) {
-
   .square {
     width: 82px;
     height: 82px;

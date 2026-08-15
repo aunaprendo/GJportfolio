@@ -9,7 +9,7 @@ async function loadPartials() {
   const includes = document.querySelectorAll("[data-include]");
 
   await Promise.all(
-    Array.from(includes).map(async el => {
+    Array.from(includes).map(async (el) => {
       const file = el.getAttribute("data-include");
       if (!file) return;
       try {
@@ -18,13 +18,13 @@ async function loadPartials() {
       } catch (err) {
         console.error("Error loading partial:", err);
       }
-    })
+    }),
   );
 
   initNavbar();
   initSideMenu();
   initContactCard();
-	document.querySelectorAll(".carousel-wrapper").forEach(initAutoCarousel);
+  document.querySelectorAll(".carousel-wrapper").forEach(initAutoCarousel);
 }
 
 /* ================================
@@ -32,15 +32,15 @@ async function loadPartials() {
 ================================ */
 function getFocusable(container = document) {
   const selectors = [
-    'a[href]:not([disabled])',
-    'button:not([disabled])',
-    'input:not([disabled])',
-    'select:not([disabled])',
-    'textarea:not([disabled])',
-    '[tabindex]:not([tabindex="-1"])'
+    "a[href]:not([disabled])",
+    "button:not([disabled])",
+    "input:not([disabled])",
+    "select:not([disabled])",
+    "textarea:not([disabled])",
+    '[tabindex]:not([tabindex="-1"])',
   ];
   return Array.from(container.querySelectorAll(selectors.join(","))).filter(
-    el => !el.hasAttribute("disabled") && isVisible(el)
+    (el) => !el.hasAttribute("disabled") && isVisible(el),
   );
 }
 
@@ -71,7 +71,7 @@ function initNavbar() {
   hamburger.setAttribute("aria-controls", "side-menu");
   hamburger.setAttribute("aria-expanded", "false");
 
-  const onToggle = e => {
+  const onToggle = (e) => {
     if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
     toggleMenu();
     e.preventDefault();
@@ -85,7 +85,7 @@ function initNavbar() {
     closeContact();
   });
 
-  document.addEventListener("keydown", e => {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeMenu();
       closeContact();
@@ -104,8 +104,8 @@ function toggleMenu() {
   hamburger.classList.toggle("active", isOpen);
   overlay.classList.toggle("show", isOpen);
   hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
- document.body.classList.toggle("menu-open", isOpen);
-	
+  document.body.classList.toggle("menu-open", isOpen);
+
   if (isOpen) openFocusTrap(sideMenu);
   else releaseFocusTrap();
 }
@@ -122,9 +122,9 @@ function closeMenu() {
   hamburger.setAttribute("aria-expanded", "false");
 
   overlay.classList.remove("show");
-	
-	 document.body.classList.remove("menu-open");
-	 
+
+  document.body.classList.remove("menu-open");
+
   releaseFocusTrap();
 }
 
@@ -140,7 +140,7 @@ function moveNavLinks() {
 
   if (mobileNavLinks.childElementCount === 0) {
     const clone = navLinks.cloneNode(true);
-    clone.querySelectorAll("[id]").forEach(n => n.removeAttribute("id"));
+    clone.querySelectorAll("[id]").forEach((n) => n.removeAttribute("id"));
     mobileNavLinks.append(...Array.from(clone.children).reverse());
   }
 }
@@ -160,7 +160,7 @@ function initContactCard() {
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("contact-close");
 
-  document.addEventListener("click", e => {
+  document.addEventListener("click", (e) => {
     const link = e.target.closest(".side-card");
     if (!link) return;
 
@@ -172,7 +172,7 @@ function initContactCard() {
   if (closeBtn) closeBtn.addEventListener("click", closeContact);
   if (overlay) overlay.addEventListener("click", closeContact);
 
-  document.addEventListener("keydown", e => {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeContact();
   });
 }
@@ -200,8 +200,7 @@ function closeContact() {
   contactCard.classList.remove("open");
   document.body.classList.remove("contact-open");
 
-  const sideMenuOpen =
-    document.getElementById("side-menu")?.classList.contains("open");
+  const sideMenuOpen = document.getElementById("side-menu")?.classList.contains("open");
 
   if (!sideMenuOpen) overlay.classList.remove("show");
 
@@ -222,7 +221,7 @@ function openFocusTrap(container) {
   const focusables = getFocusable(container);
   if (focusables.length) focusables[0].focus();
 
-  _trapHandler = e => {
+  _trapHandler = (e) => {
     if (e.key !== "Tab") return;
 
     const f = getFocusable(_trapContainer);
@@ -257,14 +256,13 @@ function releaseFocusTrap() {
   _trapContainer = null;
 }
 
-
 /* ================================
    PROJECT CAROUSEL
 ================================ */
 (() => {
-  const track = document.querySelector('.carousel-track');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
+  const track = document.querySelector(".carousel-track");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
 
   if (!track || !nextBtn || !prevBtn) return;
 
@@ -275,8 +273,8 @@ function releaseFocusTrap() {
   const firstClone = cards[0].cloneNode(true);
   const lastClone = cards[cards.length - 1].cloneNode(true);
 
-  firstClone.id = 'first-clone';
-  lastClone.id = 'last-clone';
+  firstClone.id = "first-clone";
+  lastClone.id = "last-clone";
 
   track.append(firstClone);
   track.prepend(lastClone);
@@ -287,58 +285,52 @@ function releaseFocusTrap() {
     const containerWidth = track.parentElement.getBoundingClientRect().width;
     cardWidth = allCards[index].getBoundingClientRect().width;
 
-    const offset =
-      cardWidth * index -
-      (containerWidth / 2 - cardWidth / 2);
+    const offset = cardWidth * index - (containerWidth / 2 - cardWidth / 2);
 
-    track.style.transition = 'none';
+    track.style.transition = "none";
     track.style.transform = `translateX(-${offset}px)`;
   }
 
-	window.addEventListener('resize', setCardWidth);
-	setCardWidth();
+  window.addEventListener("resize", setCardWidth);
+  setCardWidth();
 
-  nextBtn.addEventListener('click', () => {
+  nextBtn.addEventListener("click", () => {
     if (index >= allCards.length - 1) return;
     index++;
     updatePosition();
   });
 
-  prevBtn.addEventListener('click', () => {
+  prevBtn.addEventListener("click", () => {
     if (index <= 0) return;
     index--;
     updatePosition();
   });
 
-	track.addEventListener('transitionend', () => {
-	  if (allCards[index].id === 'first-clone') {
-	    index = 1;
-	    updatePosition(false);
-	  }
-	
-	  if (allCards[index].id === 'last-clone') {
-	    index = allCards.length - 2;
-	    updatePosition(false);
-	  }
-	});
-	
-	function updatePosition(withTransition = true) {
-  const containerWidth = track.parentElement.getBoundingClientRect().width;
+  track.addEventListener("transitionend", () => {
+    if (allCards[index].id === "first-clone") {
+      index = 1;
+      updatePosition(false);
+    }
 
-  const offset =
-    cardWidth * index -
-    (containerWidth / 2 - cardWidth / 2);
+    if (allCards[index].id === "last-clone") {
+      index = allCards.length - 2;
+      updatePosition(false);
+    }
+  });
 
-  track.style.transition = withTransition
-    ? 'transform 0.4s ease'
-    : 'none';
+  function updatePosition(withTransition = true) {
+    const containerWidth = track.parentElement.getBoundingClientRect().width;
 
-  track.style.transform = `translateX(-${offset}px)`;
-}
+    const offset = cardWidth * index - (containerWidth / 2 - cardWidth / 2);
+
+    track.style.transition = withTransition ? "transform 0.4s ease" : "none";
+
+    track.style.transform = `translateX(-${offset}px)`;
+  }
   /* ================================
      TOUCH / SWIPE SUPPORT
   ================================ */
-  const viewport = track.closest('.carousel-viewport');
+  const viewport = track.closest(".carousel-viewport");
 
   let startX = 0;
   let currentX = 0;
@@ -346,26 +338,26 @@ function releaseFocusTrap() {
 
   const SWIPE_THRESHOLD = 50;
 
-  viewport.style.touchAction = 'pan-y';
+  viewport.style.touchAction = "pan-y";
 
-  viewport.addEventListener('pointerdown', e => {
-    if (e.target.closest('a, button')) return;
-		isDragging = true;
+  viewport.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a, button")) return;
+    isDragging = true;
     startX = e.clientX;
     currentX = startX;
-    track.style.transition = 'none';
+    track.style.transition = "none";
     viewport.setPointerCapture(e.pointerId);
   });
 
-  viewport.addEventListener('pointermove', e => {
+  viewport.addEventListener("pointermove", (e) => {
     if (!isDragging) return;
     currentX = e.clientX;
     const delta = startX - currentX;
     track.style.transform = `translateX(-${cardWidth * index + delta}px)`;
   });
 
-  viewport.addEventListener('pointerup', finishSwipe);
-  viewport.addEventListener('pointercancel', finishSwipe);
+  viewport.addEventListener("pointerup", finishSwipe);
+  viewport.addEventListener("pointercancel", finishSwipe);
 
   function finishSwipe(e) {
     if (!isDragging) return;
@@ -381,7 +373,7 @@ function releaseFocusTrap() {
       }
     }
 
-    track.style.transition = 'transform 0.4s ease';
+    track.style.transition = "transform 0.4s ease";
     updatePosition();
   }
 })();
@@ -402,7 +394,7 @@ function initAutoCarousel(wrapper) {
   let rafId = null;
 
   const originals = Array.from(track.children);
-  originals.forEach(item => track.append(item.cloneNode(true)));
+  originals.forEach((item) => track.append(item.cloneNode(true)));
 
   const loopWidth = () => track.scrollWidth / 2;
 
@@ -424,8 +416,8 @@ function initAutoCarousel(wrapper) {
     if (!rafId) animate();
   }
 
-  carousel.addEventListener("mouseenter", () => paused = true);
-  carousel.addEventListener("mouseleave", () => paused = false);
+  carousel.addEventListener("mouseenter", () => (paused = true));
+  carousel.addEventListener("mouseleave", () => (paused = false));
 
   leftArrow.addEventListener("click", () => {
     paused = true;
@@ -440,12 +432,13 @@ function initAutoCarousel(wrapper) {
   const images = carousel.querySelectorAll("img");
   let loaded = 0;
 
-  images.forEach(img => {
+  images.forEach((img) => {
     if (img.complete) loaded++;
-    else img.onload = () => {
-      loaded++;
-      if (loaded === images.length) start();
-    };
+    else
+      img.onload = () => {
+        loaded++;
+        if (loaded === images.length) start();
+      };
   });
 
   if (loaded === images.length) start();

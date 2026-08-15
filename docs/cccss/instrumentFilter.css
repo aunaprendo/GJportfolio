@@ -1,6 +1,5 @@
 body {
   background-color: var(--accent-color-lgray);
-  
 }
 
 .h1 {
@@ -9,7 +8,7 @@ body {
 }
 
 .h2 {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 .select-container {
@@ -39,7 +38,7 @@ body {
 .Mcard {
   background-color: var(--text-color-alt);
   color: var(--text-color-main);
-  border: 4px solid var( --accent-color-brown);
+  border: 4px solid var(--accent-color-brown);
   border-radius: 5px;
   padding: 10px;
   width: 200px;

@@ -1,177 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="../cccss/musicPlayer.css">	
-	
-  <!-- Primary Meta Tags -->
-  <title>>Build a Music Player App</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-		
-  <div class="container">
-    <div class="player">
-      <div class="player-bar">
-        <div class="parallel-lines">
-          <div></div>
-          <div></div>
-        </div>
-        <h1 class="h1 fcc-title">freeCodeCamp</h1>
-        <div class="parallel-lines">
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div class="player-content">
-        <div id="player-album-art">
-          <img src="../assets/ccAssets/squirrelTape.png"
-            alt="song cover art" />
-        </div>
-        <div class="player-display">
-          <div class="player-display-song-artist">
-            <p id="player-song-title"></p>
-            <p id="player-song-artist"></p>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/musicPlayer.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>>Build a Music Player App</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="player">
+          <div class="player-bar">
+            <div class="parallel-lines">
+              <div></div>
+              <div></div>
+            </div>
+            <h1 class="h1 fcc-title">freeCodeCamp</h1>
+            <div class="parallel-lines">
+              <div></div>
+              <div></div>
+            </div>
           </div>
-          <div class="player-buttons">
-            <button id="previous" class="buttonmusic previous" aria-label="Previous">
-              <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23.2248 0L7.03964 9.5L23.2248 19L23.2248 0Z" />
-                <rect width="4.63633" height="18.5453" transform="matrix(-1 0 0 1 4.63633 0)" />
-              </svg>
-            </button>
-            <button id="play" class="buttonmusic play" aria-label="Play">
-              <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
-              </svg>
-            </button>
-            <button id="pause" class="buttonmusic pause" aria-label="Pause">
-              <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 6.54013e-07H4.75V19H0V6.54013e-07Z" />
-                <path d="M11.4 0H16.15V19H11.4V0Z" />
-              </svg>
-            </button>
-            <button id="next" class="buttonmusic next" aria-label="Next">
-              <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
-                <rect x="18.5885" width="4.63633" height="18.5453" />
-              </svg>
-            </button>
+          <div class="player-content">
+            <div id="player-album-art">
+              <img src="../assets/ccAssets/squirrelTape.png" alt="song cover art" />
+            </div>
+            <div class="player-display">
+              <div class="player-display-song-artist">
+                <p id="player-song-title"></p>
+                <p id="player-song-artist"></p>
+              </div>
+              <div class="player-buttons">
+                <button id="previous" class="buttonmusic previous" aria-label="Previous">
+                  <svg
+                    width="24"
+                    height="19"
+                    viewBox="0 0 24 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M23.2248 0L7.03964 9.5L23.2248 19L23.2248 0Z" />
+                    <rect width="4.63633" height="18.5453" transform="matrix(-1 0 0 1 4.63633 0)" />
+                  </svg>
+                </button>
+                <button id="play" class="buttonmusic play" aria-label="Play">
+                  <svg
+                    width="17"
+                    height="19"
+                    viewBox="0 0 17 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
+                  </svg>
+                </button>
+                <button id="pause" class="buttonmusic pause" aria-label="Pause">
+                  <svg
+                    width="17"
+                    height="19"
+                    viewBox="0 0 17 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 6.54013e-07H4.75V19H0V6.54013e-07Z" />
+                    <path d="M11.4 0H16.15V19H11.4V0Z" />
+                  </svg>
+                </button>
+                <button id="next" class="buttonmusic next" aria-label="Next">
+                  <svg
+                    width="24"
+                    height="19"
+                    viewBox="0 0 24 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
+                    <rect x="18.5885" width="4.63633" height="18.5453" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="playlist">
-      <div class="playlist-bar">
-        <div class="parallel-lines">
-          <div></div>
-          <div></div>
+        <div class="playlist">
+          <div class="playlist-bar">
+            <div class="parallel-lines">
+              <div></div>
+              <div></div>
+            </div>
+            <h2 class="h2 playlist-title" id="playlist">Playlist</h2>
+            <div class="parallel-lines">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <ul class="ul" id="playlist-songs">
+            <li id="song-0" class="playlist-song">
+              <button class="buttonmusic playlist-song-info">
+                <span class="playlist-song-title">Hello Squirrel</span>
+                <span class="playlist-song-artist">Sir Peanut</span>
+                <span class="playlist-song-duration">0:23</span>
+              </button>
+            </li>
+
+            <li id="song-1" class="playlist-song">
+              <button class="buttonmusic playlist-song-info">
+                <span class="playlist-song-title">In the Tree</span>
+                <span class="playlist-song-artist">Sir Peanut</span>
+                <span class="playlist-song-duration">0:11</span>
+              </button>
+            </li>
+
+            <li id="song-2" class="playlist-song">
+              <button class="buttonmusic playlist-song-info">
+                <span class="playlist-song-title">Nutty Nut</span>
+                <span class="playlist-song-artist">Sir Peanut</span>
+                <span class="playlist-song-duration">0:21</span>
+              </button>
+            </li>
+
+            <li id="song-3" class="playlist-song">
+              <button class="buttonmusic playlist-song-info">
+                <span class="playlist-song-title">Tail Spin</span>
+                <span class="playlist-song-artist">Sir Peanut</span>
+                <span class="playlist-song-duration">0:15</span>
+              </button>
+            </li>
+
+            <li id="song-4" class="playlist-song">
+              <button class="buttonmusic playlist-song-info">
+                <span class="playlist-song-title">Flying Squirrels</span>
+                <span class="playlist-song-artist">Sir Peanut</span>
+                <span class="playlist-song-duration">0:22</span>
+              </button>
+            </li>
+          </ul>
         </div>
-        <h2 class="h2 playlist-title" id="playlist">Playlist</h2>
-        <div class="parallel-lines">
-          <div></div>
-          <div></div>
-        </div>
       </div>
-      <ul class="ul" id="playlist-songs">
-        <li id="song-0" class="playlist-song">
-          <button class="buttonmusic playlist-song-info" >
-            <span class="playlist-song-title">Hello Squirrel</span>
-            <span class="playlist-song-artist">Sir Peanut</span>
-            <span class="playlist-song-duration">0:23</span>
-          </button>
-        </li>
+    </main>
 
-        <li id="song-1" class="playlist-song">
-          <button class="buttonmusic playlist-song-info" >
-            <span class="playlist-song-title">In the Tree</span>
-            <span class="playlist-song-artist">Sir Peanut</span>
-            <span class="playlist-song-duration">0:11</span>
-          </button>
-        </li>
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
 
-        <li id="song-2" class="playlist-song">
-          <button class="buttonmusic playlist-song-info" >
-            <span class="playlist-song-title">Nutty Nut</span>
-            <span class="playlist-song-artist">Sir Peanut</span>
-            <span class="playlist-song-duration">0:21</span>
-          </button>
-        </li>
-
-        <li id="song-3" class="playlist-song">
-          <button class="buttonmusic playlist-song-info" >
-            <span class="playlist-song-title">Tail Spin</span>
-            <span class="playlist-song-artist">Sir Peanut</span>
-            <span class="playlist-song-duration">0:15</span>
-          </button>
-        </li>
-
-        <li id="song-4" class="playlist-song">
-          <button class="buttonmusic playlist-song-info" >
-            <span class="playlist-song-title">Flying Squirrels</span>
-            <span class="playlist-song-artist">Sir Peanut</span>
-            <span class="playlist-song-duration">0:22</span>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-	</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	<script src="../ccjs/084musicPlayer.js"></script>	
-	  <script src="../js/script.js"></script>		
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-	</body>
-	</html>
-	
+    <script src="../ccjs/084musicPlayer.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

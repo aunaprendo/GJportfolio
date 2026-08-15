@@ -64,7 +64,7 @@ thead th {
   position: relative;
   z-index: 0;
   top: 0;
-  background: var(--accent-color-brown); 
+  background: var(--accent-color-brown);
   color: var(--text-color-alt);
   padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
   margin: 0 -2px;
@@ -165,9 +165,9 @@ tr.data th .description {
   display: block;
   font-weight: normal;
   font-style: italic;
-	font-size: .8rem;
+  font-size: 0.8rem;
   padding: 1rem 0 0.75rem;
-  margin-right: -13.5rem; 
+  margin-right: -13.5rem;
 }
 
 tr.data td {

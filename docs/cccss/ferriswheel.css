@@ -9,7 +9,7 @@ main {
 .wheel {
   border: 2px solid black;
   border-radius: 50%;
-	position: relative; 
+  position: relative;
   margin: 0;
   height: 55vw;
   width: 55vw;
@@ -30,12 +30,24 @@ main {
 }
 
 /* Rotate lines to form spokes */
-.line:nth-of-type(1) { transform: rotate(0deg); }
-.line:nth-of-type(2) { transform: rotate(60deg); }
-.line:nth-of-type(3) { transform: rotate(120deg); }
-.line:nth-of-type(4) { transform: rotate(180deg); }
-.line:nth-of-type(5) { transform: rotate(240deg); }
-.line:nth-of-type(6) { transform: rotate(300deg); }
+.line:nth-of-type(1) {
+  transform: rotate(0deg);
+}
+.line:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+.line:nth-of-type(3) {
+  transform: rotate(120deg);
+}
+.line:nth-of-type(4) {
+  transform: rotate(180deg);
+}
+.line:nth-of-type(5) {
+  transform: rotate(240deg);
+}
+.line:nth-of-type(6) {
+  transform: rotate(300deg);
+}
 
 /* Ferris wheel cabins */
 .cabin {
@@ -48,12 +60,30 @@ main {
   animation: cabins 10s ease-in-out infinite;
 }
 
-.cabin:nth-of-type(1) { right: -8.5%; top: 50%; }
-.cabin:nth-of-type(2) { right: 17%; top: 93.5%; }
-.cabin:nth-of-type(3) { right: 67%; top: 93.5%; }
-.cabin:nth-of-type(4) { left: -8.5%; top: 50%; }
-.cabin:nth-of-type(5) { left: 17%; top: 7%; }
-.cabin:nth-of-type(6) { right: 17%; top: 7%; }
+.cabin:nth-of-type(1) {
+  right: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(2) {
+  right: 17%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(3) {
+  right: 67%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(4) {
+  left: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(5) {
+  left: 17%;
+  top: 7%;
+}
+.cabin:nth-of-type(6) {
+  right: 17%;
+  top: 7%;
+}
 
 .cabin:nth-of-type(1)::after {
   content: "";
@@ -62,7 +92,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-	background-image: url("data:image/svg+xml;utf8,\
+  background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='3 -4 64 64' role='img' aria-label='Squirrel icon'>\
   <circle cx='42' cy='30' r='18' fill='%23C68642'/>\
   <ellipse cx='28' cy='36' rx='12' ry='14' fill='%238D5524'/>\
@@ -79,14 +109,28 @@ main {
    ========================================================================= */
 
 @keyframes wheel {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes cabins {
-  0%   { transform: rotate(0deg); }
-  25%  { background-color: yellow; }
-  50%  { background-color: purple; }
-  75%  { background-color: yellow; }
-  100% { transform: rotate(-360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }

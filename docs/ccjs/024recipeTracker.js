@@ -5,7 +5,7 @@ const recipe1 = {
   ingredients: ["spaghetti", "Parmesan cheese", "pancetta", "black pepper"],
   cookingTime: 22,
   totalIngredients: null,
-  difficultyLevel: ""
+  difficultyLevel: "",
 };
 
 const recipe2 = {
@@ -13,7 +13,7 @@ const recipe2 = {
   ingredients: ["chicken breast", "coconut milk", "curry powder", "onion", "garlic"],
   cookingTime: 42,
   totalIngredients: null,
-  difficultyLevel: ""
+  difficultyLevel: "",
 };
 
 const recipe3 = {
@@ -21,7 +21,7 @@ const recipe3 = {
   ingredients: ["broccoli", "carrot", "bell pepper"],
   cookingTime: 15,
   totalIngredients: null,
-  difficultyLevel: ""
+  difficultyLevel: "",
 };
 
 recipes.push(recipe1, recipe2, recipe3);

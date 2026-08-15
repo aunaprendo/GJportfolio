@@ -14,15 +14,15 @@
 }
 
 #fcclogo {
-	width: 200px;
-	height: auto;
+  width: 200px;
+  height: auto;
 }
 
 @media (max-width: 576px) {
-	#fcclogo {
-		width: 150px;
-		height: auto;
-	}
+  #fcclogo {
+    width: 150px;
+    height: auto;
+  }
 }
 
 /* Navigation container */
@@ -44,24 +44,24 @@
 }
 
 .quiz-items {
-  color: var(--text-color-alt);;
+  color: var(--text-color-alt);
   padding: 0.2rem;
   margin: 0 0.2rem;
   list-style: none;
 }
 
 @media (max-width: 576px) {
-	.quiz-items {
-		font-size: .7rem;
-	}
+  .quiz-items {
+    font-size: 0.7rem;
+  }
 }
 
 .nav > ul > li:hover {
   background-color: var(--bg-color-main);
-	border-radius: 7%;
+  border-radius: 7%;
   color: var(--text-color-main);
   cursor: pointer;
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .li > a {

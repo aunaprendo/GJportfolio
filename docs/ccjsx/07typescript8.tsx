@@ -1,20 +1,8 @@
 const { useState, useEffect } = React;
 
-const POSITIONS = [
-  "GK",
-  "CB",
-  "LB",
-  "RB",
-  "CDM",
-  "CM",
-  "CAM",
-  "LW",
-  "RW",
-  "ST",
-  "CF"
-] as const;
+const POSITIONS = ["GK", "CB", "LB", "RB", "CDM", "CM", "CAM", "LW", "RW", "ST", "CF"] as const;
 
-type Position = typeof POSITIONS[number];
+type Position = (typeof POSITIONS)[number];
 
 interface PlayerData {
   name: string;
@@ -95,7 +83,7 @@ export const PlayerCard = ({ player }: { player: PlayerData }) => {
       </div>
     </div>
   );
-}
+};
 
 const defaultPlayer: PlayerData = {
   name: "PELE",
@@ -116,10 +104,10 @@ function loadPlayer(): PlayerData {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       return {
-        ...defaultPlayer, 
-        ...JSON.parse(saved) 
-      }
-    };
+        ...defaultPlayer,
+        ...JSON.parse(saved),
+      };
+    }
   } catch (error) {
     console.log("Failed to load player data, using defaults:", error);
   }
@@ -159,9 +147,7 @@ export const FootballPlayerCard = () => {
                   className="input"
                   type="text"
                   value={player.name}
-                  onChange={(e) =>
-                    setPlayer({ ...player, name: e.target.value })
-                  }
+                  onChange={(e) => setPlayer({ ...player, name: e.target.value })}
                 />
               </div>
               <div className="form-row">
@@ -173,16 +159,13 @@ export const FootballPlayerCard = () => {
                     id="position"
                     className="input"
                     value={player.position}
-                    onChange={(e) => 
-                      setPlayer({ ...player, position: e.target.value as Position })}
+                    onChange={(e) => setPlayer({ ...player, position: e.target.value as Position })}
                   >
-                    {POSITIONS.map(
-                      (pos) => (
-                        <option key={pos} value={pos}>
-                          {pos}
-                        </option>
-                      )
-                    )}
+                    {POSITIONS.map((pos) => (
+                      <option key={pos} value={pos}>
+                        {pos}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="form-group">
@@ -212,9 +195,7 @@ export const FootballPlayerCard = () => {
                   className="input"
                   type="text"
                   value={player.club}
-                  onChange={(e) =>
-                    setPlayer({ ...player, club: e.target.value })
-                  }
+                  onChange={(e) => setPlayer({ ...player, club: e.target.value })}
                 />
               </div>
               <div className="form-group">
@@ -226,9 +207,7 @@ export const FootballPlayerCard = () => {
                   className="input"
                   type="text"
                   value={player.imageUrl}
-                  onChange={(e) =>
-                    setPlayer({ ...player, imageUrl: e.target.value })
-                  }
+                  onChange={(e) => setPlayer({ ...player, imageUrl: e.target.value })}
                 />
               </div>
             </div>
@@ -244,9 +223,7 @@ export const FootballPlayerCard = () => {
                     className="input"
                     type="number"
                     value={player.pac}
-                    onChange={(e) =>
-                      setPlayer({ ...player, pac: Number(e.target.value) })
-                    }
+                    onChange={(e) => setPlayer({ ...player, pac: Number(e.target.value) })}
                   />
                 </div>
                 <div className="form-group">
@@ -258,9 +235,7 @@ export const FootballPlayerCard = () => {
                     className="input"
                     type="number"
                     value={player.sho}
-                    onChange={(e) =>
-                      setPlayer({ ...player, sho: Number(e.target.value) })
-                    }
+                    onChange={(e) => setPlayer({ ...player, sho: Number(e.target.value) })}
                   />
                 </div>
                 <div className="form-group">
@@ -272,9 +247,7 @@ export const FootballPlayerCard = () => {
                     className="input"
                     type="number"
                     value={player.pas}
-                    onChange={(e) =>
-                      setPlayer({ ...player, pas: Number(e.target.value) })
-                    }
+                    onChange={(e) => setPlayer({ ...player, pas: Number(e.target.value) })}
                   />
                 </div>
                 <div className="form-group">
@@ -286,9 +259,7 @@ export const FootballPlayerCard = () => {
                     className="input"
                     type="number"
                     value={player.dri}
-                    onChange={(e) =>
-                      setPlayer({ ...player, dri: Number(e.target.value) })
-                    }
+                    onChange={(e) => setPlayer({ ...player, dri: Number(e.target.value) })}
                   />
                 </div>
                 <div className="form-group">
@@ -300,9 +271,7 @@ export const FootballPlayerCard = () => {
                     className="input"
                     type="number"
                     value={player.def}
-                    onChange={(e) =>
-                      setPlayer({ ...player, def: Number(e.target.value) })
-                    }
+                    onChange={(e) => setPlayer({ ...player, def: Number(e.target.value) })}
                   />
                 </div>
                 <div className="form-group">
@@ -314,9 +283,7 @@ export const FootballPlayerCard = () => {
                     className="input"
                     type="number"
                     value={player.phy}
-                    onChange={(e) =>
-                      setPlayer({ ...player, phy: Number(e.target.value) })
-                    }
+                    onChange={(e) => setPlayer({ ...player, phy: Number(e.target.value) })}
                   />
                 </div>
               </div>
@@ -325,9 +292,7 @@ export const FootballPlayerCard = () => {
           <div className="preview-panel">
             <p className="preview-label">Live Preview</p>
             <p className="preview-hint">Updates as you type</p>
-            <div
-              className={`preview-box tier-${getPlayerTier(player.overallRating)}`}
-            >
+            <div className={`preview-box tier-${getPlayerTier(player.overallRating)}`}>
               <PlayerCard player={player} />
             </div>
           </div>

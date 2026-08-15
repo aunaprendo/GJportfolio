@@ -1,8 +1,8 @@
 :root {
   --gradient-back: #987284;
-  --gradient-left: #F9B5AC;
-  --gradient-right: #AA7674;
-  --card: #FFFFFF;
+  --gradient-left: #f9b5ac;
+  --gradient-right: #aa7674;
+  --card: #ffffff;
   --card-shadow: 0 10px 30px rgba(30, 41, 59, 0.12);
   --font: #222;
 }
@@ -10,9 +10,10 @@
 html {
   width: 100%;
   min-height: 100%;
-  background: radial-gradient(100% 100% at 10% 10%, var(--gradient-left), transparent 60%),
-              radial-gradient(90% 85% at 90% 0%, var(--gradient-right), transparent 55%),
-              linear-gradient(180deg, var(--gradient-back), #ffffff);
+  background:
+    radial-gradient(100% 100% at 10% 10%, var(--gradient-left), transparent 60%),
+    radial-gradient(90% 85% at 90% 0%, var(--gradient-right), transparent 55%),
+    linear-gradient(180deg, var(--gradient-back), #ffffff);
 }
 
 body {
@@ -31,7 +32,8 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 
-select, input {
+select,
+input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -43,7 +45,7 @@ select, input {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-form { 
+form {
   display: flex;
   flex-direction: column;
 }

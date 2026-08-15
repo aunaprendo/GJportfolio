@@ -1,8 +1,7 @@
 const testimonialGrid = document.querySelector(".testimonial-masonry");
 
 if (testimonialGrid) {
-  const testimonialItems =
-    testimonialGrid.querySelectorAll(".testimonial-link");
+  const testimonialItems = testimonialGrid.querySelectorAll(".testimonial-link");
 
   function resizeTestimonial(item) {
     const gridStyles = getComputedStyle(testimonialGrid);
@@ -10,9 +9,7 @@ if (testimonialGrid) {
     const rowGap = parseFloat(gridStyles.rowGap);
     const itemHeight = item.getBoundingClientRect().height;
 
-    const rowSpan = Math.ceil(
-      (itemHeight + rowGap) / (rowHeight + rowGap)
-    );
+    const rowSpan = Math.ceil((itemHeight + rowGap) / (rowHeight + rowGap));
 
     item.style.gridRowEnd = `span ${rowSpan}`;
   }

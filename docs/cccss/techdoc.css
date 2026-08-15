@@ -22,14 +22,14 @@
   #main-doc {
     margin-left: 250px;
   }
-	
-	.alt-heading {
-  display: none;
-	}
+
+  .alt-heading {
+    display: none;
+  }
 }
 
-h3{
-	padding-top: 17%;
+h3 {
+  padding-top: 17%;
 }
 
 #navbar-squirrel {
@@ -40,8 +40,8 @@ h3{
 .tech-link {
   padding: 15px;
   font-weight: var(--weight-thin);
-	font-size: 1.2rem;
-	line-height: 4rem;
+  font-size: 1.2rem;
+  line-height: 4rem;
   color: var(--text-color-main);
 }
 
@@ -51,6 +51,5 @@ h3{
 
 footer {
   position: relative;
-  z-index: .1; /* higher than navbar (0) */
+  z-index: 0.1; /* higher than navbar (0) */
 }
-

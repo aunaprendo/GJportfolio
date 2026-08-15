@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(30deg, #ff9999 50%, #6699ff 50%)
+  background: linear-gradient(30deg, #ff9999 50%, #6699ff 50%);
 }
 
 .form-wrap {
@@ -44,7 +44,7 @@ body {
   display: block;
   margin: 0 auto;
   padding: 0.4rem 0.5rem;
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 .submit-btn:hover {

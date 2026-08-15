@@ -1,20 +1,21 @@
 #body {
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
-
 
 #message {
   font-size: 3em;
 }
 
 .theme-squirrels {
-	background: var(--accent-color-gold);
+  background: var(--accent-color-gold);
 }
 
 .theme-dinosaurs {
-	background: var(--accent-color-dteal);
+  background: var(--accent-color-dteal);
 }
 
 .theme-trees {
-	background: var(--accent-color-lteal);
+  background: var(--accent-color-lteal);
 }

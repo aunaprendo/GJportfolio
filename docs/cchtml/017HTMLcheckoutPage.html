@@ -1,135 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Checkout</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccHTML.html">freeCodeCamp HTML</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-		
-    <h1>Checkout</h1>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <section aria-labelledby="cart-heading">
-      <h2 id="cart-heading">Your Cart</h2>
-      <img
-        src="../assets/ccAssets/sculpture.jpeg"
-        alt="sculpture of a squirrel" class="feature-photo" />
-    </section>
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp Checkout</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-    <section aria-labelledby="payment-heading">
-      <h2 id="payment-heading">Payment Information</h2>
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-      <form
-        id="form"
-        method="get"
-        action="0SubmissionRecieved.html"
-        aria-describedby="form-instructions">
-				
-        <fieldset>
-          <legend>Card Details</legend>
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
 
-          <div class="form-group input-group mb-3">
-             <span class="input-group-text" for="card-name">Name on Card:</span>
-            <input
-              id="card-name"
-              name="card-name"
-              type="text"
-              autocomplete="cc-name"
-							class="form-control"
-              required />
-          </div>
-					
-          <div class="form-group input-group mb-3">
-            <span class="input-group-text" for="card-number">Card Number:</span>
-            <input
-              id="card-number"
-              name="card-number"
-              type="tel"
-              inputmode="numeric"
-              autocomplete="cc-number"
-              pattern="[0-9]{13,19}"
-							class="form-control"
-              aria-describedby="card-number-note"
-              required />
-            <small class="ms-3" id="card-number-note">Numbers only, no spaces or dashes.</small>
-          </div>
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccHTML.html">freeCodeCamp HTML</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <h1>Checkout</h1>
 
-          <div class="form-group input-group mb-3">
-             <span class="input-group-text" for="expiration">Expiration Date (MM/YY):</span>
-            <input
-              id="expiration"
-              name="expiration"
-              type="text"
-              autocomplete="cc-exp"
-              placeholder="MM/YY"
-							class="form-control"
-              pattern="(0[1-9]|1[0-2])\/\d{2}"
-              aria-describedby="expiration-format" />
-							<small class="ms-3" id="expiration-format">Format: month/year</small>
-          </div>
-        </fieldset>
-      
-			<!-- Submit -->
-      <button id="submit" class="btn btn-secondary"name="submit" value="Submit">Submit</button>
- 			</form>		
-			
-    </section>
+      <section aria-labelledby="cart-heading">
+        <h2 id="cart-heading">Your Cart</h2>
+        <img
+          src="../assets/ccAssets/sculpture.jpeg"
+          alt="sculpture of a squirrel"
+          class="feature-photo"
+        />
+      </section>
 
-	</main>
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-	</body>
-	</html>
-	
+      <section aria-labelledby="payment-heading">
+        <h2 id="payment-heading">Payment Information</h2>
+
+        <form
+          id="form"
+          method="get"
+          action="0SubmissionRecieved.html"
+          aria-describedby="form-instructions"
+        >
+          <fieldset>
+            <legend>Card Details</legend>
+
+            <div class="form-group input-group mb-3">
+              <span class="input-group-text" for="card-name">Name on Card:</span>
+              <input
+                id="card-name"
+                name="card-name"
+                type="text"
+                autocomplete="cc-name"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="form-group input-group mb-3">
+              <span class="input-group-text" for="card-number">Card Number:</span>
+              <input
+                id="card-number"
+                name="card-number"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                pattern="[0-9]{13,19}"
+                class="form-control"
+                aria-describedby="card-number-note"
+                required
+              />
+              <small class="ms-3" id="card-number-note">Numbers only, no spaces or dashes.</small>
+            </div>
+
+            <div class="form-group input-group mb-3">
+              <span class="input-group-text" for="expiration">Expiration Date (MM/YY):</span>
+              <input
+                id="expiration"
+                name="expiration"
+                type="text"
+                autocomplete="cc-exp"
+                placeholder="MM/YY"
+                class="form-control"
+                pattern="(0[1-9]|1[0-2])\/\d{2}"
+                aria-describedby="expiration-format"
+              />
+              <small class="ms-3" id="expiration-format">Format: month/year</small>
+            </div>
+          </fieldset>
+
+          <!-- Submit -->
+          <button id="submit" class="btn btn-secondary" name="submit" value="Submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

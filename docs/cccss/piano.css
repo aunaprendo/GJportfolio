@@ -1,9 +1,8 @@
-
 /* ============================================================
    Piano Container
    ============================================================ */
 #piano {
-  background-color:var(--accent-color-dteal);
+  background-color: var(--accent-color-dteal);
   width: 95%;
   height: 290px;
   margin: 80px auto;

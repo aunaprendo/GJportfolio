@@ -1,12 +1,15 @@
-.title{grid-area:title;
-	background-color: var(--accent-color-brown);
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5)
+.title {
+  grid-area: title;
+  background-color: var(--accent-color-brown);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.feature-article{grid-area:feature-article;
+.feature-article {
+  grid-area: feature-article;
 }
 
-.secondary-article{grid-area:secondary-article;
+.secondary-article {
+  grid-area: secondary-article;
 }
 
 article {
@@ -15,8 +18,8 @@ article {
 }
 
 .h1 {
-	font-family: 'Baskervville', serif;
-	color: white;
+  font-family: "Baskervville", serif;
+  color: white;
 }
 
 article h2,
@@ -39,26 +42,32 @@ article p {
   padding-bottom: 1rem;
 }
 
-.cover-image { 
-	grid-area:cover-image;
-	align-self: start;
-}
-	
-.cover-image>img{
-	max-width: 100%;
-	border-radius: 50%;
+.cover-image {
+  grid-area: cover-image;
+  align-self: start;
 }
 
-figcaption{
-	font-size: .8rem;
-	text-align: center;
+.cover-image > img {
+  max-width: 100%;
+  border-radius: 50%;
 }
 
-.small-article1{grid-area:small-article1;}
+figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+}
 
-.small-article2{grid-area:small-article2;}
+.small-article1 {
+  grid-area: small-article1;
+}
 
-.small-article3{grid-area:small-article3;}
+.small-article2 {
+  grid-area: small-article2;
+}
+
+.small-article3 {
+  grid-area: small-article3;
+}
 
 .newspaper-layout {
   display: grid;
@@ -85,14 +94,14 @@ figcaption{
 
 .ad {
   margin-bottom: 2rem;
-	margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .ad h4 {
   margin: 0;
   font-size: 0.95rem;
   font-weight: bold;
-	margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .ad p {

@@ -9,7 +9,6 @@ function binarySearch(searchList, value) {
 
     if (value === valueAtMiddle) {
       return [pathToTarget, `Value found at index ${mid}`];
-
     } else if (value > valueAtMiddle) {
       low = mid + 1;
     } else {
@@ -17,7 +16,6 @@ function binarySearch(searchList, value) {
     }
   }
   return [[], "Value not found"];
-
 }
 
 console.log(binarySearch([1, 2, 3, 4, 5], 3));

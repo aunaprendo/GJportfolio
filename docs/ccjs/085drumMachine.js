@@ -2,7 +2,7 @@ const displayText = document.getElementById("display");
 const clips = document.querySelectorAll(".clip");
 
 function playSound(clip) {
-  clips.forEach(c => {
+  clips.forEach((c) => {
     c.pause();
     c.currentTime = 0;
   });

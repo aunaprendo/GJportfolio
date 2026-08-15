@@ -7,19 +7,19 @@ const footballTeam = {
     { name: "Hazel Quicktail", position: "midfielder", isCaptain: false },
     { name: "Barkley Swiftclaw", position: "defender", isCaptain: false },
     { name: "Chestnut Ironpaws", position: "goalkeeper", isCaptain: false },
-		{ name: "Dash Whiskerwind", position: "forward", isCaptain: false },
+    { name: "Dash Whiskerwind", position: "forward", isCaptain: false },
     { name: "Cinnamon Flicktail", position: "midfielder", isCaptain: false },
     { name: "Oakley Hardbark", position: "defender", isCaptain: false },
-    { name: "Walnut Stoneclaw", position: "goalkeeper", isCaptain: false },   
-		{ name: "Blaze Nutrunner", position: "forward", isCaptain: false },
+    { name: "Walnut Stoneclaw", position: "goalkeeper", isCaptain: false },
+    { name: "Blaze Nutrunner", position: "forward", isCaptain: false },
     { name: "Amber Leafdash", position: "midfielder", isCaptain: false },
     { name: "Thorn Shadowtail", position: "defender", isCaptain: false },
     { name: "Cedar Strongpaw", position: "goalkeeper", isCaptain: false },
     { name: "Flash Quicknut", position: "forward", isCaptain: false },
     { name: "Ivy Swiftbranch", position: "midfielder", isCaptain: false },
     { name: "Granite Oakshield", position: "defender", isCaptain: false },
-    { name: "Moss Ironwhisker", position: "goalkeeper", isCaptain: false }
-  ]
+    { name: "Moss Ironwhisker", position: "goalkeeper", isCaptain: false },
+  ],
 };
 
 const headCoach = document.getElementById("head-coach");
@@ -36,32 +36,30 @@ function playerCards(playerPosition) {
   const selectedPlayers =
     playerPosition === "all"
       ? footballTeam.players
-      : footballTeam.players.filter(
-          ({position}) => position === playerPosition
-        );
+      : footballTeam.players.filter(({ position }) => position === playerPosition);
 
   return selectedPlayers
-    .map(({ name, position, isCaptain}) => {
+    .map(({ name, position, isCaptain }) => {
       if (isCaptain === true) {
-      	return `
+        return `
           <div class="player-card">
  						<h2>(Captain) ${name}</h2>
   					<p>Position: ${position}</p>
 					</div>
         `;
       } else {
-      	return `
+        return `
           <div class="player-card">
  						<h2>${name}</h2>
   					<p>Position: ${position}</p>
 					</div>
         `;
-      }	
-    }).join("")
+      }
+    })
+    .join("");
 }
 playersPosition.addEventListener("change", () => {
   players.innerHTML = playerCards(playersPosition.value);
 });
 
-
-players.innerHTML = playerCards(playersPosition.value)
+players.innerHTML = playerCards(playersPosition.value);

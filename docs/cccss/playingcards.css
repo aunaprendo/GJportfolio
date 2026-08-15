@@ -2,18 +2,18 @@
 #playing-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;                
-  justify-content: center;   
+  gap: 20px;
+  justify-content: center;
   align-items: flex-start;
   font-family: Arial, sans-serif;
 }
 
 /* Individual card */
 .card {
-  position: relative;         
+  position: relative;
   width: 75px;
   height: 100px;
-  perspective: 600px;         /* Needed for 3D flip effect */
+  perspective: 600px; /* Needed for 3D flip effect */
 }
 
 /* Inner card for flipping */
@@ -72,14 +72,14 @@
   right: 5px;
   font-weight: bold;
   font-size: 0.8em;
-  transform: rotate(180deg); 
+  transform: rotate(180deg);
 }
 
 /* Middle suit symbol */
 .middle {
   font-size: 35px;
   color: teal;
-  aria-hidden: true; 
+  aria-hidden: true;
 }
 
 /* =========================================================================

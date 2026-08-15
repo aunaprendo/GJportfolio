@@ -46,10 +46,10 @@ function shortestPath(matrix, startNode, targetNode = null) {
     if (nodeNo === startNode || distances[nodeNo] === INF) {
       continue;
     }
-    const path = paths[nodeNo].join(' -> ');
+    const path = paths[nodeNo].join(" -> ");
     console.log(`\n${startNode}-${nodeNo} distance: ${distances[nodeNo]}\nPath: ${path}`);
   }
   return [distances, paths];
 }
 
-shortestPath(adjMatrix, 0, 5)
+shortestPath(adjMatrix, 0, 5);

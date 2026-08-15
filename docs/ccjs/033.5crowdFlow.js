@@ -16,7 +16,7 @@ function initializeThroughput(gates) {
   const summary = {};
   for (const gate of gates) {
     summary[gate.id] = 0;
-  };
+  }
   return summary;
 }
 
@@ -29,7 +29,7 @@ function processGateFlow(gate, tickIndex) {
   }
   return {
     processed: processed,
-    overflow: currentTickQueue
+    overflow: currentTickQueue,
   };
 }
 
@@ -37,24 +37,16 @@ function rerouteOverflow(gates, currentGate, tickIndex, overflowAmount) {
   const currentIndex = gates.indexOf(currentGate);
   const nextGateIndex = (currentIndex + 1) % gates.length;
   gates[nextGateIndex].queue[tickIndex] += overflowAmount;
-  console.log(
-    overflowAmount + " attendees rerouted to " +
-    gates[nextGateIndex].id
-  );
+  console.log(overflowAmount + " attendees rerouted to " + gates[nextGateIndex].id);
 }
 
 function handleGateAtTick(gates, gate, tickIndex, throughputSummary) {
   console.log("\nProcessing " + gate.id + "...");
-  console.log(
-    gate.queue[tickIndex] + " attendees arriving."
-  );
+  console.log(gate.queue[tickIndex] + " attendees arriving.");
   const result = processGateFlow(gate, tickIndex);
   throughputSummary[gate.id] += result.processed;
   if (result.overflow > 0) {
-    console.log(
-      "Overflow of " + result.overflow +
-      " attendees. Rerouting..."
-    );
+    console.log("Overflow of " + result.overflow + " attendees. Rerouting...");
     rerouteOverflow(gates, gate, tickIndex, result.overflow);
   }
 }
@@ -62,10 +54,7 @@ function handleGateAtTick(gates, gate, tickIndex, throughputSummary) {
 function printSummary(summary) {
   console.log("\nThroughput Summary");
   for (const gateId in summary) {
-    console.log(
-      gateId + ": " + summary[gateId] +
-      " attendees processed"
-    );
+    console.log(gateId + ": " + summary[gateId] + " attendees processed");
   }
 }
 
@@ -85,4 +74,4 @@ function simulateFestival(gates, timeBlock) {
 }
 
 simulateFestival(morningGates, "Morning");
-simulateFestival(nightGates,"Night");
+simulateFestival(nightGates, "Night");

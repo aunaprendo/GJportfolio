@@ -1,176 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp JS Studies</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>
-  <main>
-    <h1 class="mb-0">JavaScript Work</h1>
-    <h2 class="pb-3">
-      Additional Lessons and Studies
-    </h2>
-		
-    <ul class="custom-bullets ms-3">
-      <li>Lesson 1: <a href="../ccjs/000greetingBot.js" class="gen-link-cc">Greeting Bot</a></li>
-      <li>Lesson 2: <a href="../ccjs/001trivia.js" class="gen-link-cc">Trivia</a></li>
-			<li>Lesson 3: <a href="../ccjs/002sentenceMaker.js" class="gen-link-cc">Sentence Builder</a></li>
-      <li>Lesson 4: <a href="../ccjs/003teacherBot.js" class="gen-link-cc">Teacher Bot</a></li>
-			<li>Lesson 5: <a href="../ccjs/004stringInspect.js" class="gen-link-cc">String Inspector</a></li>
-      <li>Lesson 6: <a href="../ccjs/005stringBuilder.js" class="gen-link-cc">String Builder</a></li>
-			<li>Lesson 7: <a href="../ccjs/006stringTransform.js" class="gen-link-cc">String Transformer</a></li>
-      <li>Lesson 8: <a href="../ccjs/007debugCoercion.js" class="gen-link-cc">Debug Coercion</a></li>
-			<li>Lesson 9: <a href="../ccjs/008operatorError.js" class="gen-link-cc">Operator Error</a></li>
-      <li>Lesson 10: <a href="../ccjs/009logicChecker.js" class="gen-link-cc">Logic Checker</a></li>
-			<li>Lesson 11: <a href="../ccjs/010mathBot.js" class="gen-link-cc">Math Bot</a></li>
-      <li>Lesson 12: <a href="../ccjs/011fortuneTeller.js" class="gen-link-cc">Fortune Teller</a></li>
-			<li>Lesson 13: <a href="../ccjs/012calculator.js" class="gen-link-cc">Calculator</a></li>
-      <li>Lesson 14: <a href="../ccjs/013booleanCheck.js" class="gen-link-cc">Boolean Checker</a></li>
-			<li>Lesson 15: <a href="../ccjs/014emailMaker.js" class="gen-link-cc">Email Maker</a></li>
-      <li>Lesson 16: <a href="../ccjs/015loanChecker.js" class="gen-link-cc">Loan Checker</a></li>
-			<li>Lesson 17: <a href="../ccjs/016celToFer.js" class="gen-link-cc">Temperature Conversion</a></li>
-      <li>Lesson 18: <a href="../ccjs/017cardCounter.js" class="gen-link-cc">Card Counter</a></li>
-			<li>Lesson 19: <a href="../ccjs/018leapYear.js" class="gen-link-cc">Leap Year</a></li>
-      <li>Lesson 20: <a href="../ccjs/019truncateString.js" class="gen-link-cc">Truncate String</a></li>
-			<li>Lesson 21: <a href="../ccjs/020endingTool.js" class="gen-link-cc">Ending Tool</a></li>
-      <li>Lesson 22: <a href="../ccjs/021shoppingList.js" class="gen-link-cc">Shopping List</a></li>
-			<li>Lesson 23: <a href="../ccjs/022lunchPicker.js" class="gen-link-cc">Lunch Picker</a></li>
-      <li>Lesson 24: <a href="../ccjs/023.5cargoManifest.js" class="gen-link-cc">Cargo Manifest</a></li>
-			<li>Lesson 25: <a href="../ccjs/023.75animalTracker.js" class="gen-link-cc">Animal Tracker</a></li>
-			<li>Lesson 26: <a href="../ccjs/023golfScore.js" class="gen-link-cc">Golf Score</a></li>
-      <li>Lesson 27: <a href="../ccjs/024recipeTracker.js" class="gen-link-cc">Recipe Tracker</a></li>
-			<li>Lesson 28: <a href="../ccjs/025quizGame.js" class="gen-link-cc">Quiz Game</a></li>
-      <li>Lesson 29: <a href="../ccjs/026recordCollection.js" class="gen-link-cc">Record Collection</a></li>
-			<li>Lesson 29.5: <a href="../ccjs/026.5wordCount.js" class="gen-link-cc">Word Count</a></li>
-			<li>Lesson 30: <a href="../ccjs/027sentenceAnalyzerFinal.js" class="gen-link-cc">Sentence Analyzer</a></li>
-			<li>Lesson 30.5: <a href="../ccjs/027.5heritageLibrary.js" class="gen-link-cc">Heritage Library</a></li>
-			<li>Lesson 31: <a href="../ccjs/028longestWordFinal.js" class="gen-link-cc">Longest Word</a></li>
-      <li>Lesson 32: <a href="../ccjs/029factorialCalculator.js" class="gen-link-cc">Factorial Calculator</a></li>
-			<li>Lesson 33: <a href="../ccjs/030mutationsFinal.js" class="gen-link-cc">Mutations Algorithm</a></li>
-			<li>Lesson 33.5: <a href="../ccjs/030.5playlistRemix.js" class="gen-link-cc">Playlist Remix</a></li>
-      <li>Lesson 34: <a href="../ccjs/031chunkyMonkeyFinal.js" class="gen-link-cc">Chunky Monkey</a></li>
-			<li>Lesson 35: <a href="../ccjs/032profileLookFinal.js" class="gen-link-cc">Profile Lookup</a></li>
-      <li>Lesson 36: <a href="../ccjs/033stringRepeat.js" class="gen-link-cc">String Repeat</a></li>
-			<li>Lesson 36.5: <a href="../ccjs/033.5crowdFlow.js" class="gen-link-cc">Crowd Flow</a></li>
-			<li>Lesson 37: <a href="../ccjs/034missingLetterFinal.js" class="gen-link-cc">Missing Letter</a></li>
-      <li>Lesson 38: <a href="../ccjs/035stringInvert.js" class="gen-link-cc">String Inversion</a></li>
-			<li>Lesson 39: <a href="../ccjs/036largestNumber.js" class="gen-link-cc">Largest Number</a></li>
-      <li>Lesson 40: <a href="../ccjs/037elementFinder.js" class="gen-link-cc">Element Finder</a></li>
-			<li>Lesson 41: <a href="../ccjs/038sliceSplice.js" class="gen-link-cc">Slice Splice</a></li>
-      <li>Lesson 42: <a href="../ccjs/039pyramid.js" class="gen-link-cc">Pyramid</a></li>
-			<li>Lesson 43: <a href="../ccjs/040gradebook.js" class="gen-link-cc">Grade Book</a></li>
-      <li>Lesson 44: <a href="../ccjs/041titleCase.js" class="gen-link-cc">Title Case</a></li>
-			<li>Lesson 45: <a href="../ccjs/042falsyRemover.js" class="gen-link-cc">Falsey Remover</a></li>
-      <li>Lesson 46: <a href="../ccjs/043inventoryManager.js" class="gen-link-cc">Inventory Manager</a></li>
-			<li>Lesson 47: <a href="../ccjs/044uniqueSort.js" class="gen-link-cc">Unique Sort Bot</a></li>
-      <li>Lesson 48: <a href="../ccjs/045passwordGenerator.js" class="gen-link-cc">Password Generator</a></li>
-			<li>Lesson 49: <a href="../ccjs/046sums.js" class="gen-link-cc">Sums</a></li>
-      <li>Lesson 50: <a href="../ccjs/047dnaPair.js" class="gen-link-cc">DNA Pair</a></li>
-			<li>Lesson 51: <a href="../ccjs/048htmlSymbol.js" class="gen-link-cc">HTML Symbol</a></li>
-      <li>Lesson 52: <a href="../ccjs/049oddFibonacci.js" class="gen-link-cc">Odd Fibonacci</a></li>
-			<li>Lesson 53: <a href="../ccjs/050elementSkipper.js" class="gen-link-cc">Element Skipper</a></li>
-      <li>Lesson 54: <a href="../ccjs/051libraryManager.js" class="gen-link-cc">Library Manager</a></li>
-			<li>Lesson 55: <a href="../ccjs/052bookOrganizer.js" class="gen-link-cc">Book Organizer</a></li>
-      <li>Lesson 56: <a href="../ccjs/053sortedIndex.js" class="gen-link-cc">Sorted Index</a></li>
-			<li>Lesson 57: <a href="../ccjs/054symmetricDiff.js" class="gen-link-cc">Symmetric Difference</a></li>
-      <li>Lesson 58: <a href="../ccjs/055valueRemover.js" class="gen-link-cc">Value Remover</a></li>
-			<li>Lesson 59: <a href="../ccjs/056filterMatch.js" class="gen-link-cc">Filter Match</a></li>
-			<li>Lesson 60: <a href="../ccjs/057primeSum.js" class="gen-link-cc">Prime Sum</a></li>
-			
-			<li>Lesson 61: <a href="../ccjs/058LCM.js" class="gen-link-cc">LCM</a></li>
-			<li>Lesson 62: <a href="../ccjs/059flattenTool.js" class="gen-link-cc">Flatten Tool</a></li>
-			<li>Lesson 63: <a href="../ccjs/060truthTest.js" class="gen-link-cc">Truth Test</a></li>			
-			
-			<li>Lesson 76: <a href="../ccjs/076spinalCase.js" class="gen-link-cc">Spinal Case</a></li>
-			<li>Lesson 77: <a href="../ccjs/077pigLatin.js" class="gen-link-cc">Pig Latin</a></li>
-			<li>Lesson 78: <a href="../ccjs/078smartWord.js" class="gen-link-cc">Smart Word</a></li>
-			<li>Lesson 82: <a href="../ccjs/082spaceMission.js" class="gen-link-cc">Space Mission</a></li>
-			<li>Lesson 83: <a href="../ccjs/083dateConvert.js" class="gen-link-cc">Date Conversion</a></li>		
-			<li>Lesson 86: <a href="../ccjs/086plantNursery.js" class="gen-link-cc">Plant Nursery</a></li>	
-			<li>Lesson 87: <a href="../ccjs/087voteSystem.js" class="gen-link-cc">Vote System</a></li>
-			<li>Lesson 91: <a href="../ccjs/091projectBoard.js" class="gen-link-cc">Project Board</a></li>	
-			<li>Lesson 92: <a href="../ccjs/092bankManegment.js" class="gen-link-cc">Bank Manager</a></li>				
-			<li>Lesson 93: <a href="../ccjs/093countUpjs" class="gen-link-cc">Count Up</a></li>	
-			<li>Lesson 94: <a href="../ccjs/094countDown.js" class="gen-link-cc">Count Down</a></li>		
-			<li>Lesson 95: <a href="../ccjs/095numberRange.js" class="gen-link-cc">Number Range</a></li>	
-			<li>Lesson 97: <a href="../ccjs/097permutationGenerator.js" class="gen-link-cc">Permutation Generator</a></li>	
-			<li>Lesson 98: <a href="../ccjs/098linkedList.js" class="gen-link-cc">Linked List</a></li>	
-			<li>Lesson 99: <a href="../ccjs/099linkedListOps.js" class="gen-link-cc">Linked List Operations</a></li>	
-			<li>Lesson 100: <a href="../ccjs/100createStack.js" class="gen-link-cc">Create a Stack</a></li>	
-			<li>Lesson 101: <a href="../ccjs/101createQueue.js" class="gen-link-cc">Create a Queue </a></li>				
-			<li>Lesson 102: <a href="../ccjs/102binarySearch.js" class="gen-link-cc">Binary Search</a></li>	
-			<li>Lesson 103: <a href="../ccjs/103mergeSort.js" class="gen-link-cc">Merge Sort</a></li>
-			<li>Lesson 104: <a href="../ccjs/104bubbleSort.js" class="gen-link-cc">Bubble Sort</a></li>
-			<li>Lesson 105: <a href="../ccjs/105selectionSort.js" class="gen-link-cc">Selection Sort</a></li>
-			<li>Lesson 106: <a href="../ccjs/106insertionSort.js" class="gen-link-cc">Insertion Sort</a></li>
-			<li>Lesson 107: <a href="../ccjs/107quickSort.js" class="gen-link-cc">QuickSort</a></li>
-			<li>Lesson 108: <a href="../ccjs/108shortestPath.js" class="gen-link-cc">Shortest Path</a></li>
-			<li>Lesson 109: <a href="../ccjs/109adjacencyList.js" class="gen-link-cc">Adjacency List to Matrix Converter</a></li>
-			<li>Lesson 110: <a href="../ccjs/110breadthFirstSearch.js" class="gen-link-cc">Breadth-First Search</a></li>
-			<li>Lesson 111: <a href="../ccjs/111depthFirstSearch.js" class="gen-link-cc">Depth-First Search</a></li>
-			<li>Lesson 112: <a href="../ccjs/112nQueens.js" class="gen-link-cc">N-Queens</a></li>
-			<li>Lesson 113: <a href="../ccjs/113fibonacciCalc.js" class="gen-link-cc">Fibonacci Calculator</a></li>
-			<li>Lesson 115: <a href="../ccjs/115optionalArgumentsSumFunction.js" class="gen-link-cc">Optional Arguments Sum Function</a></li>
-			<li>Lesson 116: <a href="../ccjs/120trafficLight.js" class="gen-link-cc">Traffic Light Simulation</a></li>
-    </ul>
-		
-		
-	</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-	</body>
-	</html>
-	
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp JS Studies</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccJS.html">freeCodeCamp JS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <h1 class="mb-0">JavaScript Work</h1>
+      <h2 class="pb-3">Additional Lessons and Studies</h2>
+
+      <ul class="custom-bullets ms-3">
+        <li>Lesson 1: <a href="../ccjs/000greetingBot.js" class="gen-link-cc">Greeting Bot</a></li>
+        <li>Lesson 2: <a href="../ccjs/001trivia.js" class="gen-link-cc">Trivia</a></li>
+        <li>
+          Lesson 3: <a href="../ccjs/002sentenceMaker.js" class="gen-link-cc">Sentence Builder</a>
+        </li>
+        <li>Lesson 4: <a href="../ccjs/003teacherBot.js" class="gen-link-cc">Teacher Bot</a></li>
+        <li>
+          Lesson 5: <a href="../ccjs/004stringInspect.js" class="gen-link-cc">String Inspector</a>
+        </li>
+        <li>
+          Lesson 6: <a href="../ccjs/005stringBuilder.js" class="gen-link-cc">String Builder</a>
+        </li>
+        <li>
+          Lesson 7:
+          <a href="../ccjs/006stringTransform.js" class="gen-link-cc">String Transformer</a>
+        </li>
+        <li>
+          Lesson 8: <a href="../ccjs/007debugCoercion.js" class="gen-link-cc">Debug Coercion</a>
+        </li>
+        <li>
+          Lesson 9: <a href="../ccjs/008operatorError.js" class="gen-link-cc">Operator Error</a>
+        </li>
+        <li>
+          Lesson 10: <a href="../ccjs/009logicChecker.js" class="gen-link-cc">Logic Checker</a>
+        </li>
+        <li>Lesson 11: <a href="../ccjs/010mathBot.js" class="gen-link-cc">Math Bot</a></li>
+        <li>
+          Lesson 12: <a href="../ccjs/011fortuneTeller.js" class="gen-link-cc">Fortune Teller</a>
+        </li>
+        <li>Lesson 13: <a href="../ccjs/012calculator.js" class="gen-link-cc">Calculator</a></li>
+        <li>
+          Lesson 14: <a href="../ccjs/013booleanCheck.js" class="gen-link-cc">Boolean Checker</a>
+        </li>
+        <li>Lesson 15: <a href="../ccjs/014emailMaker.js" class="gen-link-cc">Email Maker</a></li>
+        <li>Lesson 16: <a href="../ccjs/015loanChecker.js" class="gen-link-cc">Loan Checker</a></li>
+        <li>
+          Lesson 17: <a href="../ccjs/016celToFer.js" class="gen-link-cc">Temperature Conversion</a>
+        </li>
+        <li>Lesson 18: <a href="../ccjs/017cardCounter.js" class="gen-link-cc">Card Counter</a></li>
+        <li>Lesson 19: <a href="../ccjs/018leapYear.js" class="gen-link-cc">Leap Year</a></li>
+        <li>
+          Lesson 20: <a href="../ccjs/019truncateString.js" class="gen-link-cc">Truncate String</a>
+        </li>
+        <li>Lesson 21: <a href="../ccjs/020endingTool.js" class="gen-link-cc">Ending Tool</a></li>
+        <li>
+          Lesson 22: <a href="../ccjs/021shoppingList.js" class="gen-link-cc">Shopping List</a>
+        </li>
+        <li>Lesson 23: <a href="../ccjs/022lunchPicker.js" class="gen-link-cc">Lunch Picker</a></li>
+        <li>
+          Lesson 24: <a href="../ccjs/023.5cargoManifest.js" class="gen-link-cc">Cargo Manifest</a>
+        </li>
+        <li>
+          Lesson 25: <a href="../ccjs/023.75animalTracker.js" class="gen-link-cc">Animal Tracker</a>
+        </li>
+        <li>Lesson 26: <a href="../ccjs/023golfScore.js" class="gen-link-cc">Golf Score</a></li>
+        <li>
+          Lesson 27: <a href="../ccjs/024recipeTracker.js" class="gen-link-cc">Recipe Tracker</a>
+        </li>
+        <li>Lesson 28: <a href="../ccjs/025quizGame.js" class="gen-link-cc">Quiz Game</a></li>
+        <li>
+          Lesson 29:
+          <a href="../ccjs/026recordCollection.js" class="gen-link-cc">Record Collection</a>
+        </li>
+        <li>Lesson 29.5: <a href="../ccjs/026.5wordCount.js" class="gen-link-cc">Word Count</a></li>
+        <li>
+          Lesson 30:
+          <a href="../ccjs/027sentenceAnalyzerFinal.js" class="gen-link-cc">Sentence Analyzer</a>
+        </li>
+        <li>
+          Lesson 30.5:
+          <a href="../ccjs/027.5heritageLibrary.js" class="gen-link-cc">Heritage Library</a>
+        </li>
+        <li>
+          Lesson 31: <a href="../ccjs/028longestWordFinal.js" class="gen-link-cc">Longest Word</a>
+        </li>
+        <li>
+          Lesson 32:
+          <a href="../ccjs/029factorialCalculator.js" class="gen-link-cc">Factorial Calculator</a>
+        </li>
+        <li>
+          Lesson 33:
+          <a href="../ccjs/030mutationsFinal.js" class="gen-link-cc">Mutations Algorithm</a>
+        </li>
+        <li>
+          Lesson 33.5:
+          <a href="../ccjs/030.5playlistRemix.js" class="gen-link-cc">Playlist Remix</a>
+        </li>
+        <li>
+          Lesson 34: <a href="../ccjs/031chunkyMonkeyFinal.js" class="gen-link-cc">Chunky Monkey</a>
+        </li>
+        <li>
+          Lesson 35: <a href="../ccjs/032profileLookFinal.js" class="gen-link-cc">Profile Lookup</a>
+        </li>
+        <li>
+          Lesson 36: <a href="../ccjs/033stringRepeat.js" class="gen-link-cc">String Repeat</a>
+        </li>
+        <li>Lesson 36.5: <a href="../ccjs/033.5crowdFlow.js" class="gen-link-cc">Crowd Flow</a></li>
+        <li>
+          Lesson 37:
+          <a href="../ccjs/034missingLetterFinal.js" class="gen-link-cc">Missing Letter</a>
+        </li>
+        <li>
+          Lesson 38: <a href="../ccjs/035stringInvert.js" class="gen-link-cc">String Inversion</a>
+        </li>
+        <li>
+          Lesson 39: <a href="../ccjs/036largestNumber.js" class="gen-link-cc">Largest Number</a>
+        </li>
+        <li>
+          Lesson 40: <a href="../ccjs/037elementFinder.js" class="gen-link-cc">Element Finder</a>
+        </li>
+        <li>Lesson 41: <a href="../ccjs/038sliceSplice.js" class="gen-link-cc">Slice Splice</a></li>
+        <li>Lesson 42: <a href="../ccjs/039pyramid.js" class="gen-link-cc">Pyramid</a></li>
+        <li>Lesson 43: <a href="../ccjs/040gradebook.js" class="gen-link-cc">Grade Book</a></li>
+        <li>Lesson 44: <a href="../ccjs/041titleCase.js" class="gen-link-cc">Title Case</a></li>
+        <li>
+          Lesson 45: <a href="../ccjs/042falsyRemover.js" class="gen-link-cc">Falsey Remover</a>
+        </li>
+        <li>
+          Lesson 46:
+          <a href="../ccjs/043inventoryManager.js" class="gen-link-cc">Inventory Manager</a>
+        </li>
+        <li>
+          Lesson 47: <a href="../ccjs/044uniqueSort.js" class="gen-link-cc">Unique Sort Bot</a>
+        </li>
+        <li>
+          Lesson 48:
+          <a href="../ccjs/045passwordGenerator.js" class="gen-link-cc">Password Generator</a>
+        </li>
+        <li>Lesson 49: <a href="../ccjs/046sums.js" class="gen-link-cc">Sums</a></li>
+        <li>Lesson 50: <a href="../ccjs/047dnaPair.js" class="gen-link-cc">DNA Pair</a></li>
+        <li>Lesson 51: <a href="../ccjs/048htmlSymbol.js" class="gen-link-cc">HTML Symbol</a></li>
+        <li>
+          Lesson 52: <a href="../ccjs/049oddFibonacci.js" class="gen-link-cc">Odd Fibonacci</a>
+        </li>
+        <li>
+          Lesson 53: <a href="../ccjs/050elementSkipper.js" class="gen-link-cc">Element Skipper</a>
+        </li>
+        <li>
+          Lesson 54: <a href="../ccjs/051libraryManager.js" class="gen-link-cc">Library Manager</a>
+        </li>
+        <li>
+          Lesson 55: <a href="../ccjs/052bookOrganizer.js" class="gen-link-cc">Book Organizer</a>
+        </li>
+        <li>Lesson 56: <a href="../ccjs/053sortedIndex.js" class="gen-link-cc">Sorted Index</a></li>
+        <li>
+          Lesson 57:
+          <a href="../ccjs/054symmetricDiff.js" class="gen-link-cc">Symmetric Difference</a>
+        </li>
+        <li>
+          Lesson 58: <a href="../ccjs/055valueRemover.js" class="gen-link-cc">Value Remover</a>
+        </li>
+        <li>Lesson 59: <a href="../ccjs/056filterMatch.js" class="gen-link-cc">Filter Match</a></li>
+        <li>Lesson 60: <a href="../ccjs/057primeSum.js" class="gen-link-cc">Prime Sum</a></li>
+
+        <li>Lesson 61: <a href="../ccjs/058LCM.js" class="gen-link-cc">LCM</a></li>
+        <li>Lesson 62: <a href="../ccjs/059flattenTool.js" class="gen-link-cc">Flatten Tool</a></li>
+        <li>Lesson 63: <a href="../ccjs/060truthTest.js" class="gen-link-cc">Truth Test</a></li>
+
+        <li>Lesson 76: <a href="../ccjs/076spinalCase.js" class="gen-link-cc">Spinal Case</a></li>
+        <li>Lesson 77: <a href="../ccjs/077pigLatin.js" class="gen-link-cc">Pig Latin</a></li>
+        <li>Lesson 78: <a href="../ccjs/078smartWord.js" class="gen-link-cc">Smart Word</a></li>
+        <li>
+          Lesson 82: <a href="../ccjs/082spaceMission.js" class="gen-link-cc">Space Mission</a>
+        </li>
+        <li>
+          Lesson 83: <a href="../ccjs/083dateConvert.js" class="gen-link-cc">Date Conversion</a>
+        </li>
+        <li>
+          Lesson 86: <a href="../ccjs/086plantNursery.js" class="gen-link-cc">Plant Nursery</a>
+        </li>
+        <li>Lesson 87: <a href="../ccjs/087voteSystem.js" class="gen-link-cc">Vote System</a></li>
+        <li>
+          Lesson 91: <a href="../ccjs/091projectBoard.js" class="gen-link-cc">Project Board</a>
+        </li>
+        <li>
+          Lesson 92: <a href="../ccjs/092bankManegment.js" class="gen-link-cc">Bank Manager</a>
+        </li>
+        <li>Lesson 93: <a href="../ccjs/093countUpjs" class="gen-link-cc">Count Up</a></li>
+        <li>Lesson 94: <a href="../ccjs/094countDown.js" class="gen-link-cc">Count Down</a></li>
+        <li>Lesson 95: <a href="../ccjs/095numberRange.js" class="gen-link-cc">Number Range</a></li>
+        <li>
+          Lesson 97:
+          <a href="../ccjs/097permutationGenerator.js" class="gen-link-cc">Permutation Generator</a>
+        </li>
+        <li>Lesson 98: <a href="../ccjs/098linkedList.js" class="gen-link-cc">Linked List</a></li>
+        <li>
+          Lesson 99:
+          <a href="../ccjs/099linkedListOps.js" class="gen-link-cc">Linked List Operations</a>
+        </li>
+        <li>
+          Lesson 100: <a href="../ccjs/100createStack.js" class="gen-link-cc">Create a Stack</a>
+        </li>
+        <li>
+          Lesson 101: <a href="../ccjs/101createQueue.js" class="gen-link-cc">Create a Queue </a>
+        </li>
+        <li>
+          Lesson 102: <a href="../ccjs/102binarySearch.js" class="gen-link-cc">Binary Search</a>
+        </li>
+        <li>Lesson 103: <a href="../ccjs/103mergeSort.js" class="gen-link-cc">Merge Sort</a></li>
+        <li>Lesson 104: <a href="../ccjs/104bubbleSort.js" class="gen-link-cc">Bubble Sort</a></li>
+        <li>
+          Lesson 105: <a href="../ccjs/105selectionSort.js" class="gen-link-cc">Selection Sort</a>
+        </li>
+        <li>
+          Lesson 106: <a href="../ccjs/106insertionSort.js" class="gen-link-cc">Insertion Sort</a>
+        </li>
+        <li>Lesson 107: <a href="../ccjs/107quickSort.js" class="gen-link-cc">QuickSort</a></li>
+        <li>
+          Lesson 108: <a href="../ccjs/108shortestPath.js" class="gen-link-cc">Shortest Path</a>
+        </li>
+        <li>
+          Lesson 109:
+          <a href="../ccjs/109adjacencyList.js" class="gen-link-cc"
+            >Adjacency List to Matrix Converter</a
+          >
+        </li>
+        <li>
+          Lesson 110:
+          <a href="../ccjs/110breadthFirstSearch.js" class="gen-link-cc">Breadth-First Search</a>
+        </li>
+        <li>
+          Lesson 111:
+          <a href="../ccjs/111depthFirstSearch.js" class="gen-link-cc">Depth-First Search</a>
+        </li>
+        <li>Lesson 112: <a href="../ccjs/112nQueens.js" class="gen-link-cc">N-Queens</a></li>
+        <li>
+          Lesson 113:
+          <a href="../ccjs/113fibonacciCalc.js" class="gen-link-cc">Fibonacci Calculator</a>
+        </li>
+        <li>
+          Lesson 115:
+          <a href="../ccjs/115optionalArgumentsSumFunction.js" class="gen-link-cc"
+            >Optional Arguments Sum Function</a
+          >
+        </li>
+        <li>
+          Lesson 116:
+          <a href="../ccjs/120trafficLight.js" class="gen-link-cc">Traffic Light Simulation</a>
+        </li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

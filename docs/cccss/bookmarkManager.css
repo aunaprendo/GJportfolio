@@ -18,7 +18,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-	background-color: var(--accent-color-lteal);
+  background-color: var(--accent-color-lteal);
 }
 
 .select,
@@ -39,7 +39,8 @@ section {
   cursor: pointer;
 }
 
-.h1, .h2 {
+.h1,
+.h2 {
   margin-top: 10px;
   text-align: center;
 }

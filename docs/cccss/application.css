@@ -30,11 +30,7 @@ input:valid,
 select:valid,
 textarea:valid {
   border-color: var(--accent-color-dteal);
-
-	
 }
-
-
 
 /* Button hover effect */
 /*button:hover,
@@ -63,4 +59,3 @@ button:focus {
   border-radius: 10px;
   border-style: dotted;
 }*/
-

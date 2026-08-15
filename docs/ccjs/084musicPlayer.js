@@ -49,14 +49,14 @@ const userData = {
   songs: allSongs,
   currentSong: null,
   songCurrentTime: 0,
-}
+};
 
-const playSong = (id, start=true) => {
+const playSong = (id, start = true) => {
   const song = userData.songs.find((song) => song.id === id);
   audio.src = song.src;
   audio.title = song.title;
   if (userData.currentSong === null || start) {
-    audio.currentTime = 0
+    audio.currentTime = 0;
   } else {
     audio.currentTime = userData.songCurrentTime;
   }
@@ -66,13 +66,13 @@ const playSong = (id, start=true) => {
   highlightCurrentSong();
   setPlayButtonAccessibleText();
   audio.play();
-}
+};
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
   playButton.classList.remove("playing");
   audio.pause();
-}
+};
 
 const getCurrentSongIndex = () => userData.songs.indexOf(userData.currentSong);
 
@@ -93,7 +93,7 @@ const playPreviousSong = () => {
 const playNextSong = () => {
   if (userData.currentSong === null) {
     playSong(userData.songs[0].id);
-    return
+    return;
   }
   const nextSong = getNextSong();
   if (nextSong) {
@@ -106,7 +106,7 @@ const playNextSong = () => {
     setPlayButtonAccessibleText();
     pauseSong();
   }
-}
+};
 
 const setPlayerDisplay = () => {
   const currentTitle = userData.currentSong?.title;
@@ -119,10 +119,8 @@ const setPlayerDisplay = () => {
 const highlightCurrentSong = () => {
   const previousCurrentSong = document.querySelector('.playlist-song[aria-current="true"]');
   previousCurrentSong?.removeAttribute("aria-current");
-  const songToHighlight = document.getElementById(
-    `song-${userData.currentSong?.id}`
-  );
-  
+  const songToHighlight = document.getElementById(`song-${userData.currentSong?.id}`);
+
   songToHighlight?.setAttribute("aria-current", "true");
 };
 
@@ -145,9 +143,9 @@ songs.forEach((song) => {
   const id = song.getAttribute("id").slice(5);
   const songBtn = song.querySelector("button");
   songBtn.addEventListener("click", () => {
-      playSong(Number(id));
-  })
-})
+    playSong(Number(id));
+  });
+});
 
 pauseButton.addEventListener("click", pauseSong);
 

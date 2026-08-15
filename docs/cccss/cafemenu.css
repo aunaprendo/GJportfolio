@@ -1,14 +1,15 @@
 /* Coffee background */
 #coffee-background {
   background:
-    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     url("../assets/ccAssets/cafeNuts.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 /* Headings */
-#h1, .h2 {
+#h1,
+.h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 15px;
@@ -42,7 +43,7 @@
   margin: 20px auto;
   padding: 20px;
   z-index: 100;
-  border-radius: 8px; 
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -74,7 +75,8 @@
 }
 
 /* Item text alignment */
-.flavor, .dessert {
+.flavor,
+.dessert {
   text-align: left;
   width: 75%;
   display: inline-block;

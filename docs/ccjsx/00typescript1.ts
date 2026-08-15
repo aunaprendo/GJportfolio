@@ -8,7 +8,7 @@ const profile: {
   username: "codeLearner",
   age: 25,
   isLoggedIn: false,
-  programmingLanguages: ["JavaScript", "Python", "C++"]
+  programmingLanguages: ["JavaScript", "Python", "C++"],
 };
 
 console.log(profile);
@@ -18,7 +18,7 @@ const userRoles: Record<string, string> = {
   editor: "limited-access",
   viewer: "read-only",
   moderator: "medium-access",
-  guest: "read-only"
+  guest: "read-only",
 };
 
 console.log(userRoles);

@@ -1,6 +1,6 @@
 function initQueue() {
   return {
-    collection: []
+    collection: [],
   };
 }
 
@@ -10,14 +10,14 @@ function print(queue) {
 
 function enqueue(queue, element) {
   let length = queue.collection.length;
-	queue.collection[length]= element;
+  queue.collection[length] = element;
 }
 
 function dequeue(queue) {
   if (queue.collection.length === 0) {
-  	return undefined;
+    return undefined;
   }
-	return queue.collection.splice(0, 1)[0];
+  return queue.collection.splice(0, 1)[0];
 }
 
 function front(queue) {
@@ -29,7 +29,7 @@ function size(queue) {
 }
 
 function isEmpty(queue) {
-  return queue.collection.length ===0;
+  return queue.collection.length === 0;
 }
 
 let interests = initQueue();

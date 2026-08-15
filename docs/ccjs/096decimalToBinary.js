@@ -23,7 +23,7 @@ const animationData = [
     msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack.",
     showMsgDelay: 5000,
     removeElDelay: 10000,
-  }
+  },
 ];
 
 const decimalToBinary = (input) => {
@@ -56,7 +56,7 @@ const showAnimation = () => {
   });
 
   setTimeout(() => {
-result.textContent=decimalToBinary(5)
+    result.textContent = decimalToBinary(5);
   }, 20000);
 };
 

@@ -4,15 +4,16 @@
   height: 100vh;
   margin: 0;
   background-color: var(--accent-color-lgray);
-	background-size: cover;
+  background-size: cover;
   background-position: center;
   color: var(--text-color-main);
   font-family: Arial, sans-serif;
 }
 
 /* Headings and paragraph */
-.h1, .p {
-  margin: .5em auto;
+.h1,
+.p {
+  margin: 0.5em auto;
   text-align: center;
 }
 
@@ -54,7 +55,7 @@
   font-size: 1rem;
   border-radius: 4px;
   box-sizing: border-box;
-	color: black;
+  color: black;
 }
 
 .ccinput,
@@ -79,7 +80,6 @@
 }
 
 .ccinput[type="radio"] {
-  
   background-color: var(--accent-color-brown);
 }
 
@@ -96,7 +96,9 @@
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .ccinput[type="submit"]:hover,
@@ -114,7 +116,7 @@
 
 /* Change the "Choose File" text color */
 input[type="file"]::file-selector-button {
-  color: black; 
+  color: black;
 }
 
 /* Password hint popup */

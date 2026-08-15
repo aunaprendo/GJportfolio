@@ -30,12 +30,17 @@ const hideElements = (...elements: HTMLElement[]) =>
 const showElements = (...elements: HTMLElement[]) =>
   elements.forEach((el) => el.classList.remove("hidden"));
 
-const getRandomItem = <T,>(items: T[]): T => {
+const getRandomItem = <T>(items: T[]): T => {
   const index = Math.floor(Math.random() * items.length);
   return items[index];
 };
 
-const renderCard = (drawingType: string, isReversed: boolean, shortName: string, img: string): string => `
+const renderCard = (
+  drawingType: string,
+  isReversed: boolean,
+  shortName: string,
+  img: string,
+): string => `
   <div>
     <h2>${drawingType}</h2>
     <figure class="card_container ${isReversed ? "reversed-card" : ""}" data-id="${shortName}">
@@ -81,7 +86,7 @@ class Game {
     cardTitle: HTMLElement;
     description: HTMLElement;
     text: HTMLElement;
-  }
+  };
 
   constructor() {
     this.elements = {
@@ -98,7 +103,7 @@ class Game {
       cardTitle: getElement(".desc_title"),
       description: getElement(".description"),
       text: getElement(".text"),
-    }
+    };
 
     this.fetchCardsData();
     this.initializeEventListeners();
@@ -115,17 +120,10 @@ class Game {
   }
 
   private initializeEventListeners(): void {
-    this.elements.singleCardBtn.addEventListener("click", () =>
-      this.singleCardSelected(),
-    )
-  this.elements.multipleCardsBtn.addEventListener("click", () =>
-      this.multipleCardSelected(),
-    );
-    this.elements.newReadingBtn.addEventListener("click", () =>
-      this.newReading(),
-    );
-      document.addEventListener("click", (e: Event) => this.showFortune(e));
-
+    this.elements.singleCardBtn.addEventListener("click", () => this.singleCardSelected());
+    this.elements.multipleCardsBtn.addEventListener("click", () => this.multipleCardSelected());
+    this.elements.newReadingBtn.addEventListener("click", () => this.newReading());
+    document.addEventListener("click", (e: Event) => this.showFortune(e));
   }
   singleCardSelected() {
     hideElements(
@@ -136,8 +134,8 @@ class Game {
       this.elements.headerTitle,
     );
 
-   const isReversed = Math.random() < 0.5;
-   const chosenCard = getRandomItem(this.cards);
+    const isReversed = Math.random() < 0.5;
+    const chosenCard = getRandomItem(this.cards);
     this.elements.singleCard.innerHTML = renderCard(
       "Click the card and reveal the fortune",
       isReversed,
@@ -145,8 +143,8 @@ class Game {
       chosenCard.img,
     );
 
-     this.elements.multipleCard.innerHTML = "";
-       showElements(this.elements.singleCard, this.elements.fortuneContainer);
+    this.elements.multipleCard.innerHTML = "";
+    showElements(this.elements.singleCard, this.elements.fortuneContainer);
   }
 
   multipleCardSelected() {
@@ -157,11 +155,7 @@ class Game {
       this.elements.headerTitle,
     );
 
-    showElements(
-      this.elements.multipleCard,
-      this.elements.fortuneContainer,
-      this.elements.text,
-    );
+    showElements(this.elements.multipleCard, this.elements.fortuneContainer, this.elements.text);
 
     this.elements.multipleCard.innerHTML = Object.values(DrawingType)
       .map((type) => {
@@ -173,24 +167,24 @@ class Game {
   }
 
   showFortune(e: Event) {
-    const target = e.target
-    if(!(target instanceof  HTMLElement)){
+    const target = e.target;
+    if (!(target instanceof HTMLElement)) {
       return;
     }
 
-    const cardElement = target?.closest(".card_container")
-      
-    if(!(cardElement instanceof HTMLElement)){
+    const cardElement = target?.closest(".card_container");
+
+    if (!(cardElement instanceof HTMLElement)) {
       return;
     }
 
-    if (!cardElement){
-        return;
+    if (!cardElement) {
+      return;
     }
-      
+
     const cardId = cardElement.getAttribute("data-id");
     const foundCard = this.cards.find((card) => card.name_short === cardId);
-        
+
     if (foundCard) {
       this.elements.cardTitle.textContent = foundCard.name;
       this.elements.description.textContent = foundCard.desc;
@@ -199,9 +193,8 @@ class Game {
       showElements(this.elements.fortuneDescription);
     }
   }
-    
+
   newReading() {
-    
     showElements(
       this.elements.singleCardBtn,
       this.elements.multipleCardsBtn,
@@ -209,10 +202,10 @@ class Game {
     );
 
     hideElements(
-     this.elements.singleCard,
-     this.elements.multipleCard,
-     this.elements.fortuneContainer,
-     this.elements.fortuneDescription
+      this.elements.singleCard,
+      this.elements.multipleCard,
+      this.elements.fortuneContainer,
+      this.elements.fortuneDescription,
     );
   }
 }

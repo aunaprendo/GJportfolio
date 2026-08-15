@@ -1,17 +1,16 @@
 function findLongestWordLength(sentence) {
-	 let words = sentence.split(" ");
-	 let wordCount = words.length; 
-	  
-	 for (let x = 0; x < wordCount; x++) {
-	 	if (words[x].length > words[x++].length) {
-	 		let biggestWord = words[x];
-	 	};
-	 };
-	return biggestWord;	 
-};
+  let words = sentence.split(" ");
+  let wordCount = words.length;
 
-console.log(findLongestWordLength("hi i love squirrels")); 
+  for (let x = 0; x < wordCount; x++) {
+    if (words[x].length > words[x++].length) {
+      let biggestWord = words[x];
+    }
+  }
+  return biggestWord;
+}
 
+console.log(findLongestWordLength("hi i love squirrels"));
 
 function findLongestWord(sentence) {
   let words = sentence.split(" ");
@@ -28,8 +27,6 @@ function findLongestWord(sentence) {
 
 console.log(findLongestWord("hi i love squirrels"));
 
-
-
 function findLongestWordLength(sentence) {
   let words = sentence.split(" ");
   let longest = 0;
@@ -43,4 +40,4 @@ function findLongestWordLength(sentence) {
   return longest;
 }
 
-console.log(findLongestWordLength("hi i love squirrels")); 
+console.log(findLongestWordLength("hi i love squirrels"));

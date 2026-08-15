@@ -43,11 +43,11 @@
    SIDE MENU
 ========================================= */
 #mobile-nav-links a:hover {
-	color: var(--accent-color-gold);
+  color: var(--accent-color-gold);
 }
-	
+
 #side-logo {
-	width: 75%;
+  width: 75%;
 }
 
 /* ========================================
@@ -67,7 +67,7 @@
   padding: 0 0;
   margin-bottom: 1rem;
   list-style: none;
-		font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -76,7 +76,7 @@
 
 @media (max-width: 576px) {
   .breadcrumb {
-  font-size: .6rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -101,4 +101,3 @@
 .social img:focus-visible {
   box-shadow: 0 0 0 3px var(--accent-color-gold);
 }
-

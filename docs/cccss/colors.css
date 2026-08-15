@@ -16,23 +16,23 @@
 
 /* Individual colors */
 .color1 {
-  background-color: var(--accent-color-dteal); 
+  background-color: var(--accent-color-dteal);
 }
 
 .color2 {
-  background-color: var(--accent-color-lteal); 
+  background-color: var(--accent-color-lteal);
 }
 
 .color3 {
-  background-color: var( --accent-color-brown); 
+  background-color: var(--accent-color-brown);
 }
 
 .color4 {
-  background-color: var(--accent-color-gold); 
+  background-color: var(--accent-color-gold);
 }
 
 .color5 {
-  background-color: var(--accent-color-lgray); 
+  background-color: var(--accent-color-lgray);
 }
 
 /* Accessibility improvements */

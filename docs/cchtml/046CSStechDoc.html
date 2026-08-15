@@ -1,211 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../cccss/techdoc.css" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Info Page</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-    <!-- Secondary Navigation for the Documentation -->
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp Info Page</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body>
+    <!-- Main navigation -->
     <nav
-      id="navbar-squirrel"
-      aria-label="Squirrel documentation sections"
-    >
-      <h2 class="nav-heading text-bold">The Life of a Squirrel</h2>
-      <ul>
-        <li><a href="#Overview" class="tech-link">Overview</a></li>
-        <li><a href="#Eating_Habits" class="tech-link">Eating Habits</a></li>
-        <li><a href="#Living_Conditions" class="tech-link">Living Conditions</a></li>
-        <li><a href="#Daily_Routines" class="tech-link">Daily Routines</a></li>
-        <li><a href="#Enemies" class="tech-link">Enemies</a></li>
-      </ul>
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
     </nav>
-
-    <!-- Main Documentation Content -->
-    <div id="main-doc">
-      <!-- Overview -->
-      <h2 class="alt-heading text-bold">The Life of a Squirrel</h2>
-			<section
-        class="main-section"
-        id="Overview"
-        aria-labelledby="overview-title"
-      >
-        <h3 id="overview-title">Overview</h3>
-        <p>
-          Squirrels are small mammals belonging to the rodent family Sciuridae.
-          They are recognized by their bushy tails, sharp claws, and large
-          expressive eyes. Squirrel species include tree squirrels, ground
-          squirrels, and flying squirrels, found across the world except in
-          Antarctica and Australia.
-        </p>
-
-        <p>
-          They are energetic, clever, and eat mainly nuts, seeds, fruits, and
-          occasional insects or small animals. Tree squirrels are especially
-          known for storing food for winter. Flying squirrels glide between
-          trees using a membrane between their legs. Squirrels also help forests
-          by spreading seeds.
-        </p>
-
-        <code>print("Thank You Squirrels!")</code>
-      </section>
-
-      <!-- Eating Habits -->
-      <section
-        class="main-section"
-        id="Eating_Habits"
-        aria-labelledby="eating-title"
-      >
-        <h3 id="eating-title">Eating Habits</h3>
-        <p>
-          Squirrels are omnivores with plant-heavy diets. Their favorite foods
-          include nuts, seeds, fruits, and berries. They use strong teeth to
-          crack hard shells and often hold food with their paws. Many squirrel
-          species store food for the winter.
-        </p>
-
-        <p>
-          Some squirrels eat insects, eggs, fungi, or roots depending on the
-          species and availability. Their smart foraging behavior and memory
-          help them locate stored food. Squirrels also contribute to ecosystems
-          by dispersing seeds.
-        </p>
-
-        <code>open(bagOfNuts.xl)</code>
-      </section>
-
-      <!-- Living Conditions -->
-      <section
-        class="main-section"
-        id="Living_Conditions"
-        aria-labelledby="living-title"
-      >
-        <h3 id="living-title">Living Conditions</h3>
-        <p>
-          Tree squirrels build dreys made from twigs, moss, and leaves, usually
-          high in trees. They may also use tree hollows. Ground squirrels dig
-          burrows with tunnels and chambers for nesting and storing food.
-        </p>
-
-        <p>
-          Squirrel homes provide warmth, protection, and storage. They choose
-          locations close to food sources and safe from predators. Urban
-          squirrels may nest in attics or sheds, showing their adaptability.
-        </p>
-
-        <code>__init__(squirrel): drey</code>
-      </section>
-
-      <!-- Daily Routines -->
-      <section
-        class="main-section"
-        id="Daily_Routines"
-        aria-labelledby="daily-title"
-      >
-        <h3 id="daily-title">Daily Routines</h3>
-        <p>
-          Squirrels are diurnal and most active in early morning and late
-          afternoon. Their day includes foraging, climbing, and navigating tree
-          branches. They are agile and quick, helping them avoid predators.
-        </p>
-
-        <ul aria-label="Favorite squirrel activities" class="custom-bullets">
-          <li>Scavenging for nuts</li>
-          <li>Hiding nuts</li>
-          <li>Finding nice trees</li>
-          <li>Making mushroom jerky</li>
-          <li>Snuggling with fluffy tails</li>
+    <main>
+      <!-- Secondary Navigation for the Documentation -->
+      <nav id="navbar-squirrel" aria-label="Squirrel documentation sections">
+        <h2 class="nav-heading text-bold">The Life of a Squirrel</h2>
+        <ul>
+          <li><a href="#Overview" class="tech-link">Overview</a></li>
+          <li><a href="#Eating_Habits" class="tech-link">Eating Habits</a></li>
+          <li><a href="#Living_Conditions" class="tech-link">Living Conditions</a></li>
+          <li><a href="#Daily_Routines" class="tech-link">Daily Routines</a></li>
+          <li><a href="#Enemies" class="tech-link">Enemies</a></li>
         </ul>
+      </nav>
 
-        <p>
-          They rest in their nests during hot midday hours, groom themselves,
-          and stay alert. During fall, they focus heavily on gathering food for
-          winter. At night, they sleep safely in their nests.
-        </p>
+      <!-- Main Documentation Content -->
+      <div id="main-doc">
+        <!-- Overview -->
+        <h2 class="alt-heading text-bold">The Life of a Squirrel</h2>
+        <section class="main-section" id="Overview" aria-labelledby="overview-title">
+          <h3 id="overview-title">Overview</h3>
+          <p>
+            Squirrels are small mammals belonging to the rodent family Sciuridae. They are
+            recognized by their bushy tails, sharp claws, and large expressive eyes. Squirrel
+            species include tree squirrels, ground squirrels, and flying squirrels, found across the
+            world except in Antarctica and Australia.
+          </p>
 
-        <code>try("Climb a Tree")</code>
-      </section>
+          <p>
+            They are energetic, clever, and eat mainly nuts, seeds, fruits, and occasional insects
+            or small animals. Tree squirrels are especially known for storing food for winter.
+            Flying squirrels glide between trees using a membrane between their legs. Squirrels also
+            help forests by spreading seeds.
+          </p>
 
-      <!-- Enemies -->
-      <section
-        class="main-section"
-        id="Enemies"
-        aria-labelledby="enemies-title"
-      >
-        <h3 id="enemies-title">Enemies</h3>
-        <p>
-          Squirrels must watch out for predators such as hawks, owls, foxes,
-          snakes, and domestic cats. These predators rely on stealth or speed to
-          catch squirrels.
-        </p>
+          <code>print("Thank You Squirrels!")</code>
+        </section>
 
-        <p>
-          Other dangers include habitat loss, cars, harsh winters, and humans
-          who may view squirrels as pests. Despite this, squirrels are adaptable
-          and clever, helping them survive in diverse environments.
-        </p>
+        <!-- Eating Habits -->
+        <section class="main-section" id="Eating_Habits" aria-labelledby="eating-title">
+          <h3 id="eating-title">Eating Habits</h3>
+          <p>
+            Squirrels are omnivores with plant-heavy diets. Their favorite foods include nuts,
+            seeds, fruits, and berries. They use strong teeth to crack hard shells and often hold
+            food with their paws. Many squirrel species store food for the winter.
+          </p>
 
-        <code>split(squirrel, enemy)</code>
-      </section>
-		</div>
+          <p>
+            Some squirrels eat insects, eggs, fungi, or roots depending on the species and
+            availability. Their smart foraging behavior and memory help them locate stored food.
+            Squirrels also contribute to ecosystems by dispersing seeds.
+          </p>
 
-	</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-</body>
+          <code>open(bagOfNuts.xl)</code>
+        </section>
+
+        <!-- Living Conditions -->
+        <section class="main-section" id="Living_Conditions" aria-labelledby="living-title">
+          <h3 id="living-title">Living Conditions</h3>
+          <p>
+            Tree squirrels build dreys made from twigs, moss, and leaves, usually high in trees.
+            They may also use tree hollows. Ground squirrels dig burrows with tunnels and chambers
+            for nesting and storing food.
+          </p>
+
+          <p>
+            Squirrel homes provide warmth, protection, and storage. They choose locations close to
+            food sources and safe from predators. Urban squirrels may nest in attics or sheds,
+            showing their adaptability.
+          </p>
+
+          <code>__init__(squirrel): drey</code>
+        </section>
+
+        <!-- Daily Routines -->
+        <section class="main-section" id="Daily_Routines" aria-labelledby="daily-title">
+          <h3 id="daily-title">Daily Routines</h3>
+          <p>
+            Squirrels are diurnal and most active in early morning and late afternoon. Their day
+            includes foraging, climbing, and navigating tree branches. They are agile and quick,
+            helping them avoid predators.
+          </p>
+
+          <ul aria-label="Favorite squirrel activities" class="custom-bullets">
+            <li>Scavenging for nuts</li>
+            <li>Hiding nuts</li>
+            <li>Finding nice trees</li>
+            <li>Making mushroom jerky</li>
+            <li>Snuggling with fluffy tails</li>
+          </ul>
+
+          <p>
+            They rest in their nests during hot midday hours, groom themselves, and stay alert.
+            During fall, they focus heavily on gathering food for winter. At night, they sleep
+            safely in their nests.
+          </p>
+
+          <code>try("Climb a Tree")</code>
+        </section>
+
+        <!-- Enemies -->
+        <section class="main-section" id="Enemies" aria-labelledby="enemies-title">
+          <h3 id="enemies-title">Enemies</h3>
+          <p>
+            Squirrels must watch out for predators such as hawks, owls, foxes, snakes, and domestic
+            cats. These predators rely on stealth or speed to catch squirrels.
+          </p>
+
+          <p>
+            Other dangers include habitat loss, cars, harsh winters, and humans who may view
+            squirrels as pests. Despite this, squirrels are adaptable and clever, helping them
+            survive in diverse environments.
+          </p>
+
+          <code>split(squirrel, enemy)</code>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
-	

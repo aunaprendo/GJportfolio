@@ -1,14 +1,14 @@
-const calorieCounter = document.getElementById('calorie-counter');
-const budgetNumberInput = document.getElementById('budget');
-const entryDropdown = document.getElementById('entry-dropdown');
-const addEntryButton = document.getElementById('add-entry');
-const clearButton = document.getElementById('clear');
-const output = document.getElementById('output');
+const calorieCounter = document.getElementById("calorie-counter");
+const budgetNumberInput = document.getElementById("budget");
+const entryDropdown = document.getElementById("entry-dropdown");
+const addEntryButton = document.getElementById("add-entry");
+const clearButton = document.getElementById("clear");
+const output = document.getElementById("output");
 let isError = false;
 
 function cleanInputString(str) {
   const regex = /[+-\s]/g;
-  return str.replace(regex, '');
+  return str.replace(regex, "");
 }
 
 function isInvalidInput(str) {
@@ -29,7 +29,7 @@ function addEntry() {
     id="${entryDropdown.value}-${entryNumber}-calories"
     placeholder="Calories"
   />`;
-  targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
+  targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
 function calculateCalories(e) {
@@ -55,7 +55,7 @@ function calculateCalories(e) {
 
   const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
   const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
-  const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';
+  const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
   output.innerHTML = `
   <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
   <hr>
@@ -64,7 +64,7 @@ function calculateCalories(e) {
   <p>${exerciseCalories} Calories Burned</p>
   `;
 
-  output.classList.remove('hide');
+  output.classList.remove("hide");
 }
 
 function getCaloriesFromInputs(list) {
@@ -85,15 +85,15 @@ function getCaloriesFromInputs(list) {
 }
 
 function clearForm() {
-  const inputContainers = Array.from(document.querySelectorAll('.input-container'));
+  const inputContainers = Array.from(document.querySelectorAll(".input-container"));
 
   for (const container of inputContainers) {
-    container.innerHTML = '';
+    container.innerHTML = "";
   }
 
-  budgetNumberInput.value = '';
-  output.innerText = '';
-  output.classList.add('hide');
+  budgetNumberInput.value = "";
+  output.innerText = "";
+  output.classList.add("hide");
 }
 
 addEntryButton.addEventListener("click", addEntry);

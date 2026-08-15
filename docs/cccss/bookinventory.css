@@ -1,4 +1,3 @@
-
 span {
   display: inline-block;
 }
@@ -9,43 +8,53 @@ span {
 }
 
 /* Column widths */
-.col-title   { width: 36%; }
-.col-author  { width: 22%; }
-.col-category{ width: 16%; }
-.col-status  { width: 12%; }
-.col-rating  { width: 14%; }
+.col-title {
+  width: 36%;
+}
+.col-author {
+  width: 22%;
+}
+.col-category {
+  width: 16%;
+}
+.col-status {
+  width: 12%;
+}
+.col-rating {
+  width: 14%;
+}
 
 th {
-	font-weight: var(--weight-semibold);
+  font-weight: var(--weight-semibold);
 }
 
 table th,
 table td {
-  padding: 18px 3px;   
+  padding: 18px 3px;
 }
 
 .table-scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-	position: relative;
+  position: relative;
 }
 
 .inventory-table {
-  min-width: 750px; 
+  min-width: 750px;
   border-collapse: collapse;
 }
 
 @media (max-width: 768px) {
-	.table-scroll::after {
-	  content: "← swipe →";
-	  position: sticky;
-	  right: 10px;
-	  bottom: 6px;
-	  font-size: 0.75rem;
-	  opacity: 0.6;
-	  pointer-events: none;
-	}
+  .table-scroll::after {
+    content: "← swipe →";
+    position: sticky;
+    right: 10px;
+    bottom: 6px;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    pointer-events: none;
+  }
 }
 /* ========================================================================
    Table Row Status Coloring
@@ -72,7 +81,7 @@ tr.in-progress {
   padding: 2px;
   border: 1px dotted black;
   border-radius: 10px;
-	font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 tr.to-read .status {

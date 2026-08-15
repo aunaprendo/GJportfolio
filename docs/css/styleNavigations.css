@@ -2,7 +2,7 @@
    NAVBAR
 ========================================= */
 #top-bar {
-	background: var(--bg-color-main);
+  background: var(--bg-color-main);
 }
 
 .nav-link {
@@ -43,11 +43,11 @@
    SIDE MENU
 ========================================= */
 #mobile-nav-links a:hover {
-	color: var(--accent-color-lteal);
+  color: var(--accent-color-lteal);
 }
-	
+
 #side-logo {
-	width: 65%;
+  width: 65%;
 }
 
 /* ========================================

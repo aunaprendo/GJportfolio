@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-	--squirrel-width: 320px; /* overall scale — change this to resize */
+  --squirrel-width: 320px; /* overall scale — change this to resize */
   --color-fur-1: #8b5a2b; /* main fur */
   --color-fur-2: #6a4322; /* darker accents */
   --color-belly: #f3dcb2; /* belly/inner-ear */
@@ -43,9 +43,9 @@ main {
   margin: 0 auto;
   transform-origin: center bottom;
   outline: none;
-	z-index: 0;
-	pointer-events: none;
-	transform: translatex(-7%);
+  z-index: 0;
+  pointer-events: none;
+  transform: translatex(-7%);
 }
 
 .squirrel,
@@ -398,7 +398,6 @@ main {
   border-radius: 50% 50% 40% 40%;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12);
 }
-
 
 @media (max-width: 576px) {
   * {

@@ -1,8 +1,8 @@
 /* General Body Styling */
-#greeting-card {  
-  background-color: var(--accent-color-lteal);  
+#greeting-card {
+  background-color: var(--accent-color-lteal);
   color: #333;
-	max-height: 100vh;
+  max-height: 100vh;
 }
 
 /* Card Styling */
@@ -13,12 +13,14 @@
   margin: 75px auto 75px auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px gray;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-	text-align: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  text-align: center;
 }
 
 #card-title {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 .bday-card:hover {

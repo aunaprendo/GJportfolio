@@ -3,12 +3,12 @@
   border-radius: 25px;
   padding: 15px;
   width: 100%;
-  max-width: 500px; 
-  margin: 75px auto 0 auto;   
+  max-width: 500px;
+  margin: 75px auto 0 auto;
 }
 
 .cclabel {
-  display: block;   /* ensures labels stack above inputs */
+  display: block; /* ensures labels stack above inputs */
   margin: 5px 0;
   color: #ffffff;
   font-weight: bold;
@@ -16,7 +16,7 @@
 
 .ccinput,
 .cctextarea {
-  width: 100%;      
+  width: 100%;
   padding: 8px;
   margin: 5px 0 15px 0;
   border-radius: 5px;
@@ -26,7 +26,7 @@
 
 .ccinput:focus,
 .cctextarea:focus {
-  outline: 3px solid var(--accent-color-brown); 
+  outline: 3px solid var(--accent-color-brown);
   border-color: var(--accent-color-brown);
 }
 
@@ -44,5 +44,5 @@
 .ccbutton:hover,
 .ccbutton:focus {
   background-color: var(--accent-color-gold);
-  outline: 3px solid var(--accent-color-brown); 
+  outline: 3px solid var(--accent-color-brown);
 }

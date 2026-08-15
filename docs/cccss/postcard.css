@@ -5,21 +5,21 @@
   width: 75%;
   text-align: center;
   margin: 20px auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Post Image */
 .post-img {
   width: 100%;
-	aspect-ratio: 1 / 1;
-  background-image: url("../assets/ccAssets/adSquirrelLife.jpeg"); 
-  background-size: cover;  
+  aspect-ratio: 1 / 1;
+  background-image: url("../assets/ccAssets/adSquirrelLife.jpeg");
+  background-size: cover;
   background-position: center;
   border-bottom: 3px dotted gray;
-  height: auto; 
+  height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Post Content */
@@ -47,14 +47,16 @@
 .read-more {
   color: #000080; /* navy */
   background-color: var(--accent-color-brown);
-	color: var(--text-color-alt);
+  color: var(--text-color-alt);
   margin: 10px;
   padding: 10px 15px;
   border-radius: 15px;
   display: inline-block;
   font-size: 1rem;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Read More Hover State */

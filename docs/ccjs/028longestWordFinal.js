@@ -11,4 +11,4 @@ function findLongestWordLength(sentence) {
   return longest;
 }
 
-console.log(findLongestWordLength("hi i love squirrels")); 
+console.log(findLongestWordLength("hi i love squirrels"));

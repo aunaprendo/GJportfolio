@@ -50,7 +50,7 @@
 
 .product {
   margin: 25px 0;
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 .product-count {
@@ -77,8 +77,7 @@
 }
 
 @media (max-width: 576px) {
-	#cart-btn {
-  top: 15%;
+  #cart-btn {
+    top: 15%;
+  }
 }
-}
-

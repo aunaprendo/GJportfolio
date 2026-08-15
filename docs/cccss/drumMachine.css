@@ -6,22 +6,22 @@ main {
 }
 
 #drum-machine {
-	display: flex;
-	flex-direction: column;   
-	align-items: center;
-	justify-content: flex-start; 
-	width: 50%;
-	height: 75%;
-	background: linear-gradient(145deg, #e0c56e, #b89a3c);
-	border-radius: 3%;
-	padding-top: 5%; 
-	gap: 7%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  height: 75%;
+  background: linear-gradient(145deg, #e0c56e, #b89a3c);
+  border-radius: 3%;
+  padding-top: 5%;
+  gap: 7%;
 
-	box-shadow:
-		12px 12px 25px rgba(0,0,0,0.4),
-		-6px -6px 12px rgba(255,255,255,0.15);
+  box-shadow:
+    12px 12px 25px rgba(0, 0, 0, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.15);
 
-	border: 2px solid rgba(0,0,0,0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 #pad-bank {
@@ -29,8 +29,6 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
-
 
 .drum-pad {
   width: 100px;
@@ -47,16 +45,16 @@ main {
   align-items: center;
 
   background: linear-gradient(145deg, #444, #222);
-  box-shadow: 
-    6px 6px 12px rgba(0,0,0,0.6),
-    -4px -4px 8px rgba(255,255,255,0.05);
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.6),
+    -4px -4px 8px rgba(255, 255, 255, 0.05);
 }
 
 .drum-pad:active {
   transform: scale(0.95);
-  box-shadow: 
-    inset 4px 4px 8px rgba(0,0,0,0.7),
-    inset -2px -2px 4px rgba(255,255,255,0.05);
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.05);
 }
 
 .drum-pad:hover {
@@ -64,25 +62,25 @@ main {
 }
 
 #clipName {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 80%;
-	background-color: white;
-	border-radius: 10px;
-	padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 @media (max-width: 576px) {
-	#drum-machine {	
-		width: 100%;
-		height: 90%;	
-	}
-	#clipName {
-	width: 95%;
-	}
-	#pad-bank {
-  gap: 15px;
-	}
+  #drum-machine {
+    width: 100%;
+    height: 90%;
+  }
+  #clipName {
+    width: 95%;
+  }
+  #pad-bank {
+    gap: 15px;
+  }
 }

@@ -12,7 +12,6 @@ function destroyer(array, ...args) {
 
 console.log(destroyer(["tree", "hamburger", 7, 53], "tree", 53));
 
-
 function destroyer(array, ...args) {
-  return array.filter(item => !args.includes(item));
+  return array.filter((item) => !args.includes(item));
 }

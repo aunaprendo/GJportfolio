@@ -1,30 +1,30 @@
 function parseShipment(rawData) {
-    let shipment = [];
-    let seen = new Set();
+  let shipment = [];
+  let seen = new Set();
 
-    for (let item of rawData) {
-        let parts = item.split("|");
-        let shipmentObj = {
-            sku: parts[0],
-            name: parts[1],
-            qty: Number(parts[2]),
-            expires: parts[3],
-            zone: parts[4] || "general"
-        };
-        if (seen.has(shipmentObj.sku)) {
-            continue;
-        }
-        seen.add(shipmentObj.sku);
-        shipment.push(shipmentObj);
+  for (let item of rawData) {
+    let parts = item.split("|");
+    let shipmentObj = {
+      sku: parts[0],
+      name: parts[1],
+      qty: Number(parts[2]),
+      expires: parts[3],
+      zone: parts[4] || "general",
+    };
+    if (seen.has(shipmentObj.sku)) {
+      continue;
     }
-    return shipment;
+    seen.add(shipmentObj.sku);
+    shipment.push(shipmentObj);
+  }
+  return shipment;
 }
 
 const rawShip = [
   "SKU1|acorns|5|2026-01-01|nuts",
   "SKU2|leaves|0|2026-01-01",
-  "SKU1|branches|99|2027-01-01|drey"
-]
+  "SKU1|branches|99|2027-01-01|drey",
+];
 
 const pantry = [
   {
@@ -32,46 +32,40 @@ const pantry = [
     name: "pecan",
     qty: 10,
     expires: "2025-12-01",
-    zone: "nuts"
+    zone: "nuts",
   },
   {
     sku: "SKU3",
     name: "fluff",
     qty: 4,
     expires: "2025-10-01",
-    zone: "drey"
-  }
+    zone: "drey",
+  },
 ];
 
-
 function planRestock(pantry, shipment) {
-    let actions = [];
+  let actions = [];
 
-    for (let item of shipment) {
-        if (item.qty <= 0) {
-            actions.push({
-                type: "discard",
-                item: item
-            });
-        } else if (
-            pantry.some(
-                pantryItem => pantryItem.sku === item.sku
-            )
-        ) {
-            actions.push({
-                type: "restock",
-                item: item
-            });
-        } else {
-            actions.push({
-                type: "donate",
-                item: item
-            });
-        }
+  for (let item of shipment) {
+    if (item.qty <= 0) {
+      actions.push({
+        type: "discard",
+        item: item,
+      });
+    } else if (pantry.some((pantryItem) => pantryItem.sku === item.sku)) {
+      actions.push({
+        type: "restock",
+        item: item,
+      });
+    } else {
+      actions.push({
+        type: "donate",
+        item: item,
+      });
     }
-    return actions;
+  }
+  return actions;
 }
-
 
 function groupByZone(actions) {
   let groups = {};
@@ -86,11 +80,11 @@ function groupByZone(actions) {
     groups[zone].push(action);
   }
 
-  return groups;	
+  return groups;
 }
 
 function clonePantry(pantry) {
-    return pantry.map(item => ({ ...item }));
+  return pantry.map((item) => ({ ...item }));
 }
 
 const shipment = parseShipment(rawShip);

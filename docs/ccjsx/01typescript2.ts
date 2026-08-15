@@ -16,9 +16,9 @@ const avgResult = getAverage([2, 14, 26, 8]);
 console.log(avgResult);
 
 function raiseTo(base: number, exponent?: number): number {
-if (exponent){
-  return base ** exponent;
-}
+  if (exponent) {
+    return base ** exponent;
+  }
   return base ** 2;
 }
 

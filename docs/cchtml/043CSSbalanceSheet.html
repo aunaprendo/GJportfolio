@@ -1,241 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="../cccss/balancesheet.css" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Budget</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-<main>
-		
-	<section class="section" aria-labelledby="page-title">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/balancesheet.css" />
 
-		<h1 class="h1" id="page-title">
-      <span class="flex">
-        <span>Acorn & Tail Co.</span>
-        <span>Balance Sheet</span>
-      </span>
-    </h1>
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp Budget</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-    <!-- Visible year labels (decorative for layout only) -->
-    <div id="years" aria-hidden="true">
-      <span class="year">2019</span>
-      <span class="year">2020</span>
-      <span class="year">2021</span>
-    </div>
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-    <div class="table-wrap">
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
 
-      <!-- ========================
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <section class="section" aria-labelledby="page-title">
+        <h1 class="h1" id="page-title">
+          <span class="flex">
+            <span>Acorn & Tail Co.</span>
+            <span>Balance Sheet</span>
+          </span>
+        </h1>
+
+        <!-- Visible year labels (decorative for layout only) -->
+        <div id="years" aria-hidden="true">
+          <span class="year">2019</span>
+          <span class="year">2020</span>
+          <span class="year">2021</span>
+        </div>
+
+        <div class="table-wrap">
+          <!-- ========================
            ASSETS TABLE
       ========================= -->
-     <div class="table-responsive"> 
-			<table class="table" aria-label="Assets">
-        <caption>Assets</caption>
-        <thead>
-          <tr>
-            <td aria-hidden="true"></td>
-            <th><span class="sr-only">2019</span></th>
-            <th><span class="sr-only">2020</span></th>
-            <th class="current"><span class="sr-only">2021</span></th>
-          </tr>
-        </thead>
+          <div class="table-responsive">
+            <table class="table" aria-label="Assets">
+              <caption>
+                Assets
+              </caption>
+              <thead>
+                <tr>
+                  <td aria-hidden="true"></td>
+                  <th><span class="sr-only">2019</span></th>
+                  <th><span class="sr-only">2020</span></th>
+                  <th class="current"><span class="sr-only">2021</span></th>
+                </tr>
+              </thead>
 
-        <tbody>
-          <tr class="data">
-            <th scope="row">
-              Fluff
-              <span class="description">
-                Everyday spending nuts carried on paw.
-              </span>
-            </th>
-            <td>54 Nuts</td>
-            <td>56 Nuts</td>
-            <td class="current">53 Nuts</td>
-          </tr>
-					
-          <tr class="data">
-            <th scope="row">
-              Drey
-              <span class="description">
-                Safe and ready for trade or winter use.
-              </span>
-            </th>
-            <td>25 Nuts</td>
-            <td>30 Nuts</td>
-            <td class="current">28 Nuts</td>
-          </tr>
+              <tbody>
+                <tr class="data">
+                  <th scope="row">
+                    Fluff
+                    <span class="description"> Everyday spending nuts carried on paw. </span>
+                  </th>
+                  <td>54 Nuts</td>
+                  <td>56 Nuts</td>
+                  <td class="current">53 Nuts</td>
+                </tr>
 
-          <tr class="data">
-            <th scope="row">
-              Hidden
-              <span class="description">
-                Emergency stash buried across the forest.
-              </span>
-            </th>
-            <td>500 Nuts</td>
-            <td>650 Nuts</td>
-            <td class="current">728 Nuts</td>
-          </tr>
+                <tr class="data">
+                  <th scope="row">
+                    Drey
+                    <span class="description"> Safe and ready for trade or winter use. </span>
+                  </th>
+                  <td>25 Nuts</td>
+                  <td>30 Nuts</td>
+                  <td class="current">28 Nuts</td>
+                </tr>
 
-          <tr class="total">
-            <th scope="row">
-              Total <span class="sr-only">Assets</span>
-            </th>
-            <td>579 Nuts</td>
-            <td>736 Nuts</td>
-            <td class="current">809 Nuts</td>
-          </tr>
-        </tbody>
-      </table>
+                <tr class="data">
+                  <th scope="row">
+                    Hidden
+                    <span class="description"> Emergency stash buried across the forest. </span>
+                  </th>
+                  <td>500 Nuts</td>
+                  <td>650 Nuts</td>
+                  <td class="current">728 Nuts</td>
+                </tr>
 
-      <!-- ========================
+                <tr class="total">
+                  <th scope="row">Total <span class="sr-only">Assets</span></th>
+                  <td>579 Nuts</td>
+                  <td>736 Nuts</td>
+                  <td class="current">809 Nuts</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- ========================
            LIABILITIES TABLE
       ========================= -->
-      <table class="table" aria-label="Liabilities">
-        <caption>Liabilities</caption>
-        <thead>
-          <tr>
-            <td aria-hidden="true"></td>
-            <th><span class="sr-only">2019</span></th>
-            <th><span class="sr-only">2020</span></th>
-            <th><span class="sr-only">2021</span></th>
-          </tr>
-        </thead>
+            <table class="table" aria-label="Liabilities">
+              <caption>
+                Liabilities
+              </caption>
+              <thead>
+                <tr>
+                  <td aria-hidden="true"></td>
+                  <th><span class="sr-only">2019</span></th>
+                  <th><span class="sr-only">2020</span></th>
+                  <th><span class="sr-only">2021</span></th>
+                </tr>
+              </thead>
 
-        <tbody>
-          <tr class="data">
-            <th scope="row">
-              Burrow
-              <span class="description">
-                Outstanding loan from expanding tree drey.
-              </span>
-            </th>
-            <td>500 Nuts</td>
-            <td>250 Nuts</td>
-            <td class="current">0 Nuts</td>
-          </tr>
+              <tbody>
+                <tr class="data">
+                  <th scope="row">
+                    Burrow
+                    <span class="description"> Outstanding loan from expanding tree drey. </span>
+                  </th>
+                  <td>500 Nuts</td>
+                  <td>250 Nuts</td>
+                  <td class="current">0 Nuts</td>
+                </tr>
 
-          <tr class="data">
-            <th scope="row">
-              Foresting
-              <span class="description">
-                Annual forest fees including leaf insulation.
-              </span>
-            </th>
-            <td>200 Nuts</td>
-            <td>300 Nuts</td>
-            <td class="current">400 Nuts</td>
-          </tr>
+                <tr class="data">
+                  <th scope="row">
+                    Foresting
+                    <span class="description"> Annual forest fees including leaf insulation. </span>
+                  </th>
+                  <td>200 Nuts</td>
+                  <td>300 Nuts</td>
+                  <td class="current">400 Nuts</td>
+                </tr>
 
-          <tr class="data">
-            <th scope="row">
-              BIOUs
-              <span class="description">
-                Outstanding favors owed to birds.
-              </span>
-            </th>
-            <td>50 Nuts</td>
-            <td>50 Nuts</td>
-            <td class="current">75 Nuts</td>
-          </tr>
+                <tr class="data">
+                  <th scope="row">
+                    BIOUs
+                    <span class="description"> Outstanding favors owed to birds. </span>
+                  </th>
+                  <td>50 Nuts</td>
+                  <td>50 Nuts</td>
+                  <td class="current">75 Nuts</td>
+                </tr>
 
-          <tr class="total">
-            <th scope="row">
-              Total <span class="sr-only">Liabilities</span>
-            </th>
-            <td>750 Nuts</td>
-            <td>600 Nuts</td>
-            <td class="current">475 Nuts</td>
-          </tr>
-        </tbody>
-      </table>
+                <tr class="total">
+                  <th scope="row">Total <span class="sr-only">Liabilities</span></th>
+                  <td>750 Nuts</td>
+                  <td>600 Nuts</td>
+                  <td class="current">475 Nuts</td>
+                </tr>
+              </tbody>
+            </table>
 
-      <!-- ========================
+            <!-- ========================
            NET WORTH TABLE
       ========================= -->
-      <table class="table" aria-label="Net Worth">
-        <caption>Net Worth</caption>
-        <thead>
-          <tr>
-            <td aria-hidden="true"></td>
-            <th><span class="sr-only">2019</span></th>
-            <th><span class="sr-only">2020</span></th>
-            <th><span class="sr-only">2021</span></th>
-          </tr>
-        </thead>
+            <table class="table" aria-label="Net Worth">
+              <caption>
+                Net Worth
+              </caption>
+              <thead>
+                <tr>
+                  <td aria-hidden="true"></td>
+                  <th><span class="sr-only">2019</span></th>
+                  <th><span class="sr-only">2020</span></th>
+                  <th><span class="sr-only">2021</span></th>
+                </tr>
+              </thead>
 
-        <tbody>
-          <tr class="total">
-            <th scope="row">
-              Total <span class="sr-only">Net Worth</span>
-            </th>
-            <td>-171 Nuts</td>
-            <td>136 Nuts</td>
-            <td class="current">334 Nuts</td>
-          </tr>
-        </tbody>
-      </table>
-			<em><p class="scroll-hint-text mb-0 pb-0 d-md-none">← Scroll left and right to see more →</p></em>
-			</div>
-    </div>
-  </section>
+              <tbody>
+                <tr class="total">
+                  <th scope="row">Total <span class="sr-only">Net Worth</span></th>
+                  <td>-171 Nuts</td>
+                  <td>136 Nuts</td>
+                  <td class="current">334 Nuts</td>
+                </tr>
+              </tbody>
+            </table>
+            <em
+              ><p class="scroll-hint-text mb-0 pb-0 d-md-none">
+                ← Scroll left and right to see more →
+              </p></em
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-</body>
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

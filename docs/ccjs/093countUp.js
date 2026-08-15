@@ -9,4 +9,3 @@ function countup(number) {
   }
 }
 console.log(countup(5));
-

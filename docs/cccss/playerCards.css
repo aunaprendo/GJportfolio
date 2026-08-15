@@ -112,7 +112,9 @@ body {
   font-size: 14px;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
 
 .input:focus {
@@ -140,20 +142,20 @@ body {
   }
 }
 
-.tier-elite { 
-  --accent: #dbb8ff; 
+.tier-elite {
+  --accent: #dbb8ff;
 }
 
-.tier-gold   { 
-  --accent: #f1be32; 
+.tier-gold {
+  --accent: #f1be32;
 }
 
-.tier-silver { 
-  --accent: #99c9ff; 
+.tier-silver {
+  --accent: #99c9ff;
 }
 
-.tier-bronze { 
-  --accent: #acd157; 
+.tier-bronze {
+  --accent: #acd157;
 }
 
 .preview-box {
@@ -183,14 +185,40 @@ body {
 }
 
 .card-wrapper {
-  clip-path: polygon(8% 0%, 92% 0%, 100% 5%, 100% 91%, 98% 96%, 93% 99%, 87% 100%, 13% 100%, 7% 99%, 2% 96%, 0% 91%, 0% 5%);
+  clip-path: polygon(
+    8% 0%,
+    92% 0%,
+    100% 5%,
+    100% 91%,
+    98% 96%,
+    93% 99%,
+    87% 100%,
+    13% 100%,
+    7% 99%,
+    2% 96%,
+    0% 91%,
+    0% 5%
+  );
   background-color: var(--accent);
   padding: 3px;
   display: inline-block;
 }
 
 .card {
-  clip-path: polygon(8% 0%, 92% 0%, 100% 5%, 100% 91%, 98% 96%, 93% 99%, 87% 100%, 13% 100%, 7% 99%, 2% 96%, 0% 91%, 0% 5%);
+  clip-path: polygon(
+    8% 0%,
+    92% 0%,
+    100% 5%,
+    100% 91%,
+    98% 96%,
+    93% 99%,
+    87% 100%,
+    13% 100%,
+    7% 99%,
+    2% 96%,
+    0% 91%,
+    0% 5%
+  );
   width: 260px;
   background-color: #0a0a23;
   font-family: "Lato", sans-serif;

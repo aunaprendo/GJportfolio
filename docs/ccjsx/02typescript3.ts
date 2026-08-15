@@ -93,19 +93,19 @@ function updateResult() {
       type: "circle",
       radius: Number(propertyInputs.radius.value),
     });
- } else if (shape === "rectangle") {
+  } else if (shape === "rectangle") {
     result = calculateArea({
       type: "rectangle",
       width: Number(propertyInputs.width.value),
       height: Number(propertyInputs.height.value),
     });
   } else if (shape === "triangle") {
-      result = calculateArea({
-        type: "triangle",
-        base: Number(propertyInputs.base.value),
-        height: Number(propertyInputs.triangleHeight.value),
-      });
-    }
+    result = calculateArea({
+      type: "triangle",
+      base: Number(propertyInputs.base.value),
+      height: Number(propertyInputs.triangleHeight.value),
+    });
+  }
 
   resultText.textContent = result;
 }
@@ -141,7 +141,7 @@ const initializeApp = () => {
   shapeTypeSelect = getElement("shape-type") as HTMLSelectElement;
 
   propertyGroups = {
-    circle: getElement ("circle-props") as HTMLElement,
+    circle: getElement("circle-props") as HTMLElement,
     rectangle: getElement("rectangle-props") as HTMLElement,
     triangle: getElement("triangle-props") as HTMLElement,
   };
@@ -160,7 +160,7 @@ const initializeApp = () => {
   shapeTypeSelect.oninput = handleShapeSelect;
 
   for (const [, input] of Object.entries(propertyInputs)) {
-  input.oninput=handleInput
+    input.oninput = handleInput;
   }
 };
 

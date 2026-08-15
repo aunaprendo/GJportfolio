@@ -4,7 +4,7 @@
   min-height: calc(100vh - 100px);
   text-align: center;
   width: 75%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   line-height: 1.5;
 }
 
@@ -12,15 +12,15 @@
   #event-title {
     font-size: 2.1rem;
   }
-	#activities-title,
-	#accommodations-title,
-	#accoutrements-title {
-		font-size: 1.1rem;
-		font-weight: var(--weight-semibold);
-	}
-	#event-flyer {
-	  width: 95%;
-	}
+  #activities-title,
+  #accommodations-title,
+  #accoutrements-title {
+    font-size: 1.1rem;
+    font-weight: var(--weight-semibold);
+  }
+  #event-flyer {
+    width: 95%;
+  }
 }
 
 /* Horizontal Rule Styling */
@@ -38,17 +38,17 @@
 
 /* Flex Container for Multiple Sections */
 .containercc {
-	background-color: var(--accent-color-gold);
+  background-color: var(--accent-color-gold);
   text-align: left;
-  flex-wrap: wrap; 
-	width: 72vw;
-	padding: 5%;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+  flex-wrap: wrap;
+  width: 72vw;
+  padding: 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .eventimg {
-	width: 100%;
-	border-radius: 5%;
+  width: 100%;
+  border-radius: 5%;
 }
 
 /* Individual Section Styling */
@@ -59,6 +59,6 @@
   padding: 10px;
   margin: 0;
   box-sizing: border-box;
-  background-color: #f9f9f9; 
-  border-radius: 8px; 
+  background-color: #f9f9f9;
+  border-radius: 8px;
 }

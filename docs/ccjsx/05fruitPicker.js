@@ -1,7 +1,7 @@
 const { useState, useEffect } = React;
 
 export function FruitsSearch() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
   function handleSubmit(e) {
@@ -9,25 +9,23 @@ export function FruitsSearch() {
   }
 
   useEffect(() => {
-    if (query.trim() === '') {
+    if (query.trim() === "") {
       setResults([]);
       return;
     }
     const timeoutId = setTimeout(async () => {
       try {
-        const response = await fetch(`https://fruit-search.freecodecamp.rocks/api/fruits?q=${query}`);
+        const response = await fetch(
+          `https://fruit-search.freecodecamp.rocks/api/fruits?q=${query}`,
+        );
         const data = await response.json();
-        setResults(data.map(fruit => fruit.name));
+        setResults(data.map((fruit) => fruit.name));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     }, 700);
-      return () => 
-      clearTimeout(timeoutId);
-    
-
+    return () => clearTimeout(timeoutId);
   }, [query]);
-
 
   return (
     <div id="search-container">
@@ -42,8 +40,10 @@ export function FruitsSearch() {
       </form>
       <div id="results">
         {results.length > 0 ? (
-          results.map(item => (
-            <p key={item} className="result-item">{item}</p>
+          results.map((item) => (
+            <p key={item} className="result-item">
+              {item}
+            </p>
           ))
         ) : (
           <p>No results found</p>

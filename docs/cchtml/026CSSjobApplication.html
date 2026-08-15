@@ -1,141 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
-	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="../css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link href="../cccss/application.css" rel="stylesheet" />
-	
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - freeCodeCamp Application</title>
-  <meta name="title" content="Portfolio" />
-  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-	<!-- Main navigation -->
-  <nav 
-    data-include="../partials/ccNavBar.html" 
-    role="navigation" 
-    aria-label="Primary navigation">
-  </nav>
-	
-	<!-- Side menu -->
-  <aside 
-    data-include="../partials/ccSideMenu.html" 
-    role="navigation" 
-    aria-label="Side menu">
-  </aside>
-	
-	<!-- Contact menu -->
-  <aside 
-    data-include="../partials/contactMenu.html" 
-    role="contact" 
-    aria-label="Contact Card">
-  </aside>
-	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-	  <ol class="breadcrumb justify-content-end">
-	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
-			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
-	  </ol>
-	</nav>	
-  <main>
-    <div class="container">
-      <h1 class="h1" id="form-title">Squirrel Application</h1>
-      
-      <form
-        id="form"
-        method="get"
-        action="0SubmissionRecieved.html"
-        aria-describedby="form-instructions">
-        
-      <!-- Name -->
-			<div class="form-group input-group mb-3">
-			  <span class="input-group-text" id="name-label">Full Name:</span>
-			  <input type="text" id="name" class="form-control" placeholder="Peanut Metz" aria-label="Name" required aria-required="true">
-			</div>				
-				
-      <!-- Email -->
-			<div class="form-group input-group mb-3">
-			  <span class="input-group-text" id="email-label">Email:</span>
-			  <input type="email" id="email" class="form-control" placeholder="pecansforever@nuts.com" aria-label="email" required aria-required="true">
-			</div>		
-			
-      <!-- Position -->
-      <div class="form-group mb-3">
-        <label for="dropdown">Position:</label>
-        <select
-				  id="dropdown"
-				  class="form-select form-select-sm"
-				  name="attitude"
-				  required
-				  aria-required="true">
-				  <option value="" disabled selected>
-				    Open this select menu
-				  </option>
-					<option value="nut-hider">Nut Hider</option>
-          <option value="nut-finder">Nut Finder</option>
-          <option value="drey-builder">Drey Builder</option>
-          <option value="mushroom-jerky-maker">Mushroom Jerky Maker</option>
-          <option value="pup-rearer">Pup Rearer</option>
-        </select>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="../cccss/application.css" rel="stylesheet" />
+
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - freeCodeCamp Application</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+    <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-end">
+        <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+      </ol>
+    </nav>
+    <main>
+      <div class="container">
+        <h1 class="h1" id="form-title">Squirrel Application</h1>
+
+        <form
+          id="form"
+          method="get"
+          action="0SubmissionRecieved.html"
+          aria-describedby="form-instructions"
+        >
+          <!-- Name -->
+          <div class="form-group input-group mb-3">
+            <span class="input-group-text" id="name-label">Full Name:</span>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Peanut Metz"
+              aria-label="Name"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group input-group mb-3">
+            <span class="input-group-text" id="email-label">Email:</span>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="pecansforever@nuts.com"
+              aria-label="email"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <!-- Position -->
+          <div class="form-group mb-3">
+            <label for="dropdown">Position:</label>
+            <select
+              id="dropdown"
+              class="form-select form-select-sm"
+              name="attitude"
+              required
+              aria-required="true"
+            >
+              <option value="" disabled selected>Open this select menu</option>
+              <option value="nut-hider">Nut Hider</option>
+              <option value="nut-finder">Nut Finder</option>
+              <option value="drey-builder">Drey Builder</option>
+              <option value="mushroom-jerky-maker">Mushroom Jerky Maker</option>
+              <option value="pup-rearer">Pup Rearer</option>
+            </select>
+          </div>
+
+          <!-- Availability -->
+          <fieldset class="mb-3">
+            <legend>Availability:</legend>
+
+            <div class="option form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="morning"
+                name="availability"
+                value="Mornings"
+                required
+              />
+              <label for="morning">Mornings</label><br />
+
+              <input
+                class="form-check-input"
+                type="radio"
+                id="afternoon"
+                name="availability"
+                value="Afternoons"
+              />
+              <label for="afternoon">Afternoons</label><br />
+
+              <input
+                class="form-check-input"
+                type="radio"
+                id="evening"
+                name="availability"
+                value="Evenings"
+              />
+              <label for="evening">Evenings</label><br />
+            </div>
+          </fieldset>
+
+          <!-- Why -->
+          <div class="form-group mb-4">
+            <label class="form-label" for="comments">Why do you want to be a squirrel?</label>
+            <textarea
+              id="comments"
+              class="form-control"
+              name="comments"
+              rows="3"
+              placeholder="Type your reason here"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-secondary" type="submit">Submit Application</button>
+        </form>
       </div>
-						
-      <!-- Availability -->
-      <fieldset class="mb-3">
-        <legend>Availability:</legend>
-				
-				
-        <div class="option form-check">
-          <input class="form-check-input" type="radio" id="morning" name="availability" value="Mornings" required />
-          <label for="morning">Mornings</label><br>
+    </main>
 
-          <input class="form-check-input" type="radio" id="afternoon" name="availability" value="Afternoons" />
-          <label for="afternoon">Afternoons</label><br>
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
 
-          <input class="form-check-input" type="radio" id="evening" name="availability" value="Evenings" />
-          <label for="evening">Evenings</label><br>
-        </div>
-      </fieldset>
-			
-      <!-- Why -->
-      <div class="form-group mb-4">
-        <label class="form-label" for="comments">Why do you want to be a squirrel?</label>
-        <textarea
-          id="comments"
-					class="form-control"
-          name="comments"
-          rows="3"
-					placeholder="Type your reason here"
-					required aria-required="true"></textarea>
-      </div>
-
-        <button class="btn btn-secondary" type="submit">Submit Application</button>
-      </form>
-    </div>
-	</main>
-		
-			<!-- Footer -->
-	  <footer
-	    data-include="../partials/footer.html" 
-	    role="contentinfo" 
-	    aria-label="Footer">
-	  </footer>
-		
-	  <script src="../js/script.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-	  AOS.init();
-	</script>
-	</body>
-	</html>
-	
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

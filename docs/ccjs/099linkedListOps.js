@@ -1,7 +1,7 @@
 function initList() {
   return {
     head: null,
-    length: 0
+    length: 0,
   };
 }
 
@@ -46,15 +46,15 @@ function remove(list, element) {
 }
 
 function contains(list, element) {
-	let current = list.head;
-	
-	while (current !== null) {
-	    if (current.element===element) {
-	    	return true;
-	    }
-	    	current = current.next;
-		}
-	return false;	   
+  let current = list.head;
+
+  while (current !== null) {
+    if (current.element === element) {
+      return true;
+    }
+    current = current.next;
+  }
+  return false;
 }
 
 function getAt(list, index) {
@@ -97,7 +97,7 @@ function insertAt(list, index, element) {
 }
 
 function removeAt(list, index) {
- if (index < 0 || index > list.length) return;
+  if (index < 0 || index > list.length) return;
 
   if (index === 0) {
     list.head = list.head.next;
@@ -118,9 +118,9 @@ function removeAt(list, index) {
 }
 
 function clear(list) {
-	list.head = null;	
-	list.length = 0;
-	return;
+  list.head = null;
+  list.length = 0;
+  return;
 }
 
 const squirrelList = initList();

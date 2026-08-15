@@ -8,8 +8,8 @@ const instrumentsArr = [
   { category: "percussion", instrument: "Log Drum Set", price: 500 },
   { category: "percussion", instrument: "Twig Xylophone", price: 3000 },
   { category: "percussion", instrument: "Shell Cymbals", price: 200 },
-  { category: "percussion", instrument: "Forest Marimba", price: 3000 }
-]
+  { category: "percussion", instrument: "Forest Marimba", price: 3000 },
+];
 
 const selectContainer = document.querySelector("select");
 const productsContainer = document.querySelector(".products-container");
@@ -17,9 +17,7 @@ function instrumentCards(instrumentCategory) {
   const instruments =
     instrumentCategory === "all"
       ? instrumentsArr
-      : instrumentsArr.filter(
-          ({ category }) => category === instrumentCategory
-        );
+      : instrumentsArr.filter(({ category }) => category === instrumentCategory);
 
   return instruments
     .map(({ instrument, price }) => {
@@ -29,7 +27,8 @@ function instrumentCards(instrumentCategory) {
             <p>$${price}</p>
           </div>
         `;
-    }).join("")
+    })
+    .join("");
 }
 selectContainer.addEventListener("change", () => {
   productsContainer.innerHTML = instrumentCards(selectContainer.value);

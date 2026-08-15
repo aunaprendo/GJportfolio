@@ -1,20 +1,19 @@
 let num = 5;
 
 function factorialCalculator(number) {
-	let max = number + 1;
-	let result = 1;
-	for (var i = 1; i < max; i++) {
-	result = result * i;
-	}
-	return result;
+  let max = number + 1;
+  let result = 1;
+  for (var i = 1; i < max; i++) {
+    result = result * i;
+  }
+  return result;
 }
 
 let factorial = factorialCalculator(num);
-let resultMsg = `Factorial of ${num} is ${factorial}`
-console.log(resultMsg)
+let resultMsg = `Factorial of ${num} is ${factorial}`;
+console.log(resultMsg);
 
-
-//cleaner version 
+//cleaner version
 let num = 5;
 
 function factorialCalculator(number) {

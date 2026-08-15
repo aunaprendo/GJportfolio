@@ -1,5 +1,3 @@
-
-
 main {
   text-align: center;
   padding: 10px;
@@ -21,17 +19,15 @@ button {
   cursor: pointer;
   color: var(--text-color-alt);
   background-color: var(--accent-color-brown);
-  background-image: linear-gradient(
-    to bottom,
-    var(--accent-color-gold),
-    var(--accent-color-brown)
-  );
+  background-image: linear-gradient(to bottom, var(--accent-color-gold), var(--accent-color-brown));
   border: 3px solid var(--accent-color-brown);
   border-radius: 8px;
   padding: 10px;
   font-size: 1.5rem;
   margin: 10px 0;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 @media (min-width: 768px) {
@@ -48,7 +44,7 @@ button {
 .title {
   margin-top: 15px;
   font-size: 2rem;
-	font-weight: var(--weight-bold);
+  font-weight: var(--weight-bold);
 }
 
 .description {

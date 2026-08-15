@@ -1,56 +1,56 @@
 #story-body {
-    background-color: black;
-    color: var(--text-color-alt);
+  background-color: black;
+  color: var(--text-color-alt);
 }
 
 #story,
 #result {
-    text-align: center;
+  text-align: center;
 }
 
 #story {
-    margin: 10px 0 15px;
+  margin: 10px 0 15px;
 }
 
 .story-container {
-    margin: auto;
-    padding: 10px;
-    width: 80%;
-    border-style: double;
-    border-width: 14px;
-    border-color: var(--accent-color-lgray);
+  margin: auto;
+  padding: 10px;
+  width: 80%;
+  border-style: double;
+  border-width: 14px;
+  border-color: var(--accent-color-lgray);
 }
 
 .story-btn-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 760px) {
-    .story-btn-container {
-        flex-direction: row;
-    }
+  .story-btn-container {
+    flex-direction: row;
+  }
 }
 
 #result {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    line-height: 30px;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  line-height: 30px;
 }
 
 .story-btn {
-    cursor: pointer;
-    width: 200px;
-    margin: 10px 0 10px 0.5rem;
-    color: var(--text-color-main);
-    background-color: var(--accent-color-gold);
-    border-color: var(--accent-color-gold);
-    border-width: 1px;
+  cursor: pointer;
+  width: 200px;
+  margin: 10px 0 10px 0.5rem;
+  color: var(--text-color-main);
+  background-color: var(--accent-color-gold);
+  border-color: var(--accent-color-gold);
+  border-width: 1px;
 }
 
 .story-btn:hover {
-    background-image: linear-gradient(var(--accent-color-lteal), var(--accent-color-dteal));
-		border-color: var(--accent-color-lteal);
+  background-image: linear-gradient(var(--accent-color-lteal), var(--accent-color-dteal));
+  border-color: var(--accent-color-lteal);
 }

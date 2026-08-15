@@ -35,7 +35,7 @@ function parseCard(rawString) {
     title: title || "Unknown",
     author: author || "Unknown",
     year: year ? parseInt(year) : "Unknown",
-    location: location || "Unknown"
+    location: location || "Unknown",
   };
 }
 
@@ -136,18 +136,18 @@ function exportToCSV(catalog) {
 console.log(exportToCSV(catalog));
 
 console.log(catalog.length);
-console.log( Object.keys(byDecade).length);
+console.log(Object.keys(byDecade).length);
 let oldestYear = Infinity;
- let newestYear = 0;
- for(let i = 0; i < catalog.length; i++){
-  if (catalog[i].year !== "Unknown"){
-    if (catalog[i].year<oldestYear){
-      oldestYear= catalog[i].year
+let newestYear = 0;
+for (let i = 0; i < catalog.length; i++) {
+  if (catalog[i].year !== "Unknown") {
+    if (catalog[i].year < oldestYear) {
+      oldestYear = catalog[i].year;
     }
-      if (catalog[i].year>newestYear){
-      newestYear= catalog[i].year
+    if (catalog[i].year > newestYear) {
+      newestYear = catalog[i].year;
     }
     console.log(oldestYear);
     console.log(newestYear);
   }
- }
+}
