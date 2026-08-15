@@ -120,32 +120,14 @@
 /* ========================================
    HOME PAGE: TESTIMONIALS
 ========================================= */
-.testimonial-grid {
-  --testimonial-gap: 1.5rem;
-
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--testimonial-gap);
-  align-items: start;
-}
-
-.testimonial-column {
-  display: flex;
-  flex-direction: column;
-  gap: var(--testimonial-gap);
-  min-width: 0;
-}
-
 .testimonial-link {
-  display: block;
-  margin: 0;
+
   color: inherit;
   text-decoration: none;
 }
 
 .testimonial-card {
-  display: flex;
-  flex-direction: column;
+
   padding: 1.5rem;
   background-color: var(--accent-color-dteal);
   border-radius: 12px;
@@ -189,19 +171,6 @@
   opacity: 0.9;
 }
 
-/* Two-column layout */
-@media (max-width: 992px) {
-  .testimonial-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* Single-column layout */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ========================================
    HOME PAGE: PROJECT CAROUSEL
