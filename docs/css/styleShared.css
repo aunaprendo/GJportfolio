@@ -81,7 +81,7 @@ h1 {
 }
 
 h2 {
-  font-size: calc(1rem + 1.3vw);
+  font-size: calc(1rem + 1vw);
   font-weight: var(--weight-small);
   line-height: 1.2;
 }
