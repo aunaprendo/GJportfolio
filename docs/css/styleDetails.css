@@ -115,21 +115,50 @@
 /* ========================================
    HOME PAGE: TESTIMONIALS
 ========================================= */
+
 .testimonial-grid {
-  column-gap: 1.5rem;
-  column-count: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Desktop layout */
+.testimonial-link:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.testimonial-link:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.testimonial-link:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.testimonial-link:nth-child(4) {
+    grid-column: 3;
+    grid-row: 1;
 }
 
 @media (max-width: 992px) {
-  .testimonial-grid {
-    column-count: 2;
-  }
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-link:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }
 
 @media (max-width: 768px) {
-  .testimonial-grid {
-    column-count: 1;
-  }
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .testimonial-link {
