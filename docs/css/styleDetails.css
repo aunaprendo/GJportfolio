@@ -120,7 +120,43 @@
 /* ========================================
    HOME PAGE: TESTIMONIALS
 ========================================= */
+.testimonial-masonry {
+  --testimonial-gap: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1px;
+  gap: var(--testimonial-gap);
+  align-items: start;
+}
+
 .testimonial-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.testimonial-card {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--accent-color-dteal);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .testimonial-masonry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-masonry {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* .testimonial-link {
 
   color: inherit;
   text-decoration: none;
@@ -135,7 +171,7 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-}
+} */
 
 .testimonial-link:hover .testimonial-card,
 .testimonial-link:focus-visible .testimonial-card {
