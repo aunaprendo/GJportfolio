@@ -342,7 +342,6 @@ blockquote {
 ========================================= */
 .in-progress-blur {
   filter: blur(5px);
-  aria-hidden: true; /* Decorative content ignored by screen readers */
 }
 
 hr {

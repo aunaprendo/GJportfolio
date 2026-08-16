@@ -7,8 +7,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.3/babel.min.js"></script>
-    <script data-plugins="transform-modules-umd" type="text/babel" src="index.jsx"></script>
-    <link rel="stylesheet" href="./styles.css" />
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="../ccjsx/01profileCards.js"
+    ></script>
     <link rel="stylesheet" href="../cccss/profileCards.css" />
   </head>
   <body>
@@ -19,9 +22,8 @@
       data-presets="react"
       data-type="module"
     >
-      import { App } from "./index.jsx";
+      import { App } from "../ccjsx/01profileCards.js";
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     </script>
-    <script src="../ccjsx/01profileCards.js"></script>
   </body>
 </html>
