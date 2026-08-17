@@ -1,29 +1,90 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Reusable Card component</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/profileCards.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.3/babel.min.js"></script>
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
-      src="../ccjsx/01profileCards.js"
+      src="../ccjsx/01profileCards.jsx"
     ></script>
-    <link rel="stylesheet" href="../cccss/profileCards.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>Reusable Card component</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
   </head>
+
   <body>
-    <div id="root"></div>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+
+    <main>
+      <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-end">
+          <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccFrontEnd.html">freeCodeCamp Front End</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+        </ol>
+      </nav>
+
+      <div id="root"></div>
+    </main>
+
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
       data-presets="react"
       data-type="module"
     >
-      import { App } from "../ccjsx/01profileCards.js";
+      import { App } from "../ccjsx/01profileCards.jsx";
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

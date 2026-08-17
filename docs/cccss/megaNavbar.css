@@ -1,11 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --white: #fff;
   --light-grey: #e1e0e0;
@@ -42,7 +34,6 @@ body {
 button {
   background: transparent;
   border: none;
-  font-family: "Times New Roman", Times, serif;
   padding: 10px;
   font-size: 1rem;
 }
