@@ -1,9 +1,4 @@
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: #f4f4f4;
 }
 
@@ -18,7 +13,7 @@ body {
 #toggle-button {
   padding: 10px 20px;
   border: none;
-  background: #007bff;
+  background: var(--accent-color-brown);
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -26,7 +21,8 @@ body {
 }
 
 #toggle-button:hover {
-  background: #0056b3;
+  background: var(--accent-color-gold);
+  color: black;
 }
 
 #message {

@@ -1,26 +1,90 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Toggle Visibility</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/textApp.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
-    <script data-plugins="transform-modules-umd" type="text/babel" src="index.jsx"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="../cccss/textApp.css" />
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      src="../ccjsx/03textApp.jsx"
+    ></script>
+
+    <!-- Primary Meta Tags -->
+    <title>Toggle Visibility</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
   </head>
+
   <body>
-    <div id="root"></div>
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+
+    <main>
+      <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-end">
+          <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccFrontEnd.html">freeCodeCamp Front End</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+        </ol>
+      </nav>
+
+      <div id="root"></div>
+    </main>
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
       data-presets="react"
       data-type="module"
     >
-      import { ToggleApp } from "./index.jsx";
+      import { ToggleApp } from "../ccjsx/03textApp.jsx";
       ReactDOM.createRoot(document.getElementById("root")).render(<ToggleApp />);
     </script>
-    <script src="../ccjsx/03textApp.js"></script>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

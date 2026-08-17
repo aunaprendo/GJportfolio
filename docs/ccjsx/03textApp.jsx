@@ -12,7 +12,7 @@ export const ToggleApp = () => {
       <button onClick={handleToggleVisibility} id="toggle-button">
         {isVisible ? "Hide" : "Show"} Message
       </button>
-      {isVisible && <p id="message">I love freeCodeCamp!</p>}
+      {isVisible && <p id="message">I love squirrels!</p>}
     </div>
   );
 };
