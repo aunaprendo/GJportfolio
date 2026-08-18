@@ -1,18 +1,17 @@
 const { useState, useMemo, useCallback } = React;
 
 const items = [
-  "Apples",
-  "Bananas",
-  "Strawberries",
-  "Blueberries",
-  "Mangoes",
-  "Pineapple",
-  "Lettuce",
-  "Broccoli",
-  "Paper Towels",
-  "Dish Soap",
+  "Acorns",
+  "Walnuts",
+  "Pecans",
+  "Hazelnuts",
+  "Sunflower Seeds",
+  "Pumpkin Seeds",
+  "Peanuts",
+  "Dried Berries",
+  "Tiny Napkins",
+  "Acorn Polish",
 ];
-
 let prevToggleItem = null;
 
 export const ShoppingList = () => {
@@ -42,8 +41,8 @@ export const ShoppingList = () => {
 
   return (
     <div className="container">
-      <h1>Shopping List</h1>
-      <form>
+      <h1 className="h1 text-center">Shopping List</h1>
+      <form className="formList">
         <label htmlFor="search">Search for an item:</label>
         <input
           id="search"

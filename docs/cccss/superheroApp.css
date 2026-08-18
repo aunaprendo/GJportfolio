@@ -1,12 +1,9 @@
-#superhero {
-  margin: 0;
-  padding: 0;
+#root {
   min-height: 100vh;
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(30deg, #ff9999 50%, #6699ff 50%);
+  background: linear-gradient(30deg, #705200 50%, #065f6f 50%);
 }
 
 .form-wrap {

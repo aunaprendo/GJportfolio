@@ -6,58 +6,34 @@
   --golden-yellow: #feac32;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
+#shopList {
   line-height: 1.5;
-  color: var(--dark-grey);
-  background-color: var(--dark-grey);
 }
 
-main,
-.container {
+#app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.container {
-  background-color: var(--light-grey);
+#app-container {
+  background-color: var(--accent-color-lgray);
   width: 90%;
   margin: 20px;
   padding: 10px;
+  border-radius: 1%;
 }
 
-h1 {
-  color: var(--dark-grey);
+.h1 {
+  font-size: calc(1.5rem + 2vw);
 }
 
-form {
+.formList {
   text-align: center;
 }
 
-button {
+.buttonList {
   cursor: pointer;
-}
-
-button {
-  cursor: pointer;
-  width: 100px;
-  margin: 3px;
-  color: var(--dark-grey);
-  background-color: var(--golden-yellow);
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border-color: var(--golden-yellow);
-  border-width: 3px;
-}
-
-button:hover {
-  background-image: linear-gradient(#ffcc4c, #f89808);
 }
 
 input {

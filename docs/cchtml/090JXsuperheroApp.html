@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="../cccss/superheroApp.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
-      data-presets='[["react", {"runtime":"classic"}]]'
       src="../ccjsx/07superheroApp.jsx"
     ></script>
 
@@ -72,11 +71,10 @@
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
-      data-presets='[["react", {"runtime":"classic"}]]'
+      data-presets="react"
       data-type="module"
     >
       import { SuperheroForm } from "../ccjsx/07superheroApp.jsx";
-
       ReactDOM.createRoot(document.getElementById("root")).render(<SuperheroForm />);
     </script>
 

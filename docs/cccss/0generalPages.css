@@ -86,3 +86,46 @@ main {
     0 2px 4px rgba(0, 0, 0, 0.9),
     0 0 8px rgba(0, 0, 0, 0.6);
 }
+
+/* ========================================
+   CODE PROJECTS
+========================================= */
+
+.code-project {
+  width: min(900px, 90%);
+  margin: 2rem auto;
+}
+
+.code-project > h1,
+.code-project > p {
+  margin-bottom: 1rem;
+}
+
+.code-example {
+  border: 2px solid var(--accent-color-brown);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.code-header {
+  background: var(--accent-color-brown);
+  color: white;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+}
+
+.code-example pre {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.code-example code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
