@@ -96,6 +96,11 @@ main {
   margin: 2rem auto;
 }
 
+.code-project > h1 {
+  font-size: calc(1.5rem + 3vw);
+  margin-top: 0pt;
+}
+
 .code-project > h1,
 .code-project > p {
   margin-bottom: 1rem;

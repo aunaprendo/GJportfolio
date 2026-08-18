@@ -2,76 +2,123 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../cccss/shapes.css" />
+
+    <!-- Primary Meta Tags -->
     <title>Shape Manager</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
   </head>
-  <body>
-    <div class="container">
-      <div class="text-center mb-8">
-        <h1>Shape Manager</h1>
-        <p class="subtitle">Calculate areas of geometric shapes</p>
-      </div>
 
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Shape Calculator</h2>
+  <body id="body">
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+
+    <main>
+      <div class="container">
+        <div class="text-center mb-8">
+          <h1 class="h1">Shape Manager</h1>
+          <p class="subtitle">Calculate areas of geometric shapes</p>
         </div>
-        <div class="card-content">
-          <div class="form-group">
-            <label for="shape-type" class="label">Shape Type</label>
-            <select id="shape-type" class="select">
-              <option value="">Select shape type</option>
-              <option value="circle">Circle</option>
-              <option value="rectangle">Rectangle</option>
-              <option value="triangle">Triangle</option>
-            </select>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Shape Calculator</h2>
           </div>
-
-          <div id="property-inputs">
-            <div id="circle-props" class="form-group hidden">
-              <label for="radius" class="label">Radius</label>
-              <input type="number" min="0" id="radius" placeholder="Enter radius" class="input" />
+          <div class="card-content">
+            <div class="form-group">
+              <label for="shape-type" class="label">Shape Type</label>
+              <select id="shape-type" class="select">
+                <option value="">Select shape type</option>
+                <option value="circle">Circle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="triangle">Triangle</option>
+              </select>
             </div>
 
-            <div id="rectangle-props" class="form-grid hidden">
-              <div class="form-group">
-                <label for="width" class="label">Width</label>
-                <input type="number" min="0" id="width" placeholder="Width" class="input" />
+            <div id="property-inputs">
+              <div id="circle-props" class="form-group hidden">
+                <label for="radius" class="label">Radius</label>
+                <input type="number" min="0" id="radius" placeholder="Enter radius" class="input" />
               </div>
-              <div class="form-group">
-                <label for="height" class="label">Height</label>
-                <input type="number" min="0" id="height" placeholder="Height" class="input" />
-              </div>
-            </div>
 
-            <div id="triangle-props" class="form-grid hidden">
-              <div class="form-group">
-                <label for="base" class="label">Base</label>
-                <input type="number" min="0" id="base" placeholder="Base" class="input" />
+              <div id="rectangle-props" class="form-grid hidden">
+                <div class="form-group">
+                  <label for="width" class="label">Width</label>
+                  <input type="number" min="0" id="width" placeholder="Width" class="input" />
+                </div>
+                <div class="form-group">
+                  <label for="height" class="label">Height</label>
+                  <input type="number" min="0" id="height" placeholder="Height" class="input" />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="triangle-height" class="label">Height</label>
-                <input
-                  type="number"
-                  min="0"
-                  id="triangle-height"
-                  placeholder="Height"
-                  class="input triangle-height"
-                />
+
+              <div id="triangle-props" class="form-grid hidden">
+                <div class="form-group">
+                  <label for="base" class="label">Base</label>
+                  <input type="number" min="0" id="base" placeholder="Base" class="input" />
+                </div>
+                <div class="form-group">
+                  <label for="triangle-height" class="label">Height</label>
+                  <input
+                    type="number"
+                    min="0"
+                    id="triangle-height"
+                    placeholder="Height"
+                    class="input triangle-height"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="result-card" class="card">
-        <div class="card-content result-card-content">
-          <div id="result-text"></div>
-          <div class="result-area"></div>
+        <div id="result-card" class="card">
+          <div class="card-content result-card-content">
+            <div id="result-text"></div>
+            <div class="result-area"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <script src="../ccjsx/02typescript3.ts"></script>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../ccjsx/02typescript3.js"></script>
   </body>
 </html>

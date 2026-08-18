@@ -1,15 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+#body {
   background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
   color: #334155;
   min-height: 100vh;
-  padding: 1rem;
 }
 
 .container {
@@ -26,7 +18,7 @@ body {
   margin-bottom: 2rem;
 }
 
-h1 {
+.h1 {
   font-size: 2.25rem;
   font-weight: 700;
   color: #1e293b;
