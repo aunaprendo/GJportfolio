@@ -1,201 +1,292 @@
-:root {
-  /* Backgrounds */
-  --bg-gradient-start: #dbeafe;
-  --bg-gradient-mid: #faf5ff;
-  --bg-gradient-end: #fce7f3;
+/* ========================================
+DIGITAL PET GAME
+========================================= */
 
-  /* Text */
-  --text-primary: #1f2937;
-  --text-muted: #6b7280;
-  --text-muted-2: #9ca3af;
+/* ========================================
+ROOT APP
+========================================= */
 
-  /* Card / surface */
-  --card-bg-translucent: rgba(255, 255, 255, 0.6);
-  --card-bg-solid: rgba(255, 255, 255, 0.8);
-
-  /* Accent / brand */
-  --accent-purple: #8b5cf6;
-  --accent-purple-dark: #7c3aed;
-
-  /* Actions */
-  --action-feed: #10b981;
-  --action-feed-dark: #059669;
-  --action-play: #3b82f6;
-  --action-play-dark: #2563eb;
-  --action-sleep: #8b5cf6;
-  --action-sleep-dark: #7c3aed;
-  --action-heal: #ec4899;
-  --action-heal-dark: #db2777;
-
-  /* Stats */
-  --stat-high: #10b981;
-  --stat-medium: #f59e0b;
-  --stat-low: #ef4444;
-
-  /* UI greys */
-  --ui-bg-light: #e5e7eb;
-  --ui-fill: #8b5cf6; /* used for exp fill as accent */
-
-  /* Shadows */
-  --shadow-strong: rgba(0, 0, 0, 0.25);
-  --shadow-soft: rgba(0, 0, 0, 0.1);
-}
-
-html {
-  /*color-scheme: light dark;*/
-  font-family: system-ui;
-  display: flex;
-  justify-content: center;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #dbeafe 0%, #faf5ff 50%, #fce7f3 100%);
-  min-height: 100vh;
-  padding: 1rem;
-}
-
-header {
+#root {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
-body {
-  max-width: 400px;
+/* ========================================
+APP TITLE
+========================================= */
+
+#root > h1 {
+  margin: 0 0 0.75rem;
+  font-size: 3rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-color-main);
 }
+
+#root > p {
+  margin: 0 0 2rem;
+  font-size: 1.15rem;
+  color: var(--accent-color-dgray);
+}
+
+/* ========================================
+BASE / START CONTAINER
+========================================= */
 
 .base-container {
-  background: rgba(255, 255, 255, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   padding: 2rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  .pet-name {
-    text-align: center;
-  }
+  background-color: var(--bg-color-main);
+  border: 1px solid var(--accent-color-lgray);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
-.game-container {
-  margin-bottom: 1.5rem;
+.base-container form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
 }
 
-/* Stats Grid */
+.base-container h2 {
+  margin: 0;
+}
+
+.base-container input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--accent-color-lgray);
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.base-container input:focus {
+  border-color: var(--accent-color-dteal);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(6, 95, 111, 0.15);
+}
+
+.base-container button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color-dteal);
+  border: 2px solid var(--accent-color-dteal);
+  border-radius: 0.4rem;
+  color: var(--text-color-alt);
+  font-family: "Montserrat", sans-serif;
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+}
+
+.base-container button:hover {
+  background-color: var(--bg-color-alt);
+  border-color: var(--bg-color-alt);
+}
+
+/* ========================================
+GAME CONTAINER
+========================================= */
+
+.game-container {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color-main);
+  border: 1px solid var(--accent-color-lgray);
+  border-radius: 2rem;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+PET NAME & SPRITE
+========================================= */
+
+.pet-name {
+  margin-bottom: 0.75rem;
+  color: var(--text-color-main);
+  font-size: 1.8rem;
+  font-weight: var(--weight-bold);
+  text-align: center;
+}
+
+.game-container h3 {
+  margin: 0 0 1.5rem;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/* ========================================
+PET ACTION BUTTONS
+========================================= */
+.pet-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pet-button {
+  min-width: 130px;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--accent-color-dteal);
+  border: 2px solid var(--accent-color-dteal);
+  border-radius: 0.4rem;
+  color: var(--text-color-alt);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+}
+
+.pet-button:hover {
+  background-color: var(--bg-color-alt);
+  border-color: var(--bg-color-alt);
+  transform: translateY(-2px);
+}
+
+.pet-button:active {
+  transform: scale(0.96);
+}
+
+.pet-button:focus-visible {
+  outline: 2px solid var(--accent-color-gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 576px) {
+  .pet-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pet-button {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+/* ========================================
+STATS GRID
+========================================= */
+
 .stats-grid {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
+/* ========================================
+STAT CARD
+========================================= */
+
 .stat-bar {
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 0.75rem;
-  padding: 1rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  padding: 1.25rem;
+  background-color: var(--bg-color-main);
+  border: 1px solid var(--accent-color-lgray);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .stat-bar:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
+
+/* ========================================
+STAT HEADER
+========================================= */
 
 .stat-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .stat-icon {
-  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .stat-name {
-  font-weight: 500;
-  color: #374151;
+  color: var(--accent-color-dgray);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
 }
 
 .stat-value {
-  font-weight: bold;
-  color: #1f2937;
+  color: var(--text-color-main);
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
 }
+
+/* ========================================
+STAT PROGRESS BAR
+========================================= */
 
 .stat-progress {
   width: 100%;
   height: 0.75rem;
-  background: #e5e7eb;
-  border-radius: 9999px;
+  margin-top: 0.75rem;
   overflow: hidden;
+  background-color: var(--accent-color-ateal);
+  border-radius: 9999px;
 }
 
 .stat-fill {
   height: 100%;
-  transition: width 0.5s ease-out;
+  background-color: var(--accent-color-dteal);
   border-radius: 9999px;
+  transition: width 0.5s ease-out;
 }
 
 .stat-fill.high {
-  background: #10b981;
+  background-color: var(--accent-color-dteal);
 }
 
 .stat-fill.medium {
-  background: #f59e0b;
+  background-color: var(--accent-color-gold);
 }
 
 .stat-fill.low {
-  background: #ef4444;
+  background-color: var(--accent-color-brown);
 }
 
-.pet-buttons {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.pet-buttons .pet-button {
-  min-width: 80px;
-  background: #c2214a;
-  color: white;
-  border-radius: 13%;
-  border-style: solid;
-  border-color: #870b04;
-  box-shadow: rgba(120, 25, 23, 0.2) 2px 2px 4px 2px;
-  &:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset;
-  }
-  text-align: center;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-}
-
-.pet-sprite {
-  font-size: xxx-large;
-  text-align: center;
-}
+/* ========================================
+DATA MANAGEMENT
+========================================= */
 
 .data-management * {
   margin: 0 0.5rem 0 0;
 }
 
+/* ========================================
+INFO PANEL
+========================================= */
+
 .info-panel {
   text-align: center;
 }
+
 .info-panel #hud,
 .info-panel .start-questions {
   display: flex;
@@ -205,45 +296,66 @@ body {
 }
 
 .info-panel #hud p {
-  margin: 0rem;
+  margin: 0;
 }
 
 .info-panel .start-questions div * {
   margin: 0 0.5rem 0 0;
 }
 
+/* ========================================
+PET FACT
+========================================= */
+
 #pet-fact {
-  color: var(--text-muted-2);
-  margin: 0 0 0.5rem 0;
-}
-#set-name-btn {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 1.15rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #6b8cff, #5ec2ff);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(92, 132, 255, 0.25);
-  cursor: pointer;
-  transition:
-    transform 0.08s ease,
-    box-shadow 0.12s ease,
-    opacity 0.12s;
+  margin: 0 0 0.5rem;
+  color: var(--accent-color-dgray);
+  font-size: 0.9rem;
 }
 
-#set-name-btn:hover {
-  opacity: 0.98;
+/* ========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  #root {
+    max-width: 600px;
+  }
+
+  #root > h1 {
+    font-size: 2.5rem;
+  }
+
+  .game-container,
+  .stats-grid {
+    max-width: 520px;
+  }
 }
 
-#set-name-btn:active,
-#set-name-btn.pressed {
-  transform: translateY(2px) scale(0.995);
-  box-shadow: 0 3px 8px rgba(92, 132, 255, 0.18);
-}
+@media (max-width: 576px) {
+  #root > h1 {
+    font-size: 2rem;
+  }
 
-#set-name-btn:focus {
-  outline: 3px solid rgba(94, 190, 255, 0.28);
-  outline-offset: 2px;
+  #root > p {
+    font-size: 1rem;
+  }
+
+  .game-container {
+    padding: 1.5rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-buttons {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .game-container h3 {
+    font-size: 3.5rem;
+  }
 }

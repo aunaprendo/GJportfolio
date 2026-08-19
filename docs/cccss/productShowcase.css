@@ -1,11 +1,11 @@
-body {
+/* body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
   padding: 40px 20px;
   margin: 0;
   color: #1a1a1a;
   min-height: 100vh;
-}
+} */
 
 h1 {
   text-align: center;
@@ -38,13 +38,13 @@ button {
 }
 
 button:hover {
-  background: white;
+  background: var(--accent-color-gold);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 button.active {
-  background: #ff9800;
+  background: var(--accent-color-gold);
   color: #1a1a1a;
   box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
   font-weight: 600;
@@ -78,7 +78,7 @@ button.active {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #0f4c75;
+  color: var(--accent-color-brown);
   font-weight: 700;
 }
 
@@ -92,7 +92,7 @@ button.active {
   margin-top: auto;
   font-size: 24px;
   font-weight: 700;
-  color: #0f4c75;
+  color: var(--accent-color-brown);
   padding-top: 12px;
   border-top: 2px solid #f0f0f0;
 }

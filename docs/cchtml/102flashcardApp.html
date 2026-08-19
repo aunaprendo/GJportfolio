@@ -1,49 +1,108 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcard App</title>
-    <link rel="stylesheet" href="../cccss/petGame.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div>
-      <div id="cardSection">
-        <h1 class="text-center">Flash Card App</h1>
 
-        <div id="flashcard">
-          <div id="front"></div>
-          <div id="back"></div>
+    <!-- Links -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../cccss/flashcardApp.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>Flashcard App</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
+
+  <body id="body">
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+
+    <main>
+      <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-end">
+          <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccFrontEnd.html">freeCodeCamp Front End</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+        </ol>
+      </nav>
+
+      <div>
+        <div id="cardSection">
+          <h1 class="text-center">Flash Card App</h1>
+
+          <div id="flashcard">
+            <div id="front"></div>
+            <div id="back"></div>
+          </div>
+        </div>
+
+        <div id="manageSection">
+          <h2 class="text-center">Manage Cards</h2>
+          <button id="delete-btn">Delete</button>
+
+          <hr />
+
+          <h3 class="text-center">Cards in Deck</h3>
+          <div id="cards"></div>
+
+          <hr />
+
+          <h3 class="text-center">Add Cards</h3>
+          <form id="entry-form">
+            <div>
+              <label for="front-text">Front: </label>
+              <textarea id="front-text" name="front-text"></textarea>
+            </div>
+
+            <div>
+              <label for="back-text">Back: </label>
+              <textarea id="back-text" name="back-text"></textarea>
+            </div>
+            <button id="add-btn" type="submit">Save Card</button>
+          </form>
         </div>
       </div>
+    </main>
 
-      <div id="manageSection">
-        <h2 class="text-center">Manage Cards</h2>
-        <button id="delete-btn">Delete</button>
-
-        <hr />
-
-        <h3 class="text-center">Cards in Deck</h3>
-        <div id="cards"></div>
-
-        <hr />
-
-        <h3 class="text-center">Add Cards</h3>
-        <form id="entry-form">
-          <div>
-            <label for="front-text">Front: </label>
-            <textarea id="front-text" name="front-text"></textarea>
-          </div>
-
-          <div>
-            <label for="back-text">Back: </label>
-            <textarea id="back-text" name="back-text"></textarea>
-          </div>
-          <button id="add-btn" type="submit">Save Card</button>
-        </form>
-      </div>
-    </div>
-    <script src="index.ts" type="module"></script>
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../ccjsx/flashcardApp.js"></script>
   </body>
 </html>

@@ -186,7 +186,6 @@ class Game {
     const foundCard = this.cards.find((card) => card.name_short === cardId);
 
     if (foundCard) {
-      this.elements.cardTitle.textContent = foundCard.name;
       this.elements.description.textContent = foundCard.desc;
       this.elements.subTitle.textContent = foundCard.meaning_up;
       this.elements.title.textContent = foundCard.name;

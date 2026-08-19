@@ -1,74 +1,735 @@
-Practice/
-├── docs/
-│   ├── index.html           
-│   ├── 404.html    
-│   ├── resume.html    
-│   ├── ccCSS.html    
-│   ├── ccHTML.html    
-│   ├── ccProjects.html    
-│   ├── comingSoon.html    
-│   ├── learningPath.html    
-│   ├── css/                
-│   │   ├── ccStyleNavigations.css
-│   │   ├── styleBootstrapGrid.css
-│   │   ├── styleDetails.css
-│   │   ├── styleNavigations.css
-│   │   └── styleShared.css
-│   ├── js/                  
-│   │   └── script.js
-│   ├── assets/              
-│   │   ├── acorn.svg
-│   │   ├── alwaysLearning.png
-│   │   ├── comingSoon.jpeg
-│   │   ├── logoInitialsBlack.svg
-│   │   ├── logoInitialsHole.svg
-│   │   ├── logoInitialsWhite.svg
-│   │   ├── logoSquirrel.svg
-│   │   ├── lostNut.jpeg
-│   │   ├── portraitReal.jpeg
-│   │   ├── ccAssets/              
-│   │   │		├── adSquirrelLife.jpeg
-│   │   │		└── ...
-│   │   ├── ccProjectIcons/              
-│   │   │		├── 00.svg
-│   │   │		└── ...
-│   │   ├── certificates/              
-│   │   │		├── EDAC.png
-│   │   │		└── ...
-│   │   ├── indexProjectCards/              
-│   │   │		├── projectCamp.png
-│   │   │		└── ...
-│   │   └── learnContent/              
-│   │   		├── algorithmsLife.jpeg
-│   │   		└── ...
-│   ├── cccss/              
-│   │   ├── 0generalPages.css
-│   │   ├── application.css
-│   │   └── ...
-│   ├─── cchtml/              
-│   │   ├── 0cart.html
-│   │   ├── 0checkOut.html
-│   │   ├── 000HTMLphotoApp.html
-│   │   ├── 0SubmissionRecieved.html
-│   │   ├── 001HTMLrecipie.html
-│   │   ├── 002HTMLbookstorePage.html
-│   │   ├── 003HTMLtravel.html
-│   │   ├── 004HTMLaudioVideoPlayer.html
-│   │   ├── 005HTMLheartIcon.html
-│   │   ├── 006HTMLvideoCompilation.html
-│   │   ├── 007HTMLbrowserList.html
-│   │   ├── 008HTMLtipsPage.html
-│   │   ├── 009HTMLblog.html
-│   │   └── ...
-│   ├─── ccjs/              
-│   │   ├── 000greetingBot.js
-│   │   ├── 001trivia.js
-│   │   └── 002sentenceMaker.js
-│   └──── partials/              
-│       ├── ccNavBar.html
-│       ├── ccSideMenu.html
-│       ├── contactMenu.html
-│       ├── footer.html
-│       ├── navBar.html
-│       └── sideMenu.html
-└── README.md               
+.
+├── .vscode
+│   ├── settings.json
+│   └── tsconfig.json
+├── LICENSE
+├── README.md
+├── acknowledgments.md
+├── docs
+│   ├── .prettierrc
+│   ├── 404.html
+│   ├── acknowledgments.html
+│   ├── assets
+│   │   ├── acorn.svg
+│   │   ├── alwaysLearning.png
+│   │   ├── ccAssets
+│   │   │   ├── TWflyingSquirrel.jpeg
+│   │   │   ├── TWgreySquirrel.jpeg
+│   │   │   ├── TWredSquirrel.jpeg
+│   │   │   ├── adSquirrelLife.jpeg
+│   │   │   ├── art1.jpeg
+│   │   │   ├── art2.webp
+│   │   │   ├── art3.webp
+│   │   │   ├── blogPixels.jpeg
+│   │   │   ├── cafeNuts.jpeg
+│   │   │   ├── checkOut.jpeg
+│   │   │   ├── contactCard.jpeg
+│   │   │   ├── drumDigging.mp3
+│   │   │   ├── drumLeavesCrunch.mp3
+│   │   │   ├── drumNutCrack.mp3
+│   │   │   ├── drumNutFall.mp3
+│   │   │   ├── drumRedSquirrel.mp3
+│   │   │   ├── drumSquirrelCall.mp3
+│   │   │   ├── drumSquirrelChirp.mp3
+│   │   │   ├── drumTreeBranch.mp3
+│   │   │   ├── drumWind.mp3
+│   │   │   ├── eventDrey.jpeg
+│   │   │   ├── eventFlyer.jpeg
+│   │   │   ├── eventMushroom.jpeg
+│   │   │   ├── eventNutHunt.jpeg
+│   │   │   ├── eventTalk.jpeg
+│   │   │   ├── gallery1.jpeg
+│   │   │   ├── gallery2.jpeg
+│   │   │   ├── gallery3.jpeg
+│   │   │   ├── gallery4.jpeg
+│   │   │   ├── gallery5.jpeg
+│   │   │   ├── gallery6.jpeg
+│   │   │   ├── gallery7.jpeg
+│   │   │   ├── gallery8.jpeg
+│   │   │   ├── magJumpRock.jpeg
+│   │   │   ├── magJumpTree.jpeg
+│   │   │   ├── magJumpWater.jpeg
+│   │   │   ├── magWire.jpeg
+│   │   │   ├── moviePoster.png
+│   │   │   ├── newspaper.jpeg
+│   │   │   ├── peanut.mp3
+│   │   │   ├── peanutTribute.jpeg
+│   │   │   ├── photoAppEat.jpeg
+│   │   │   ├── photoAppStretch.jpeg
+│   │   │   ├── photoAppTree.jpeg
+│   │   │   ├── recipie.jpeg
+│   │   │   ├── sculpture.jpeg
+│   │   │   ├── shopBasket.jpeg
+│   │   │   ├── springForest.mp3
+│   │   │   ├── squirrelEat.mp4
+│   │   │   ├── squirrelTalk.mp3
+│   │   │   ├── squirrelTape.png
+│   │   │   ├── submissionGood.jpeg
+│   │   │   ├── tea.svg
+│   │   │   ├── travelDrink.jpeg
+│   │   │   ├── travelEat.jpeg
+│   │   │   └── travelForest.jpeg
+│   │   ├── ccProjectIcons
+│   │   │   ├── 00.svg
+│   │   │   ├── 01.svg
+│   │   │   ├── 02.svg
+│   │   │   ├── 03.svg
+│   │   │   ├── 04.svg
+│   │   │   ├── 05.svg
+│   │   │   ├── 06.svg
+│   │   │   ├── 07.svg
+│   │   │   ├── 08.svg
+│   │   │   ├── 09.svg
+│   │   │   ├── 10.svg
+│   │   │   ├── 100.svg
+│   │   │   ├── 101.svg
+│   │   │   ├── 102.svg
+│   │   │   ├── 103.svg
+│   │   │   ├── 104.svg
+│   │   │   ├── 105.svg
+│   │   │   ├── 106.svg
+│   │   │   ├── 107.svg
+│   │   │   ├── 108.svg
+│   │   │   ├── 109.svg
+│   │   │   ├── 11.svg
+│   │   │   ├── 110.svg
+│   │   │   ├── 111.svg
+│   │   │   ├── 112.svg
+│   │   │   ├── 113.svg
+│   │   │   ├── 12.svg
+│   │   │   ├── 13.svg
+│   │   │   ├── 14.svg
+│   │   │   ├── 15.svg
+│   │   │   ├── 16.svg
+│   │   │   ├── 17.svg
+│   │   │   ├── 18.svg
+│   │   │   ├── 19.svg
+│   │   │   ├── 20.svg
+│   │   │   ├── 21.svg
+│   │   │   ├── 22.svg
+│   │   │   ├── 23.svg
+│   │   │   ├── 24.svg
+│   │   │   ├── 25.svg
+│   │   │   ├── 26.svg
+│   │   │   ├── 27.svg
+│   │   │   ├── 28.svg
+│   │   │   ├── 29.svg
+│   │   │   ├── 30.svg
+│   │   │   ├── 31.svg
+│   │   │   ├── 33.svg
+│   │   │   ├── 34.svg
+│   │   │   ├── 35.svg
+│   │   │   ├── 36.svg
+│   │   │   ├── 37.svg
+│   │   │   ├── 38.svg
+│   │   │   ├── 39.svg
+│   │   │   ├── 40.svg
+│   │   │   ├── 41.svg
+│   │   │   ├── 42.svg
+│   │   │   ├── 43.svg
+│   │   │   ├── 44.svg
+│   │   │   ├── 45.svg
+│   │   │   ├── 46.svg
+│   │   │   ├── 47.svg
+│   │   │   ├── 48.svg
+│   │   │   ├── 49.svg
+│   │   │   ├── 50.svg
+│   │   │   ├── 51.svg
+│   │   │   ├── 52.svg
+│   │   │   ├── 53.svg
+│   │   │   ├── 54.svg
+│   │   │   ├── 55.svg
+│   │   │   ├── 60.svg
+│   │   │   ├── 61.svg
+│   │   │   ├── 62.svg
+│   │   │   ├── 63.svg
+│   │   │   ├── 64.svg
+│   │   │   ├── 65.svg
+│   │   │   ├── 66.svg
+│   │   │   ├── 67.svg
+│   │   │   ├── 68.svg
+│   │   │   ├── 69.svg
+│   │   │   ├── 70.svg
+│   │   │   ├── 71.svg
+│   │   │   ├── 72.svg
+│   │   │   ├── 73.svg
+│   │   │   ├── 74.svg
+│   │   │   ├── 75.svg
+│   │   │   ├── 76.svg
+│   │   │   ├── 77.svg
+│   │   │   ├── 78.svg
+│   │   │   ├── 79.svg
+│   │   │   ├── 80.svg
+│   │   │   ├── 81.svg
+│   │   │   ├── 82.svg
+│   │   │   ├── 83.svg
+│   │   │   ├── 84.svg
+│   │   │   ├── 85.svg
+│   │   │   ├── 86.svg
+│   │   │   ├── 87.svg
+│   │   │   ├── 88.svg
+│   │   │   ├── 89.svg
+│   │   │   ├── 90.svg
+│   │   │   ├── 91.svg
+│   │   │   ├── 92.svg
+│   │   │   ├── 93.svg
+│   │   │   ├── 94.svg
+│   │   │   ├── 95.svg
+│   │   │   ├── 96.svg
+│   │   │   ├── 97.svg
+│   │   │   ├── 98.svg
+│   │   │   ├── 99.svg
+│   │   │   ├── CSS.svg
+│   │   │   ├── HTML.svg
+│   │   │   ├── JS.svg
+│   │   │   ├── React.svg
+│   │   │   ├── database.svg
+│   │   │   └── python.svg
+│   │   ├── certificates
+│   │   │   ├── EDAC.png
+│   │   │   ├── LEED.pdf
+│   │   │   ├── NCIDQ.jpeg
+│   │   │   ├── RA.pdf
+│   │   │   ├── THM-Presecurity.pdf
+│   │   │   ├── WELL.pdf
+│   │   │   ├── fitwel.png
+│   │   │   ├── procore.jpeg
+│   │   │   └── vector.jpeg
+│   │   ├── comingSoon.jpeg
+│   │   ├── indexProjectCards
+│   │   │   ├── projectCamp.png
+│   │   │   ├── projectCode.png
+│   │   │   ├── projectLearn.png
+│   │   │   ├── projectMeds.png
+│   │   │   └── projectSquirrel.png
+│   │   ├── learnContent
+│   │   │   ├──  meetingsResults.jpeg
+│   │   │   ├── DataIntensiveApplications.jpeg
+│   │   │   ├── SoftwareDeveloperCareerGuide.jpeg
+│   │   │   ├── algorithmsLife.jpeg
+│   │   │   ├── alignmentProblem.jpeg
+│   │   │   ├── cleanCode.jpeg
+│   │   │   ├── codingDummies.jpeg
+│   │   │   ├── compScienceCoding.jpeg
+│   │   │   ├── compTIA.jpeg
+│   │   │   ├── compTIAA+.jpeg
+│   │   │   ├── crucialConversations.jpeg
+│   │   │   ├── cuckoosEgg.jpeg
+│   │   │   ├── cyberEspionage.jpeg
+│   │   │   ├── ethicalHackingBookBeginners.jpeg
+│   │   │   ├── fierceConversations.jpeg
+│   │   │   ├── fiveDysfunctions.jpeg
+│   │   │   ├── fundamentalsArchitecture.jpeg
+│   │   │   ├── gettingNaked.jpeg
+│   │   │   ├── ghostWire.jpeg
+│   │   │   ├── goodToGreat.jpeg
+│   │   │   ├── googleEngineering.jpeg
+│   │   │   ├── grokkingAlgorithms.jpeg
+│   │   │   ├── introAlgorithms.jpeg
+│   │   │   ├── mastersAtWork.jpeg
+│   │   │   ├── networkingSecurity.jpeg
+│   │   │   ├── neverEatAlone.jpeg
+│   │   │   ├── penetrationBasics.jpeg
+│   │   │   ├── practicalProgramming.jpeg
+│   │   │   ├── pragmaticProgram.jpeg
+│   │   │   ├── selfTaughtComputerScientist.jpeg
+│   │   │   ├── selfTaughtProgram.jpeg
+│   │   │   ├── sql.jpeg
+│   │   │   ├── videoBootstrap.jpeg
+│   │   │   ├── videoDefcon.jpeg
+│   │   │   ├── videoGithub.jpeg
+│   │   │   ├── videoNqueens.jpeg
+│   │   │   ├── videoPasswordGen.jpeg
+│   │   │   ├── videoSortAlgorithm.jpeg
+│   │   │   ├── videoStaircase.jpeg
+│   │   │   └── worldEthicalHacking.jpeg
+│   │   ├── logoInitialsBlack.svg
+│   │   ├── logoInitialsHole.svg
+│   │   ├── logoInitialsWhite.svg
+│   │   ├── logoSquirrel.svg
+│   │   ├── lostNut.jpeg
+│   │   ├── portraitReal.jpeg
+│   │   └── testimonials
+│   │       ├── Cutco_Recommendation.jpg
+│   │       ├── Filsinger_Recommendation.jpg
+│   │       ├── Nestor_Recommendation.png
+│   │       └── Tommy_Recommendation.jpg
+│   ├── ccCSS.html
+│   ├── ccDB.html
+│   ├── ccFrontEnd.html
+│   ├── ccHTML.html
+│   ├── ccJS.html
+│   ├── ccProjects.html
+│   ├── ccPython.html
+│   ├── cccss
+│   │   ├── 0generalPages.css
+│   │   ├── application.css
+│   │   ├── audio.css
+│   │   ├── balancesheet.css
+│   │   ├── bookinventory.css
+│   │   ├── bookmarkManager.css
+│   │   ├── bookstore.css
+│   │   ├── buildings.css
+│   │   ├── businesscard.css
+│   │   ├── cafemenu.css
+│   │   ├── calorieCounter.css
+│   │   ├── charCountdown.css
+│   │   ├── colorBug.css
+│   │   ├── colorPicker.css
+│   │   ├── colors.css
+│   │   ├── complaintForm.css
+│   │   ├── confidential.css
+│   │   ├── currencyConverter.css
+│   │   ├── decimalToBinary.css
+│   │   ├── drumMachine.css
+│   │   ├── emojiPicker.css
+│   │   ├── emojiReactor.css
+│   │   ├── eventRSVP.css
+│   │   ├── favoriteIcon.css
+│   │   ├── fccAuthors.css
+│   │   ├── fccForum.css
+│   │   ├── ferriswheel.css
+│   │   ├── festival.css
+│   │   ├── flashcardApp.css
+│   │   ├── fortuneTelling.css
+│   │   ├── fruitPicker.css
+│   │   ├── greetingcard.css
+│   │   ├── house.css
+│   │   ├── htmlMark.css
+│   │   ├── ingredientConverter.css
+│   │   ├── instrumentFilter.css
+│   │   ├── lightboxViewer.css
+│   │   ├── magazine.css
+│   │   ├── markers.css
+│   │   ├── megaNavbar.css
+│   │   ├── moodBoard.css
+│   │   ├── moon.css
+│   │   ├── motorcycleShop.css
+│   │   ├── musicPlayer.css
+│   │   ├── newsarticle.css
+│   │   ├── newspaper.css
+│   │   ├── noteApp.css
+│   │   ├── nutrition.css
+│   │   ├── oneTimePass.css
+│   │   ├── painting.css
+│   │   ├── palindromeChecker.css
+│   │   ├── penguin.css
+│   │   ├── petGame.css
+│   │   ├── photogallery.css
+│   │   ├── piano.css
+│   │   ├── planetTabs.css
+│   │   ├── playerCards.css
+│   │   ├── playingcards.css
+│   │   ├── popup.css
+│   │   ├── postcard.css
+│   │   ├── productShowcase.css
+│   │   ├── productpage.css
+│   │   ├── profileCards.css
+│   │   ├── quiz.css
+│   │   ├── regEx.css
+│   │   ├── registration.css
+│   │   ├── rpsGame.css
+│   │   ├── shapes.css
+│   │   ├── shopList.css
+│   │   ├── shoppingCart.css
+│   │   ├── sortingVisualizer.css
+│   │   ├── spamFilter.css
+│   │   ├── squirrel.css
+│   │   ├── storyTelling.css
+│   │   ├── superheroApp.css
+│   │   ├── teamBuild.css
+│   │   ├── techdoc.css
+│   │   ├── textApp.css
+│   │   ├── themeSwitch.css
+│   │   ├── tickTackToe.css
+│   │   ├── todoApp.css
+│   │   ├── tribute.css
+│   │   └── weatherApp.css
+│   ├── cchtml
+│   │   ├── 000000test.html
+│   │   ├── 000HTMLphotoApp.html
+│   │   ├── 000JSstudies.html
+│   │   ├── 000PYlabs.html
+│   │   ├── 000PYworkshops.html
+│   │   ├── 000codeBox.html
+│   │   ├── 000react.html
+│   │   ├── 000tailwind.html
+│   │   ├── 000typescript.html
+│   │   ├── 001HTMLrecipie.html
+│   │   ├── 002HTMLbookstorePage.html
+│   │   ├── 003HTMLtravel.html
+│   │   ├── 004HTMLaudioVideoPlayer.html
+│   │   ├── 005HTMLheartIcon.html
+│   │   ├── 006HTMLvideoCompilation.html
+│   │   ├── 007HTMLbrowserList.html
+│   │   ├── 008HTMLtipsPage.html
+│   │   ├── 009HTMLblog.html
+│   │   ├── 010HTMLevents.html
+│   │   ├── 014HTMLsurvey.html
+│   │   ├── 015HTMLconferenceSchedule.html
+│   │   ├── 016HTMLaudioControl.html
+│   │   ├── 017HTMLcheckoutPage.html
+│   │   ├── 018HTMLmovieReview.html
+│   │   ├── 019HTMLmultimediaPage.html
+│   │   ├── 020CSScafeMenu.html
+│   │   ├── 021CSSbusinessCard.html
+│   │   ├── 023CSSpostCard.html
+│   │   ├── 024CSSeventFlyer.html
+│   │   ├── 025CSSgreetingCard.html
+│   │   ├── 026CSSjobApplication.html
+│   │   ├── 027CSSmarkers.html
+│   │   ├── 028CSScoloredBoxes.html
+│   │   ├── 029CSSregistrationForm.html
+│   │   ├── 030CSScontactForm.html
+│   │   ├── 033CSSpainting.html
+│   │   ├── 034CSSconfidentialEmail.html
+│   │   ├── 035CSSphotoGallery.html
+│   │   ├── 036CSSplayingCards.html
+│   │   ├── 037CSSnutritionLabel.html
+│   │   ├── 038CSSnewsArticle.html
+│   │   ├── 039CSSquiz.html
+│   │   ├── 040CSStributePage.html
+│   │   ├── 041CSSsquirrelPainting.html
+│   │   ├── 042CSShousePainting.html
+│   │   ├── 043CSSbalanceSheet.html
+│   │   ├── 044CSSbookInventory.html
+│   │   ├── 045CSSpiano.html
+│   │   ├── 046CSStechDoc.html
+│   │   ├── 047CSSbuildings.html
+│   │   ├── 049CSSmagazine.html
+│   │   ├── 050CSSnewspaper.html
+│   │   ├── 051CSSproductPage.html
+│   │   ├── 052CSSferrisWheel.html
+│   │   ├── 053CSSmoonOrbit.html
+│   │   ├── 054CSSpenguin.html
+│   │   ├── 055JSstorytelling.html
+│   │   ├── 056JSemojiReactor.html
+│   │   ├── 057JSfavoriteIcon.html
+│   │   ├── 058JSinstrumentFilter.html
+│   │   ├── 059JScharCountdown.html
+│   │   ├── 060JSlightboxViewer.html
+│   │   ├── 061JSrpsGame.html
+│   │   ├── 062JSteamBuild.html
+│   │   ├── 063JSplanetTabs.html
+│   │   ├── 064JSnoteApp.html
+│   │   ├── 065JSthemeSwitch.html
+│   │   ├── 066JScolorBug.html
+│   │   ├── 067JSspamFilter.html
+│   │   ├── 068JSpalindromeChecker.html
+│   │   ├── 069JSregEx.html
+│   │   ├── 070JShtmlMark.html
+│   │   ├── 071JScalorieCounter.html
+│   │   ├── 072JScomplaintForm.html
+│   │   ├── 073JSmusicPlayer.html
+│   │   ├── 074JSdrumMachine.html
+│   │   ├── 075JStodoApp.html
+│   │   ├── 076JSbookmarkManager.html
+│   │   ├── 077JSshoppingCart.html
+│   │   ├── 078JSdecimalToBinary.html
+│   │   ├── 079JSingredientConverter.html
+│   │   ├── 080JSsortingVisualizer.html
+│   │   ├── 081JSfccAuthors.html
+│   │   ├── 082JSfccForum.html
+│   │   ├── 083JSweatherApp.html
+│   │   ├── 084JXmegaNavbar.html
+│   │   ├── 085JXmoodBoard.html
+│   │   ├── 085JXprofileCards.html
+│   │   ├── 086JXtextApp.html
+│   │   ├── 087JXcolorPicker.html
+│   │   ├── 088JXfruitPicker.html
+│   │   ├── 089JXoneTimePass.html
+│   │   ├── 090JXsuperheroApp.html
+│   │   ├── 091JXeventRSVP.html
+│   │   ├── 092JXshopList.html
+│   │   ├── 093typescriptShapes.html
+│   │   ├── 094motorcycleShop.html
+│   │   ├── 095emojiPicker.html
+│   │   ├── 096productShowcase.html
+│   │   ├── 097fortuneTelling.html
+│   │   ├── 098playerCards.html
+│   │   ├── 099petGame.html
+│   │   ├── 0SubmissionRecieved.html
+│   │   ├── 0cart.html
+│   │   ├── 0checkOut.html
+│   │   ├── 100currencyConverter.html
+│   │   ├── 101tickTackToe.html
+│   │   ├── 102flashcardApp.html
+│   │   ├── ts00.html
+│   │   └── ts01.html
+│   ├── ccjs
+│   │   ├── 000greetingBot.js
+│   │   ├── 001trivia.js
+│   │   ├── 002sentenceMaker.js
+│   │   ├── 003teacherBot.js
+│   │   ├── 004stringInspect.js
+│   │   ├── 005stringBuilder.js
+│   │   ├── 006stringTransform.js
+│   │   ├── 007debugCoercion.js
+│   │   ├── 008operatorError.js
+│   │   ├── 009logicChecker.js
+│   │   ├── 010mathBot.js
+│   │   ├── 011fortuneTeller.js
+│   │   ├── 012calculator.js
+│   │   ├── 013booleanCheck.js
+│   │   ├── 014emailMaker.js
+│   │   ├── 015loanChecker.js
+│   │   ├── 016celToFer.js
+│   │   ├── 017cardCounter.js
+│   │   ├── 018leapYear.js
+│   │   ├── 019truncateString.js
+│   │   ├── 020endingTool.js
+│   │   ├── 021shoppingList.js
+│   │   ├── 022lunchPicker.js
+│   │   ├── 023.5cargoManifest.js
+│   │   ├── 023.75animalTracker.js
+│   │   ├── 023golfScore.js
+│   │   ├── 024recipeTracker.js
+│   │   ├── 025quizGame.js
+│   │   ├── 026.5wordCount.js
+│   │   ├── 026recordCollection.js
+│   │   ├── 027.5heritageLibrary.js
+│   │   ├── 027sentenceAnalyzer.js
+│   │   ├── 027sentenceAnalyzerFinal.js
+│   │   ├── 028longestWord.js
+│   │   ├── 028longestWordFinal.js
+│   │   ├── 029factorialCalculator.js
+│   │   ├── 030.5playlistRemix.js
+│   │   ├── 030mutationsAlgorithm.js
+│   │   ├── 030mutationsFinal.js
+│   │   ├── 031chunkyMonkey.js
+│   │   ├── 031chunkyMonkeyFinal.js
+│   │   ├── 032profileLook.js
+│   │   ├── 032profileLookFinal.js
+│   │   ├── 033.5crowdFlow.js
+│   │   ├── 033stringRepeat.js
+│   │   ├── 034.5pantryRestock.js
+│   │   ├── 034.75proofreading.js
+│   │   ├── 034missingLetter.js
+│   │   ├── 034missingLetterFinal.js
+│   │   ├── 035stringInvert.js
+│   │   ├── 036largestNumber.js
+│   │   ├── 037elementFinder.js
+│   │   ├── 038sliceSplice.js
+│   │   ├── 039pyramid.js
+│   │   ├── 040gradebook.js
+│   │   ├── 041titleCase.js
+│   │   ├── 042falsyRemover .js
+│   │   ├── 043inventoryManager.js
+│   │   ├── 044uniqueSort.js
+│   │   ├── 045passwordGenerator.js
+│   │   ├── 046sums.js
+│   │   ├── 047dnaPair.js
+│   │   ├── 048htmlSymbol.js
+│   │   ├── 049oddFibonacci.js
+│   │   ├── 050elementSkipper .js
+│   │   ├── 051libraryManager.js
+│   │   ├── 052bookOrganizer.js
+│   │   ├── 053sortedIndex.js
+│   │   ├── 054symmetricDiff.js
+│   │   ├── 055valueRemover.js
+│   │   ├── 056filterMatch.js
+│   │   ├── 057primeSum.js
+│   │   ├── 058LCM.js
+│   │   ├── 059flattenTool.js
+│   │   ├── 060truthTest.js
+│   │   ├── 061storyTelling.js
+│   │   ├── 062emojiReactor.js
+│   │   ├── 063favoriteIcon.js
+│   │   ├── 064instrumentFilter.js
+│   │   ├── 065charCountdown.js
+│   │   ├── 066lightboxViewer.js
+│   │   ├── 067rpsGame.js
+│   │   ├── 068teamBuild.js
+│   │   ├── 069planetTabs.js
+│   │   ├── 070noteApp.js
+│   │   ├── 071themeSwitch.js
+│   │   ├── 072colorBug.js
+│   │   ├── 073spamFilter.js
+│   │   ├── 074palindromeChecker.js
+│   │   ├── 075regEx.js
+│   │   ├── 076spinalCase.js
+│   │   ├── 077pigLatin.js
+│   │   ├── 078smartWord.js
+│   │   ├── 079htmlMark.js
+│   │   ├── 080calorieCounter.js
+│   │   ├── 081complaintForm.js
+│   │   ├── 082spaceMission.js
+│   │   ├── 083dateConvert.js
+│   │   ├── 084musicPlayer.js
+│   │   ├── 085drumMachine.js
+│   │   ├── 086plantNursery.js
+│   │   ├── 087voteSystem.js
+│   │   ├── 088todoApp.js
+│   │   ├── 089bookmarkManager.js
+│   │   ├── 090shoppingCart.js
+│   │   ├── 091projectBoard.js
+│   │   ├── 092bankManegment.js
+│   │   ├── 093countUp.js
+│   │   ├── 094countDown.js
+│   │   ├── 095numberRange.js
+│   │   ├── 096decimalToBinary.js
+│   │   ├── 097permutationGenerator.js
+│   │   ├── 098linkedList.js
+│   │   ├── 099linkedListOps.js
+│   │   ├── 100createStack.js
+│   │   ├── 101createQueue.js
+│   │   ├── 102binarySearch.js
+│   │   ├── 103mergeSort.js
+│   │   ├── 104bubbleSort.js
+│   │   ├── 105selectionSort.js
+│   │   ├── 106insertionSort.js
+│   │   ├── 107quickSort.js
+│   │   ├── 108shortestPath.js
+│   │   ├── 109adjacencyList.js
+│   │   ├── 110breadthFirstSearch.js
+│   │   ├── 111depthFirstSearch.js
+│   │   ├── 112nQueens.js
+│   │   ├── 113fibonacciCalc.js
+│   │   ├── 114ingredientConverter.js
+│   │   ├── 115optionalArgumentsSumFunction.js
+│   │   ├── 116sortingVisualizer.js
+│   │   ├── 117fccAuthors.js
+│   │   ├── 118fccForum.js
+│   │   ├── 119weatherApp.js
+│   │   ├── 120trafficLight.js
+│   │   ├── DCCscaledImage.js
+│   │   └── notes.js
+│   ├── ccjsx
+│   │   ├── 00megaNavbar.jsx
+│   │   ├── 00tailwind1.html
+│   │   ├── 00typescript1.ts
+│   │   ├── 01profileCards.jsx
+│   │   ├── 01tailwind2.html
+│   │   ├── 01typescript2.ts
+│   │   ├── 02moodBoard.jsx
+│   │   ├── 02tailwind3.html
+│   │   ├── 02typescript3.js
+│   │   ├── 02typescript3.ts
+│   │   ├── 03tailwind4.html
+│   │   ├── 03textApp.jsx
+│   │   ├── 03typescript4.js
+│   │   ├── 03typescript4.ts
+│   │   ├── 04colorPicker.jsx
+│   │   ├── 04tailwind5.html
+│   │   ├── 04typescript5.js
+│   │   ├── 04typescript5.ts
+│   │   ├── 05fruitPicker.jsx
+│   │   ├── 05typescript6.js
+│   │   ├── 05typescript6.ts
+│   │   ├── 06oneTimePass.jsx
+│   │   ├── 06typescript7.js
+│   │   ├── 06typescript7.ts
+│   │   ├── 07superheroApp.jsx
+│   │   ├── 07typescript8.tsx
+│   │   ├── 08eventRSVP.jsx
+│   │   ├── 08typescript9.tsx
+│   │   ├── 09shopList.jsx
+│   │   ├── 10currencyConverter.jsx
+│   │   ├── 11tickTackToe.jsx
+│   │   ├── flascardApp.ts
+│   │   ├── my-react-app
+│   │   │   ├── .gitignore
+│   │   │   ├── README.md
+│   │   │   ├── eslint.config.js
+│   │   │   ├── index.html
+│   │   │   ├── package-lock.json
+│   │   │   ├── package.json
+│   │   │   ├── public
+│   │   │   │   ├── favicon.svg
+│   │   │   │   └── icons.svg
+│   │   │   ├── src
+│   │   │   │   ├── App.css
+│   │   │   │   ├── App.jsx
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── hero.png
+│   │   │   │   │   ├── react.svg
+│   │   │   │   │   └── vite.svg
+│   │   │   │   ├── index.css
+│   │   │   │   └── main.jsx
+│   │   │   └── vite.config.js
+│   │   └── notes.html
+│   ├── ccpy
+│   │   ├── 000reportCard.py
+│   │   ├── 001employeeProfile.py
+│   │   ├── 002billSplitter.py
+│   │   ├── 003movieTicket.py
+│   │   ├── 004travelPlanner.py
+│   │   ├── 005discountCalc.py
+│   │   ├── 006caesarCipher.py
+│   │   ├── 007rpgChar.py
+│   │   ├── 008poemCode.py
+│   │   ├── 009numPattern.py
+│   │   ├── 010medicalData.py
+│   │   ├── 011configurationManager.py
+│   │   ├── 012ISBNvalidator.py
+│   │   ├── 014instrumentInventory.py
+│   │   ├── 015planetClass.py
+│   │   ├── 016emailSim.py
+│   │   ├── 017budgetApp.py
+│   │   ├── 018saleryTracker.py
+│   │   ├── 019characterStats.py
+│   │   ├── 020mediaCatalogue.py
+│   │   ├── 021discountCalculator.py
+│   │   ├── 022playerInterface.py
+│   │   ├── 023polygonAreaCalculator.py
+│   │   ├── 024linkedList.py
+│   │   ├── 025hashTable.py
+│   │   ├── 026binarySearch.py
+│   │   ├── 027bisectionMethod.py
+│   │   ├── 028mergeSort.py
+│   │   ├── 029quickSort.py
+│   │   ├── 030selectionSort.py
+│   │   ├── 031luhnAlgorithm.py
+│   │   ├── 032hanoiAlgorithm.py
+│   │   ├── 033shortestPath.py
+│   │   ├── 034listToMatrix.py
+│   │   ├── 035breadthFirst.py
+│   │   ├── 036depthFirst.py
+│   │   ├── 037nQueens.py
+│   │   ├── 038fibonacciCalc.py
+│   │   └── notes.py
+│   ├── ccsql
+│   │   ├── CelestialDatabase
+│   │   │   └── universe.sql
+│   │   ├── GuessingGame
+│   │   │   ├── number_guess.sh
+│   │   │   └── number_guess.sql
+│   │   ├── PeriodicDatabase
+│   │   │   ├── element.sh
+│   │   │   └── periodic_table.sql
+│   │   ├── SalonScheduler
+│   │   │   ├── salon.sh
+│   │   │   └── salon.sql
+│   │   └── WorldCup
+│   │       ├── insert_data.sh
+│   │       ├── queries.sh
+│   │       └── worldcup.sql
+│   ├── comingSoon.html
+│   ├── css
+│   │   ├── ccStyleNavigations.css
+│   │   ├── styleBootstrapGrid.css
+│   │   ├── styleDetails.css
+│   │   ├── styleNavigations.css
+│   │   └── styleShared.css
+│   ├── index.html
+│   ├── js
+│   │   ├── codeBoxScript.js
+│   │   ├── script.js
+│   │   └── testimonialMasonry.js
+│   ├── learningPath.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── partials
+│   │   ├── ccNavBar.html
+│   │   ├── ccSideMenu.html
+│   │   ├── contactMenu.html
+│   │   ├── footer.html
+│   │   ├── navBar.html
+│   │   └── sideMenu.html
+│   └── resume.html
+├── file-tree.txt
+├── folderstructure.txt
+├── package-lock.json
+└── package.json
+
+28 directories, 705 files

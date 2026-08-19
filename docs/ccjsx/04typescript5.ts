@@ -1,4 +1,4 @@
-abstract class Bug<T> {
+abstract class Dino<T> {
   emoji!: T;
   emojiElement!: HTMLParagraphElement;
   constructor(emojiElement: HTMLParagraphElement) {
@@ -8,10 +8,10 @@ abstract class Bug<T> {
   abstract render(): void;
 }
 
-class Bee extends Bug<string> {
+class Tyrannosaurus extends Dino<string> {
   constructor(emojiElement: HTMLParagraphElement) {
     super(emojiElement);
-    this.emoji = "🐝";
+    this.emoji = "🦖";
   }
 
   override render() {
@@ -19,10 +19,10 @@ class Bee extends Bug<string> {
   }
 }
 
-class Spider extends Bug<string> {
+class Sauropod extends Dino<string> {
   constructor(emojiElement: HTMLParagraphElement) {
     super(emojiElement);
-    this.emoji = "🕷️";
+    this.emoji = "🦕";
   }
 
   override render() {
@@ -34,15 +34,16 @@ function isSelect(element: EventTarget | null): element is HTMLSelectElement {
   return element instanceof HTMLSelectElement;
 }
 
-const bugEmojiElement = document.querySelector<HTMLParagraphElement>("#bug-emoji")!;
-const bugMap: Record<string, Bug<string>> = {
-  bee: new Bee(bugEmojiElement),
-  spider: new Spider(bugEmojiElement),
+const DinoEmojiElement = document.querySelector<HTMLParagraphElement>("#Dino-emoji")!;
+const DinoMap: Record<string, Dino<string>> = {
+  Tyrannosaurus: new Tyrannosaurus(DinoEmojiElement),
+  Sauropod: new Sauropod(DinoEmojiElement),
 };
 
-const selectElement = document.querySelector<HTMLSelectElement>("#species")!;
+const selectElement = document.querySelector<HTMLSelectElement>("#dinosaur")!;
 selectElement.addEventListener("change", (e) => {
   if (isSelect(e.target)) {
-    bugMap[e.target.value].render();
+    DinoMap[e.target.value].render();
   }
 });
+export {};

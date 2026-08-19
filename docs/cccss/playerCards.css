@@ -1,18 +1,14 @@
-html,
-body {
-  min-height: 100%;
-  font-family: "Lato", system-ui, sans-serif;
-  background-color: #0a0a23;
-}
+/* ========================================
+PAGE LAYOUT
+========================================= */
 
 .page {
-  min-height: 100vh;
-  background-color: #0a0a23;
+  min-height: 100%;
 }
 
 .header {
-  background-color: #1b1b32;
-  border-bottom: 3px solid #f1be32;
+  background-color: var(--bg-color-alt);
+  border-bottom: 3px solid var(--accent-color-gold);
 }
 
 .header-inner {
@@ -22,17 +18,19 @@ body {
 }
 
 .header-title {
-  font-size: 20px;
-  font-weight: 900;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #f1be32;
+  color: var(--accent-color-gold);
 }
 
 .header-subtitle {
-  font-size: 12px;
-  color: #99c9ff;
   margin-top: 2px;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: var(--accent-color-lteal);
 }
 
 .main {
@@ -53,24 +51,34 @@ body {
   }
 }
 
+/* ========================================
+FORM PANEL
+========================================= */
+
 .form-panel {
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 24px;
+  background-color: var(--bg-color-main);
+  border: 1px solid var(--accent-color-lgray);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.form-panel > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .form-section-title {
-  font-size: 17px;
-  font-weight: 900;
+  margin-bottom: 8px;
+  font-size: 1.0625rem;
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #1f2937;
-  margin-bottom: 8px;
+  color: var(--text-color-main);
 }
 
 .form-group {
@@ -89,37 +97,33 @@ body {
   gap: 12px;
 }
 
-.form-panel > div {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
 .label {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 0.6875rem;
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #6b7280;
+  color: var(--accent-color-dgray);
 }
 
 .input {
   box-sizing: border-box;
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--accent-color-lgray);
   border-radius: 8px;
-  font-size: 14px;
-  font-family: inherit;
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
   outline: none;
   transition:
-    border-color 0.15s,
-    box-shadow 0.15s;
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 .input:focus {
-  border-color: #a78bfa;
-  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+  border-color: var(--accent-color-dteal);
+  box-shadow: 0 0 0 3px rgba(6, 95, 111, 0.2);
 }
 
 .stats-grid {
@@ -127,6 +131,10 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+
+/* ========================================
+PREVIEW PANEL
+========================================= */
 
 .preview-panel {
   display: flex;
@@ -142,49 +150,60 @@ body {
   }
 }
 
-.tier-elite {
-  --accent: #dbb8ff;
-}
-
-.tier-gold {
-  --accent: #f1be32;
-}
-
-.tier-silver {
-  --accent: #99c9ff;
-}
-
-.tier-bronze {
-  --accent: #acd157;
-}
-
 .preview-box {
   width: 100%;
-  background-color: #1b1b32;
-  border-radius: 12px;
-  border: 2px solid var(--accent);
   padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  background-color: var(--bg-color-alt);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
 }
 
 .preview-label {
-  font-size: 13px;
-  font-weight: 900;
+  font-size: 0.8125rem;
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #dfdfe2;
+  color: var(--text-color-alt);
 }
 
 .preview-hint {
-  font-size: 11px;
-  color: #99c9ff;
   margin-top: 2px;
+  font-size: 0.6875rem;
+  color: var(--accent-color-lteal);
 }
 
+/* ========================================
+PLAYER TIERS
+========================================= */
+
+.tier-elite {
+  --accent: var(--accent-color-dteal);
+}
+
+.tier-gold {
+  --accent: var(--accent-color-gold);
+}
+
+.tier-silver {
+  --accent: var(--accent-color-lteal);
+}
+
+.tier-bronze {
+  --accent: var(--accent-color-brown);
+}
+
+/* ========================================
+PLAYER CARD
+========================================= */
+
 .card-wrapper {
+  display: inline-block;
+  padding: 3px;
+  background-color: var(--accent);
   clip-path: polygon(
     8% 0%,
     92% 0%,
@@ -199,12 +218,13 @@ body {
     0% 91%,
     0% 5%
   );
-  background-color: var(--accent);
-  padding: 3px;
-  display: inline-block;
 }
 
 .card {
+  width: 260px;
+  overflow: hidden;
+  background-color: var(--bg-color-alt);
+  font-family: "Montserrat", sans-serif;
   clip-path: polygon(
     8% 0%,
     92% 0%,
@@ -219,33 +239,33 @@ body {
     0% 91%,
     0% 5%
   );
-  width: 260px;
-  background-color: #0a0a23;
-  font-family: "Lato", sans-serif;
-  overflow: hidden;
 }
 
+/* ========================================
+CARD HEADER
+========================================= */
+
 .card-header {
-  background-color: #1b1b32;
-  padding: 16px 20px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 20px 12px;
+  background-color: var(--bg-color-lalt);
 }
 
 .card-rating {
-  font-size: 48px;
-  font-weight: 900;
-  color: var(--accent);
+  font-size: 3rem;
+  font-weight: var(--weight-bold);
   line-height: 1;
+  color: var(--accent);
 }
 
 .card-position {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.1em;
   margin-top: 2px;
+  font-size: 0.8125rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  color: var(--accent);
 }
 
 .card-header-right {
@@ -254,27 +274,31 @@ body {
 
 .card-tier-badge {
   display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  color: #0a0a23;
-  background-color: var(--accent);
-  padding: 2px 8px;
-  border-radius: 4px;
-  letter-spacing: 0.1em;
   margin-bottom: 6px;
+  padding: 2px 8px;
+  background-color: var(--accent);
+  border-radius: 4px;
+  color: var(--bg-color-alt);
+  font-size: 0.6875rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
 }
 
 .card-club {
-  font-size: 13px;
-  font-weight: 700;
-  color: #dfdfe2;
+  font-size: 0.8125rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-color-alt);
 }
+
+/* ========================================
+CARD IMAGE
+========================================= */
 
 .card-image-wrap {
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background-color: #1b1b32;
+  background-color: var(--bg-color-lalt);
 }
 
 .card-image {
@@ -284,26 +308,34 @@ body {
   object-position: center 20%;
 }
 
+/* ========================================
+CARD NAME
+========================================= */
+
 .card-name-strip {
-  background-color: var(--accent);
   padding: 8px 20px;
+  background-color: var(--accent);
   text-align: center;
 }
 
 .card-name {
-  font-size: 18px;
-  font-weight: 900;
-  color: #0a0a23;
+  font-size: 1.125rem;
+  font-weight: var(--weight-bold);
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  color: var(--bg-color-alt);
 }
 
+/* ========================================
+CARD STATS
+========================================= */
+
 .card-stats {
-  background-color: #dfdfe2;
-  padding: 12px 20px 20px;
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
   gap: 0 12px;
+  padding: 12px 20px 20px;
+  background-color: var(--bg-color-main);
 }
 
 .stat-col {
@@ -317,7 +349,7 @@ body {
 }
 
 .stat-divider {
-  background-color: #d0d0d5;
+  background-color: var(--accent-color-lgray);
 }
 
 .stat-row {
@@ -327,16 +359,40 @@ body {
 }
 
 .stat-value {
-  font-size: 15px;
-  font-weight: 900;
-  color: #0a0a23;
   min-width: 24px;
+  font-size: 0.9375rem;
+  font-weight: var(--weight-bold);
   text-align: right;
+  color: var(--text-color-main);
 }
 
 .stat-label {
-  font-size: 10px;
-  font-weight: 700;
-  color: #1b1b32;
+  font-size: 0.625rem;
+  font-weight: var(--weight-bold);
   letter-spacing: 0.08em;
+  color: var(--accent-color-dgray);
+}
+
+/* ========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+  .main {
+    padding: 20px 10px;
+  }
+
+  .form-panel,
+  .preview-box {
+    padding: 16px;
+  }
+
+  .form-row,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 240px;
+  }
 }

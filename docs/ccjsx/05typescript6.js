@@ -1,75 +1,41 @@
-interface Item {
-  type: "book" | "electronics" | "clothing";
-  id: string;
-  price: number;
-}
-
-interface Book extends Item {
-  type: "book";
-  title: string;
-  author: string;
-}
-
-interface Electronics extends Item {
-  type: "electronics";
-  item: string;
-  model: string;
-  warranty?: number;
-}
-
-interface Clothing extends Item {
-  type: "clothing";
-  item: string;
-  brand: string;
-  size?: "S" | "M" | "L";
-}
-
-type Product = Book | Electronics | Clothing;
-
-class Collection<T> {
-  items: T[];
-  constructor(items: T[]) {
+"use strict";
+class Collection {
+  items;
+  constructor(items) {
     this.items = items;
   }
   getAll() {
     return this.items;
   }
-
-  filter(callback: (item: T) => boolean) {
+  filter(callback) {
     return this.items.filter(callback);
   }
 }
-
-const tail: Clothing = {
+const tail = {
   type: "clothing",
   id: "Tail Cover",
   price: 25,
-  item: "knit",
+  item: "Tail Cover",
   brand: "Squirrel Inc",
   size: "S",
 };
-
-const tree: Book = {
+const tree = {
   type: "book",
   id: "learn",
   price: 10,
   title: "Drey Building",
   author: "Sandy Cheeks",
 };
-
-const nuts: Electronics = {
+const nuts = {
   type: "electronics",
   id: "scanner",
   price: 55,
   item: "Nut Finder",
   model: "Pecan Perfect",
 };
-
-const products = new Collection<Product>([tail, tree, nuts]);
-
-function renderProduct(product: Product) {
+const products = new Collection([tail, tree, nuts]);
+function renderProduct(product) {
   let html = `<div class="item" id="${product.id}">`;
-
   if (product.type === "book") {
     html += `
       <div class="more">
@@ -98,7 +64,8 @@ function renderProduct(product: Product) {
       html += `
         <div class="more">
           <strong>CLOTHING:</strong>
-          <div>${product.item} by ${product.brand} - Size ${product.size}</div>
+          <div>${product.item} by ${product.brand}</div>
+          <div>Size ${product.size}</div>
         </div>
       `;
     } else {
@@ -113,14 +80,12 @@ function renderProduct(product: Product) {
     const jsonString = JSON.stringify(product);
     throw new Error(`Unknown product type: ${jsonString}`);
   }
-
   html += `
     <div class="price">$${product.price.toFixed(2)}</div>
   </div>`;
-
   return html;
 }
-function showProducts(filter?: Product["type"]) {
+function showProducts(filter) {
   const output = document.getElementById("output");
   if (output) {
     if (filter) {
@@ -138,29 +103,22 @@ function showProducts(filter?: Product["type"]) {
     }
   }
 }
-
-const booksBtn = document.querySelector<HTMLButtonElement>("#books");
-const electronicsBtn = document.querySelector<HTMLButtonElement>("#electronics");
-const clothingBtn = document.querySelector<HTMLButtonElement>("#clothing");
-const allBtn = document.querySelector<HTMLButtonElement>("#all");
-
+const booksBtn = document.querySelector("#books");
+const electronicsBtn = document.querySelector("#electronics");
+const clothingBtn = document.querySelector("#clothing");
+const allBtn = document.querySelector("#all");
 allBtn?.addEventListener("click", () => {
   showProducts();
 });
-
 booksBtn?.addEventListener("click", () => {
   showProducts("book");
 });
-
 electronicsBtn?.addEventListener("click", () => {
   showProducts("electronics");
 });
-
 clothingBtn?.addEventListener("click", () => {
   showProducts("clothing");
 });
-
 document.addEventListener("DOMContentLoaded", () => {
   showProducts();
 });
-export {};

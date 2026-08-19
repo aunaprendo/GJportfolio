@@ -1,20 +1,72 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fortune Telling App</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="../css/styleShared.css" />
+    <link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+    <link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="../css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../cccss/fortuneTelling.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>Fortune Telling App</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
   </head>
-  <body>
+
+  <body id="body">
+    <!-- Main navigation -->
+    <nav
+      data-include="../partials/ccNavBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu -->
+    <aside
+      data-include="../partials/ccSideMenu.html"
+      role="navigation"
+      aria-label="Side menu"
+    ></aside>
+
+    <!-- Contact menu -->
+    <aside
+      data-include="../partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
+
     <main id="main_container">
-      <header>
-        <h1>Mystic Tarot</h1>
-        <h6>Discover the wisdom of the cards and unveil the mysteries of your path</h6>
-      </header>
+      <nav class="mb-1 me-3" style="--bs-breadcrumb-divider: &quot;>&quot;" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-end">
+          <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="gen-link-cc" href="../ccFrontEnd.html">freeCodeCamp Front End</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+        </ol>
+      </nav>
+
+      <section class="header_container">
+        <h1 class="text-center">✨ Mystic Tarot ✨</h1>
+        <h6 class="text-center">
+          Discover the wisdom of the cards and unveil the mysteries of your path
+        </h6>
+      </section>
       <div id="btn_title_container">
         <div class="title_wrapper">
-          <h2 class="header_title">Choose Your Reading</h2>
+          <h2 class="header_title text-center">Choose Your Reading</h2>
         </div>
         <div class="btn_wrapper">
           <button class="btn btn_singleCard" id="btn-single-card">Single Card Reading</button>
@@ -33,9 +85,19 @@
             <p class="description"></p>
           </div>
         </div>
-        <button class="btn_reveal">New Reading</button>
+        <div class="btn_wrapper">
+          <button class="btn_reveal">New Reading</button>
+        </div>
       </section>
     </main>
-    <script src="../ccjsx/06typescript7.ts" type="module"></script>
+
+    <!-- Footer -->
+    <footer data-include="../partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../ccjsx/06typescript7.js"></script>
   </body>
 </html>

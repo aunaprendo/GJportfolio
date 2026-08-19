@@ -1,46 +1,21 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ========================================
+   MOTORCYCLE GALLERY
+========================================= */
 
-body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Layout utilities */
+/* ========================================
+   LAYOUT
+========================================= */
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .mt-20 {
@@ -51,168 +26,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Responsive padding */
-@media (min-width: 640px) {
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-/* Background gradients */
-.bg-gradient-to-r {
-  background: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-gray-900 {
-  --tw-gradient-from: #111827;
-  --tw-gradient-to: rgb(17 24 39 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-gray-800 {
-  --tw-gradient-to: rgb(31 41 55 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #1f2937, var(--tw-gradient-to);
-}
-
-.to-gray-900 {
-  --tw-gradient-to: #111827;
-}
-
-.from-orange-600 {
-  --tw-gradient-from: #ea580c;
-  --tw-gradient-to: rgb(234 88 12 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-orange-500 {
-  --tw-gradient-to: rgb(249 115 22 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #f97316, var(--tw-gradient-to);
-}
-
-.to-red-500 {
-  --tw-gradient-to: #ef4444;
-}
-
-/* Colors */
-.bg-gray-900 {
-  background-color: #111827;
-}
-
-.text-white {
-  color: #ffffff;
-}
-
-.text-gray-400 {
-  color: #9ca3af;
-}
-
-.text-orange-500 {
-  color: #f97316;
-  stroke: #f97316;
-}
-
-/* Flexbox utilities */
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-/* Grid utilities */
-.grid {
-  display: grid;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-/* Typography */
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.opacity-90 {
-  opacity: 0.9;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-/* Spacing utilities */
-.w-8 {
-  width: 2rem;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
-.h-2 {
-  height: 0.5rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
-/* Border utilities */
-.border {
-  border-width: 1px;
-}
-
-.border-t {
-  border-top-width: 1px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-/* Position utilities */
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-/* Padding utilities */
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -233,45 +46,265 @@ body {
   padding-bottom: 0.5rem;
 }
 
-/* Margin utilities */
-.mb-4 {
-  margin-bottom: 1rem;
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-/* Focus utilities */
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+/* ========================================
+   RESPONSIVE SPACING
+========================================= */
+@media (min-width: 640px) {
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ========================================
+   FLEX & GRID UTILITIES
+========================================= */
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+/* ========================================
+   WIDTH & HEIGHT
+========================================= */
+.w-8 {
+  width: 2rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+/* ========================================
+   POSITIONING
+========================================= */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-3 {
+  left: 0.75rem;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.transform {
+  transform: translateY(-50%);
+}
+
+/* ========================================
+   TYPOGRAPHY
+========================================= */
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: var(--weight-bold);
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+/* ========================================
+   MOTORCYCLE PAGE COLORS
+========================================= */
+.bg-gray-900 {
+  background-color: var(--bg-color-alt);
+}
+
+.bg-gray-700 {
+  background-color: var(--bg-color-lalt);
+}
+
+.text-gray-400 {
+  color: var(--accent-color-lgray);
+}
+
+.text-orange-500 {
+  color: var(--accent-color-gold);
+  stroke: var(--accent-color-gold);
+}
+
+.border-gray-600 {
+  border-color: var(--accent-color-dgray);
+}
+
+.placeholder-gray-400::placeholder {
+  color: var(--accent-color-lgray);
+}
+
+/* ========================================
+   BACKGROUND GRADIENTS
+========================================= */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-gray-900 {
+  --tw-gradient-from: var(--bg-color-alt);
+  --tw-gradient-to: rgb(36 36 36 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-gray-800 {
+  --tw-gradient-to: rgb(51 51 51 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--bg-color-lalt), var(--tw-gradient-to);
+}
+
+.to-gray-900 {
+  --tw-gradient-to: var(--bg-color-alt);
+}
+
+/* Replaces original orange/red gradient with portfolio colors */
+.from-orange-600 {
+  --tw-gradient-from: var(--accent-color-dteal);
+  --tw-gradient-to: rgb(6 95 111 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-orange-500 {
+  --tw-gradient-to: rgb(112 82 0 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--accent-color-brown), var(--tw-gradient-to);
+}
+
+.to-red-500 {
+  --tw-gradient-to: var(--accent-color-gold);
+}
+
+/* ========================================
+   BORDERS
+========================================= */
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.border-t {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* ========================================
+   SEARCH
+========================================= */
+.focus\:outline-none:focus {
+  outline: none;
+}
+
 .focus\:ring-2:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width)
-    var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
-    var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  box-shadow: 0 0 0 2px rgb(6 95 111 / 0.35);
 }
 
 .focus\:ring-orange-500:focus {
-  --tw-ring-color: #f97316;
+  box-shadow: 0 0 0 2px rgb(6 95 111 / 0.35);
 }
 
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
 
-/* Hover utilities */
+/* ========================================
+   HOVER UTILITIES
+========================================= */
 .hover\:-translate-y-1:hover {
   transform: translateY(-0.25rem);
 }
 
-/* Animation utilities */
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Custom component styles */
+/* ========================================
+   LOADING
+========================================= */
 .loading-container {
   display: flex;
   align-items: center;
@@ -285,9 +318,22 @@ body {
   justify-content: center;
 }
 
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   MOTORCYCLE GRID
+========================================= */
 .motorcycle-grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -303,52 +349,72 @@ body {
   }
 }
 
+/* ========================================
+   MOTORCYCLE CARD
+========================================= */
 .motorcycle-card {
-  background-color: #ffffff;
+  position: relative;
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+  border: 1px solid var(--accent-color-ateal);
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(0);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .motorcycle-card:hover {
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   transform: translateY(-0.25rem);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
 }
 
+/* ========================================
+   MOTORCYCLE IMAGE
+========================================= */
 .motorcycle-card-image-container {
-  position: relative;
+  display: block;
+  width: 100%;
   height: 16rem;
-  overflow: hidden;
-  background-color: #111827;
+  object-fit: cover;
+  background-color: var(--bg-color-alt);
+  transition: transform 0.5s ease;
 }
 
+.motorcycle-card:hover .motorcycle-card-image-container {
+  transform: scale(1.03);
+}
+
+/* Use this if your HTML has a separate image wrapper */
 .motorcycle-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s ease;
 }
 
 .motorcycle-card:hover .motorcycle-card-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
+/* ========================================
+   MOTORCYCLE YEAR BADGE
+========================================= */
 .motorcycle-card-year-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #f97316;
-  color: #ffffff;
+  display: inline-block;
+  background-color: var(--accent-color-dteal);
+  color: var(--text-color-alt);
   padding: 0.25rem 0.75rem;
+  margin: 1rem 1rem 0;
   border-radius: 9999px;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: var(--weight-bold);
 }
 
+/* ========================================
+   MOTORCYCLE CARD CONTENT
+========================================= */
 .motorcycle-card-content {
   padding: 1.5rem;
 }
@@ -357,74 +423,118 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 0.75rem;
 }
 
 .motorcycle-card-title {
+  margin: 1rem 1rem 0.25rem;
+  color: var(--text-color-main);
   font-size: 1.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.25rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.3;
 }
 
 .motorcycle-card-manufacturer {
-  color: #4b5563;
-  font-weight: 500;
+  margin: 0 1rem;
+  color: var(--accent-color-dgray);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
 }
 
 .motorcycle-card-category {
+  display: inline-block;
+  margin: 0.75rem 1rem;
   padding: 0.25rem 0.75rem;
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: var(--accent-color-ateal);
+  color: var(--text-color-main);
   border-radius: 9999px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
 
 .motorcycle-card-description {
-  color: #4b5563;
+  margin: 0 1rem 1rem;
+  color: var(--accent-color-dgray);
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
 
+/* ========================================
+   MOTORCYCLE CARD FOOTER
+========================================= */
 .motorcycle-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
-  border-top: 1px solid #e5e7eb;
+  gap: 1rem;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--accent-color-ateal);
 }
 
 .motorcycle-card-price {
+  margin: 0 1rem 1rem;
+  color: var(--accent-color-brown);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #ea580c;
+  font-weight: var(--weight-bold);
 }
 
 .motorcycle-card-engine {
+  margin: 0 1rem 1rem;
+  color: var(--accent-color-dgray);
   font-size: 0.75rem;
-  color: #6b7280;
 }
 
+/* ========================================
+   MOTORCYCLE CARD BUTTON
+========================================= */
 .motorcycle-card-button {
-  background-color: #f97316;
-  color: #ffffff;
   padding: 0.5rem 1.5rem;
+  background-color: var(--accent-color-dteal);
+  color: var(--text-color-alt);
+  border: 1px solid var(--accent-color-dteal);
   border-radius: 0.5rem;
-  font-weight: 600;
-  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: var(--weight-semibold);
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .motorcycle-card-button:hover {
-  background-color: #ea580c;
+  background-color: var(--bg-color-alt);
+  border-color: var(--bg-color-alt);
+}
+
+.motorcycle-card-button:focus-visible {
+  outline: 2px solid var(--accent-color-dteal);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   RESULTS
+========================================= */
+.results-count {
+  margin-bottom: 1.5rem;
+}
+
+.results-count-text {
+  color: var(--accent-color-dgray);
+}
+
+.results-count-number {
+  color: var(--text-color-main);
+  font-weight: var(--weight-bold);
 }
 
 .no-results {
@@ -433,96 +543,13 @@ body {
 }
 
 .no-results-text {
+  color: var(--accent-color-dgray);
   font-size: 1.25rem;
-  color: #4b5563;
 }
 
-.results-count {
-  margin-bottom: 1.5rem;
-}
-
-.results-count-text {
-  color: #4b5563;
-}
-
-.results-count-number {
-  font-weight: 700;
-  color: #111827;
-}
-
-/* Additional utility classes for search input */
-.bg-gray-700 {
-  background-color: #374151;
-}
-
-.border-gray-600 {
-  border-color: #4b5563;
-}
-
-.placeholder-gray-400::placeholder {
-  color: #9ca3af;
-}
-
-.focus\:outline-none:focus {
-  outline: none;
-}
-
-.focus\:ring-2:focus {
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.5);
-}
-
-.focus\:ring-orange-500:focus {
-  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.5);
-}
-
-.focus\:border-transparent:focus {
-  border-color: transparent;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.left-3 {
-  left: 0.75rem;
-}
-
-.top-1\/2 {
-  top: 50%;
-}
-
-.transform {
-  transform: translateY(-50%);
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-center {
-  align-items: center;
-}
-
+/* ========================================
+   RESPONSIVE LAYOUT
+========================================= */
 @media (min-width: 768px) {
   .md\:flex-row {
     flex-direction: row;

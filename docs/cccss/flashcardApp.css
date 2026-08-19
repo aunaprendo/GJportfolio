@@ -1,3 +1,99 @@
+/* ========================================
+APP LAYOUT
+========================================= */
+
+#cardSection,
+#manageSection {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+#cardSection {
+  padding: 24px;
+  background-color: var(--bg-color-lalt);
+  border: 1px solid var(--accent-color-dgray);
+  border-radius: 12px;
+}
+
+#manageSection {
+  margin-top: 16px;
+  padding: 24px;
+  background-color: var(--bg-color-lalt);
+  border: 1px solid var(--accent-color-dgray);
+  border-radius: 12px;
+}
+
+/* ========================================
+HEADINGS
+========================================= */
+
+#cardSection h1 {
+  margin: 0 0 20px;
+  color: var(--text-color-alt);
+  font-size: 1.35rem;
+  font-weight: var(--weight-bold);
+}
+
+#manageSection h2 {
+  margin: 0 0 12px;
+  color: var(--text-color-alt);
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  text-align: left;
+}
+
+#manageSection h3 {
+  margin: 0 0 10px;
+  color: var(--text-color-alt);
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  text-align: left;
+}
+
+/* ========================================
+FLASH CARD
+========================================= */
+
+#flashcard {
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--bg-color-alt);
+  border: 1px solid var(--accent-color-dgray);
+  border-radius: 6px;
+  color: var(--text-color-alt);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#flashcard:hover {
+  border-color: var(--accent-color-gold);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#flashcard:focus-visible {
+  outline: 2px solid var(--accent-color-gold);
+  outline-offset: 3px;
+}
+
+#front,
+#back {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+}
+
+/* ========================================
+FLASH CARD FLIP STATES
+========================================= */
+
 #flashcard.flipped #front {
   display: none;
 }
@@ -12,4 +108,160 @@
 
 #flashcard:not(.flipped) #back {
   display: none;
+}
+
+/* ========================================
+MANAGE SECTION
+========================================= */
+
+#manageSection hr {
+  margin: 18px 0;
+  border: 0;
+  border-top: 1px solid var(--accent-color-dgray);
+}
+
+/* ========================================
+BUTTONS
+========================================= */
+
+#delete-btn,
+#add-btn {
+  width: 100%;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-color-alt);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#delete-btn {
+  background-color: var(--accent-color-brown);
+}
+
+#add-btn {
+  margin-top: 18px;
+  background-color: var(--accent-color-dteal);
+}
+
+#delete-btn:hover,
+#add-btn:hover {
+  background-color: var(--bg-color-alt);
+}
+
+#delete-btn:active,
+#add-btn:active {
+  transform: scale(0.98);
+}
+
+#delete-btn:focus-visible,
+#add-btn:focus-visible {
+  outline: 2px solid var(--accent-color-gold);
+  outline-offset: 3px;
+}
+
+/* ========================================
+CARDS IN DECK
+========================================= */
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardStack {
+  width: 100%;
+  padding: 7px 12px;
+  overflow: hidden;
+  background-color: var(--accent-color-dteal);
+  border-radius: 4px;
+  color: var(--text-color-alt);
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cardStack:hover {
+  background-color: var(--accent-color-brown);
+}
+
+.cardStack:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
+ADD CARD FORM
+========================================= */
+
+#entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#entry-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#entry-form label {
+  color: var(--accent-color-lgray);
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+}
+
+#front-text,
+#back-text {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px;
+  resize: vertical;
+  background-color: var(--bg-color-alt);
+  border: 1px solid var(--accent-color-dgray);
+  border-radius: 4px;
+  color: var(--text-color-alt);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+#front-text:focus,
+#back-text:focus {
+  border-color: var(--accent-color-gold);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(216, 185, 97, 0.2);
+}
+
+/* ========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+  #cardSection,
+  #manageSection {
+    max-width: 100%;
+  }
+
+  #cardSection,
+  #manageSection {
+    padding: 18px;
+  }
+
+  #flashcard {
+    min-height: 110px;
+    padding: 18px;
+  }
 }
