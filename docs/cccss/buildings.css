@@ -12,11 +12,9 @@
   --window-color4: #8cb3d9;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+nav[aria-label="breadcrumb"] {
+  position: relative;
+  z-index: 10;
 }
 
 /* ============================================================

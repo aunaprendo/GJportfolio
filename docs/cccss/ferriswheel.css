@@ -2,7 +2,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
+  width: 100%;
+  min-height: 0;
+  padding: 1.5rem 0 3rem;
+  box-sizing: border-box;
 }
 
 /* Wheel container */
@@ -11,10 +14,10 @@ main {
   border-radius: 50%;
   position: relative;
   margin: 0;
-  height: 55vw;
-  width: 55vw;
-  max-height: 500px;
-  max-width: 500px;
+
+  width: min(48vw, 52vh, 430px);
+  aspect-ratio: 1 / 1;
+
   animation: wheel 10s linear infinite;
 }
 
