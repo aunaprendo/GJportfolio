@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to my portfolio. This repository documents my transition into cybersecurity, highlighting hands-on projects, technical learning, and practical exercises focused on security analysis, risk identification, and building resilient systems.
+Welcome to my portfolio. This repository documents my transition into cybersecurity, highlighting hands-on projects, technical learning, and practical exercises focused on risk identification and building resilient systems.
 
 I am a methodical problem solver and knowledge seeker with a strong interest in security analysis, vulnerability assessment, and offensive security. My work reflects a structured, analytical approach shaped by experience assessing complex environments, working within constraints, and prioritizing risk-focused solutions.
 
