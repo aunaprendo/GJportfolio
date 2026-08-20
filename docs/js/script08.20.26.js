@@ -257,125 +257,81 @@ function releaseFocusTrap() {
 }
 
 /* ================================
-PROJECT CAROUSEL
+   PROJECT CAROUSEL
 ================================ */
 (() => {
   const track = document.querySelector(".carousel-track");
-  const viewport = document.querySelector(".carousel-viewport");
-  const nextBtn = document.querySelector(".carousel-btn.next");
-  const prevBtn = document.querySelector(".carousel-btn.prev");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
 
-  if (!track || !viewport || !nextBtn || !prevBtn) return;
+  if (!track || !nextBtn || !prevBtn) return;
 
-  const originalSlides = Array.from(track.children);
-  const originalCount = originalSlides.length;
+  const cards = Array.from(track.children);
+  let cardWidth;
+  let index = 1;
 
-  if (!originalCount) return;
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[cards.length - 1].cloneNode(true);
 
-  const groupsBefore = 2;
-  const groupsAfter = 2;
+  firstClone.id = "first-clone";
+  lastClone.id = "last-clone";
 
-  function cloneGroup() {
-    return originalSlides.map((slide) => {
-      const clone = slide.cloneNode(true);
-      clone.setAttribute("aria-hidden", "true");
-      return clone;
-    });
+  track.append(firstClone);
+  track.prepend(lastClone);
+
+  const allCards = Array.from(track.children);
+
+  function setCardWidth() {
+    const containerWidth = track.parentElement.getBoundingClientRect().width;
+    cardWidth = allCards[index].getBoundingClientRect().width;
+
+    const offset = cardWidth * index - (containerWidth / 2 - cardWidth / 2);
+
+    track.style.transition = "none";
+    track.style.transform = `translateX(-${offset}px)`;
   }
 
-  for (let group = 0; group < groupsBefore; group++) {
-    const clones = cloneGroup();
+  window.addEventListener("resize", setCardWidth);
+  setCardWidth();
 
-    clones.reverse().forEach((clone) => {
-      track.prepend(clone);
-    });
-  }
+  nextBtn.addEventListener("click", () => {
+    if (index >= allCards.length - 1) return;
+    index++;
+    updatePosition();
+  });
 
-  for (let group = 0; group < groupsAfter; group++) {
-    cloneGroup().forEach((clone) => {
-      track.append(clone);
-    });
-  }
+  prevBtn.addEventListener("click", () => {
+    if (index <= 0) return;
+    index--;
+    updatePosition();
+  });
 
-  const slides = Array.from(track.children);
-
-  let index = originalCount * groupsBefore;
-
-  let isAnimating = false;
-  let currentOffset = 0;
-
-  /* ========================================
-     POSITION CALCULATION
-  ========================================= */
-  function getTargetOffset() {
-    const slide = slides[index];
-
-    if (!slide) return 0;
-
-    const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-    const viewportCenter = viewport.clientWidth / 2;
-    return slideCenter - viewportCenter;
-  }
-
-  function updatePosition(animate = true) {
-    currentOffset = getTargetOffset();
-
-    track.style.transition = animate ? "transform 0.45s ease" : "none";
-
-    track.style.transform = `translate3d(-${currentOffset}px, 0, 0)`;
-  }
-
-  /* ========================================
-     INFINITE LOOP RESET
-  ========================================= */
-  function normalizeIndex() {
-    const middleStart = originalCount * groupsBefore;
-    const middleEnd = middleStart + originalCount;
-
-    if (index >= middleEnd) {
-      index -= originalCount;
-      updatePosition(false);
-    } else if (index < middleStart) {
-      index += originalCount;
+  track.addEventListener("transitionend", () => {
+    if (allCards[index].id === "first-clone") {
+      index = 1;
       updatePosition(false);
     }
 
-    isAnimating = false;
-  }
-
-  track.addEventListener("transitionend", (event) => {
-    if (event.propertyName !== "transform") return;
-
-    normalizeIndex();
+    if (allCards[index].id === "last-clone") {
+      index = allCards.length - 2;
+      updatePosition(false);
+    }
   });
 
-  /* ========================================
-     BUTTON CONTROLS
-  ========================================= */
-  function moveNext() {
-    if (isAnimating) return;
+  function updatePosition(withTransition = true) {
+    const containerWidth = track.parentElement.getBoundingClientRect().width;
 
-    isAnimating = true;
-    index++;
+    const offset = cardWidth * index - (containerWidth / 2 - cardWidth / 2);
 
-    updatePosition(true);
+    track.style.transition = withTransition ? "transform 0.4s ease" : "none";
+
+    track.style.transform = `translateX(-${offset}px)`;
   }
+  /* ================================
+     TOUCH / SWIPE SUPPORT
+  ================================ */
+  const viewport = track.closest(".carousel-viewport");
 
-  function movePrevious() {
-    if (isAnimating) return;
-
-    isAnimating = true;
-    index--;
-
-    updatePosition(true);
-  }
-
-  nextBtn.addEventListener("click", moveNext);
-  prevBtn.addEventListener("click", movePrevious);
-
-  /* ========================================
-     TOUCH / POINTER SWIPE
-  ========================================= */
   let startX = 0;
   let currentX = 0;
   let isDragging = false;
@@ -384,89 +340,42 @@ PROJECT CAROUSEL
 
   viewport.style.touchAction = "pan-y";
 
-  viewport.addEventListener("pointerdown", (event) => {
-    if (event.target.closest("a, button")) return;
-
-    if (isAnimating) return;
-
+  viewport.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a, button")) return;
     isDragging = true;
-
-    startX = event.clientX;
+    startX = e.clientX;
     currentX = startX;
-
     track.style.transition = "none";
-
-    viewport.setPointerCapture(event.pointerId);
+    viewport.setPointerCapture(e.pointerId);
   });
 
-  viewport.addEventListener("pointermove", (event) => {
+  viewport.addEventListener("pointermove", (e) => {
     if (!isDragging) return;
-
-    currentX = event.clientX;
-    const dragDistance = currentX - startX;
-
-    track.style.transform = `translate3d(${-currentOffset + dragDistance}px, 0, 0)`;
+    currentX = e.clientX;
+    const delta = startX - currentX;
+    track.style.transform = `translateX(-${cardWidth * index + delta}px)`;
   });
 
   viewport.addEventListener("pointerup", finishSwipe);
   viewport.addEventListener("pointercancel", finishSwipe);
 
-  function finishSwipe() {
+  function finishSwipe(e) {
     if (!isDragging) return;
-
     isDragging = false;
 
-    const dragDistance = currentX - startX;
+    const delta = startX - currentX;
 
-    if (Math.abs(dragDistance) >= SWIPE_THRESHOLD) {
-      isAnimating = true;
-
-      if (dragDistance < 0) {
+    if (Math.abs(delta) > SWIPE_THRESHOLD) {
+      if (delta > 0 && index < allCards.length - 1) {
         index++;
-      } else {
+      } else if (delta < 0 && index > 0) {
         index--;
       }
     }
 
-    updatePosition(true);
+    track.style.transition = "transform 0.4s ease";
+    updatePosition();
   }
-
-  /* ========================================
-     KEYBOARD SUPPORT
-  ========================================= */
-  nextBtn.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      moveNext();
-    }
-  });
-
-  prevBtn.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      movePrevious();
-    }
-  });
-
-  /* ========================================
-     WINDOW RESIZE
-  ========================================= */
-  let resizeTimer;
-
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-
-    resizeTimer = setTimeout(() => {
-      updatePosition(false);
-    }, 50);
-  });
-
-  /* ========================================
-     INITIAL POSITION
-  ========================================= */
-  requestAnimationFrame(() => {
-    updatePosition(false);
-  });
 })();
 
 /* ================================

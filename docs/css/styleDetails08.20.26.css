@@ -201,200 +201,62 @@
 }
 
 /* ========================================
-HOME PAGE: PROJECT CAROUSEL
+   HOME PAGE: PROJECT CAROUSEL
 ========================================= */
 .carousel-section {
   margin-top: 5%;
-  width: 100%;
 }
 
 .carousel-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: 1rem;
   position: relative;
-  width: 100vw;
-  max-width: none;
-  margin-left: calc(50% - 50vw);
 }
 
 .carousel-bleed {
-  width: 100%;
-  margin: 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .carousel-viewport {
   position: relative;
-  width: 100%;
   overflow: hidden;
-  padding-inline: 1rem;
 }
 
 .carousel-track {
   display: flex;
-  align-items: stretch;
-  gap: 1rem;
-  width: max-content;
-  transform: translateX(0);
-  transition: transform 0.45s ease;
+  transform: translateX(var(--carousel-offset, 0));
+  transition: transform 0.4s ease;
   pointer-events: none;
-  will-change: transform;
 }
 
-/* ========================================
-PROJECT CAROUSEL SLIDES
-========================================= */
-.carousel-slide {
-  flex: 0 0 280px;
-  width: 280px;
-}
-
-@media (min-width: 768px) {
-  .carousel-slide {
-    flex-basis: 300px;
-    width: 300px;
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-slide {
-    flex-basis: 320px;
-    width: 320px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .carousel-slide {
-    flex-basis: clamp(340px, 19vw, 390px);
-    width: clamp(340px, 19vw, 390px);
-  }
-
-  .card-img-top-i {
-    height: 11rem;
-  }
-
-  .card-body-i {
-    padding: 1rem;
-  }
-
-  .card-title {
-    font-size: 1.3rem;
-  }
-}
-
-@media (min-width: 1800px) {
-  .carousel-slide {
-    flex-basis: clamp(370px, 20vw, 430px);
-    width: clamp(370px, 20vw, 430px);
-  }
-
-  .card-img-top-i {
-    height: 12rem;
-  }
-}
-
-.project-card {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border: 2px dotted rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  overflow: hidden;
-  background-color: var(--bg-color-main);
-}
-
-.project-card .btn {
-  pointer-events: auto;
-}
-.card-img-top-i {
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  filter: grayscale(25%);
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-
-/* ========================================
-PROJECT CAROUSEL BUTTONS
-========================================= */
+/* Project Carousel Buttons */
 .carousel-btn {
   position: absolute;
   width: 60px;
   height: 60px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
   background: rgba(0, 0, 0, 0.7);
   color: white;
+  text-align: center;
   border: none;
   border-radius: 50%;
   font-size: 3rem;
-  line-height: 1;
   cursor: pointer;
-  z-index: 5;
+  z-index: 1;
   pointer-events: auto;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    opacity 0.2s ease;
 }
-
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-.carousel-btn:active {
-  transform: translateY(-50%) scale(0.92);
-}
-
 .prev {
   left: 1rem;
 }
-
 .next {
   right: 1rem;
 }
 
-@media (min-width: 1200px) {
-  .prev {
-    left: 2rem;
-  }
-
-  .next {
-    right: 2rem;
-  }
-}
-
-@media (min-width: 1800px) {
-  .prev {
-    left: 3rem;
-  }
-
-  .next {
-    right: 3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .carousel-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 2.4rem;
-  }
-
-  .prev {
-    left: 0.5rem;
-  }
-
-  .next {
-    right: 0.5rem;
-  }
-}
-
 /* Hide carousel buttons when contact card is open */
+.contact-card.open ~ main .carousel-btn,
 body.contact-open .carousel-btn {
   opacity: 0;
   pointer-events: none;
@@ -406,12 +268,67 @@ body.menu-open .carousel-btn {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .carousel-track,
-  .carousel-btn {
-    transition: none;
+/* ========================================
+  HOME PAGE: CAROUSEL CARDS 
+========================================= */
+.project-card {
+  flex: 0 0 100%;
+  width: 300px;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    flex-basis: 50%;
   }
 }
+
+@media (min-width: 992px) {
+  .project-card {
+    flex-basis: 33.3333%;
+  }
+}
+
+.project-card .btn {
+  pointer-events: auto;
+}
+
+.card-i {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--bg-color-main);
+  background-clip: border-box;
+  border: 2px dotted rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-body-i {
+  flex: 1 1 auto;
+  padding: 1rem 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .card-body-i a {
+    font-size: 0.9rem;
+  }
+  .card-body-i {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+.card-img-top-i {
+  height: 10rem;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  display: block;
+  filter: grayscale(25%);
+}
+
 /* ========================================
   SHARED CARD STYLES
 ========================================= */
