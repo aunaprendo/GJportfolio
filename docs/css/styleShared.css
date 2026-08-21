@@ -5,22 +5,33 @@
 ========================================= */
 :root {
   /* ACCENT COLORS */
-  --accent-color-gold: #d8b961; /* Dark Gold (AAA on black) */
-  --accent-color-brown: #705200; /* Dark Brown (AAA on white) */
-  --accent-color-dteal: #065f6f; /* Deep Teal (AAA on white) */
-  --accent-color-lteal: #95b6bb; /* Light Teal (AAA on black) */
+  --accent-color-gold: #d8b961;
+  /* Dark Gold (AAA on black) */
+  --accent-color-brown: #705200;
+  /* Dark Brown (AAA on white) */
+  --accent-color-dteal: #065f6f;
+  /* Deep Teal (AAA on white) */
+  --accent-color-lteal: #95b6bb;
+  /* Light Teal (AAA on black) */
   --accent-color-ateal: #cadadd;
-  --accent-color-dgray: #595959; /* Dark Gray (AAA on white) */
-  --accent-color-lgray: #b0b0b0; /* Light Gray (AAA on black) */
+  --accent-color-dgray: #595959;
+  /* Dark Gray (AAA on white) */
+  --accent-color-lgray: #b0b0b0;
+  /* Light Gray (AAA on black) */
 
   /* TEXT */
-  --text-color-main: #242424; /* Deep near-black (AAA on white) */
-  --text-color-alt: #ffffff; /* White (AAA on near-black) */
+  --text-color-main: #242424;
+  /* Deep near-black (AAA on white) */
+  --text-color-alt: #ffffff;
+  /* White (AAA on near-black) */
 
   /* BACKGROUNDS */
-  --bg-color-main: #ffffff; /* White (AAA on Deep charcoal) */
-  --bg-color-alt: #242424; /* Deep charcoal (AAA on white) */
-  --bg-color-lalt: #333333; /* Light charcoal (AAA on white) */
+  --bg-color-main: #ffffff;
+  /* White (AAA on Deep charcoal) */
+  --bg-color-alt: #242424;
+  /* Deep charcoal (AAA on white) */
+  --bg-color-lalt: #333333;
+  /* Light charcoal (AAA on white) */
 
   /* FONT WEIGHTS */
   --weight-small: 300;
@@ -68,6 +79,7 @@ h1 {
   font-weight: var(--weight-small);
   line-height: 1.2;
 }
+
 @media (min-width: 1200px) {
   h1 {
     font-size: 5rem;
@@ -85,11 +97,13 @@ h2 {
   font-weight: var(--weight-small);
   line-height: 1.2;
 }
+
 @media (max-width: 768px) {
   h2 {
     font-size: calc(1rem + 2vw);
   }
 }
+
 @media (min-width: 1200px) {
   h2 {
     font-size: 2.25rem;
@@ -273,6 +287,7 @@ a {
   .semi-soft-image {
     width: 75%;
   }
+
   .feature-photo {
     width: 80%;
   }
@@ -322,7 +337,7 @@ blockquote {
   font-size: 1.25rem;
 }
 
-.blockquote > :last-child {
+.blockquote> :last-child {
   margin-bottom: 0;
 }
 
@@ -466,7 +481,7 @@ BUTTONS
   cursor: pointer;
 }
 
-.dropdown:hover > .dropdown-content {
+.dropdown:hover>.dropdown-content {
   display: block;
 }
 
@@ -800,16 +815,20 @@ body.contact-open .hamburger {
     font-size: 0.5rem;
     margin: 2px;
   }
+
   #footer a {
     font-size: 0.5rem;
   }
+
   #bottom-bar {
     padding: 1px 0;
   }
+
   .footer-icon {
     width: 20px;
     height: 20px;
   }
+
   .social {
     gap: 0.75rem;
   }

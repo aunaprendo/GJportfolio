@@ -1,4 +1,7 @@
 {
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+
   "cSpell.words": [
     "accreditations",
     "Aprendo",
@@ -43,26 +46,32 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+
   "[css]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+
   "[javascriptreact]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+
   "[typescript]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+
   "[typescriptreact]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+
   "[python]": {
     "editor.tabSize": 4,
     "editor.insertSpaces": true
