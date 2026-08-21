@@ -1,289 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styleShared.css" />
+    <link rel="stylesheet" href="css/styleNavigations.css" />
+    <link rel="stylesheet" href="css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/styleShared.css" />
-	<link rel="stylesheet" href="css/styleNavigations.css" />
-	<link rel="stylesheet" href="css/styleBootstrapGrid.css" />
-	<link rel="stylesheet" href="css/styleDetails.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - Portfolio</title>
+    <meta name="title" content="Portfolio" />
+    <meta
+      name="description"
+      content="Portfolio of a lifelong learner and analytical problem solver"
+    />
+  </head>
 
-	<!-- Primary Meta Tags -->
-	<title>Georgia Jean - Portfolio</title>
-	<meta name="title" content="Portfolio" />
-	<meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
-</head>
+  <body>
+    <div id="loader">
+      <div id="loader-content">
+        <div id="loader-circle"></div>
+        <div id="loader-percentage">0%</div>
+      </div>
+    </div>
+    <!-- Main navigation -->
+    <nav
+      data-include="partials/navBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-<body>
-	<div id="loader">
-		<div id="loader-content">
-			<div id="loader-circle"></div>
-			<div id="loader-percentage">0%</div>
-		</div>
-	</div>
-	<!-- Main navigation -->
-	<nav data-include="partials/navBar.html" role="navigation" aria-label="Primary navigation">
-	</nav>
+    <!-- Side menu -->
+    <aside data-include="partials/sideMenu.html" role="navigation" aria-label="Side menu"></aside>
 
-	<!-- Side menu -->
-	<aside data-include="partials/sideMenu.html" role="navigation" aria-label="Side menu">
-	</aside>
+    <!-- Contact menu -->
+    <aside
+      data-include="partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact Card"
+    ></aside>
 
-	<!-- Contact menu -->
-	<aside data-include="partials/contactMenu.html" role="contact" aria-label="Contact Card">
-	</aside>
+    <main>
+      <div class="p-0 m-0">
+        <div class="row ms-2 me-2 align-items-center hero" data-aos="fade-up">
+          <div class="col-md-6 mb-5 mb-md-0 p-xl-2">
+            <section class="cluster" aria-label="Introduction">
+              <div class="cir top"></div>
+              <div class="cir bottom">
+                <h2 class="text-center px-3 px-md-5 text-white">
+                  Methodical problem solver and seeker of knowledge
+                </h2>
+              </div>
+            </section>
+          </div>
 
-	<main>
+          <div class="col-md-6 p-xl-4">
+            <h1 class="justify-content-start">HI, I'M GEORGIA JEAN METZ</h1>
+            <h3 class="justify-content-start">
+              Analytical, self-driven learner with a strong focus on identifying risks, devising
+              solutions, and prioritizing impact. Experienced in assessing complex environments,
+              working within constraints, and developing effective strategies that prioritize
+              clarity, documentation, and security.
+            </h3>
+          </div>
+        </div>
+      </div>
 
-		<div class="p-0 m-0">
-			<div class="row ms-2 me-2 align-items-center hero" data-aos="fade-up">
+      <section class="carousel-section" id="project-carousel">
+        <div class="carousel-container">
+          <button class="carousel-btn prev" aria-label="Previous projects">←</button>
+          <button class="carousel-btn next" aria-label="Next projects">→</button>
+          <div class="carousel-bleed">
+            <div class="carousel-viewport">
+              <ul class="carousel-track">
+                <li class="carousel-slide">
+                  <article class="card-i project-card">
+                    <img
+                      src="assets/indexProjectCards/projectCodeV2.png"
+                      class="card-img-top-i"
+                      alt="practicing coding"
+                    />
+                    <div class="card-body-i d-flex flex-column justify-content-between">
+                      <p class="card-title m-0 p-0">freeCodeCamp</p>
+                      <a href="ccProjects.html" class="btn btn-primary mt-2">Learn More</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="carousel-slide">
+                  <article class="card-i project-card">
+                    <img
+                      src="assets/indexProjectCards/projectLearn.png"
+                      class="card-img-top-i"
+                      alt="learning"
+                    />
+                    <div class="card-body-i d-flex flex-column justify-content-between">
+                      <p class="card-title m-0 p-0">Learning Path</p>
+                      <a href="learningPath.html" class="btn btn-primary mt-2">Learn More</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="carousel-slide">
+                  <article class="card-i project-card">
+                    <img
+                      src="assets/indexProjectCards/projectSecurityV2.png"
+                      class="card-img-top-i"
+                      alt="game creation"
+                    />
+                    <div class="card-body-i d-flex flex-column justify-content-between">
+                      <p class="card-title m-0 p-0">Security Explorations</p>
+                      <a href="comingSoon.html" class="btn btn-primary mt-2">Learn More</a>
+                    </div>
+                  </article>
+                </li>
+                <li class="carousel-slide">
+                  <article class="card-i project-card">
+                    <img
+                      src="assets/indexProjectCards/projectCamp.png"
+                      class="card-img-top-i"
+                      alt="intense practicing"
+                    />
+                    <div class="card-body-i d-flex flex-column justify-content-between">
+                      <p class="card-title m-0 p-0">Bootcamp</p>
+                      <a href="comingSoon.html" class="btn btn-primary mt-2">Learn More</a>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<div class="col-md-6 mb-5 mb-md-0 p-xl-2">
-					<section class="cluster " aria-label="Introduction">
-						<div class="cir top"></div>
-						<div class="cir bottom">
-							<h2 class="text-center px-3 px-md-5 text-white">Methodical problem solver and seeker of
-								knowledge</h2>
-						</div>
-					</section>
-				</div>
+      <h4 class="text-center pt-3 mt-5 mx-sm-1 mx-md-5">
+        My background in architectural design and Peace Corps service shaped how I approach
+        problems: assess risk, gather information, and build thoughtful, resilient solutions.
+        Collaborating across disciplines and adapting to new environments strengthened my ability to
+        detect gaps, evaluate threats, and create clear, well-documented technical strategies —
+        skills I now apply as I transition into security analysis and build systems that improve
+        long-term operational stability.
+      </h4>
+      <p class="text-thick text-center">ANALYTICAL - COLLABORATIVE - AVID LEARNER</p>
+      <h4 class="text-center pb-5 mx-sm-1 mx-md-5">
+        As a lifelong learner, I thrive on mastering intricate frameworks. Through self-directed
+        study, I earned multiple accreditations, including becoming a licensed architect without a
+        formal architecture degree. I bring strong attention to detail, an ability to structure data
+        and workflows, and disciplined problem-solving skills — qualities that support methodical
+        analysis, vulnerability assessment, and continuous improvement. I’m known for managing tasks
+        efficiently and delivering reliable, repeatable results.
+      </h4>
 
-				<div class="col-md-6 p-xl-4">
-					<h1 class="justify-content-start">HI, I'M GEORGIA JEAN METZ</h1>
-					<h3 class="justify-content-start">Analytical, self-driven learner with a strong focus on
-						identifying risks, devising solutions, and prioritizing impact. Experienced in assessing complex
-						environments, working within constraints, and developing effective strategies that prioritize
-						clarity, documentation, and security.</h3>
-				</div>
+      <section class="testimonials mt-5">
+        <h3 class="mb-0 text-bold">Hear What Others Have to Say</h3>
+        <hr />
+        <div class="testimonial-masonry">
+          <a
+            class="testimonial-link"
+            href="assets/testimonials/Tommy_Recommendation.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read the full recommendation from Charles Dew in a new tab"
+          >
+            <article class="testimonial-card">
+              <p class="testimonial-text">
+                “Georgia is exceptionally focused, detail-oriented, and has an insatiable curiosity
+                for learning. She consistently comes prepared and manages her time with remarkable
+                efficiency. Her passion and leadership fostered a strong, trusting relationship with
+                the project team and our client.”
+              </p>
 
-			</div>
-		</div>
+              <p class="testimonial-author">Charles T. “Tommy” Dew, Jr.</p>
 
-		<section class="carousel-section" id="project-carousel">
+              <span class="testimonial-note"> (Click for Full Recommendation) </span>
+            </article>
+          </a>
 
-			<div class="carousel-container">
-				<button class="carousel-btn prev" aria-label="Previous projects">←</button>
-				<button class="carousel-btn next" aria-label="Next projects">→</button>
-				<div class="carousel-bleed">
-					<div class="carousel-viewport">
-						<ul class="carousel-track">
-							<li class="carousel-slide">
-								<article class="card-i project-card">
-									<img src="assets/indexProjectCards/projectCodeV2.png" class="card-img-top-i"
-										alt="practicing coding">
-									<div class="card-body-i d-flex flex-column justify-content-between">
-										<p class="card-title m-0 p-0">freeCodeCamp</p>
-										<a href="ccProjects.html" class="btn btn-primary mt-2">Learn More</a>
-									</div>
-								</article>
-							</li>
-							<li class="carousel-slide">
-								<article class="card-i project-card">
-									<img src="assets/indexProjectCards/projectLearn.png" class="card-img-top-i"
-										alt="learning">
-									<div class="card-body-i d-flex flex-column justify-content-between">
-										<p class="card-title m-0 p-0">Learning Path</p>
-										<a href="learningPath.html" class="btn btn-primary mt-2">Learn More</a>
-									</div>
-								</article>
-							</li>
-							<li class="carousel-slide">
-								<article class="card-i project-card">
-									<img src="assets/indexProjectCards/projectSecurityV2.png" class="card-img-top-i"
-										alt="game creation">
-									<div class="card-body-i d-flex flex-column justify-content-between">
-										<p class="card-title m-0 p-0">Security Explorations</p>
-										<a href="comingSoon.html" class="btn btn-primary mt-2">Learn More</a>
-									</div>
-								</article>
-							</li>
-							<li class="carousel-slide">
-								<article class="card-i project-card">
-									<img src="assets/indexProjectCards/projectCamp.png" class="card-img-top-i"
-										alt="intense practicing">
-									<div class="card-body-i d-flex flex-column justify-content-between">
-										<p class="card-title m-0 p-0">Bootcamp</p>
-										<a href="comingSoon.html" class="btn btn-primary mt-2">Learn More</a>
-									</div>
-								</article>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+          <a
+            class="testimonial-link"
+            href="assets/testimonials/Cutco_Recommendation.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read the full recommendation from Bruce Goodman in a new tab"
+          >
+            <article class="testimonial-card">
+              <p class="testimonial-text">
+                “Hard work, self-discipline, a willingness to accept challenge, and a high degree of
+                personal responsibility. Georgia is this type of individual.”
+              </p>
 
-		<h4 class="text-center pt-3 mt-5 mx-sm-1 mx-md-5">My background in architectural design and Peace Corps service
-			shaped how I approach problems: assess risk, gather information, and build thoughtful, resilient solutions.
-			Collaborating across disciplines and adapting to new environments strengthened my ability to detect gaps,
-			evaluate threats, and create clear, well-documented technical strategies — skills I now apply as I
-			transition into security analysis and build systems that improve long-term operational stability.</h4>
-		<h2 class="text-thick text-center">ANALYTICAL - COLLABORATIVE - AVID LEARNER</p>
-			<h4 class="text-center pb-5 mx-sm-1 mx-md-5">As a lifelong learner, I thrive on mastering intricate
-				frameworks. Through self-directed study, I earned multiple accreditations, including becoming a licensed
-				architect without a formal architecture degree. I bring strong attention to detail, an ability to
-				structure data and workflows, and disciplined problem-solving skills — qualities that support methodical
-				analysis, vulnerability assessment, and continuous improvement. I’m known for managing tasks efficiently
-				and delivering reliable, repeatable results.</h4>
+              <p class="testimonial-author">Bruce Goodman</p>
 
-			<section class="testimonials mt-5">
-				<h3 class="mb-0 text-bold">Hear What Others Have to Say</h3>
-				<hr />
-				<div class="testimonial-masonry">
+              <span class="testimonial-note"> (Click for Full Recommendation) </span>
+            </article>
+          </a>
 
-					<a class="testimonial-link"
-						href="assets/testimonials/Tommy_Recommendation.jpg"
-						target="_blank" 
-						rel="noopener noreferrer"
-						aria-label="Read the full recommendation from Charles Dew in a new tab">
-						<article class="testimonial-card">
-							<p class="testimonial-text">
-								“Georgia is exceptionally focused, detail-oriented, and has an
-								insatiable curiosity for learning. She consistently comes prepared
-								and manages her time with remarkable efficiency. Her passion and
-								leadership fostered a strong, trusting relationship with the
-								project team and our client.”
-							</p>
+          <a
+            class="testimonial-link"
+            href="assets/testimonials/Filsinger_Recommendation.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read the full recommendation from Cary Filsinger in a new tab"
+          >
+            <article class="testimonial-card">
+              <p class="testimonial-text">
+                “She dedicated long hours to learning our industry to ensure her contribution. She
+                was a huge help to everyone. She is always courteous and professional in her
+                approach. Due to her teamwork and respect for her peers, Georgia Jean got along very
+                well with everyone. She learns quickly because she listens to instructions and then
+                asks questions, thereby ensuring her understanding.”
+              </p>
 
-							<p class="testimonial-author">
-								Charles T. “Tommy” Dew, Jr.
-							</p>
+              <p class="testimonial-author">Cary Filsinger</p>
 
-							<span class="testimonial-note">
-								(Click for Full Recommendation)
-							</span>
-						</article>
-					</a>
+              <span class="testimonial-note"> (Click for Full Recommendation) </span>
+            </article>
+          </a>
 
-					<a class="testimonial-link"
-						href="assets/testimonials/Cutco_Recommendation.jpg"
-						target="_blank" 
-						rel="noopener noreferrer"
-						aria-label="Read the full recommendation from Bruce Goodman in a new tab">
-						<article class="testimonial-card">
-							<p class="testimonial-text">
-								“Hard work, self-discipline, a willingness to accept challenge,
-								and a high degree of personal responsibility. Georgia is this
-								type of individual.”
-							</p>
+          <a
+            class="testimonial-link"
+            href="assets/testimonials/Nestor_Recommendation.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read the full recommendation from Néstor Gerónimo in a new tab"
+          >
+            <article class="testimonial-card">
+              <p class="testimonial-text">
+                “Georgia was one of the best students I have ever had in my teaching career. She was
+                committed to learn from day one.”
+              </p>
 
-							<p class="testimonial-author">
-								Bruce Goodman
-							</p>
+              <p class="testimonial-author">Néstor Gerónimo</p>
 
-							<span class="testimonial-note">
-								(Click for Full Recommendation)
-							</span>
-						</article>
-					</a>
+              <span class="testimonial-note"> (Click for Full Recommendation) </span>
+            </article>
+          </a>
+        </div>
+      </section>
+      <!-- End Recommendations -->
 
-					<a class="testimonial-link"
-						href="assets/testimonials/Filsinger_Recommendation.jpg"
-						target="_blank" rel="noopener noreferrer"
-						aria-label="Read the full recommendation from Cary Filsinger in a new tab">
-						<article class="testimonial-card">
-							<p class="testimonial-text">
-								“She dedicated long hours to learning our industry to ensure her
-								contribution. She was a huge help to everyone. She is always
-								courteous and professional in her approach. Due to her teamwork
-								and respect for her peers, Georgia Jean got along very well with
-								everyone. She learns quickly because she listens to instructions
-								and then asks questions, thereby ensuring her understanding.”
-							</p>
+      <p class="text-center mb-0 mt-5">
+        <a id="acknowledgments" href="acknowledgments.html"><em>acknowledgments</em></a>
+      </p>
+    </main>
 
-							<p class="testimonial-author">
-								Cary Filsinger
-							</p>
+    <!-- Footer -->
+    <footer data-include="partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
 
-							<span class="testimonial-note">
-								(Click for Full Recommendation)
-							</span>
-						</article>
-					</a>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      (() => {
+        const loader = document.getElementById("loader");
+        const percent = document.getElementById("loader-percentage");
 
-					<a class="testimonial-link"
-						href="assets/testimonials/Nestor_Recommendation.png" 
-						target="_blank" 
-						rel="noopener noreferrer"
-						aria-label="Read the full recommendation from Néstor Gerónimo in a new tab">
-						<article class="testimonial-card">
-							<p class="testimonial-text">
-								“Georgia was one of the best students I have ever had in my
-								teaching career. She was committed to learn from day one.”
-							</p>
+        let progress = 0;
+        let shown = false;
 
-							<p class="testimonial-author">
-								Néstor Gerónimo
-							</p>
+        // Only show loader if page takes longer than 300ms
+        const showDelay = setTimeout(() => {
+          shown = true;
+          loader.classList.add("active");
 
-							<span class="testimonial-note">
-								(Click for Full Recommendation)
-							</span>
-						</article>
-					</a>
-				</div>
+          // Fake progress ONLY while waiting
+          const progressInterval = setInterval(() => {
+            progress = Math.min(progress + Math.random() * 8, 90);
+            percent.textContent = Math.floor(progress) + "%";
+          }, 100);
 
-			</section>
-			<!-- End Recommendations -->
+          loader._interval = progressInterval;
+        }, 300);
 
-			<p class="text-center mb-0 mt-5"><a id="acknowledgments"
-					href="acknowledgments.html"><em>acknowledgments</em></a></p>
+        // When everything is loaded
+        window.addEventListener("load", () => {
+          clearTimeout(showDelay);
 
-	</main>
+          if (!shown) return;
 
-	<!-- Footer -->
-	<footer data-include="partials/footer.html" role="contentinfo" aria-label="Footer">
-	</footer>
+          clearInterval(loader._interval);
+          percent.textContent = "100%";
 
-	<script src="js/script.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
-	<script>
-		(() => {
-			const loader = document.getElementById("loader");
-			const percent = document.getElementById("loader-percentage");
-
-			let progress = 0;
-			let shown = false;
-
-			// Only show loader if page takes longer than 300ms
-			const showDelay = setTimeout(() => {
-				shown = true;
-				loader.classList.add("active");
-
-				// Fake progress ONLY while waiting
-				const progressInterval = setInterval(() => {
-					progress = Math.min(progress + Math.random() * 8, 90);
-					percent.textContent = Math.floor(progress) + "%";
-				}, 100);
-
-				loader._interval = progressInterval;
-			}, 300);
-
-			// When everything is loaded
-			window.addEventListener("load", () => {
-				clearTimeout(showDelay);
-
-				if (!shown) return;
-
-				clearInterval(loader._interval);
-				percent.textContent = "100%";
-
-				loader.classList.add("fade-out");
-				setTimeout(() => {
-					loader.remove();
-				}, 500);
-			});
-		})();
-	</script>
-	<script src="js/testimonialMasonry.js"></script>
-</body>
-
+          loader.classList.add("fade-out");
+          setTimeout(() => {
+            loader.remove();
+          }, 500);
+        });
+      })();
+    </script>
+    <script src="js/testimonialMasonry.js"></script>
+  </body>
 </html>

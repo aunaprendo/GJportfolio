@@ -1,7 +1,6 @@
 .
 ├── .vscode
-│   ├── settings.json
-│   └── tsconfig.json
+│   └── settings.json
 ├── LICENSE
 ├── README.md
 ├── acknowledgments.md
@@ -96,7 +95,14 @@
 │   │   │   ├── 111.svg
 │   │   │   ├── 112.svg
 │   │   │   ├── 113.svg
+│   │   │   ├── 114.svg
+│   │   │   ├── 115.svg
+│   │   │   ├── 116.svg
+│   │   │   ├── 117.svg
+│   │   │   ├── 118.svg
+│   │   │   ├── 119.svg
 │   │   │   ├── 12.svg
+│   │   │   ├── 120.svg
 │   │   │   ├── 13.svg
 │   │   │   ├── 14.svg
 │   │   │   ├── 15.svg
@@ -199,11 +205,13 @@
 │   │   ├── indexProjectCards
 │   │   │   ├── projectCamp.png
 │   │   │   ├── projectCode.png
+│   │   │   ├── projectCodeV2.png
 │   │   │   ├── projectLearn.png
 │   │   │   ├── projectMeds.png
+│   │   │   ├── projectSecurity.png
+│   │   │   ├── projectSecurityV2.png
 │   │   │   └── projectSquirrel.png
 │   │   ├── learnContent
-│   │   │   ├──  meetingsResults.jpeg
 │   │   │   ├── DataIntensiveApplications.jpeg
 │   │   │   ├── SoftwareDeveloperCareerGuide.jpeg
 │   │   │   ├── algorithmsLife.jpeg
@@ -227,6 +235,7 @@
 │   │   │   ├── grokkingAlgorithms.jpeg
 │   │   │   ├── introAlgorithms.jpeg
 │   │   │   ├── mastersAtWork.jpeg
+│   │   │   ├── meetingsResults.jpeg
 │   │   │   ├── networkingSecurity.jpeg
 │   │   │   ├── neverEatAlone.jpeg
 │   │   │   ├── penetrationBasics.jpeg
@@ -457,80 +466,147 @@
 │   │   ├── ts00.html
 │   │   └── ts01.html
 │   ├── ccjs
+│   │   ├── 000greetingBot.html
 │   │   ├── 000greetingBot.js
+│   │   ├── 001trivia.html
 │   │   ├── 001trivia.js
+│   │   ├── 002sentenceMaker.html
 │   │   ├── 002sentenceMaker.js
+│   │   ├── 003teacherBot.html
 │   │   ├── 003teacherBot.js
+│   │   ├── 004stringInspect.html
 │   │   ├── 004stringInspect.js
+│   │   ├── 005stringBuilder.html
 │   │   ├── 005stringBuilder.js
+│   │   ├── 006stringTransform.html
 │   │   ├── 006stringTransform.js
+│   │   ├── 007debugCoercion.html
 │   │   ├── 007debugCoercion.js
+│   │   ├── 008operatorError.html
 │   │   ├── 008operatorError.js
+│   │   ├── 009logicChecker.html
 │   │   ├── 009logicChecker.js
+│   │   ├── 010mathBot.html
 │   │   ├── 010mathBot.js
+│   │   ├── 011fortuneTeller.html
 │   │   ├── 011fortuneTeller.js
+│   │   ├── 012calculator.html
 │   │   ├── 012calculator.js
+│   │   ├── 013booleanCheck.html
 │   │   ├── 013booleanCheck.js
+│   │   ├── 014emailMaker.html
 │   │   ├── 014emailMaker.js
+│   │   ├── 015loanChecker.html
 │   │   ├── 015loanChecker.js
+│   │   ├── 016celToFer.html
 │   │   ├── 016celToFer.js
+│   │   ├── 017cardCounter.html
 │   │   ├── 017cardCounter.js
+│   │   ├── 018leapYear.html
 │   │   ├── 018leapYear.js
+│   │   ├── 019truncateString.html
 │   │   ├── 019truncateString.js
+│   │   ├── 020endingTool.html
 │   │   ├── 020endingTool.js
+│   │   ├── 021shoppingList.html
 │   │   ├── 021shoppingList.js
+│   │   ├── 022lunchPicker.html
 │   │   ├── 022lunchPicker.js
+│   │   ├── 023.5cargoManifest.html
 │   │   ├── 023.5cargoManifest.js
+│   │   ├── 023.75animalTracker.html
 │   │   ├── 023.75animalTracker.js
+│   │   ├── 023golfScore.html
 │   │   ├── 023golfScore.js
+│   │   ├── 024recipeTracker.html
 │   │   ├── 024recipeTracker.js
+│   │   ├── 025quizGame.html
 │   │   ├── 025quizGame.js
+│   │   ├── 026.5wordCount.html
 │   │   ├── 026.5wordCount.js
+│   │   ├── 026recordCollection.html
 │   │   ├── 026recordCollection.js
+│   │   ├── 027.5heritageLibrary.html
 │   │   ├── 027.5heritageLibrary.js
 │   │   ├── 027sentenceAnalyzer.js
+│   │   ├── 027sentenceAnalyzerFinal.html
 │   │   ├── 027sentenceAnalyzerFinal.js
 │   │   ├── 028longestWord.js
+│   │   ├── 028longestWordFinal.html
 │   │   ├── 028longestWordFinal.js
+│   │   ├── 029factorialCalculator.html
 │   │   ├── 029factorialCalculator.js
+│   │   ├── 030.5playlistRemix.html
 │   │   ├── 030.5playlistRemix.js
 │   │   ├── 030mutationsAlgorithm.js
+│   │   ├── 030mutationsFinal.html
 │   │   ├── 030mutationsFinal.js
 │   │   ├── 031chunkyMonkey.js
+│   │   ├── 031chunkyMonkeyFinal.html
 │   │   ├── 031chunkyMonkeyFinal.js
 │   │   ├── 032profileLook.js
+│   │   ├── 032profileLookFinal.html
 │   │   ├── 032profileLookFinal.js
+│   │   ├── 033.5crowdFlow.html
 │   │   ├── 033.5crowdFlow.js
+│   │   ├── 033stringRepeat.html
 │   │   ├── 033stringRepeat.js
 │   │   ├── 034.5pantryRestock.js
 │   │   ├── 034.75proofreading.js
 │   │   ├── 034missingLetter.js
+│   │   ├── 034missingLetterFinal.html
 │   │   ├── 034missingLetterFinal.js
+│   │   ├── 035stringInvert.html
 │   │   ├── 035stringInvert.js
+│   │   ├── 036largestNumber.html
 │   │   ├── 036largestNumber.js
+│   │   ├── 037elementFinder.html
 │   │   ├── 037elementFinder.js
+│   │   ├── 038sliceSplice.html
 │   │   ├── 038sliceSplice.js
+│   │   ├── 039pyramid.html
 │   │   ├── 039pyramid.js
+│   │   ├── 040gradebook.html
 │   │   ├── 040gradebook.js
+│   │   ├── 041titleCase.html
 │   │   ├── 041titleCase.js
-│   │   ├── 042falsyRemover .js
+│   │   ├── 042falsyRemover.html
+│   │   ├── 042falsyRemover.js
+│   │   ├── 043inventoryManager.html
 │   │   ├── 043inventoryManager.js
+│   │   ├── 044uniqueSort.html
 │   │   ├── 044uniqueSort.js
+│   │   ├── 045passwordGenerator.html
 │   │   ├── 045passwordGenerator.js
+│   │   ├── 046sums.html
 │   │   ├── 046sums.js
+│   │   ├── 047dnaPair.html
 │   │   ├── 047dnaPair.js
+│   │   ├── 048htmlSymbol.html
 │   │   ├── 048htmlSymbol.js
+│   │   ├── 049oddFibonacci.html
 │   │   ├── 049oddFibonacci.js
-│   │   ├── 050elementSkipper .js
+│   │   ├── 050elementSkipper.html
+│   │   ├── 050elementSkipper.js
+│   │   ├── 051libraryManager.html
 │   │   ├── 051libraryManager.js
+│   │   ├── 052bookOrganizer.html
 │   │   ├── 052bookOrganizer.js
+│   │   ├── 053sortedIndex.html
 │   │   ├── 053sortedIndex.js
+│   │   ├── 054symmetricDiff.html
 │   │   ├── 054symmetricDiff.js
+│   │   ├── 055valueRemover.html
 │   │   ├── 055valueRemover.js
+│   │   ├── 056filterMatch.html
 │   │   ├── 056filterMatch.js
+│   │   ├── 057primeSum.html
 │   │   ├── 057primeSum.js
+│   │   ├── 058LCM.html
 │   │   ├── 058LCM.js
+│   │   ├── 059flattenTool.html
 │   │   ├── 059flattenTool.js
+│   │   ├── 060truthTest.html
 │   │   ├── 060truthTest.js
 │   │   ├── 061storyTelling.js
 │   │   ├── 062emojiReactor.js
@@ -547,50 +623,81 @@
 │   │   ├── 073spamFilter.js
 │   │   ├── 074palindromeChecker.js
 │   │   ├── 075regEx.js
+│   │   ├── 076spinalCase.html
 │   │   ├── 076spinalCase.js
+│   │   ├── 077pigLatin.html
 │   │   ├── 077pigLatin.js
+│   │   ├── 078smartWord.html
 │   │   ├── 078smartWord.js
 │   │   ├── 079htmlMark.js
 │   │   ├── 080calorieCounter.js
 │   │   ├── 081complaintForm.js
+│   │   ├── 082spaceMission.html
 │   │   ├── 082spaceMission.js
+│   │   ├── 083dateConvert.html
 │   │   ├── 083dateConvert.js
 │   │   ├── 084musicPlayer.js
 │   │   ├── 085drumMachine.js
+│   │   ├── 086plantNursery.html
 │   │   ├── 086plantNursery.js
+│   │   ├── 087voteSystem.html
 │   │   ├── 087voteSystem.js
 │   │   ├── 088todoApp.js
 │   │   ├── 089bookmarkManager.js
 │   │   ├── 090shoppingCart.js
+│   │   ├── 091projectBoard.html
 │   │   ├── 091projectBoard.js
+│   │   ├── 092bankManegment.html
 │   │   ├── 092bankManegment.js
+│   │   ├── 093countUp.html
 │   │   ├── 093countUp.js
+│   │   ├── 094countDown.html
 │   │   ├── 094countDown.js
+│   │   ├── 095numberRange.html
 │   │   ├── 095numberRange.js
 │   │   ├── 096decimalToBinary.js
+│   │   ├── 097permutationGenerator.html
 │   │   ├── 097permutationGenerator.js
+│   │   ├── 098linkedList.html
 │   │   ├── 098linkedList.js
+│   │   ├── 099linkedListOps.html
 │   │   ├── 099linkedListOps.js
+│   │   ├── 100createStack.html
 │   │   ├── 100createStack.js
+│   │   ├── 101createQueue.html
 │   │   ├── 101createQueue.js
+│   │   ├── 102binarySearch.html
 │   │   ├── 102binarySearch.js
+│   │   ├── 103mergeSort.html
 │   │   ├── 103mergeSort.js
+│   │   ├── 104bubbleSort.html
 │   │   ├── 104bubbleSort.js
+│   │   ├── 105selectionSort.html
 │   │   ├── 105selectionSort.js
+│   │   ├── 106insertionSort.html
 │   │   ├── 106insertionSort.js
+│   │   ├── 107quickSort.html
 │   │   ├── 107quickSort.js
+│   │   ├── 108shortestPath.html
 │   │   ├── 108shortestPath.js
+│   │   ├── 109adjacencyList.html
 │   │   ├── 109adjacencyList.js
+│   │   ├── 110breadthFirstSearch.html
 │   │   ├── 110breadthFirstSearch.js
+│   │   ├── 111depthFirstSearch.html
 │   │   ├── 111depthFirstSearch.js
+│   │   ├── 112nQueens.html
 │   │   ├── 112nQueens.js
+│   │   ├── 113fibonacciCalc.html
 │   │   ├── 113fibonacciCalc.js
 │   │   ├── 114ingredientConverter.js
+│   │   ├── 115optionalArgumentsSumFunction.html
 │   │   ├── 115optionalArgumentsSumFunction.js
 │   │   ├── 116sortingVisualizer.js
 │   │   ├── 117fccAuthors.js
 │   │   ├── 118fccForum.js
 │   │   ├── 119weatherApp.js
+│   │   ├── 120trafficLight.html
 │   │   ├── 120trafficLight.js
 │   │   ├── DCCscaledImage.js
 │   │   └── notes.js
@@ -620,13 +727,16 @@
 │   │   ├── 06typescript7.js
 │   │   ├── 06typescript7.ts
 │   │   ├── 07superheroApp.jsx
+│   │   ├── 07typescript8.js
 │   │   ├── 07typescript8.tsx
 │   │   ├── 08eventRSVP.jsx
+│   │   ├── 08typescript9.js
 │   │   ├── 08typescript9.tsx
 │   │   ├── 09shopList.jsx
 │   │   ├── 10currencyConverter.jsx
 │   │   ├── 11tickTackToe.jsx
-│   │   ├── flascardApp.ts
+│   │   ├── flashcardApp.js
+│   │   ├── flashcardApp.ts
 │   │   ├── my-react-app
 │   │   │   ├── .gitignore
 │   │   │   ├── README.md
@@ -649,46 +759,97 @@
 │   │   │   └── vite.config.js
 │   │   └── notes.html
 │   ├── ccpy
+│   │   ├── 000reportCard.html
 │   │   ├── 000reportCard.py
+│   │   ├── 001employeeProfile.html
 │   │   ├── 001employeeProfile.py
+│   │   ├── 002billSplitter.html
 │   │   ├── 002billSplitter.py
+│   │   ├── 003movieTicket.html
 │   │   ├── 003movieTicket.py
+│   │   ├── 004travelPlanner.html
 │   │   ├── 004travelPlanner.py
+│   │   ├── 005discountCalc.html
 │   │   ├── 005discountCalc.py
+│   │   ├── 006caesarCipher.html
 │   │   ├── 006caesarCipher.py
+│   │   ├── 007rpgChar.html
 │   │   ├── 007rpgChar.py
+│   │   ├── 008poemCode.html
 │   │   ├── 008poemCode.py
+│   │   ├── 009numPattern.html
 │   │   ├── 009numPattern.py
+│   │   ├── 010medicalData.html
 │   │   ├── 010medicalData.py
+│   │   ├── 011configurationManager.html
 │   │   ├── 011configurationManager.py
+│   │   ├── 012ISBNvalidator.html
 │   │   ├── 012ISBNvalidator.py
+│   │   ├── 014instrumentInventory.html
 │   │   ├── 014instrumentInventory.py
+│   │   ├── 015planetClass.html
 │   │   ├── 015planetClass.py
+│   │   ├── 016emailSim.html
 │   │   ├── 016emailSim.py
+│   │   ├── 017budgetApp.html
 │   │   ├── 017budgetApp.py
+│   │   ├── 018saleryTracker.html
 │   │   ├── 018saleryTracker.py
+│   │   ├── 019characterStats.html
 │   │   ├── 019characterStats.py
+│   │   ├── 020mediaCatalogue.html
 │   │   ├── 020mediaCatalogue.py
+│   │   ├── 021discountCalculator.html
 │   │   ├── 021discountCalculator.py
+│   │   ├── 022playerInterface.html
 │   │   ├── 022playerInterface.py
+│   │   ├── 023polygonAreaCalculator.html
 │   │   ├── 023polygonAreaCalculator.py
+│   │   ├── 024linkedList.html
 │   │   ├── 024linkedList.py
+│   │   ├── 025hashTable.html
 │   │   ├── 025hashTable.py
+│   │   ├── 026binarySearch.html
 │   │   ├── 026binarySearch.py
+│   │   ├── 027bisectionMethod.html
 │   │   ├── 027bisectionMethod.py
+│   │   ├── 028mergeSort.html
 │   │   ├── 028mergeSort.py
+│   │   ├── 029quickSort.html
 │   │   ├── 029quickSort.py
+│   │   ├── 030selectionSort.html
 │   │   ├── 030selectionSort.py
+│   │   ├── 031luhnAlgorithm.html
 │   │   ├── 031luhnAlgorithm.py
+│   │   ├── 032hanoiAlgorithm.html
 │   │   ├── 032hanoiAlgorithm.py
+│   │   ├── 033shortestPath.html
 │   │   ├── 033shortestPath.py
+│   │   ├── 034listToMatrix.html
 │   │   ├── 034listToMatrix.py
+│   │   ├── 035breadthFirst.html
 │   │   ├── 035breadthFirst.py
+│   │   ├── 036depthFirst.html
 │   │   ├── 036depthFirst.py
+│   │   ├── 037nQueens.html
 │   │   ├── 037nQueens.py
-│   │   ├── 038fibonacciCalc.py
-│   │   └── notes.py
+│   │   ├── 038fibonacciCalc.html
+│   │   └── 038fibonacciCalc.py
 │   ├── ccsql
+│   │   ├── 00celestialDatabase.html
+│   │   ├── 011worldCup.html
+│   │   ├── 012worldCup.html
+│   │   ├── 013worldCup.html
+│   │   ├── 01worldCup.html
+│   │   ├── 021salonScheduler.html
+│   │   ├── 022salonScheduler.html
+│   │   ├── 02salonScheduler.html
+│   │   ├── 031periodicDatabase.html
+│   │   ├── 032periodicDatabase.html
+│   │   ├── 03periodicDatabase.html
+│   │   ├── 041guessingGame.html
+│   │   ├── 042guessingGame.html
+│   │   ├── 04guessingGame.html
 │   │   ├── CelestialDatabase
 │   │   │   └── universe.sql
 │   │   ├── GuessingGame
@@ -726,10 +887,10 @@
 │   │   ├── footer.html
 │   │   ├── navBar.html
 │   │   └── sideMenu.html
-│   └── resume.html
-├── file-tree.txt
+│   ├── resume.html
+│   └── tsconfig.json
 ├── folderstructure.txt
 ├── package-lock.json
 └── package.json
 
-28 directories, 705 files
+28 directories, 866 files

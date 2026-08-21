@@ -1,606 +1,1342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/styleShared.css" />
-  <link rel="stylesheet" href="css/styleNavigations.css" />
-  <link rel="stylesheet" href="css/styleBootstrapGrid.css" />
-  <link rel="stylesheet" href="css/styleDetails.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styleShared.css" />
+    <link rel="stylesheet" href="css/styleNavigations.css" />
+    <link rel="stylesheet" href="css/styleBootstrapGrid.css" />
+    <link rel="stylesheet" href="css/styleDetails.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <!-- Primary Meta Tags -->
-  <title>Georgia Jean - Learning Path</title>
-  <meta name="title" content="Portfolio" />
-  <meta
-    name="description"
-    content="Resume of a lifelong learner and analytical problem solver"
-  />
-</head>
+    <!-- Primary Meta Tags -->
+    <title>Georgia Jean - Learning Path</title>
+    <meta name="title" content="Portfolio" />
+    <meta name="description" content="Resume of a lifelong learner and analytical problem solver" />
+  </head>
 
-<body>
-	<div id="loader">
-	  <div id="loader-content">
-	    <div id="loader-circle"></div>
-	    <div id="loader-percentage">0%</div>
-	  </div>
-	</div>
-  <!-- Main navigation -->
-  <nav
-    data-include="partials/navBar.html"
-    role="navigation"
-    aria-label="Primary navigation">
-  </nav>
+  <body>
+    <div id="loader">
+      <div id="loader-content">
+        <div id="loader-circle"></div>
+        <div id="loader-percentage">0%</div>
+      </div>
+    </div>
+    <!-- Main navigation -->
+    <nav
+      data-include="partials/navBar.html"
+      role="navigation"
+      aria-label="Primary navigation"
+    ></nav>
 
-  <!-- Side menu -->
-  <aside
-    data-include="partials/sideMenu.html"
-    role="navigation"
-    aria-label="Side menu">
-  </aside>
+    <!-- Side menu -->
+    <aside data-include="partials/sideMenu.html" role="navigation" aria-label="Side menu"></aside>
 
-  <!-- Contact menu -->
-  <aside
-    data-include="partials/contactMenu.html"
-    role="contact"
-    aria-label="Contact card">
-  </aside>
+    <!-- Contact menu -->
+    <aside
+      data-include="partials/contactMenu.html"
+      role="contact"
+      aria-label="Contact card"
+    ></aside>
 
-  <main>
-    <div class="container">
-	    <div class="row justify-content-center">
-	      <div class="col-12">
-					
-					<!-- header row start -->
-	        <div class="row text-center p-1 p-md-5">
-	          <div class="mt-0 pt-1 ps-lg-5 pe-lg-5">
-              <h1>Aún Aprendo</h1>
-              <p>Explore the resources guiding my transition into a Security Analyst role — from books and online courses to audiobooks, podcasts, and videos. A strong commitment to continuous learning fuels the process of gaining knowledge and applying it through hands-on practice. With plans to pursue a related master’s degree in the future, the ultimate goal remains constant: keep learning — <em>aún aprendo.</em></p>
-	          </div> <!-- fade up section -->
-	        </div> <!-- header row end -->
-					
-					<h2 class="text-thick mb-0 mt-3 mt-md-0">Books Read</h2>
-					<p class="text-faded mt-0">Click a book for more information</p>
-					
-					<section class="carousel-wrapper" aria-label="Book carousel">
-					  <button class="carousel-arrow left" aria-label="Previous">
-					    ←
-					  </button>
-					
-					  <div class="carousel m-0" id="bookCarousel">
-						  <div class="carousel-track-books">
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/i2Gp0XX" class="carousel-item">
-						      <img src="assets/learnContent/codingDummies.jpeg" alt="Coding All-in-One For Dummies cover">
-						    </a>	
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/dp/B09781V6F7?ref_=cm_sw_r_ffobk_cp_ud_dp_1GWZG6NYFTW46NBQMV08" class="carousel-item">
-						      <img src="assets/learnContent/grokkingAlgorithms.jpeg" alt="Grokking Algorithms: An illustrated guide for programmers and other curious people cover">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/0cLvSd08" class="carousel-item">
-						      <img src="assets/learnContent/cyberEspionage.jpeg" alt="Attribution of Advanced Persistent Threats: How to Identify the Actors Behind Cyber-Espionage">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/Everything-Computer-Science-Coding-Notebook/dp/1523502770" class="carousel-item">
-						      <img src="assets/learnContent/compScienceCoding.jpeg" alt="Everything You Need to Ace Computer Science and Coding in One Big Fat Notebook: The Complete Middle School Study Guide (Big Fat Notebooks)">
-						    </a>								
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/CompTIA-Fundamentals-Guide-Second-FC0-U61-ebook/dp/B07L8R6554/ref=tmm_kin_swatch_0" class="carousel-item">
-						      <img src="assets/learnContent/compTIA.jpeg" alt="ITF+ CompTIA IT Fundamentals All-in-One Exam Guide, Second Edition cover">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0135398576" class="carousel-item">
-						      <img src="assets/learnContent/cleanCode.jpeg" alt="Clean Code: A Handbook of Agile Software Craftsmanship">
-						    </a>
-                            
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/01SFBMIN" class="carousel-item">
-						      <img src="assets/learnContent/penetrationBasics.jpeg" alt="The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy">
-						    </a>
-                            
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/09U9CNAv" class="carousel-item in-progress-blur">
-						      <img src="assets/learnContent/compTIAA+.jpeg" alt="CompTIA A+ Certification All-in-One Exam Guide, Eleventh Edition (Exams 220-1101 & 220-1102)">
-						    </a>
-								
-							</div>
-					  </div>
-					
-					  <button class="carousel-arrow right" aria-label="Next">
-					    →
-					  </button>
-					</section><!-- carousel end -->
-					
-					<div class="table-scroll-hint">
-					  <span class="scroll-arrow left" aria-hidden="true">←</span>
-					  <span class="scroll-arrow right" aria-hidden="true">→</span>	
-						<div class="table-responsive mt-4">
-	
-							<h2 class="text-thick mb-0 mt-5">Courses Taken</h2>
-							<p class="text-faded mt-0">Completed between 05/25 - 09/26</p>
-					
-					    <table aria-describedby="schedule-caption" class="align-middle table table-striped table-hover">
-					
-					      <thead>
-					        <tr>
-					          <th scope="col">Provider</th>
-					          <th scope="col">Course</th>
-					          <th scope="col">Information</th>
-					        </tr>
-					      </thead>
-					
-					      <tbody>
-					        <tr>
-					          <th scope="row">freeCodeCamp</th>
-					          <td>Python for Everyone by Dr. Charles Severance</td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.freecodecamp.org/learn/python-for-everybody/">Details</a></td>
-					        </tr>
-					
-					        <tr>
-					          <th scope="row">freeCodeCamp</th>
-					          <td>Responsive Web Design Certification <a class="gen-link-cert" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.freecodecamp.org/certification/aunaprendo/responsive-web-design-v9">(View Certificate)</a></td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="ccProjects.html">Details</a></td>
-					        </tr>		
-					
-					        <tr>
-					          <th scope="row">freeCodeCamp</th>
-			                  <td>JavaScript Certification <a class="gen-link-cert" target="_blank" rel="noopener noreferrer" aria-label="Visit link (opens in a new tab)" href="https://www.freecodecamp.org/certification/aunaprendo/javascript-v9">(View Certificate)</a></td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="ccJS.html">Details</a></td>
-					        </tr>
-					
-					        <tr>
-					          <th scope="row">freeCodeCamp</th>
-					          <td>Front End Development Libraries Certification <a class="gen-link-cert" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.freecodecamp.org/certification/aunaprendo/front-end-development-libraries-v9">(View Certificate)</a></td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="ccFrontEnd.html">Details</a></td>
-					        </tr>
-									
-							<tr>
-					          <th scope="row">freeCodeCamp</th>
-					          <td>Python Certification <a class="gen-link-cert" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.freecodecamp.org/certification/aunaprendo/python-v9">(View Certificate)</a></td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="ccPython.html">Details</a></td>
-					        </tr>
-									
-							<tr>
-					          <th scope="row">freeCodeCamp</th>
-					          <td>Relational Databases Certification <a class="gen-link-cert" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.freecodecamp.org/certification/aunaprendo/relational-databases-v9">(View Certificate)</a></td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="ccDB.html">Details</a></td>
-					        </tr>
-									
-									<tr>
-					          <th scope="row">Khan Academy</th>
-					          <td>Computers and the Internet</td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.khanacademy.org/computing/computers-and-internet">Details</a></td>
-					        </tr>
-									
-									<tr>
-					          <th scope="row">Khan Academy</th>
-					          <td>AP®︎/College Computer Science Principals</td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.khanacademy.org/computing/ap-computer-science-principles">Details</a></td>
-					        </tr>
-																		
-							<tr>
-					          <th scope="row">Khan Academy</th>
-					          <td>Computer Science Theory</td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.khanacademy.org/computing/computer-science">Details</a></td>
-					        </tr>
-									
-									<tr>
-					          <th scope="row">TryHackMe</th>
-					          <td>Linux Fundamentals Parts 1-3</td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://tryhackme.com/room/linuxfundamentalspart1">Details</a></td>
-					        </tr>
-									
-									<tr>
-					          <th scope="row">TryHackMe</th>
-					          <td>Pre Security <a class="gen-link-cert" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="assets/certificates/THM-Presecurity.pdf">(View Certificate)</a></td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://tryhackme.com/path/outline/presecurity&ved=2ahUKEwjdlq6-qfqTAxU4M9AFHYAjCPkQFnoECAwQAQ&usg=AOvVaw2eVBspQIlcju-fi3ww8-a0">Details</a></td>
-					        </tr>
-									
-					      </tbody>
-					    </table>
-							<em><p class="scroll-hint-text d-md-none"> Scroll left and right to see more </p></em>
-						</div>
-					</div><!-- table end -->
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <!-- header row start -->
+            <div class="row text-center p-1 p-md-5">
+              <div class="mt-0 pt-1 ps-lg-5 pe-lg-5">
+                <h1>Aún Aprendo</h1>
+                <p>
+                  Explore the resources guiding my transition into a Security Analyst role — from
+                  books and online courses to audiobooks, podcasts, and videos. A strong commitment
+                  to continuous learning fuels the process of gaining knowledge and applying it
+                  through hands-on practice. With plans to pursue a related master’s degree in the
+                  future, the ultimate goal remains constant: keep learning — <em>aún aprendo.</em>
+                </p>
+              </div>
+              <!-- fade up section -->
+            </div>
+            <!-- header row end -->
 
-					<!-- audio carousel start -->
-					<h2 class="text-thick mb-0 mt-5">Audiobooks Heard</h2>
-					<p class="text-faded mt-0">Click a book for more information</p>
-					 
-					<section class="carousel-wrapper" aria-label="Audiobook carousel">
-					  <button class="carousel-arrow left" aria-label="Previous">
-					    ←
-					  </button>
-					
-					  <div class="carousel m-0" id="audioCarousel">
-						  <div class="carousel-track-audio">
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833FBNHV/ref=tmm_aud_swatch_0" class="carousel-item">
-						      <img src="assets/learnContent/pragmaticProgram.jpeg" alt="The Pragmatic Programmer: 20th Anniversary Edition, 2nd Edition">
-						    </a>
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/Algorithms-to-Live-By-audiobook/dp/B01D24NAL6/ref=tmm_aud_swatch_0" class="carousel-item">
-						      <img src="assets/learnContent/algorithmsLife.jpeg" alt="Algorithms to Live By - The Computer Science of Human Decisions">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/The-Ethical-Hacking-Book-for-Beginners-Audiobook/B0F1N5214P?qid=1777815847&sr=1-2&ref_pageloadid=not_applicable&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=CHVBVG17KGGS7AG3QXVF&plink=Rju5FHoRfEXztH7y&pageLoadId=bzl4lcvcRNc7e56v&creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c&ref=a_search_c3_lProduct_1_2" class="carousel-item">
-						      <img src="assets/learnContent/ethicalHackingBookBeginners.jpeg	" alt="The Ethical Hacking Book for Beginners">
-						    </a>
-						   
-                            <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/The-Cuckoos-Egg-Audiobook/1977300472?source_code=ASSORAP0511160006&share_location=player_overflow" class="carousel-item">
-						      <img src="assets/learnContent/cuckoosEgg.jpeg" alt="The Cuckoo's Egg">
-						    </a>
-                            
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/Ethical-Hacking-A-Beginners-Guide-to-Learning-the-World-of-Ethical-Hacking-Audiobook/B07MDSCR35?srsltid=AfmBOor7UR7wa2gF22rSNouSEosc7ORNP9r3GETFDz8sVF6SUa0B8SUA" class="carousel-item">
-						      <img src="assets/learnContent/worldEthicalHacking.jpeg	" alt="Ethical Hacking: A Beginners Guide to Learning the World of Ethical Hacking">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/Fundamentals-Software-Architecture-Engineering-Approach/dp/B08X8H15BW/ref=tmm_aud_swatch_0" class="carousel-item">
-						      <img src="assets/learnContent/fundamentalsArchitecture.jpeg" alt="Fundamentals of Software Architecture An Engineering Approach">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/Computer-Networking-and-Cybersecurity-Audiobook/B08M3J9Z8K?source_code=ASSORAP0511160006&share_location=player_overflow" class="carousel-item">
-						      <img src="assets/learnContent/networkingSecurity.jpeg" alt="Computer Networking and Cybersecurity">	
-						    </a>		
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/Designing-Data-Intensive-Applications-Audiobook/B08VLGDK32?source_code=ASSORAP0511160006&share_location=library_overflow" class="carousel-item">
-						      <img src="assets/learnContent/DataIntensiveApplications.jpeg" alt="Designing Data-Intensive Applications">
-						    </a>
-							
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/Becoming-an-Ethical-Hacker-Audiobook/B07MNHLWQZ?source_code=ASSORAP0511160006&share_location=player_overflow" class="carousel-item">
-						      <img src="assets/learnContent/mastersAtWork.jpeg" alt="Becoming an Ethical Hacker">
-						    </a>
-						    
-                            <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/Ghost-in-the-Wires-Audiobook/B005H3FYR4?srsltid=AfmBOoo0iago9sSlJD3GqqY9KduOEaRq7715zyN3mo5a2T0V77FQtS1X" class="carousel-item">
-						      <img src="assets/learnContent/ghostWire.jpeg" alt="Ghost in the Wires
-">
-                              
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/Software-Engineering-Google-Lessons-Programming/dp/B08VKLTB9X/ref=tmm_aud_swatch_0" class="carousel-item">
-						      <img src="assets/learnContent/googleEngineering.jpeg" alt="Software Engineering at Google - Lessons Learned from Programming Over Time">
-						    </a>
-						    <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.audible.com/pd/The-Complete-Software-Developers-Career-Guide-Audiobook/B078JDMDNV?srsltid=AfmBOoouG8I68HTLV2dXIHiV9zxmiuGwgZ4oqdDHVWtMlAJhm1JBDXui" class="carousel-item">
-						      <img src="assets/learnContent/SoftwareDeveloperCareerGuide.jpeg" alt="The Complete Software Developer's Career Guide">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/0j1JrFf2" class="carousel-item">
-						      <img src="assets/learnContent/alignmentProblem.jpeg" alt="The Alignment Problem: Machine Learning and Human Values ">
-						    </a>
-								
-							</div>
-					  </div>
-					
-					  <button class="carousel-arrow right" aria-label="Next">
-					    →
-					  </button>
-					</section>
-					<!-- audio carousel end -->
-					
-					<figure class="mt-5 ms-1 me-1 ms-md-4 me-md-4 d-flex flex-column align-items-center">
-						<img
-	            src="assets/alwaysLearning.png"
-	            alt="brain computer" 
-							class="semi-soft-image mt-5 p-lg-5"
-	          />
-					<figcaption class="text-center mt-3 pb-0"><code>Always Learning</code></figcaption>
-	       	 		</figure>
-					
-					<h2 class="text-thick mb-0 mt-5">Videos Watched</h2>
-					<p class="text-faded mt-0">Click a video for more information</p>
-					
-					<section class="carousel-wrapper" aria-label="Video carousel">
-					  <button class="carousel-arrow left" aria-label="Previous">
-					    ←
-					  </button>
-					
-					  <div class="carousel m-0" id="videoCarousel">
-						  <div class="carousel-track-audio">
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.youtube.com/watch?v=-qfEOE4vtxE" class="carousel-item">
-							<img src="assets/learnContent/videoBootstrap.jpeg" alt="Bootstrap Framework - Full Course for Beginners">
-						    </a>
-                            <a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://youtu.be/fo1BR9itwOY?si=_Dehncq6pV7l5K9b" class="carousel-item">
-							<img src="assets/learnContent/videoDefcon.jpeg" alt="DEF CON 13 - Johnny Long, Google Hacking for Penetration Testers">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.youtube.com/watch?v=r8jQ9hVA2qs&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f" class="carousel-item">
-						    <img src="assets/learnContent/videoGithub.jpeg" alt="GitHub for Beginners Eight Video Series">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://youtu.be/W35KhZq2xFQ?si=RwODPvEn_XJPnCZn" class="carousel-item">
-						    <img src="assets/learnContent/videoSortAlgorithm.jpeg" alt="Sorting Algorithms Explained and Visualized">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://youtu.be/qO71L3kxmr8?si=2m2B9mL4Bw-tr2a8" class="carousel-item">
-						    <img src="assets/learnContent/videoNqueens.jpeg" alt="Javascript N Queens I & II">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://youtu.be/NFJ3m9a1oJQ?si=GbnaWPJuH2F9Et8y" class="carousel-item">
-						    <img src="assets/learnContent/videoStaircase.jpeg" alt="The Recursive Staircase Dynamic Programming">
-						    </a>
-							<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://m.youtube.com/watch?v=1QlOOR2yMrU" class="carousel-item">
-						    <img src="assets/learnContent/videoPasswordGen.jpeg" alt="React Lab Build an OTP Generator">
-						    </a>
-							
-						</div>
-					  </div>
-					
-					  <button class="carousel-arrow right" aria-label="Next">
-					    →
-					  </button>
-					</section><!-- carousel end -->
-					
-					<div class="table-scroll-hint">
-					  <span class="scroll-arrow left" aria-hidden="true">←</span>
-					  <span class="scroll-arrow right" aria-hidden="true">→</span>	
-						<div class="table-responsive mt-4">
-							<h2 class="text-thick mb-0 mt-5">Blogs & Podcasts</h2>			
-							<p class="text-faded mt-0">Keeping up to date <em>(Click a dot for a specific post)</em></p>
-					
-					    <table aria-describedby="schedule-caption" class="align-middle table table-striped table-sm table-hover">
-					
-					      <thead>
-					        <tr>
-					          <th scope="col">Type</th>
-					          <th scope="col">Name</th>
-					          <th scope="col">Posts</th>
-					        </tr>
-					      </thead>
-					
-					      <tbody>
-					        <tr>
-					          <th scope="row">Blog</th>
-					          <td>CISCO Talos</td>
-					          <td>
-					          	<a class="gen-link" href="https://blog.talosintelligence.com/the-time-of-much-patching-is-coming/">●</a>
-                                <a class="gen-link" href="https://blog.talosintelligence.com/introducing-evidenceforge-synthetic-security-logs-that-dont-look-as-fake/">●</a>
-                                <a class="gen-link" href="https://blog.talosintelligence.com/hypotheses-telemetry-and-human-judgment-inside-cisco-talos-threat-hunting/">●</a>
-                                <a class="gen-link" href="https://blog.talosintelligence.com/a-tale-of-two-eras/">●</a>
-                                <a class="gen-link" href="https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/">●</a>
-					          </td>
-					        </tr>
-									
-							<tr>
-					          <th scope="row">Blog</th>
-					          <td>SANS Institute</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.sans.org/blog/your-ai-agent-easily-confused-deputy-why-cloud-security-needs-credential-broker">●</a>
-                                <a class="gen-link" href="https://www.sans.org/blog/stay-ahead-ransomware-what-2026-threat-reports-are-telling-us">●</a>
-                                <a class="gen-link" href="https://www.sans.org/blog/the-agent-identity-problem-applying-zero-trust-to-ai-agents">●</a>
-                                <a class="gen-link" href="https://www.sans.org/blog/investigating-ai-tools-modern-linux-intrusions">●</a>
-					          </td>
-					        </tr>
-							
-							<tr>
-					          <th scope="row">Blog</th>
-					          <td>Sentinel One</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.sentinelone.com/blog/prompt-security-for-agentic-ai/">●</a>
-                                <a class="gen-link" href="https://www.sentinelone.com/blog/red-teaming-a-government-edubot/">●</a>
-                                <a class="gen-link" href="https://www.sentinelone.com/blog/frontier-ai-and-agentic-soc/">●</a>
-                                <a class="gen-link" href="https://www.sentinelone.com/blog/hpc-ai-workloads-need-runtime-security-the-architecture-already-exists/">●</a>
-					          </td>
-					        </tr>
-							
-							<tr>
-					          <th scope="row">Blog</th>
-					          <td>CrowdStrike</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-launches-falcon-overwatch-for-defender/">●</a>
-                                <a class="gen-link" href="https://www.crowdstrike.com/en-us/blog/inside-crowdstrike-takedown-of-a-developer-targeting-botnet/">●</a>
-                                <a class="gen-link" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-zscaler-bring-continuous-identity-security-to-zero-trust-access/">●</a>
-                                <a class="gen-link" href="https://www.crowdstrike.com/en-us/blog/after-executive-order-14409-next-steps-for-securing-ai/">●</a>
-                                <a class="gen-link" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-technical-risk-assessments-reveal-common-exposure-patterns/">●</a>
-                                <a class="gen-link" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-prompt-injection-techniques/">●</a>
-					          </td>
-					        </tr>
-							
-							<tr>
-					          <th scope="row">Blog</th>
-					          <td>Microsoft Threat Intelligence</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/">●</a>
-                                <a class="gen-link" href="https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/">●</a>
-                                <a class="gen-link" href="https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/">●</a>
-					          </td>
-					        </tr>
-							
-                            <tr>
-					          <th scope="row">Blog</th>
-					          <td>Google Threat Intelligence</td>
-					          <td>
-					          	<a class="gen-link" href="https://cloud.google.com/blog/topics/threat-intelligence/chinese-language-phishing-services">●</a>
-                                <a class="gen-link" href="https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026">●</a>
-                                <a class="gen-link" href="https://cloud.google.com/blog/topics/threat-intelligence/pro-russia-influence-ecosystem">●</a>
-					          </td>
-					        </tr>
-                            
-                            <tr>
-					          <th scope="row">Blog</th>
-					          <td>Recorded Future</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.recordedfuture.com/blog/vulnerability-board-conversation">●</a>
-                                <a class="gen-link" href="https://www.recordedfuture.com/blog/recorded-future-holistic-sourcing-wins">●</a>
-                                <a class="gen-link" href="https://www.recordedfuture.com/blog/world-cup-purchase-scam-tactics">●</a>
-                                <a class="gen-link" href="https://www.recordedfuture.com/blog/tracking-advanced-persistent-threats">●</a>
-					          </td>
-					        </tr>
-                            
-                            <tr>
-					          <th scope="row">Blog</th>
-					          <td>Bit Defender</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.bitdefender.com/en-us/blog/labs/operation-road-trap">●</a>
-                                <a class="gen-link" href="https://www.bitdefender.com/en-us/blog/labs/inside-the-apac-malvertising-ecosystem">●</a>
-                                <a class="gen-link" href="https://www.bitdefender.com/en-us/blog/hotforsecurity/travelers-targeted-by-whatsapp-hotel-scams">●</a>
-                                <a class="gen-link" href="https://www.bitdefender.com/en-us/blog/labs/fake-shops-europe-samsung-world-cup-scams">●</a>
-					          </td>
-					        </tr>
-                            
-                            <tr>
-					          <th scope="row">Blog</th>
-					          <td>Trend Micro</td>
-					          <td>
-					          	<a class="gen-link" href="https://www.trendmicro.com/en_us/research/26/e/inside-the-influence-and-fraud-patriot-bait-campaign.html">●</a>
-					          </td>
-					        </tr>
-                            
-                            <tr>
-					          <th scope="row">Blog</th>
-					          <td>Citizen Lab</td>
-					          <td>
-					          	<a class="gen-link" href="https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/">●</a>
-					          </td>
-					        </tr>
-                            
-							<tr>
-					          <th scope="row">Podcast</th>
-					          <td>CrowStrike Adversary Universe</td>
-					          <td>
-					          	<a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000774176094">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000768434807">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000771895331">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000776181449">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000763237878">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000766658751">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000760448761">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000754529691">●</a>
-					          	<a class="gen-link" href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000783127536">●</a>
-					         
-							</td>
-					        </tr>
-									
-							<tr>
-					          <th scope="row">Podcast</th>
-					          <td>CISO Series Podcast</td>
-					          <td>
-					          	<a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000774831180">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000773870061">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000775779471">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000776743007">●</a>
-                                 <a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000769663110">●</a>
-                                <a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000777701208">●</a>
-								<a class="gen-link" href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000784065002">●</a>
-					          </td>
-					        </tr>
-									
-					        <tr>
-					          <th scope="row">Podcast</th>
-					          <td>Swinburne University CodeCasts</td>
-					          <td>
-					          	<a class="gen-link" href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1312884000">●</a>
-								<a class="gen-link" href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1313402400">●</a>
-								<a class="gen-link" href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1313661600">●</a>
-								<a class="gen-link" href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1313748000">●</a>
-								<a class="gen-link" href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1318500000">●</a>
-					          </td>
-					        </tr>
-							
-					        <tr>
-					          <th scope="row">Podcast</th>
-					          <td>Python Podcast - The DDSRY Show</td>
-					          <td>								  
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/1-difference-between-reader-and-writer-76950864/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/2-rules-for-naming-a-variable-76950865/">●</a>
-								<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/3-do-you-think-python-software-76950863/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/4-can-i-install-python-30-76950862/">●</a>
-								<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/5-give-me-an-example-of-76961518/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/6-what-is-inventory-management-system-76961519/">●</a>
-								<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/7-how-web-programming-can-be-76961520/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/8-a-set-of-statements-in-77023833/">●</a>
-								<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/9-3-features-of-variable-names-77023834/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/10-what-is-interpreter-and-platform-79614863/">●</a>
-								<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/11-3-key-features-of-79628527/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/12-three-reasons-to-use-immutable-79628529/">●</a>
-								<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/13-best-apps-to-learn-python-79628530/">●</a>
-					          	<a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/14-which-inbuilt-function-is-used-79628528/">●</a>
-					          </td>
-					        </tr>
-							
-					      </tbody>
-					    </table>
-							<em><p class="scroll-hint-text d-md-none"> Scroll left and right to see more </p></em>
-						</div>	
-					</div><!-- table end -->
-					
-					<h2 class="text-thick mb-0 mt-5">Additional Books Read</h2>
-					<p class="text-faded mt-0">Because communication is key</p>
-					
-					<section class="carousel-wrapper" aria-label="Book carousel">
-					  <button class="carousel-arrow left" aria-label="Previous">
-					    ←
-					  </button>
-					
-					  <div class="carousel m-0" id="addBookCarousel">
-						  <div class="carousel-track-books">
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/5c8Rm6o" class="carousel-item">
-						      <img src="assets/learnContent/crucialConversations.jpeg" alt="Crucial Conversations Tools for Talking When Stakes Are High">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/63z0PzO" class="carousel-item">
-						      <img src="assets/learnContent/fierceConversations.jpeg" alt="Fierce Conversations: Achieving Success at Work and in Life One Conversation at a Time">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/1pLRxdC" class="carousel-item">
-						      <img src="assets/learnContent/goodToGreat.jpeg" alt="Good to Great: Why Some Companies Make the Leap...And Others Don't">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/2ZorCDF" class="carousel-item">
-						      <img src="assets/learnContent/fiveDysfunctions.jpeg" alt="The Five Dysfunctions of a Team: A Leadership Fable">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/2CH8gf0" class="carousel-item">
-						      <img src="assets/learnContent/neverEatAlone.jpeg" alt="Never Eat Alone, Expanded and Updated: And Other Secrets to Success, One Relationship at a Time">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://www.amazon.com/dp/B0032ZD0OI?ref_=cm_sw_r_ffobk_cp_ud_dp_Z3FK50G1R9A7J50RRBPE" class="carousel-item">
-						      <img src="assets/learnContent/gettingNaked.jpeg" alt="Getting Naked: A Business Fable About Shedding The Three Fears That Sabotage Client Loyalty">
-						    </a>
-								<a  target="_blank" rel="noopener noreferrer" aria-label="Visit Link (opens in a new tab)" href="https://a.co/d/f9KkPuS" class="carousel-item">
-						      <img src="assets/learnContent/meetingsResults.jpeg" alt="Meetings That Get Results: A Facilitator's Guide to Building Better Meetings">
-						    </a>
-							</div>
-					  </div>
-					
-					  <button class="carousel-arrow right" aria-label="Next">
-					    →
-					  </button>
-					</section><!-- carousel end -->
-				
-				</div> <!-- main col -->
-			</div> <!-- main row -->
-		</div> <!-- main container -->
-		
-	</main>
-	
-		<!-- Footer -->
-  <footer
-    data-include="partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-	
-  <script src="js/script.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<script>
-(() => {
-  const loader = document.getElementById("loader");
-  const percent = document.getElementById("loader-percentage");
+            <h2 class="text-thick mb-0 mt-3 mt-md-0">Books Read</h2>
+            <p class="text-faded mt-0">Click a book for more information</p>
 
-  let progress = 0;
-  let shown = false;
+            <section class="carousel-wrapper" aria-label="Book carousel">
+              <button class="carousel-arrow left" aria-label="Previous">←</button>
 
-  // Only show loader if page takes longer than 300ms
-  const showDelay = setTimeout(() => {
-    shown = true;
-    loader.classList.add("active");
+              <div class="carousel m-0" id="bookCarousel">
+                <div class="carousel-track-books">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/i2Gp0XX"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/codingDummies.jpeg"
+                      alt="Coding All-in-One For Dummies cover"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/dp/B09781V6F7?ref_=cm_sw_r_ffobk_cp_ud_dp_1GWZG6NYFTW46NBQMV08"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/grokkingAlgorithms.jpeg"
+                      alt="Grokking Algorithms: An illustrated guide for programmers and other curious people cover"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/0cLvSd08"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/cyberEspionage.jpeg"
+                      alt="Attribution of Advanced Persistent Threats: How to Identify the Actors Behind Cyber-Espionage"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/Everything-Computer-Science-Coding-Notebook/dp/1523502770"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/compScienceCoding.jpeg"
+                      alt="Everything You Need to Ace Computer Science and Coding in One Big Fat Notebook: The Complete Middle School Study Guide (Big Fat Notebooks)"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/CompTIA-Fundamentals-Guide-Second-FC0-U61-ebook/dp/B07L8R6554/ref=tmm_kin_swatch_0"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/compTIA.jpeg"
+                      alt="ITF+ CompTIA IT Fundamentals All-in-One Exam Guide, Second Edition cover"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0135398576"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/cleanCode.jpeg"
+                      alt="Clean Code: A Handbook of Agile Software Craftsmanship"
+                    />
+                  </a>
 
-    // Fake progress ONLY while waiting
-    const progressInterval = setInterval(() => {
-      progress = Math.min(progress + Math.random() * 8, 90);
-      percent.textContent = Math.floor(progress) + "%";
-    }, 100);
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/01SFBMIN"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/penetrationBasics.jpeg"
+                      alt="The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy"
+                    />
+                  </a>
 
-    loader._interval = progressInterval;
-  }, 300);
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/09U9CNAv"
+                    class="carousel-item in-progress-blur"
+                  >
+                    <img
+                      src="assets/learnContent/compTIAA+.jpeg"
+                      alt="CompTIA A+ Certification All-in-One Exam Guide, Eleventh Edition (Exams 220-1101 & 220-1102)"
+                    />
+                  </a>
+                </div>
+              </div>
 
-  // When everything is loaded
-  window.addEventListener("load", () => {
-    clearTimeout(showDelay);
+              <button class="carousel-arrow right" aria-label="Next">→</button>
+            </section>
+            <!-- carousel end -->
 
-    if (!shown) return; 
+            <div class="table-scroll-hint">
+              <span class="scroll-arrow left" aria-hidden="true">←</span>
+              <span class="scroll-arrow right" aria-hidden="true">→</span>
+              <div class="table-responsive mt-4">
+                <h2 class="text-thick mb-0 mt-5">Courses Taken</h2>
+                <p class="text-faded mt-0">Completed between 05/25 - 09/26</p>
 
-    clearInterval(loader._interval);
-    percent.textContent = "100%";
+                <table
+                  aria-describedby="schedule-caption"
+                  class="align-middle table table-striped table-hover"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col">Provider</th>
+                      <th scope="col">Course</th>
+                      <th scope="col">Information</th>
+                    </tr>
+                  </thead>
 
-    loader.classList.add("fade-out");
-    setTimeout(() => {
-      loader.remove();
-    }, 500);
-  });
-})();
-</script>
-</body>
+                  <tbody>
+                    <tr>
+                      <th scope="row">freeCodeCamp</th>
+                      <td>Python for Everyone by Dr. Charles Severance</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.freecodecamp.org/learn/python-for-everybody/"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">freeCodeCamp</th>
+                      <td>
+                        Responsive Web Design Certification
+                        <a
+                          class="gen-link-cert"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.freecodecamp.org/certification/aunaprendo/responsive-web-design-v9"
+                          >(View Certificate)</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="ccProjects.html"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">freeCodeCamp</th>
+                      <td>
+                        JavaScript Certification
+                        <a
+                          class="gen-link-cert"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit link (opens in a new tab)"
+                          href="https://www.freecodecamp.org/certification/aunaprendo/javascript-v9"
+                          >(View Certificate)</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="ccJS.html"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">freeCodeCamp</th>
+                      <td>
+                        Front End Development Libraries Certification
+                        <a
+                          class="gen-link-cert"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.freecodecamp.org/certification/aunaprendo/front-end-development-libraries-v9"
+                          >(View Certificate)</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="ccFrontEnd.html"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">freeCodeCamp</th>
+                      <td>
+                        Python Certification
+                        <a
+                          class="gen-link-cert"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.freecodecamp.org/certification/aunaprendo/python-v9"
+                          >(View Certificate)</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="ccPython.html"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">freeCodeCamp</th>
+                      <td>
+                        Relational Databases Certification
+                        <a
+                          class="gen-link-cert"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.freecodecamp.org/certification/aunaprendo/relational-databases-v9"
+                          >(View Certificate)</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="ccDB.html"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Khan Academy</th>
+                      <td>Computers and the Internet</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.khanacademy.org/computing/computers-and-internet"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Khan Academy</th>
+                      <td>AP®︎/College Computer Science Principals</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.khanacademy.org/computing/ap-computer-science-principles"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Khan Academy</th>
+                      <td>Computer Science Theory</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.khanacademy.org/computing/computer-science"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">TryHackMe</th>
+                      <td>Linux Fundamentals Parts 1-3</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://tryhackme.com/room/linuxfundamentalspart1"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">TryHackMe</th>
+                      <td>
+                        Pre Security
+                        <a
+                          class="gen-link-cert"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="assets/certificates/THM-Presecurity.pdf"
+                          >(View Certificate)</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Visit Link (opens in a new tab)"
+                          href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://tryhackme.com/path/outline/presecurity&ved=2ahUKEwjdlq6-qfqTAxU4M9AFHYAjCPkQFnoECAwQAQ&usg=AOvVaw2eVBspQIlcju-fi3ww8-a0"
+                          >Details</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <em><p class="scroll-hint-text d-md-none">Scroll left and right to see more</p></em>
+              </div>
+            </div>
+            <!-- table end -->
+
+            <!-- audio carousel start -->
+            <h2 class="text-thick mb-0 mt-5">Audiobooks Heard</h2>
+            <p class="text-faded mt-0">Click a book for more information</p>
+
+            <section class="carousel-wrapper" aria-label="Audiobook carousel">
+              <button class="carousel-arrow left" aria-label="Previous">←</button>
+
+              <div class="carousel m-0" id="audioCarousel">
+                <div class="carousel-track-audio">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833FBNHV/ref=tmm_aud_swatch_0"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/pragmaticProgram.jpeg"
+                      alt="The Pragmatic Programmer: 20th Anniversary Edition, 2nd Edition"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/Algorithms-to-Live-By-audiobook/dp/B01D24NAL6/ref=tmm_aud_swatch_0"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/algorithmsLife.jpeg"
+                      alt="Algorithms to Live By - The Computer Science of Human Decisions"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/The-Ethical-Hacking-Book-for-Beginners-Audiobook/B0F1N5214P?qid=1777815847&sr=1-2&ref_pageloadid=not_applicable&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=CHVBVG17KGGS7AG3QXVF&plink=Rju5FHoRfEXztH7y&pageLoadId=bzl4lcvcRNc7e56v&creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c&ref=a_search_c3_lProduct_1_2"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/ethicalHackingBookBeginners.jpeg	"
+                      alt="The Ethical Hacking Book for Beginners"
+                    />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/The-Cuckoos-Egg-Audiobook/1977300472?source_code=ASSORAP0511160006&share_location=player_overflow"
+                    class="carousel-item"
+                  >
+                    <img src="assets/learnContent/cuckoosEgg.jpeg" alt="The Cuckoo's Egg" />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/Ethical-Hacking-A-Beginners-Guide-to-Learning-the-World-of-Ethical-Hacking-Audiobook/B07MDSCR35?srsltid=AfmBOor7UR7wa2gF22rSNouSEosc7ORNP9r3GETFDz8sVF6SUa0B8SUA"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/worldEthicalHacking.jpeg	"
+                      alt="Ethical Hacking: A Beginners Guide to Learning the World of Ethical Hacking"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/Fundamentals-Software-Architecture-Engineering-Approach/dp/B08X8H15BW/ref=tmm_aud_swatch_0"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/fundamentalsArchitecture.jpeg"
+                      alt="Fundamentals of Software Architecture An Engineering Approach"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/Computer-Networking-and-Cybersecurity-Audiobook/B08M3J9Z8K?source_code=ASSORAP0511160006&share_location=player_overflow"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/networkingSecurity.jpeg"
+                      alt="Computer Networking and Cybersecurity"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/Designing-Data-Intensive-Applications-Audiobook/B08VLGDK32?source_code=ASSORAP0511160006&share_location=library_overflow"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/DataIntensiveApplications.jpeg"
+                      alt="Designing Data-Intensive Applications"
+                    />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/Becoming-an-Ethical-Hacker-Audiobook/B07MNHLWQZ?source_code=ASSORAP0511160006&share_location=player_overflow"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/mastersAtWork.jpeg"
+                      alt="Becoming an Ethical Hacker"
+                    />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/Ghost-in-the-Wires-Audiobook/B005H3FYR4?srsltid=AfmBOoo0iago9sSlJD3GqqY9KduOEaRq7715zyN3mo5a2T0V77FQtS1X"
+                    class="carousel-item"
+                  >
+                    <img src="assets/learnContent/ghostWire.jpeg" alt="Ghost in the Wires" />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/Software-Engineering-Google-Lessons-Programming/dp/B08VKLTB9X/ref=tmm_aud_swatch_0"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/googleEngineering.jpeg"
+                      alt="Software Engineering at Google - Lessons Learned from Programming Over Time"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.audible.com/pd/The-Complete-Software-Developers-Career-Guide-Audiobook/B078JDMDNV?srsltid=AfmBOoouG8I68HTLV2dXIHiV9zxmiuGwgZ4oqdDHVWtMlAJhm1JBDXui"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/SoftwareDeveloperCareerGuide.jpeg"
+                      alt="The Complete Software Developer's Career Guide"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/0j1JrFf2"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/alignmentProblem.jpeg"
+                      alt="The Alignment Problem: Machine Learning and Human Values "
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <button class="carousel-arrow right" aria-label="Next">→</button>
+            </section>
+            <!-- audio carousel end -->
+
+            <figure class="mt-5 ms-1 me-1 ms-md-4 me-md-4 d-flex flex-column align-items-center">
+              <img
+                src="assets/alwaysLearning.png"
+                alt="brain computer"
+                class="semi-soft-image mt-5 p-lg-5"
+              />
+              <figcaption class="text-center mt-3 pb-0"><code>Always Learning</code></figcaption>
+            </figure>
+
+            <h2 class="text-thick mb-0 mt-5">Videos Watched</h2>
+            <p class="text-faded mt-0">Click a video for more information</p>
+
+            <section class="carousel-wrapper" aria-label="Video carousel">
+              <button class="carousel-arrow left" aria-label="Previous">←</button>
+
+              <div class="carousel m-0" id="videoCarousel">
+                <div class="carousel-track-audio">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.youtube.com/watch?v=-qfEOE4vtxE"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoBootstrap.jpeg"
+                      alt="Bootstrap Framework - Full Course for Beginners"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://youtu.be/fo1BR9itwOY?si=_Dehncq6pV7l5K9b"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoDefcon.jpeg"
+                      alt="DEF CON 13 - Johnny Long, Google Hacking for Penetration Testers"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.youtube.com/watch?v=r8jQ9hVA2qs&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoGithub.jpeg"
+                      alt="GitHub for Beginners Eight Video Series"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://youtu.be/W35KhZq2xFQ?si=RwODPvEn_XJPnCZn"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoSortAlgorithm.jpeg"
+                      alt="Sorting Algorithms Explained and Visualized"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://youtu.be/qO71L3kxmr8?si=2m2B9mL4Bw-tr2a8"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoNqueens.jpeg"
+                      alt="Javascript N Queens I & II"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://youtu.be/NFJ3m9a1oJQ?si=GbnaWPJuH2F9Et8y"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoStaircase.jpeg"
+                      alt="The Recursive Staircase Dynamic Programming"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://m.youtube.com/watch?v=1QlOOR2yMrU"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/videoPasswordGen.jpeg"
+                      alt="React Lab Build an OTP Generator"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <button class="carousel-arrow right" aria-label="Next">→</button>
+            </section>
+            <!-- carousel end -->
+
+            <div class="table-scroll-hint">
+              <span class="scroll-arrow left" aria-hidden="true">←</span>
+              <span class="scroll-arrow right" aria-hidden="true">→</span>
+              <div class="table-responsive mt-4">
+                <h2 class="text-thick mb-0 mt-5">Blogs & Podcasts</h2>
+                <p class="text-faded mt-0">
+                  Keeping up to date <em>(Click a dot for a specific post)</em>
+                </p>
+
+                <table
+                  aria-describedby="schedule-caption"
+                  class="align-middle table table-striped table-sm table-hover"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col">Type</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Posts</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>CISCO Talos</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://blog.talosintelligence.com/the-time-of-much-patching-is-coming/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://blog.talosintelligence.com/introducing-evidenceforge-synthetic-security-logs-that-dont-look-as-fake/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://blog.talosintelligence.com/hypotheses-telemetry-and-human-judgment-inside-cisco-talos-threat-hunting/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://blog.talosintelligence.com/a-tale-of-two-eras/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>SANS Institute</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.sans.org/blog/your-ai-agent-easily-confused-deputy-why-cloud-security-needs-credential-broker"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.sans.org/blog/stay-ahead-ransomware-what-2026-threat-reports-are-telling-us"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.sans.org/blog/the-agent-identity-problem-applying-zero-trust-to-ai-agents"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.sans.org/blog/investigating-ai-tools-modern-linux-intrusions"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Sentinel One</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.sentinelone.com/blog/prompt-security-for-agentic-ai/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.sentinelone.com/blog/red-teaming-a-government-edubot/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.sentinelone.com/blog/frontier-ai-and-agentic-soc/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.sentinelone.com/blog/hpc-ai-workloads-need-runtime-security-the-architecture-already-exists/"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>CrowdStrike</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.crowdstrike.com/en-us/blog/crowdstrike-launches-falcon-overwatch-for-defender/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.crowdstrike.com/en-us/blog/inside-crowdstrike-takedown-of-a-developer-targeting-botnet/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.crowdstrike.com/en-us/blog/crowdstrike-zscaler-bring-continuous-identity-security-to-zero-trust-access/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.crowdstrike.com/en-us/blog/after-executive-order-14409-next-steps-for-securing-ai/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.crowdstrike.com/en-us/blog/crowdstrike-technical-risk-assessments-reveal-common-exposure-patterns/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-prompt-injection-techniques/"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Microsoft Threat Intelligence</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Google Threat Intelligence</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://cloud.google.com/blog/topics/threat-intelligence/chinese-language-phishing-services"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://cloud.google.com/blog/topics/threat-intelligence/pro-russia-influence-ecosystem"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Recorded Future</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.recordedfuture.com/blog/vulnerability-board-conversation"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.recordedfuture.com/blog/recorded-future-holistic-sourcing-wins"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.recordedfuture.com/blog/world-cup-purchase-scam-tactics"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.recordedfuture.com/blog/tracking-advanced-persistent-threats"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Bit Defender</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.bitdefender.com/en-us/blog/labs/operation-road-trap"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.bitdefender.com/en-us/blog/labs/inside-the-apac-malvertising-ecosystem"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.bitdefender.com/en-us/blog/hotforsecurity/travelers-targeted-by-whatsapp-hotel-scams"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.bitdefender.com/en-us/blog/labs/fake-shops-europe-samsung-world-cup-scams"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Trend Micro</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.trendmicro.com/en_us/research/26/e/inside-the-influence-and-fraud-patriot-bait-campaign.html"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blog</th>
+                      <td>Citizen Lab</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Podcast</th>
+                      <td>CrowStrike Adversary Universe</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000774176094"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000768434807"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000771895331"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000776181449"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000763237878"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000766658751"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000760448761"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000754529691"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/adversary-universe-podcast/id1694819239?i=1000783127536"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Podcast</th>
+                      <td>CISO Series Podcast</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000774831180"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000773870061"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000775779471"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000776743007"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000769663110"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000777701208"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podcasts.apple.com/us/podcast/ciso-series-podcast/id1391337832?i=1000784065002"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Podcast</th>
+                      <td>Swinburne University CodeCasts</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1312884000"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1313402400"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1313661600"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1313748000"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials/e/1318500000"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Podcast</th>
+                      <td>Python Podcast - The DDSRY Show</td>
+                      <td>
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/1-difference-between-reader-and-writer-76950864/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/2-rules-for-naming-a-variable-76950865/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/3-do-you-think-python-software-76950863/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/4-can-i-install-python-30-76950862/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/5-give-me-an-example-of-76961518/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/6-what-is-inventory-management-system-76961519/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/7-how-web-programming-can-be-76961520/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/8-a-set-of-statements-in-77023833/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/9-3-features-of-variable-names-77023834/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/10-what-is-interpreter-and-platform-79614863/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/11-3-key-features-of-79628527/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/12-three-reasons-to-use-immutable-79628529/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/13-best-apps-to-learn-python-79628530/"
+                          >●</a
+                        >
+                        <a
+                          class="gen-link"
+                          href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/episode/14-which-inbuilt-function-is-used-79628528/"
+                          >●</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <em><p class="scroll-hint-text d-md-none">Scroll left and right to see more</p></em>
+              </div>
+            </div>
+            <!-- table end -->
+
+            <h2 class="text-thick mb-0 mt-5">Additional Books Read</h2>
+            <p class="text-faded mt-0">Because communication is key</p>
+
+            <section class="carousel-wrapper" aria-label="Book carousel">
+              <button class="carousel-arrow left" aria-label="Previous">←</button>
+
+              <div class="carousel m-0" id="addBookCarousel">
+                <div class="carousel-track-books">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/5c8Rm6o"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/crucialConversations.jpeg"
+                      alt="Crucial Conversations Tools for Talking When Stakes Are High"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/63z0PzO"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/fierceConversations.jpeg"
+                      alt="Fierce Conversations: Achieving Success at Work and in Life One Conversation at a Time"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/1pLRxdC"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/goodToGreat.jpeg"
+                      alt="Good to Great: Why Some Companies Make the Leap...And Others Don't"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/2ZorCDF"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/fiveDysfunctions.jpeg"
+                      alt="The Five Dysfunctions of a Team: A Leadership Fable"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/2CH8gf0"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/neverEatAlone.jpeg"
+                      alt="Never Eat Alone, Expanded and Updated: And Other Secrets to Success, One Relationship at a Time"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://www.amazon.com/dp/B0032ZD0OI?ref_=cm_sw_r_ffobk_cp_ud_dp_Z3FK50G1R9A7J50RRBPE"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/gettingNaked.jpeg"
+                      alt="Getting Naked: A Business Fable About Shedding The Three Fears That Sabotage Client Loyalty"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Link (opens in a new tab)"
+                    href="https://a.co/d/f9KkPuS"
+                    class="carousel-item"
+                  >
+                    <img
+                      src="assets/learnContent/meetingsResults.jpeg"
+                      alt="Meetings That Get Results: A Facilitator's Guide to Building Better Meetings"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <button class="carousel-arrow right" aria-label="Next">→</button>
+            </section>
+            <!-- carousel end -->
+          </div>
+          <!-- main col -->
+        </div>
+        <!-- main row -->
+      </div>
+      <!-- main container -->
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="partials/footer.html" role="contentinfo" aria-label="Footer"></footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      (() => {
+        const loader = document.getElementById("loader");
+        const percent = document.getElementById("loader-percentage");
+
+        let progress = 0;
+        let shown = false;
+
+        // Only show loader if page takes longer than 300ms
+        const showDelay = setTimeout(() => {
+          shown = true;
+          loader.classList.add("active");
+
+          // Fake progress ONLY while waiting
+          const progressInterval = setInterval(() => {
+            progress = Math.min(progress + Math.random() * 8, 90);
+            percent.textContent = Math.floor(progress) + "%";
+          }, 100);
+
+          loader._interval = progressInterval;
+        }, 300);
+
+        // When everything is loaded
+        window.addEventListener("load", () => {
+          clearTimeout(showDelay);
+
+          if (!shown) return;
+
+          clearInterval(loader._interval);
+          percent.textContent = "100%";
+
+          loader.classList.add("fade-out");
+          setTimeout(() => {
+            loader.remove();
+          }, 500);
+        });
+      })();
+    </script>
+  </body>
 </html>
-
