@@ -13,9 +13,24 @@
   color: var(--accent-color-dteal);
 }
 
-#logo {
-  height: 95%;
+#logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
   padding-left: 10px;
+}
+
+#logo {
+  display: block;
+  height: 95%;
+  width: auto;
+  padding-left: 0;
+}
+
+#logo-link:focus-visible {
+  outline: 3px solid var(--accent-color-dteal);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Projects dropdown button */
