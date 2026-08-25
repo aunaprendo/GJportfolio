@@ -123,9 +123,9 @@ h3 {
 }
 
 h4 {
-  font-size: calc(1rem + 0.1vw);
+  font-size: calc(1rem);
   font-weight: var(--weight-small);
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 @media (min-width: 1200px) {
