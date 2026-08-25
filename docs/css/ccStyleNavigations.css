@@ -13,9 +13,24 @@
   color: var(--accent-color-gold);
 }
 
-#logo {
-  height: 70%;
+#logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
   padding-left: 10px;
+}
+
+#logo {
+  display: block;
+  height: 70%;
+  width: auto;
+  padding-left: 0;
+}
+
+#logo-link:focus-visible {
+  outline: 3px solid var(--accent-color-dteal);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Projects dropdown button */
@@ -70,7 +85,7 @@
   font-size: 0.9rem;
 }
 
-.breadcrumb-item + .breadcrumb-item {
+.breadcrumb-item+.breadcrumb-item {
   padding-left: 0.5rem;
 }
 
@@ -80,12 +95,15 @@
   }
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   float: left;
   padding-right: 0.5rem;
   color: var(--text-color-main);
-  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+  content: var(--bs-breadcrumb-divider, "/")
+    /* rtl: var(--bs-breadcrumb-divider, "/") */
+  ;
 }
+
 .breadcrumb-item.active {
   color: var(--bg-color-alt);
 }
