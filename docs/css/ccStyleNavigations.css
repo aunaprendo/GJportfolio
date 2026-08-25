@@ -28,7 +28,7 @@
 }
 
 #logo-link:focus-visible {
-  outline: 3px solid var(--accent-color-dteal);
+  outline: 3px solid var(--accent-color-brown);
   outline-offset: 3px;
   border-radius: 4px;
 }
