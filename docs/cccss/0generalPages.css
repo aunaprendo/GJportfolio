@@ -12,9 +12,12 @@ body {
 main {
   flex: 1;
   display: flex;
-  align-items: flex-end; /* bottom */
-  justify-content: center; /* horizontal center */
-  padding-bottom: 2rem; /* space above footer */
+  align-items: flex-end;
+  /* bottom */
+  justify-content: center;
+  /* horizontal center */
+  padding-bottom: 2rem;
+  /* space above footer */
 }
 
 #submission-good {
@@ -76,7 +79,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center; /* horizontal centering */
+  align-items: center;
+  /* horizontal centering */
   text-align: center;
 }
 
@@ -96,13 +100,14 @@ main {
   margin: 2rem auto;
 }
 
-.code-project > h1 {
+.code-project>h1 {
   font-size: calc(1.5rem + 3vw);
   margin-top: 0pt;
+  text-shadow: none;
 }
 
-.code-project > h1,
-.code-project > p {
+.code-project>h1,
+.code-project>p {
   margin-bottom: 1rem;
 }
 

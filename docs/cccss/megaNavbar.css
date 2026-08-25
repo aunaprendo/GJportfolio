@@ -1,7 +1,6 @@
 :root {
   --white: #fff;
   --light-grey: #e1e0e0;
-  --dark-purple: #7c0e7c;
   --black: #000;
 }
 
@@ -23,12 +22,36 @@ body {
   border-radius: 4px;
 }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: var(--black);
-  padding: 10px;
-  display: inline-block;
+.navbar ul .nav-item .sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 5%;
+  transition: opacity 0.5s ease;
+  display: block;
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  min-width: 120px;
+}
+
+.navbar ul .nav-item .sub-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul .nav-item .sub-menu li a {
+  display: block;
   width: 100%;
+  margin: 0;
+  padding: 10px;
+  color: var(--black);
+}
+
+.navbar ul .nav-item .sub-menu li a:hover,
+.navbar ul .nav-item .sub-menu li a:focus-visible {
+  background-color: var(--accent-color-brown);
+  color: var(--white);
 }
 
 button {
@@ -38,24 +61,15 @@ button {
   font-size: 1rem;
 }
 
-.navbar ul .nav-item a:hover {
-  background-color: var(--dark-purple);
+.navbar>ul>.nav-item>a:hover {
+  background-color: var(--accent-color-brown);
   color: var(--white);
 }
 
-button:hover {
-  background-color: var(--dark-purple);
+.navbar>ul>.nav-item>button:hover,
+.navbar>ul>.nav-item>button:focus-visible {
+  background-color: var(--accent-color-brown);
   color: var(--white);
-}
-
-.navbar ul .nav-item .sub-menu {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  right: 5%;
-  transition: opacity 0.5s ease;
-  display: block;
-  background-color: var(--white);
 }
 
 @media (min-width: 768px) {
@@ -74,4 +88,16 @@ button:hover {
 .navbar ul .nav-item:focus-within .sub-menu {
   visibility: visible;
   opacity: 1;
+}
+
+.navbar>ul>.nav-item>a,
+.navbar>ul>.nav-item>button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--black);
+  line-height: 1.5;
 }
