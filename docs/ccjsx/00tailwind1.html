@@ -75,7 +75,12 @@
         <p class="text-cyan-700 text-xl">
           <strong>Error!</strong> We are busy hiding nuts. Please try again.
         </p>
-        <button aria-label="Dismiss" class="text-cyan-700 text-2xl">
+        <button
+          type="button"
+          aria-label="Go back to previous page"
+          class="text-cyan-700 text-2xl"
+          onclick="history.back()"
+        >
           <span aria-hidden>&times;</span>
         </button>
       </div>
