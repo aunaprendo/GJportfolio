@@ -33,7 +33,7 @@ export const SuperheroForm = () => {
     <div className="form-wrap">
       <h2>Supersquirrel Application Form</h2>
       <p>Please complete all fields</p>
-      <form method="post" action="https://superhero-application-form.freecodecamp.org">
+      <form method="post" action="https://marvel.fandom.com/wiki/Doreen_Green_(Earth-616)">
         <div className="section">
           <label>
             Super Squirrel Name
